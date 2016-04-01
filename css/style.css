@@ -13,7 +13,7 @@ body {
     width: 980px;
 }
 a, a:visited {
-    color: #0052cc;
+    color: #8c001a;
     text-decoration: none;
 }
 a:hover {
@@ -32,7 +32,15 @@ a img {
 a:focus, a:hover, a:active {
     outline: medium none;
 }
-h1, h2, h3, h4, h5, h6 {
+h1 {
+    color: #ffffff;
+    font-family: Times New Roman;
+    font-weight: bold;
+    margin: 0 0 5px;
+    padding: 0;
+    text-decoration: none;
+}
+h2, h3, h4, h5, h6 {
     color: #E27318;
     font-family: Times New Roman;
     font-weight: bold;
@@ -104,7 +112,7 @@ ol ol {
     padding: 0;
 }
 #header .inner {
-    background-image: url("../images/banner-bg.jpg");
+    background-image: url("../images/tree_banner4.jpg");
     background-repeat: no-repeat;
     border-radius: 0 0 7px 7px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -163,7 +171,7 @@ ol ol {
     text-transform: uppercase;
 }
 #nav ul li a:hover, #nav ul li a:active {
-    background-color: #709B80;
+    background-color: #b3b3b3;
     color: #FFFFFF;
 	border-radius:7px;
 }
@@ -209,7 +217,8 @@ ol ol {
 #col2 {
 }
 #address {
-    background-color: #709B80;
+    /*background-color: #709B80;*/
+    background-color: #b3b3b3;
     border-radius: 7px 7px 7px 7px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
