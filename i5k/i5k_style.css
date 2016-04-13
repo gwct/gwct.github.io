@@ -4,9 +4,10 @@ p { font-family:Arial; }
 #myImage  {
   position:relative; width:2609px; height:1966px; 
   background-image:url("arth_big_figtree.png");
+  background-repeat: no-repeat; 
 }
 
-a:hover { border:1px solid #e60000; }
+/*a:hover { border:1px solid #e60000; }*/
 
 #HAZTE { position:absolute; top:-3; left:2279; width:325px; height:18px; }
 #DPULE { position:absolute; top:22; left:2279; width:325px; height:18px; }
