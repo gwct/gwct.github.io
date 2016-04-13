@@ -1,0 +1,95 @@
+h1 { font-family:Arial; }
+p { font-family:Arial; }
+
+#myImage  {
+  position:relative; width:2609px; height:1966px; 
+  background-image:url("arth_big_figtree.png");
+}
+
+a:hover { border:1px solid #e60000; }
+
+a.HAZTE { display:block; position:absolute; top:-3; left:2279; width:325px; height:18px; }
+a.DPULE { display:block; position:absolute; top:22; left:2279; width:325px; height:18px; }
+a.EAFFI { display:block; position:absolute; top:48; left:2279; width:325px; height:18px; }
+a.SMARI { display:block; position:absolute; top:73; left:2279; width:325px; height:18px; }
+a.TURTI { display:block; position:absolute; top:99; left:2279; width:325px; height:18px; }
+a.MOCCI { display:block; position:absolute; top:124; left:2279; width:325px; height:18px; }
+a.ISCAP { display:block; position:absolute; top:150; left:2279; width:325px; height:18px; }
+a.CSCUL { display:block; position:absolute; top:176; left:2279; width:325px; height:18px; }
+a.LRECL { display:block; position:absolute; top:201; left:2279; width:325px; height:18px; }
+a.SMIMO { display:block; position:absolute; top:227; left:2279; width:325px; height:18px; }
+a.PTEPI { display:block; position:absolute; top:252; left:2279; width:325px; height:18px; }
+a.LHESP { display:block; position:absolute; top:278; left:2279; width:325px; height:18px; }
+a.CAQUI { display:block; position:absolute; top:303; left:2279; width:325px; height:18px; }
+a.LFULV { display:block; position:absolute; top:329; left:2279; width:325px; height:18px; }
+a.EDANI { display:block; position:absolute; top:355; left:2279; width:325px; height:18px; }
+a.BGERM { display:block; position:absolute; top:380; left:2279; width:325px; height:18px; }
+a.ZNEVA { display:block; position:absolute; top:406; left:2279; width:325px; height:18px; }
+a.PHUMA { display:block; position:absolute; top:431; left:2279; width:325px; height:18px; }
+a.FOCCI { display:block; position:absolute; top:457; left:2279; width:325px; height:18px; }
+a.APISU { display:block; position:absolute; top:482; left:2279; width:325px; height:18px; }
+a.PVENU { display:block; position:absolute; top:508; left:2279; width:325px; height:18px; }
+a.HVITR { display:block; position:absolute; top:534; left:2279; width:325px; height:18px; }
+a.GBUEN { display:block; position:absolute; top:559; left:2279; width:325px; height:18px; }
+a.CLECT { display:block; position:absolute; top:585; left:2279; width:325px; height:18px; }
+a.HHALY { display:block; position:absolute; top:610; left:2279; width:325px; height:18px; }
+a.OFAS2 { display:block; position:absolute; top:636; left:2279; width:325px; height:18px; }
+a.TPRET { display:block; position:absolute; top:661; left:2279; width:325px; height:18px; }
+a.COPFL { display:block; position:absolute; top:687; left:2279; width:325px; height:18px; }
+a.NVITR { display:block; position:absolute; top:713; left:2279; width:325px; height:18px; }
+a.AROSA { display:block; position:absolute; top:738; left:2279; width:325px; height:18px; }
+a.OABIE { display:block; position:absolute; top:764; left:2279; width:325px; height:18px; }
+a.CCINC { display:block; position:absolute; top:789; left:2279; width:325px; height:18px; }
+a.HSALT { display:block; position:absolute; top:815; left:2279; width:325px; height:18px; }
+a.LHUMI { display:block; position:absolute; top:841; left:2279; width:325px; height:18px; }
+a.CFLOR { display:block; position:absolute; top:866; left:2279; width:325px; height:18px; }
+a.PBARB { display:block; position:absolute; top:892; left:2279; width:325px; height:18px; }
+a.COBSC { display:block; position:absolute; top:917; left:2279; width:325px; height:18px; }
+a.SINVI { display:block; position:absolute; top:943; left:2279; width:325px; height:18px; }
+a.AECHI { display:block; position:absolute; top:968; left:2279; width:325px; height:18px; }
+a.ACEPH { display:block; position:absolute; top:994; left:2279; width:325px; height:18px; }
+a.DNOVA { display:block; position:absolute; top:1020; left:2279; width:325px; height:18px; }
+a.LALBI { display:block; position:absolute; top:1045; left:2279; width:325px; height:18px; }
+a.MROTU { display:block; position:absolute; top:1071; left:2279; width:325px; height:18px; }
+a.HLABO { display:block; position:absolute; top:1096; left:2279; width:325px; height:18px; }
+a.EMEXI { display:block; position:absolute; top:1122; left:2279; width:325px; height:18px; }
+a.AFLOR { display:block; position:absolute; top:1147; left:2279; width:325px; height:18px; }
+a.AMELL { display:block; position:absolute; top:1173; left:2279; width:325px; height:18px; }
+a.MQUAD { display:block; position:absolute; top:1199; left:2279; width:325px; height:18px; }
+a.BTERR { display:block; position:absolute; top:1224; left:2279; width:325px; height:18px; }
+a.BIMPA { display:block; position:absolute; top:1250; left:2279; width:325px; height:18px; }
+a.APLAN { display:block; position:absolute; top:1275; left:2279; width:325px; height:18px; }
+a.OTAUR { display:block; position:absolute; top:1301; left:2279; width:325px; height:18px; }
+a.TCAST { display:block; position:absolute; top:1326; left:2279; width:325px; height:18px; }
+a.DPOND { display:block; position:absolute; top:1352; left:2279; width:325px; height:18px; }
+a.LDECE { display:block; position:absolute; top:1378; left:2279; width:325px; height:18px; }
+a.AGLAB { display:block; position:absolute; top:1403; left:2279; width:325px; height:18px; }
+a.LLUNA { display:block; position:absolute; top:1429; left:2279; width:325px; height:18px; }
+a.PXYLO { display:block; position:absolute; top:1454; left:2279; width:325px; height:18px; }
+a.HMELP { display:block; position:absolute; top:1480; left:2279; width:325px; height:18px; }
+a.DPLEX { display:block; position:absolute; top:1505; left:2279; width:325px; height:18px; }
+a.MSEXT { display:block; position:absolute; top:1531; left:2279; width:325px; height:18px; }
+a.BMORI { display:block; position:absolute; top:1557; left:2279; width:325px; height:18px; }
+a.CQUIN { display:block; position:absolute; top:1582; left:2279; width:325px; height:18px; }
+a.AAEGY { display:block; position:absolute; top:1608; left:2279; width:325px; height:18px; }
+a.AALBI { display:block; position:absolute; top:1633; left:2279; width:325px; height:18px; }
+a.AGAMB { display:block; position:absolute; top:1659; left:2279; width:325px; height:18px; }
+a.AFUNE { display:block; position:absolute; top:1685; left:2279; width:325px; height:18px; }
+a.LLONG { display:block; position:absolute; top:1710; left:2279; width:325px; height:18px; }
+a.MDEST { display:block; position:absolute; top:1736; left:2279; width:325px; height:18px; }
+a.DGRIM { display:block; position:absolute; top:1761; left:2279; width:325px; height:18px; }
+a.DMELA { display:block; position:absolute; top:1787; left:2279; width:325px; height:18px; }
+a.DPSEU { display:block; position:absolute; top:1812; left:2279; width:325px; height:18px; }
+a.CCAPI { display:block; position:absolute; top:1838; left:2279; width:325px; height:18px; }
+a.GMORS { display:block; position:absolute; top:1864; left:2279; width:325px; height:18px; }
+a.LCUP2 { display:block; position:absolute; top:1889; left:2279; width:325px; height:18px; }
+a.MDOME { display:block; position:absolute; top:1915; left:2279; width:325px; height:18px; }
+
+
+a.sixtynine  { display:block; position:absolute; top:216; left:1270; width:70px; height:30px; }
+
+
+
+#myImage a span  {
+  display:none;
+}
