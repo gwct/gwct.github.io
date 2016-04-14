@@ -14,10 +14,16 @@
 		<h3>Significantly changing families:</h3>
 
 		<p><b>Bold</b> text indicates lineage specific changes.</p>
-		<table>
-			<tr><th>Family ID</th><th>GO link</th></tr>
-			<tr><td><b>EOG8C2KRT</b></td><td></td></tr><tr><td><b>EOG8935ZZ</b></td><td></td></tr>
-		</table>
+
+		<form action="infiles/gfa.cgi" method="post">
+			<table>
+				<tr><th>Family ID</th></tr>
+				<tr><td><label for="EOG8C2KRT"><input type="checkbox" name="infams" id="EOG8C2KRT" value="EOG8C2KRT" /><b>EOG8C2KRT</b></label></td></tr><tr><td><label for="EOG8935ZZ"><input type="checkbox" name="infams" id="EOG8935ZZ" value="EOG8935ZZ" /><b>EOG8935ZZ</b></label></td></tr>
+			</table>
+			<button type="Submit">Submit</button><input type="reset" value="Clear all">
+		</form>
+		<p><a href="lists/25_fams.txt">Text list</a></p>
+		<p><a href="lists/25_go.txt">GO Terms for all families</a></p>
 	</body>
 	</html>
 	

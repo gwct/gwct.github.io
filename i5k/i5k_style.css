@@ -88,3 +88,19 @@ a:hover { border:1px solid #e60000; }
 
 
 #sixtynine  { position:absolute; top:216px; left:1270px; width:70px; height:30px; }	
+/*Branch leading to Araneae*/
+
+#fiftyseven { position:absolute; top:518px; left:1360px; width:70px; height:30px; }
+/*Branch leading to Hemiptera*/
+
+#twentyfive { position:absolute; top:735px; left:1350px; width:70px; height:30px; }
+/*Branch leading to Hymenoptere*/
+
+#thirty { position:absolute; top:1294px; left:1500px; width:70px; height:30px; }
+/*Branch leading to Coleoptera*/
+
+#thirtyfour { position:absolute; top:1479px; left:1825px; width:70px; height:30px; }
+/*Branch leading to Lepidoptera*/
+
+#fortyeight { position:absolute; top:1677px; left:1410px; width:70px; height:30px; }
+/*Branch leading to Diptera*/

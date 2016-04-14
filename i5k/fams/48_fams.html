@@ -14,10 +14,16 @@
 		<h3>Significantly changing families:</h3>
 
 		<p><b>Bold</b> text indicates lineage specific changes.</p>
-		<table>
-			<tr><th>Family ID</th><th>GO link</th></tr>
-			<tr><td>EOG8MGVNF</td><td></td></tr><tr><td><b>EOG8XSP3N</b></td><td></td></tr><tr><td><b>EOG8ZSCHP</b></td><td></td></tr><tr><td><b>EOG81K1TV</b></td><td></td></tr><tr><td><b>EOG84F8QM</b></td><td></td></tr>
-		</table>
+
+		<form action="infiles/gfa.cgi" method="post">
+			<table>
+				<tr><th>Family ID</th></tr>
+				<tr><td><label for="EOG8MGVNF"><input type="checkbox" name="infams" id="EOG8MGVNF" value="EOG8MGVNF" />EOG8MGVNF</label></td></tr><tr><td><label for="EOG8XSP3N"><input type="checkbox" name="infams" id="EOG8XSP3N" value="EOG8XSP3N" /><b>EOG8XSP3N</b></label></td></tr><tr><td><label for="EOG8ZSCHP"><input type="checkbox" name="infams" id="EOG8ZSCHP" value="EOG8ZSCHP" /><b>EOG8ZSCHP</b></label></td></tr><tr><td><label for="EOG81K1TV"><input type="checkbox" name="infams" id="EOG81K1TV" value="EOG81K1TV" /><b>EOG81K1TV</b></label></td></tr><tr><td><label for="EOG84F8QM"><input type="checkbox" name="infams" id="EOG84F8QM" value="EOG84F8QM" /><b>EOG84F8QM</b></label></td></tr>
+			</table>
+			<button type="Submit">Submit</button><input type="reset" value="Clear all">
+		</form>
+		<p><a href="lists/48_fams.txt">Text list</a></p>
+		<p><a href="lists/48_go.txt">GO Terms for all families</a></p>
 	</body>
 	</html>
 	
