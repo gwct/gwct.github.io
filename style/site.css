@@ -156,6 +156,19 @@ nav ul li {
 #link_grid {
 }
 
+#my_soft {
+	font-size: 14px;
+}
+
+#other_soft {
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+
+#link_break {
+	padding: 0 5px;
+}
+
 #logo {
 	border-radius:7px;
 }
