@@ -95,9 +95,6 @@ nav {
 	text-decoration: none;
 }
 
-.contact_link {
-}
-
 .table {
 	display: table;   /* Allow the centering to work */
 	margin: 0 auto;
@@ -117,6 +114,8 @@ nav ul li {
   padding-left:25px;
   padding-right:25px;
 }
+
+#email { color:#000000; }
 
 #top_margin {
 	height: 100px;
