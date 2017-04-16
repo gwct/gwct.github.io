@@ -1,0 +1,342 @@
+body {
+	color:#d7d2cc;
+}
+
+a {
+	color:#e66700;
+}
+
+/*------------------------------------------------------*/
+
+#top_grid {
+	/*min-height:120px;*/
+	height:13vh;
+	/*background-color:rgba(255, 204, 128, 0.25);*/
+	background: url(../img/bg03.jpg) no-repeat center fixed;
+}
+
+#main_grid {
+	min-height:97vh;
+	width:100%;
+
+
+
+	/*background:#394379 url(../img/bg_new.png) no-repeat center fixed;*/
+	/*background:#41688b url(../img/bg_new.png) no-repeat center fixed;*/
+	/*background:linear-gradient(#485563, #29323c);*/
+
+
+	/*background:#3f4c6b url(../img/bg_new.png) no-repeat center fixed;*/
+	/*background:#00223e url(../img/bg_new.png) no-repeat center fixed;*/
+
+
+	background:#3f4c73 url(../img/bg_new.png) no-repeat center fixed;
+	/*#5d4157 #182848*/
+}
+
+#main_divider {
+	height:3vh;
+}
+
+#bottom_grid {
+	height:0vh;
+	width:100%;
+	/*background-color:rgba(255, 204, 128, 0.25);*/
+	background: url(../img/bg02.jpg) no-repeat center fixed;
+}
+
+/*------------------------------------------------------*/
+
+#title_row {
+	position:fixed;
+}
+#name_grid {
+	margin:5px;
+}
+#subtitle_grid {
+	float:right;
+	margin:5px;
+}
+#logo_nav {
+	float:left;
+	padding:11px;
+}
+.title {
+	float: left;
+	padding:0;
+	padding-top:5px;
+	margin:0;
+	color: #fff
+}
+#title_link {
+	color:#fff;
+	text-decoration:none;
+}
+.sub_title {
+	padding-top:5px;
+	margin:0;
+	color: #fff;
+}
+.st1 {}
+.st2 { padding-left:60px; }
+.st3 { padding-left:140px; }
+
+/*------------------------------------------------------*/
+#nav_div {
+	position: -webkit-sticky;
+	position:sticky;
+	top:-1px;
+}
+#nav_col {
+	/*background-color:rgba(65, 104, 139,0.5);*/
+	background-color:rgba(41,65,87,1);
+	text-align:center;
+	border-bottom:1px solid #333;
+
+}
+#nav_bar {
+	padding-top:8px;
+}
+.nav_link {
+	display:block;
+	text-decoration:none;
+	white-space:nowrap;
+	color:#ccc;
+	padding:.5em 1em;
+}
+.nav_link:hover {
+	color:#fff;
+}
+#active {
+	color:#fff;
+}
+/*#menuLink1 {
+	color:#ccc;
+	border:1px solid purple;
+}*/
+.pure-menu-link {
+	color:#000;
+}
+
+/*------------------------------------------------------*/
+
+#research_cell {
+	padding:10px 0;
+}
+#hover_grid:hover {
+	background:#fff;
+}
+#img_container {
+	height:253px;
+}
+#research_grid {
+	background-color:#dc2424;
+	background-color:rgba(65, 104, 139,0.5);
+	border-radius:10px;
+	padding-bottom:35px;
+}
+#research_img {
+	display:block;
+	margin:auto;
+	position:relative;
+	top:50%;
+	transform: translate(0, -50%);
+	border-radius:3px;
+}
+#list_container {
+	padding:0 40px;
+}
+
+#footer {
+	background-color:rgba(41,65,87);
+	color:#fff;
+	font-size:x-small;
+	height:3vh;
+}
+
+#footer_text {
+	position:relative;
+	top:50%;
+}
+
+
+
+
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown_links {
+    display: none;
+    position: absolute;
+    background-color: rgb(182, 173, 184);
+ 	padding:5px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left:-65px;
+}
+
+/* Links inside the dropdown */
+.dropdown_links a {
+    color: black;
+    text-decoration: none;
+    display:block;
+    float:left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown_links a:hover {background-color: rgb(206, 200, 208); width:100%;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown_links {
+    display: block;
+}
+
+#email { color:#000000; }
+#email_logo {
+	vertical-align:middle;
+	padding-right:10px;
+}
+
+
+
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+.logo_links {
+	display: inline-block;
+	margin: 0;
+	list-style: none;
+	line-height: 1em;
+	height:70px;
+}
+#logolink {
+	color: #ccc;
+	transition: background-color .2s;
+	font-size: 1rem;
+	display: inline-block;
+	padding: 5px 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#logolink:hover {
+	background-color: rgba(182, 173, 184, 0.1);
+}
+#midlogo {
+	padding:0 100px;
+}
+.logo_links li {
+  float: left;
+}
+
+.logo_links a:hover {
+  background-color: rgba(182, 173, 184, 0.1);
+  border-radius: 7px;
+}
+
+.logo_links a span {
+	display:none;
+}
+
+.logo_links a:hover span {
+	display:block;
+	color: #ffffff;
+}
+#navlink {
+	color: #ccc;
+	transition: background-color .2s;
+	font-size: 1rem;
+	display: inline-block;
+	padding: 5px 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#navlink:hover {
+	background-color: rgba(182, 173, 184, 0.1);
+}
+#navlogo {
+	vertical-align:middle;
+	padding: 5px 15px;
+}
+
+
+
+.pub_title {
+	font-size:16px;
+	color:#fff;
+}
+.pub_year {
+	font-family: Arial, sans-serif;
+	background: #fff;
+	color: rgb(228, 108, 10);
+	padding: 5px;
+	border-radius:5px;
+	font-size:0.8em;
+}
+
+#news_col {
+	padding:20px;
+}
+
+
+#bio_col {
+	padding:20px;
+	padding-left:100px;
+}
+
+#contact_row {
+
+}
+
+.update_drop {
+    display: none;
+    position: absolute;
+    background-color: rgb(182, 173, 184);
+ 	padding:10px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left:-65px;
+	width:300px;
+	height:550px;
+	color:#000;
+	font-size:small;
+	word-wrap: break-word;
+	white-space:normal;
+	z-index:1000;
+	text-align:left;
+}
+
+.dropdown:hover .update_drop {
+    display: block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown_links {
+    display: none;
+    position: absolute;
+    background-color: rgb(182, 173, 184);
+ 	padding:5px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left:-65px;
+}
+
+/* Links inside the dropdown */
+.update_drop a {
+    color: black;
+
+}
+
+/* Change color of dropdown links on hover */
+.update_drop a:hover {background-color: rgb(206, 200, 208);}
+
+#archive {
+	padding:10px;
+	font-size:large;
+	border-radius:5px;
+	text-decoration:none;
+}

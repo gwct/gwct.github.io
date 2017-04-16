@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -k o
+#PBS -l nodes=1:ppn=6,walltime=48:00:00,vmem=32GB
+#PBS -M grthomas@indiana.edu
+#PBS -m abe
+#PBS -N grampa_yeast_5
+#PBS -j oe
+
+module load python/2.7.9
+module load collectl
+SAMPLEINTERVAL=10
+COLLECTLDIRECTORY=/N/dc2/scratch/grthomas/yeast-5/
+mkdir $COLLECTLDIRECTORY
+collectl -F1 -i$SAMPLEINTERVAL:$SAMPLEINTERVAL -sZl --procfilt u$UID -f $COLLECTLDIRECTORY &
+time -p python2.7 /N/u/grthomas/Mason/grampa-mp/grampa-mp.py -s /N/u/grthomas/Mason/grampa_data/yeast/yeast_spec.tre -g /N/u/grthomas/Mason/grampa_data/yeast/yeast_trees_final.txt -h1 '20' -h2 '5 7 8 9 20 21 22 23 24 ZYGRO TORDC HANAN' -o /N/u/grthomas/Mason/grampa-mp/yeast_5 -c 10 -v 0 -p 5
+collectl_stop.sh

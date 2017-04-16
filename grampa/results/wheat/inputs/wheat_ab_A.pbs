@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -k o
+#PBS -l nodes=1:ppn=1,walltime=48:00:00,vmem=10GB
+#PBS -M grthomas@indiana.edu
+#PBS -m abe
+#PBS -N wheat_ab_A_grampa
+#PBS -j oe
+
+time -p /N/u/grthomas/Mason/bin/grampa/grampa.py -s /N/u/grthomas/Mason/grampa_data/wheat/wheat_A.tre -g /N/u/grthomas/Mason/grampa_data/wheat/wheat_AB_trees.txt -o /N/u/grthomas/Mason/grampa_data/wheat/wheat_ab_A_out.txt -c 10
+

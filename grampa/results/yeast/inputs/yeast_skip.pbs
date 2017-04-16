@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -k o
+#PBS -l nodes=1:ppn=1,walltime=24:00:00,vmem=10GB
+#PBS -M grthomas@indiana.edu
+#PBS -m abe
+#PBS -N yeast_skip
+#PBS -j oe
+
+time -p /N/u/grthomas/Mason/bin/grampa/grampa.py -s /N/u/grthomas/Mason/bin/grampa/data/yeast/yeast_spec.tre -g /N/u/grthomas/Mason/bin/grampa/data/yeast/yeast_trees_final.txt -h1 20 -h2 'ZYGRO TORDC 9 8 22 5 7 21 20 23 HANAN' -o yeast_new.txt
