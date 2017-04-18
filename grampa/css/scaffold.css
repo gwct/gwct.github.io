@@ -75,7 +75,7 @@ h1 {
 	height:20px;
 }
 
-#main_col {
+#main_content {
 	padding: 60px;
 	margin-bottom: 30px;
 	font-size: 18px;
@@ -127,19 +127,27 @@ h1 {
 }
 
 #task_col {
-	padding-left:60px;
+	background-color: rgb(238, 238, 238, 0.95);
+	-webkit-border-radius: 6px;
+	 -moz-border-radius: 6px;
+	      border-radius: 6px;
+}
+
+#task_row_inner {
 	padding-right:60px;
-	padding-bottom:30px;
-	margin-bottom: 30px;
 	font-size: 18px;
 	font-weight: 200;
 	line-height: 30px;
 	color: inherit;
-	background-color: rgb(238, 238, 238, 0.95);
-	-webkit-border-radius: 6px;
-	 -moz-border-radius: 6px;
-	      border-radius: 6px;	
+	padding-left:60px;
 }
+
+#btn_row_inner {
+	padding-left:60px;
+	padding-right:60px;
+	padding-bottom:30px;
+}
+
 
 .readme_divider {
 	height:1px;
@@ -189,7 +197,8 @@ pre {
 	line-height:;
 }
 
-
+#margin {
+}
 
 
 
