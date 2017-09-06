@@ -1,0 +1,267 @@
+body {
+	margin: 0;
+	padding: 0;
+	height:100%;
+	line-height: 1.5em;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	background: rgba(36, 32, 37, 0.95) url(../img/bg.png) no-repeat center fixed;
+}
+
+a { color:#92afd3; }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown_links {
+    display: none;
+    position: absolute;
+    background-color: rgb(182, 173, 184);
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown_links a {
+    color: black;
+/*    padding: 0 10px;*/
+    text-decoration: none;
+    display: block;
+}
+
+/*.dropdown_links span {
+	padding-left: 10px;
+}*/
+
+/* Change color of dropdown links on hover */
+.dropdown_links a:hover {background-color: rgb(206, 200, 208)}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown_links {
+    display: block;
+}
+
+@media (min-width: 600px) {
+/* Add `.grid` for the table */
+	.grid {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	/* Add `.col` for the table cells, or columns */
+	.col {
+		display: table-cell;
+		text-align: center;
+	}
+
+	/* Set the widths */
+	.col-1 { width: 8.333333%; }
+	.col-2 { width: 16.666667%; }
+	.col-3 { width: 25%; }
+	.col-4 { width: 33.333333%; }
+	.col-5 { width: 41.666667%; }
+	.col-6 { width: 50%; }
+	.col-7 { width: 58.333333%; }
+	.col-8 { width: 66.666667%; }
+	.col-9 { width: 75%; }
+	.col-10 { width: 83.333333%; }
+	.col-11 { width: 91.666667%; }
+	.col-12 { width: 100%; }
+}
+
+nav {
+	color: #fff;
+	background-color: #242025;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	position: fixed;
+	top: 0;
+}
+
+#navlink {
+	color: #8c8c6d;
+	transition: background-color .2s;
+	font-size: 1rem;
+	display: inline-block;
+	padding: 0 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+nav ul a:hover {
+  background-color: rgba(182, 173, 184, 0.1);
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  float: left;
+  padding-left:25px;
+  padding-right:25px;
+}
+
+#email { color:#000000; }
+
+#top_margin {
+	height: 100px;
+}
+
+#main_content {
+/*	border: solid 2px #9d91a1;*/
+	background: rgba(106, 94, 110, 0.8);
+	padding: 20px 20px 0 20px;
+	border-radius:5px;
+}
+
+.pub_title {
+	font-size:16px;
+	color:#fff;
+}
+
+.pub_year {
+	font-family: Arial, sans-serif;
+	background: #fff;
+	color: rgb(228, 108, 10);
+	padding: 5px;
+	border-radius:5px;
+}
+
+#inner_left {
+	text-align:justify;
+	line-height: 200%;
+	color:#cccccc;
+	padding-left:20px;
+}
+
+#inner_right {
+	vertical-align: middle;
+}
+
+#presents{
+	font-size: 16px;
+}
+
+#link_grid {
+}
+
+#my_soft {
+	font-size: 14px;
+}
+
+#other_soft {
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+
+#link_break {
+	padding: 0 5px;
+}
+
+#logo {
+	border-radius:7px;
+}
+
+.logo_links {
+	display: inline-block;
+	margin: 0;
+  	list-style: none;
+  	line-height: 50px;
+}
+
+.logo_links li {
+  float: left;
+}
+
+.logo_links a:hover {
+  background-color: rgba(182, 173, 184, 0.1);
+  border-radius: 7px;
+}
+
+.logo_links a span {
+	display:none;
+}
+
+.logo_links a:hover span {
+	display:block;
+	color: #ffffff;
+}
+
+#navlogo {
+	vertical-align:middle;
+	padding: 0 25px;
+}
+
+#news_margin {
+	height: 50px;
+}
+
+#news_content {
+/*	border: solid 2px #9d91a1;*/
+	border-radius:5px;
+	background: rgba(106, 94, 110, 0.8);
+	padding: 20px 20px 0 20px;
+	text-align:left;
+	font-size:14px;
+	color:#cccccc;
+}
+
+#footer_grid {
+	position: fixed;
+	bottom: 0;
+}
+
+#footer {
+	height: 25px;
+	line-height: 25px;
+    width: 100%;
+	color: #8c8c6d;
+	background-color: #242025;
+	text-align:center;
+	font-size:x-small;
+	font-family: Arial, sans-serif;
+}
+
+/*@media (min-height: 1080px){
+	#footer_grid {
+		position: fixed;
+		bottom: 0;
+	}
+}*/
+
+/*footer.page-footer {
+	position: absolute;
+	bottom: 0;
+    height: 50px;
+    width: 100%;
+	background-color: #f0f0f4;
+	border: 1px solid #fff;
+}
+
+footer.page-footer .footer-copyright {
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  color: #8c8c6d;
+  background-color: #242025;
+  text-align:center;
+  font-size:x-small;
+}*/
+
+#mcss {
+	color: #8c8c6d;
+}
