@@ -173,8 +173,8 @@ a {
 }
 
 @media (max-width: 1025px) {
-	#index_main_text    { margin-left:1vh; margin-right:1vh; padding:20px 50px 50px 50px;}
-	#main_text    { margin-left:1vh; margin-right:1vh; }
+	#index_main_text    { margin-left:1vh; margin-right:1vh; padding:20px 50px 50px 50px; font-size:xx-large;}
+	#main_text    { margin-left:1vh; margin-right:1vh; font-size:xx-large; }
 }
 
 /*------------------------------------------------------*/
@@ -437,7 +437,7 @@ a {
 	width:100%;
 	padding-top:5px;
 	padding-bottom:5px;
-	font-size: x-large;
+	font-size: xx-large;
 }
 
 /* Change color of dropdown links on hover */
@@ -451,3 +451,13 @@ a {
 }
 
 #mobile_nav_link {}
+
+#mobile_nav_link_dropdown {
+	color: #fff;
+	transition: background-color .2s;
+	font-size:xx-large;
+	display: inline-block;
+	padding: 5px 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
