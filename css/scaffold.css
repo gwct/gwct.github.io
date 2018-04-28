@@ -41,9 +41,9 @@ a {
 	position: -webkit-sticky;
 	position:sticky;
 	top:-1px;
-	height:5vh;
+	min-height:5vh;
 }
-#name {	
+/* #name {	
 	color:#595959;
 	background-color:#f2f2f2;
 	text-align: center;
@@ -54,19 +54,15 @@ a {
        -moz-box-shadow: 12px 8px 6px -6px #4d4d4d;
             box-shadow: 12px 8px 6px -6px #4d4d4d;
     font-family: 'metropolismedium';
-}
+} */
 #logo_nav {
-	/* padding-top:2px; */
-	padding-left:5px;
 	float:left;
 	max-height:5vh;
-	width: auto;
-	height: auto;
-	
+	vertical-align: middle;
+	background-color:#f2f2f2;
 }
 #nav_col {
 	background-color:#828282;
-	padding-top:4px;
 	text-align: center;
 	vertical-align: middle;
     -webkit-box-shadow: 0 8px 6px -6px #4d4d4d;
@@ -74,9 +70,20 @@ a {
             box-shadow: 0 8px 6px -6px #4d4d4d;
 }
 #nav_bar {}
+
+#mobile_nav {
+	display: none;
+}
+
 #nav_list {
 	float:left;	
 }
+
+@media (max-width: 1025px) {
+	#nav_list    { display: none; }
+	#mobile_nav { display: inline-block; }
+}
+
 .nav_link {
 	display:block;
 	text-decoration:none;
@@ -91,6 +98,19 @@ a {
 #active {
 	color:#ff8f33;
 }
+
+.nav_link_drop {
+	display:block;
+	text-decoration:none;
+	white-space:nowrap;
+	color:#fff;
+	font-size:large;
+}
+.nav_link_drop:hover {
+	color:#ff8f33;
+}
+#active_drop {}
+
 .pure-menu-link {
 	color:#000;
 }
@@ -104,6 +124,7 @@ a {
 #main_grid {
 	/* min-height:75vh; */
 	/* padding-bottom:10px; */
+	
 }
 
 #main_content::before {
@@ -151,6 +172,11 @@ a {
 	margin-right:20vh;
 }
 
+@media (max-width: 960px) {
+	#index_main_text    { margin-left:1vh; margin-right:1vh; padding:20px 50px 50px 50px;}
+	#main_text    { margin-left:1vh; margin-right:1vh; }
+}
+
 /*------------------------------------------------------*/
 /* Research grid styles */
 #research_grid {
@@ -160,6 +186,9 @@ a {
 	padding-bottom:35px;
 	margin-left:20vh;
 	margin-right:20vh;
+}
+@media (max-width: 960px) {
+	#research_grid    { display:none; }
 }
 #research_cell {
 	padding:10px 0;
@@ -242,7 +271,13 @@ a {
 	vertical-align:middle;
 	padding: 5px 15px;
 }
-
+@media (max-width: 960px) {
+	.logo_links { width: 100%; padding-top: 5px;}
+	#logolink   { padding:0; }
+	#midlogo   { padding:0 100px; }
+	#navlogo  { padding:0; }
+	.logo_links a:hover span { display: none; }
+}
 /*------------------------------------------------------*/
 /* Footer grid styles */
 #footer {
@@ -255,7 +290,10 @@ a {
 	position:relative;
 	top:50%;
 }
-
+@media (max-width: 960px) {
+	#footer { height:6vh; }
+	#footer_text { top: 25%; }
+}
 /*------------------------------------------------------*/
 /* Grid spacing styles */
 #margin {}
@@ -374,3 +412,41 @@ a {
 	vertical-align:middle;
 	padding-right:10px;
 }
+
+
+/*------------------------------------------------------*/
+/* Custom dropdown styles for the nav dropdown menu on small screens */
+.mobile_dropdown {}
+
+/* Dropdown Content (Hidden by Default) */
+.mobile_dropdown_links {
+    display: none;
+    position: absolute;
+    background-color: rgb(182, 173, 184);
+ 	padding:5px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left:-65px;
+}
+
+/* Links inside the dropdown */
+.mobile_dropdown_links a {
+    color: black;
+    text-decoration: none;
+    display:block;
+	float:left;
+	width:100%;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+/* Change color of dropdown links on hover */
+.mobile_dropdown_links a:hover {
+	background-color: rgb(206, 200, 208);
+}
+
+/* Show the dropdown menu on hover */
+.mobile_dropdown:hover .mobile_dropdown_links {
+    display: block;
+}
+
+#mobile_nav_link {}
