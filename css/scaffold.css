@@ -172,7 +172,7 @@ a {
 	margin-right:20vh;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1025px) {
 	#index_main_text    { margin-left:1vh; margin-right:1vh; padding:20px 50px 50px 50px;}
 	#main_text    { margin-left:1vh; margin-right:1vh; }
 }
@@ -187,7 +187,7 @@ a {
 	margin-left:20vh;
 	margin-right:20vh;
 }
-@media (max-width: 960px) {
+@media (max-width: 1025px) {
 	#research_grid    { display:none; }
 }
 #research_cell {
@@ -271,8 +271,8 @@ a {
 	vertical-align:middle;
 	padding: 5px 15px;
 }
-@media (max-width: 960px) {
-	.logo_links { width: 100%; padding-top: 5px;}
+@media (max-width: 1025px) {
+	.logo_links { width: 100%; padding-top: 10px;}
 	#logolink   { padding:0; }
 	#midlogo   { padding:0 100px; }
 	#navlogo  { padding:0; }
@@ -290,7 +290,7 @@ a {
 	position:relative;
 	top:50%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1025px) {
 	#footer { height:6vh; }
 	#footer_text { top: 25%; }
 }
@@ -326,7 +326,7 @@ a {
     color: black;
     text-decoration: none;
     display:block;
-    float:left;
+	float:left;
 }
 
 /* Change color of dropdown links on hover */
@@ -437,6 +437,7 @@ a {
 	width:100%;
 	padding-top:5px;
 	padding-bottom:5px;
+	font-size: x-large;
 }
 
 /* Change color of dropdown links on hover */

@@ -21,8 +21,7 @@ h1 {
 	background-color:#000;
 }
 
-#nav_col {
-}
+#nav_col {}
 
 #logo_nav {
 	float:left;
@@ -70,6 +69,17 @@ h1 {
 #nav_list {
 	padding-left:20px;
 }
+#mobile_nav {
+	display: none;
+}
+
+@media (max-width: 960px) {
+	#nav_row {position:sticky; position: -webkit-sticky; top:0; padding:5px; }
+	#nav_list { display: none; }
+	#nav_col { width: 100% }
+	#mobile_nav { display: inline-block; float:right; padding-right:100px; }
+}
+
 
 #divider_row {
 	height:20px;
@@ -88,6 +98,8 @@ h1 {
 	   -moz-border-radius: 6px;
 			border-radius: 6px;
 }
+@media (max-width: 960px) {
+	#main_content { margin:0; padding: 30px; }
 
 #paper {
 	padding:25px;
@@ -124,6 +136,10 @@ h1 {
 
 #buffer {
 	padding-left:10px;
+}
+
+@media (max-width: 960px) {
+	#task_row { display: none; }
 }
 
 #task_col {
@@ -176,7 +192,10 @@ h1 {
 	position:relative;
 	top:50%;
 }
-
+@media (max-width: 960px) {
+	#footer { height:6vh; }
+	#footer_text { top: 25%; }
+}
 
 pre {
 	overflow:auto;
@@ -200,8 +219,11 @@ pre {
 #margin {
 }
 
-
-
+@media (max-width: 960px) {
+	#margin { display: none; }
+	#divider_row { display: none; }
+	#main_col { width: 100%; }
+}
 
 
 
@@ -284,3 +306,71 @@ pre {
   }
 
 }
+
+@media (max-width: 960px) {
+	#buttons { display: none; }
+}
+
+/*------------------------------------------------------*/
+/* Custom dropdown styles for the nav dropdown menu on small screens */
+#nav_link_dropdown {
+	color: #fff;
+	transition: background-color .2s;
+	font-size:large;
+	display: inline-block;
+	padding: 5px 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#nav_link_dropdown:hover {
+	color: #ff8f33;
+	background-color: rgba(182, 173, 184, 0.1);
+}
+#nav_link_dropdown_active {
+	color:#ff8f33;
+	transition: background-color .2s;
+	font-size:large;
+	display: inline-block;
+	padding: 5px 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#nav_link_dropdown_active:hover {
+	color:#ff8f33;
+	background-color: rgba(182, 173, 184, 0.1);
+}
+
+.mobile_dropdown {}
+
+/* Dropdown Content (Hidden by Default) */
+.mobile_dropdown_links {
+    display: none;
+    position: absolute;
+    background-color: rgb(182, 173, 184);
+ 	padding:5px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left:-65px;
+}
+
+/* Links inside the dropdown */
+.mobile_dropdown_links a {
+    color: black;
+    text-decoration: none;
+    display:block;
+	float:left;
+	width:100%;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+/* Change color of dropdown links on hover */
+.mobile_dropdown_links a:hover {
+	background-color: rgb(206, 200, 208);
+}
+
+/* Show the dropdown menu on hover */
+.mobile_dropdown:hover .mobile_dropdown_links {
+    display: block;
+}
+
+#mobile_nav_link {}
