@@ -98,8 +98,8 @@ h1 {
 	   -moz-border-radius: 6px;
 			border-radius: 6px;
 }
-@media (max-width: 960px) {
-	#main_content { margin:0; padding: 30px; }
+/* @media (max-width: 960px) {
+	#main_content { margin:0; padding: 30px; } */
 
 #paper {
 	padding:25px;
@@ -216,8 +216,7 @@ pre {
 	line-height:;
 }
 
-#margin {
-}
+#margin {}
 
 @media (max-width: 960px) {
 	#margin { display: none; }
@@ -308,7 +307,7 @@ pre {
 }
 
 @media (max-width: 960px) {
-	#buttons { display: none; }
+	#buttons_container { display: none; }
 }
 
 /*------------------------------------------------------*/
