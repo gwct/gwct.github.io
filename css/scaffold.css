@@ -14,7 +14,7 @@
 }
 body {
 	color:#fff;
-	background: url(../img/bg15.JPG);
+	background: url(../img/bg12.JPG);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
@@ -30,12 +30,12 @@ a {
 
 /*------------------------------------------------------*/
 /* Banner grid styles */
-#top_grid {
+/* #top_grid {
 	height:7.5vh;
 	position: -webkit-sticky;
 	position:sticky;
 	top:-1px;
-}
+} */
 #nav_div {
 	z-index:10;
 	position: -webkit-sticky;
@@ -56,12 +56,13 @@ a {
     font-family: 'metropolismedium';
 }
 #logo_nav {
-	padding-top:2px;
+	/* padding-top:2px; */
 	padding-left:5px;
 	float:left;
 	max-height:5vh;
 	width: auto;
 	height: auto;
+	
 }
 #nav_col {
 	background-color:#828282;
@@ -73,7 +74,9 @@ a {
             box-shadow: 0 8px 6px -6px #4d4d4d;
 }
 #nav_bar {}
-#nav_list {}
+#nav_list {
+	float:left;	
+}
 .nav_link {
 	display:block;
 	text-decoration:none;
@@ -95,17 +98,20 @@ a {
 
 /*------------------------------------------------------*/
 /* Main grid styles */
+
+/* main_div uses the frosted glass effect */
 #main_div {}
 #main_grid {
-	min-height:75vh;
-	padding-bottom:10px;
+	/* min-height:75vh; */
+	/* padding-bottom:10px; */
 }
+
 #main_content::before {
 	z-index: -100;
 	position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../img/bg15a.png);
+    background-image: url(../img/bg12a.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
@@ -113,25 +119,36 @@ a {
 	background-origin: padding-box;
 	-moz-background-size: cover;
 	background-size: cover;
-    content: ' ';
+	content: ' ';
 }
 #main_content {
 	position: relative;
-    background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.6);
+	min-height:92vh;
 }
-/* main_content uses the frosted glass effect */
+
 #main_header {
 	background-color: rgba(200,200,200,0.5);
 	font-size:x-large;
 	padding-left:20px;
 	padding-top:10px;
 	padding-bottom:10px;
+	/* position: -webkit-sticky;
+	position:sticky;
+	top: 5vh; */
 }
 #page_header{
 	font-family: 'metropolismedium';
 }
-#main_text {
+#index_main_text {
 	padding:20px 50px 20px 50px;
+	margin-left:20vh;
+	margin-right:20vh;
+}
+#main_text {
+	padding:0px 50px 100px 50px;
+	margin-left:20vh;
+	margin-right:20vh;
 }
 
 /*------------------------------------------------------*/
@@ -141,6 +158,8 @@ a {
 	background-color:rgba(65, 104, 139,0.5);*/
 	border-radius:10px;
 	padding-bottom:35px;
+	margin-left:20vh;
+	margin-right:20vh;
 }
 #research_cell {
 	padding:10px 0;
@@ -173,7 +192,12 @@ a {
 
 /*------------------------------------------------------*/
 /* Contact grid styles */
-#contact_grid {}
+#contact_grid {
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	height:8vh;
+}
 .table {
 	display: table;   /* Allow the centering to work */
 	margin: 0 auto;
@@ -236,7 +260,7 @@ a {
 /* Grid spacing styles */
 #margin {}
 #sep_div {
-	height:5vh;
+	height:10vh;
 }
 
 /*------------------------------------------------------*/
