@@ -218,7 +218,10 @@ a {
 	font-size:large;
 	color:#FFAA63;
 }
-
+@media (max-width: 1025px) {
+	.pub_title { font-size: xx-large }
+	
+}
 /*------------------------------------------------------*/
 /* Contact grid styles */
 #contact_grid {
