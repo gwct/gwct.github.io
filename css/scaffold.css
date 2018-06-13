@@ -57,8 +57,7 @@ a {
 } */
 #logo_nav {
 	float:left;
-	max-height:5vh;
-	vertical-align: middle;
+	max-height:6vh;
 	background-color:#f2f2f2;
 }
 #nav_col {
@@ -67,7 +66,8 @@ a {
 	vertical-align: middle;
     -webkit-box-shadow: 0 8px 6px -6px #4d4d4d;
        -moz-box-shadow: 0 8px 6px -6px #4d4d4d;
-            box-shadow: 0 8px 6px -6px #4d4d4d;
+			box-shadow: 0 8px 6px -6px #4d4d4d;
+	max-height: 6vh;
 }
 #nav_bar {}
 
@@ -93,10 +93,10 @@ a {
 	font-size:large;
 }
 .nav_link:hover {
-	color:#ff8f33;
+	color:#b35000;
 }
 #active {
-	color:#ff8f33;
+	color:#b35000;
 }
 
 .nav_link_drop {
@@ -107,7 +107,7 @@ a {
 	font-size:large;
 }
 .nav_link_drop:hover {
-	color:#ff8f33;
+	color:#b35000;
 }
 #active_drop {}
 
@@ -460,7 +460,7 @@ a {
 	transition: background-color .2s;
 	font-size:xx-large;
 	display: inline-block;
-	padding: 5px 15px;
+	/* padding: 5px 15px; */
 	cursor: pointer;
 	text-decoration: none;
 }
