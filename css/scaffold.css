@@ -70,7 +70,6 @@ a {
 	max-height: 5vh;
 }
 #nav_bar {
-	height:100%
 }
 
 #mobile_nav {
@@ -79,7 +78,6 @@ a {
 
 #nav_list {
 	float:left;
-	padding-top:2px;
 }
 
 @media (max-width: 1025px) {
