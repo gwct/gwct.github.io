@@ -2,202 +2,177 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
 	<link type="text/css" rel="stylesheet" href="css/pure.css"  media="screen,projection" />
-	<link type="text/css" rel="stylesheet" href="css/scaffold.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/index.css"  media="screen,projection" />
 	<title>Gregg Thomas</title>
 </head>
 
 <body>
+	<div class="pure-g" id="desktop_nav">
+		<div class="pure-u-5-24" id="margin"></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="#" id="active">Bio & Research</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="pubs.html">Publications</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="Gregg-Thomas-CV.pdf">CV</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="links.html">Software & Links</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="http://www.indiana.edu/~hahnlab/" target="_blank">Hahn Lab</a></div>
+		<!-- <div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="archive.html">Updates</a></div> -->
+		<div class="pure-u-2-24 dropdown" id="nav_link_cell">
+			<a href="archive.html" class="nav_link">Updates</a>
+			<div class="update_drop dropdown_container">
+				<p><b>August 9, 2018</b></p>
+				<p>On September 5th, I'll be hosting the <a href="http://i5k.github.io/webinar" target="_blank">i5K webinar</a>
+				and discussing our work on the i5K pilot project to examine genome evolution across 76 species of Arthropods.</p>
+				<p>-------</p>
+				<p><b>June 13, 2018</b></p>
+				<p>I was recently featured in an article on IU's IT News & Events page!</p>
+				<p><a href="https://itnews.iu.edu/articles/2018/IU%20doctoral%20student%20explores%20the%20history%20of%20life%20on%20Earth%20.php" target="_blank">Read More</a></p>
+				<p>-------</p>
+				<center><a href="archive.html" id="archive">Archive</a></center>
+			</div>
+		</div>
+		<div class="pure-u-2-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link">Contact</a>
+			<div class="dropdown_container contact_drop">
+				<div id="email">
+					<img id="email_logo" src="img/contact-logos/email-logo.png">
+				</div>
+				grthomas@indiana.edu
+			</div>
+		</div>
+		<div class="pure-u-4-24" id="margin"></div>
+	</div>
 
-	<!-- <div id="top_grid"></div> -->
-	<div class="pure-g" id="nav_div">
-		<!-- <div class="pure-u-1-8" id="margin"></div> -->
-		<div class="pure-u-24-24" id="nav_col">
-			<a href="index.html"><img class="pure_img" id="logo_nav" src="img/logo5.png"></a>
-			<div class="pure-menu pure-menu-horizontal" id="nav_bar">
-				<ul class="pure-menu-list" id="nav_list">
-					<li class="pure-menu-item"><a href="#" class="nav_link" id="active">Home</a></li>
-					<li class="pure-menu-item"><a href="pubs.html" class="nav_link">Publications</a></li>
-					<li class="pure-menu-item"><a href="Gregg-Thomas-CV.pdf" class="nav_link" target="_blank">CV</a></li>
-					<li class="pure-menu-item"><a href="links.html" class="nav_link">Software & Links</a></li>
-					<li class="pure-menu-item"><a href="http://www.indiana.edu/~hahnlab/" target="_blank" class="nav_link">Hahn Lab</a></li>
-					<!-- <li class="pure-menu-item"><a href="grampa.html" target="_blank" class="nav_link">GRAMPA</a></li> -->
-					<li class="pure-menu-item">
-						<div class="dropdown">
-							<a href="archive.html" id="nav_link_dropdown">Updates</a>
-							<div class="update_drop">
-									<p><b>June 13, 2018</b></p>
-									<p>I was recently featured in an article on IU's IT News & Events page!</p>
-									<p><a href="https://itnews.iu.edu/articles/2018/IU%20doctoral%20student%20explores%20the%20history%20of%20life%20on%20Earth%20.php" target="_blank">Read More</a></p>
-									<p>-------</p>
-									<p><b>May 8, 2018</b> -- I will be giving a talk at <a href="http://conferences.genetics-gsa.org/peqg/2018/index" target="_blank">PEQG</a> this year about my recent work on mutation rates in primates! My talk is Tuesday, May 15 at 12:30PM.</p>
-									<center><a href="archive.html" id="archive">Archive</a></center>
-							</div>
-						</div>
-					</li>
-					<li class="pure-menu-item">
-						<div class="dropdown">
-							<a href="#" id="nav_link_dropdown">Contact</a>
-							<div class="dropdown_links">
-								<img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span>
-							</div>
-						</div>
-					</li>
+	<div class="pure-g" id="mobile_nav">
+		<div class="pure-u-24-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link">&#9776; Navigation</a>
+			<div class="dropdown_container">
+				<ul class="pure-menu-list">
+					<li><a href="#" id="mobile_nav_link">Home</a></li>
+					<li><a href="pubs.html" id="mobile_nav_link">Publications</a></li>
+					<li><a href="Gregg-Thomas-CV.pdf" id="mobile_nav_link" target="_blank">CV</a></li>
+					<li><a href="links.html" id="mobile_nav_link">Software & Links</a></li>
+					<li><a href="http://www.indiana.edu/~hahnlab/" target="_blank" id="mobile_nav_link">Hahn Lab</a></li>
+					<li><a href="archive.html" id="mobile_nav_link">Archive</a></li>
+					<!-- <li><img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span></li> -->
 				</ul>
-
-				<div class="mobile_dropdown" id="mobile_nav">
-					<a href="#" id="mobile_nav_link_dropdown">Navigation</a>
-					<div class="mobile_dropdown_links">
-						<ul class="pure-menu-list">
-							<li><a href="#" class="mobile_nav_link" id="active_drop">Home</a></li>
-							<li><a href="pubs.html" class="mobile_nav_link">Publications</a></li>
-							<li><a href="Gregg-Thomas-CV.pdf" class="mobile_nav_link" target="_blank">CV</a></li>
-							<li><a href="links.html" class="mobile_nav_link">Software & Links</a></li>
-							<li><a href="http://www.indiana.edu/~hahnlab/" target="_blank" class="mobile_nav_link">Hahn Lab</a></li>
-							<li><a href="archive.html" class="mobile_nav_link">Archive</a></li>
-							<!-- <li><img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span></li> -->
-					</div>
-				</div>
-
 			</div>
-		</div>
-		<!-- <div class="pure-u-1-8" id="margin"></div> -->
-	</div>
-
-	<!-- <div id="sep_div"></div> -->
-	
-	
-	<div id="main_div">
-		<div class="pure-g" id="main_grid">
-			<!-- <div class="pure-u-1-8" id="margin"></div> -->
-			<div class="pure-u-24-24" id="main_content">
-				<!-- <div class="pure-g" id="main_header">
-					<div class="pure-u-24-24" id="page_header">Introduction</div>
-				</div> -->
-				<div id="index_main_text">
-					<h3 align="justify">Hi! I am a fourth year PhD student in the School of Informatics, Computing, and Engineering and the Department of Biology at Indiana University under 
-						the advisement of Matt Hahn.</h3>
-					<p align="justify">I'm excited to work on inferring phylogenies with the vast amount of genomic data that's now available, and working through some of 
-						the problems that amount of data has presented. I have worked on modeling mutation rate 
-						variation in mammals, detecting convergent evolution on genomic data, and analyzing gene families in a number of species. I contrbuted to latest version of CAFE to account for error 
-						in gene family analysis, and I developed the program <a href="grampa.html" target="_blank" id="doi_link">GRAMPA</a> to
-						study polyploidy in the context of gene tree topologies. I also have an interest in the biology of extremophiles.</p>		
-				</div>
-
-				<div class="pure-g" id="research_grid">
-					<div class="pure-u-1-3" id="research_cell">
-						<center><h3>Mutation rate variation</h3></center>
-						<div id="research_img_container">
-							<img class="pure-img" id="research_img" src="img/fig3.png">
-						</div>
-					</div>
-					<div class="pure-u-1-3" id="research_cell">
-						<center><h3>Molecular convergence</h3></center>
-						<div id="research_img_container">
-							<img class="pure-img" id="research_img" src="img/conv.png">
-						</div>
-					</div>
-					<div class="pure-u-1-3" id="research_cell">
-						<center><h3>Gene family evolution</h3></center>
-						<div id="research_img_container">
-							<img class="pure-img" id="research_img" src="img/gfam.png">
-						</div>
-					</div>
-				</div>
-
-				<div class="pure-g" id="contact_grid">
-					<div class="pure-u-1">
-						<center>
-						<ul class="logo_links">
-							<li><a href="https://github.com/gwct" id="logolink" target="_blank"><img id="navlogo" src="img/github-logo.png"><span>Github</span></a></li> 
-							<li><div id="midlogo">
-								<a href="https://scholar.google.com/citations?user=4pydfEUAAAAJ&hl=en" id="logolink" target="_blank"><img id="navlogo" src="img/scholar-logo.png"><span>Scholar</span></a>
-							</div></li> 
-							<li><a href="https://twitter.com/greggwcthomas?lang=en" id="logolink" target="_blank"><img id="navlogo" src="img/twitter-logo.png"><span>Twitter</span></a></li>
-						</ul>
-						</center>
-					</div>
-				</div>
-			</div>
-			<!-- <div class="pure-u-1-8" id="margin"></div>	 -->
 		</div>
 	</div>
 
+	<div class="pure-g" id="top_grid">
+		<div class="pure-u-24-24" id="hero">
+			<img class="pure_img" id="name_img" src="img/logo/name3.png">
+		</div>
+	</div>
 
+	<div class="pure-g" id="main_div_bio">
+		<div class="pure-u-24-24" id="header">Bio</div>
+		<div class="pure-u-24-24" id="sep_div"></div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-5-24" id="bio_pic_container">
+			<div id="bio_pic"></div>
+		</div>
+		<div class="pure-u-15-24" id="bio_text">
+			<h3 align="justify">Hi! I am a fifth year PhD student in the School of Informatics, Computing, and Engineering and the Department of Biology at Indiana University under 
+				the advisement of Matt Hahn.</h3>
+			<p align="justify">I'm excited to work on inferring phylogenies with the vast amount of genomic data that's now available, and working through some of 
+				the problems that amount of data has presented. I'm interested in using phylogenetics to identify genomic changes that underlay interesting phenotypic
+				adaptations throughout the tree of life. To this end, I have worked on modeling mutation rate variation in mammals, detecting convergent evolution 
+				on genomic data, and analyzing gene families in a number of species. I contrbuted to latest version of CAFE to account for error in gene family analysis, 
+				and I developed the program <a href="grampa.html" target="_blank" id="doi_link">GRAMPA</a> to study polyploidy in the context of gene tree topologies.
+				I also have an interest in the biology of extremophiles.</p>
+			<p align="justify">Outside of the lab, I have a passion for 
+				<span id="hidden">do<img src="img/me/jenny.jpg"></span><span id="hidden">gs<img src="img/me/momo.jpg"></span><span id="hidden"><img src="img/me/iggy.jpg"></span>
+				<span id="hidden"> and <img src="img/me/pip.jpg"></span><span id="hidden">animals<img src="img/me/iggy+wells.jpg"></span> in general. I volunteer every weekend at the local animal shelter to try and help
+				out. I also enjoy being active and doing <span id="hidden"> puzzles <img src="img/me/puzzles.jpg"></span> with my partner!</p>
+			</p>
+		</div>
+		<div class="pure-u-2-24" id="margin"></div>
+
+		<div class="pure-u-24-24" id="contact_grid_bio">
+			<center>
+				<ul class="logo_links">
+					<li><a href="https://github.com/gwct" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/github-logo-black.png"><span>Github</span></a></li> 
+					<li><div id="midlogo">
+						<a href="https://scholar.google.com/citations?user=4pydfEUAAAAJ&hl=en" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/scholar-logo-black.png"><span>Scholar</span></a>
+					</div></li> 
+					<li><a href="https://twitter.com/greggwcthomas?lang=en" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/twitter-logo-black.png"><span>Twitter</span></a></li>
+			</ul>
+			</center>
+		</div>
+
+		<div class="pure-u-24-24" id="header">Research</div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-20-24" id="research_header"><h2>Mutation rate variation</h2></div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-15-24" id="research_text">
+			<p align="justify">Mutations play a key role in disease and in the long-term evolution. That means the rate at which mutations
+					arise can have big impacts on both an individual and a species. Mutation rates have been shown to vary between species and
+					even within species depending on the genomic context of the mutation and the age of the sample. I'm interested in what causes
+					this variation and what we can learn about rates of substitution between species by studying it.</p>		
+		</div>
+		<div class="pure-u-5-24" id="research_pic_container">
+			<div id="research_pic_1"></div>
+		</div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-24-24" id="horz_line"></div>
+
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-20-24" id="research_header"><h2>Molecular convergence</h2></div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-5-24" id="research_pic_container">
+			<div id="research_pic_2"></div>
+		</div>
+		<div class="pure-u-15-24" id="research_text">
+			<p align="justify">Convergent evolution occurs when distantly related lineages evolve to share the same trait. A general assumption is that
+					for a trait to converge in multiple lineages, it must be adaptive. That means convergent evolution provides a great opportunity
+					to study adaptation. Until recently, convergent	evolution was only observed at the phenotypic level (i.e. the defensive quills
+					on the porcupine, echidna, and hedgehog). But with whole genome sequences available for many species we can now study convergent evolution
+					at the molecular level and ask whether it can be linked to convergence at the phenotypic level. However, we've discovered that
+					convergent amino acid substitutions occur all the time by chance in nature. This makes it difficult to pick out which convergent
+					changes are actually special. I've done work in this area to develop methods to detect molecular convergence while avoiding many
+					pitfalls that come from high levels of background convergence.</p>		
+			</div>	
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-24-24" id="sep_div"></div>
+		<div class="pure-u-24-24" id="horz_line"></div>
+		
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-20-24" id="research_header"><h2>Gene family evolution</h2></div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-15-24" id="research_text">	
+			<p align="justify">Another type of mutation is deletion or duplication of long stretches of DNA. This can lead to gene duplication
+					or loss which can play a key role in the functional evolution between species. I have helped develop the latest version of 
+					<a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE</a> by devising a method to estimate annotation and assembly 
+					error for gene count data. I have also delved into the study of whole genome duplications by developing a method to properly
+					identify and place polyploidization events on phylogeny. This method has been implemented in the software 
+					<a href="grampa.html" target="_blank">GRAMPA</a>. Finally, I led the phylogenetic and gene family analysis for the 
+					<a href="http://i5k.github.io/" target="_blank">i5K</a> pilot project. This is the largest gene family analysis to date 
+					and yielded a wealth of information as a resource for Arthropod researchers.</p>		
+			</div>
+		<div class="pure-u-5-24" id="research_pic_container">
+			<div id="research_pic_3"></div>
+		</div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-24-24" id="sep_div"></div>
+	</div>
+
+	
+	
 	<div class="pure-g" id="footer">
 		<div class="pure-u-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io/index.html" target="_blank">Gregg Thomas</a> | Some of the CSS used to design this site is from the <a href="https://purecss.io/" target="_blank">Pure CSS</a> project.</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io/index.html" target="_blank">Gregg Thomas</a>, 2018 | Some of the CSS used to design this site is from the <a href="https://purecss.io/" target="_blank">Pure CSS</a> project.</center>
 			</div>
 		</div>
 	</div>
 
-
 </body>
 </html>
-
-<!-- 
-
-	<div id="main_grid">
-		
-		<div class="pure-g" id="main_content">
-			<div class="pure-u-1-8" id="margin"></div>
-			<div class="pure-u-18-24">
-				<h3>Hi! I am a fourth year PhD student in the School of Informatics and Computing and the Deparment of Biology at Indiana University under 
-					the advisement of Matt Hahn.</h3>
-				<p>I'm excited to work on inferring phylogenies with the vast amount of genomic data that's now available, and working through some of 
-					the problems that amount of data has presented. I have worked on detecting convergent evolution on genomic data, modeling mutation rate 
-					variation in mammals, and analyzing gene families in a number of species. I helped develop the latest version of CAFE to account for error 
-					in gene family analysis, and I developed the program <a href="grampa.html" target="_blank" id="doi_link">GRAMPA</a> to
-					study polyploidy in the context of gene families. I also have an interest in the biology of extremophiles.</p>
-			</div>
-			<div class="pure-u-1-8" id="margin"></div>
-		
-
-			<div class="pure-g" id="main_divider"></div>
-
-			<div class="pure-g" id="research_row">
-				<div class="pure-u-2-24" id="margin"></div>
-				<div class="pure-u-20-24">
-					<div class="pure-g" id="research_grid">
-						<div class="pure-u-1-3" id="research_cell">
-							<center><h3>Mutation rate variation</h3></center>
-							<div id="img_container">
-								<img class="pure-img" id="research_img" src="img/mut2.png">
-							</div>
-						</div>
-						<div class="pure-u-1-3" id="research_cell">
-							<center><h3>Gene family evolution</h3></center>
-							<div id="img_container">
-								<img class="pure-img" id="research_img" src="img/gfam.png">
-							</div>
-						</div>
-						<div class="pure-u-1-3" id="research_cell">
-							<center><h3>Molecular convergence</h3></center>
-							<div id="img_container">
-								<img class="pure-img" id="research_img" src="img/conv.png">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pure-u-2-24" id="margin"></div>
-			</div>
-			<div class="pure-g" id="main_divider"></div>
-			<div class="pure-g" id="contact_row">
-				<div class="pure-u-1">
-					<center>
-					<ul class="table logo_links">
-						<li><a href="https://github.com/gwct" id="logolink" target="_blank"><img id="navlogo" src="img/github-logo.png"><span>Github</span></a></li> 
-						<li><div id="midlogo">
-							<a href="https://scholar.google.com/citations?user=4pydfEUAAAAJ&hl=en" id="logolink" target="_blank"><img id="navlogo" src="img/scholar-logo.png"><span>Scholar</span></a>
-						</div></li> 
-						<li><a href="https://twitter.com/greggwcthomas?lang=en" id="logolink" target="_blank"><img id="navlogo" src="img/twitter-logo.png"><span>Twitter</span></a></li>
-					</ul>
-					</center>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 

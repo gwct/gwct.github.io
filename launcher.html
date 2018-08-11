@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel='shortcut icon' href='launcher/img/favicon.ico' type='image/x-icon'/ >
+	<link type="text/css" rel="stylesheet" href="launcher/css/pure.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="launcher/css/launcher.css"  media="screen,projection" />
+	<script language="javascript" type="text/javascript"></script>
+	<script>
+		var currentdate = new Date(); 
+		var datetime = currentdate.getMonth()+1 + "."
+						+ currentdate.getDate()  + "." 
+						+ currentdate.getFullYear() + " @ "  
+						+ currentdate.getHours() + ":"  
+						+ currentdate.getMinutes() + ":" 
+						+ currentdate.getSeconds();
+		document.write('<title>Launcher - ' + datetime + '</title>')
+	</script>
+</head>
+
+<body>
+	<div class="pure-g" id="hero_div">
+		<div class="pure-u-24-24 sep_div"></div>
+		<div class="pure-u-24-24" id="hero_text"><center>pay no heed to the passage of time</center></div>
+		<div class="pure-u-24-24 sep_div"></div>
+		<div class="pure-u-24-24 sep_div"></div>
+		<div class="pure-u-24-24 sep_div"></div>	
+		<div class="pure-u-24-24 sep_div" id="sep_hero"></div>
+		<div class="pure-u-24-24 sep_div" id="sep_hero"></div>
+		<div class="pure-u-24-24 sep_div" id="sep_hero"></div>	
+		<div class="pure-u-24-24 clock_div">
+			<center>
+					<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:240px;height:80px;"src="https://www.clocklink.com/html5embed.php?clock=043&timezone=EST&color=white&size=240&Title=&Message=&Target=&From=2018,1,1,0,0,0&Color=white"></iframe>
+			</center>
+			<!-- https://www.clocklink.com/gallery/view/html5-043 -->
+		</div>
+	</div>
+
+	<div class="pure-g" id="bg_div">
+		<div class="pure-g" id="search_grid">
+			<div class="pure-u-3-24 margin"></div>
+			<div class="pure-u-6-24 search_cell" id="google_cell">
+				<p><form method="get" action="http://www.google.com/search">
+					<input type="text" class="search_box" name="q" maxlength="255" value="" autofocus/>
+					<script>document.getElementById('gbox1').focus()</script></br>
+					<input class="search_btn" type="submit" value="Google" />
+				</form></p>
+			</div>
+
+			<div class="pure-u-6-24 search_cell" id="scholar_cell">
+				<p><input type="text" class="search_box" id="sbox1" 
+				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()"/></br>
+				<input class="search_btn" type="submit" id="btnSearch" 
+					onclick="var queryString = document.getElementById('sbox1').value;
+					queryString = queryString.replace(/\\+/g, '&#43;');
+					var url = 'http://scholar.google.com/scholar?q=' + queryString;window.open(url,'_blank');"
+					 value="Scholar"></p>
+			</div>
+
+			<div class="pure-u-6-24 search_cell" id="wiki_cell">
+				<p><form action="http://en.wikipedia.org/wiki/Special:Search">
+						<input class="search_box" name="search" type="text" value="" /></br>
+						<input class="search_btn" name="fulltext" type="submit" value="Wikipedia" />
+				</form></p>
+			</div>
+			<div class="pure-u-3-24 margin"></div>
+		</div> <!-- end search_grid -->
+
+		<div class="pure-u-24-24 sep_div"></div>
+
+		<div class="pure-u-2-24 margin"></div>
+		<div class="pure-u-6-24 media_cell" id="iotd_cell">
+			<script>
+				var currentdate = new Date(); 
+				var curdate = currentdate.getDate();
+				document.write('<center><img class="pure-img" src="launcher/img/iotd/iotd' + curdate + '.jpg"></center>');		
+			</script>
+		</div>
+		<div class="pure-u-1-24 margin"></div>
+		<div class="pure-u-6-24 media_cell" id="weather_cell">
+			<a class="weatherwidget-io" href="https://forecast7.com/en/39d17n86d53/bloomington/?unit=us" data-label_1="BLOOMINGTON" data-icons="Climacons Animated" data-days="5" data-theme="weather_one" >BLOOMINGTON</a>
+			<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+			</script>
+			<!-- 
+				https://weatherwidget.io/ 
+				Noscript: set weatherwidget.io and forecast7.com to TRUSTED 	
+			-->
+		</div>
+		<div class="pure-u-1-24 margin"></div>
+		<div class="pure-u-6-24 media_cell" id="cal_cell">
+			<center>
+				<iframe id="cal_frame" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=340&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sonotiro%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+			</center>
+		</div>
+		<div class="pure-u-2-24 margin"></div>
+
+		<div class="pure-u-24-24 sep_div"></div>
+		<div class="pure-u-24-24" id="line"></div>
+		<!-- <div class="pure-g header">
+			<div class="pure-u-1-24 header_margin"></div>
+			<div class="pure-u-23-24 header_text">Bookmarks</div>
+		</div> -->
+
+		<!-- <div class="pure-g sub_header">
+			<div class="pure-u-2-24 header_margin"></div>
+			<div class="pure-u-22-24 header_text">Research</div>
+		</div> -->
+		<div class="pure-u-2-24 bookmark_margin"></div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://www.indiana.edu/~hahnlab" id="navlink">Lab</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://kg6ek7cq2b.search.serialssolutions.com/" id="navlink">Library</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://one.iu.edu/" id="navlink">School</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://mail.google.com/mail/u/0/#inbox" id="navlink">Mail</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://github.com/gwct" id="navlink">github</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://gitlab.com/gwct" id="navlink">gitlab</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://gwct.github.io/index.html">My Site</a>
+		</div>			
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://cgi.soic.indiana.edu/~grthomas/papers/paper_search.html" id="navlink">Papers</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://cafe-portal.gitlab.io/" target="_blank" id="navlink">CAFE</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://gwct.github.io/grampa.html">GRAMPA</a>
+		</div>
+		<div class="pure-u-2-24 bookmark_margin"></div>
+		<div class="pure-u-24-24" id="line"></div>
+
+		<!-- <div class="pure-g sub_header">
+			<div class="pure-u-2-24 header_margin"></div>
+			<div class="pure-u-22-24 header_text">Media</div>
+		</div> -->
+		<div class="pure-u-2-24 bookmark_margin"></div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://www.goodreads.com/">Books</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://www.volgistics.com/ex/portal.dll/?FROM=13211">Doggies</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://news.google.com/nwshp?hl=en&tab=wn&authuser=0">News</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://www.intellicast.com/National/Radar/Current.aspx?location=USIL1114&animate=true">Radar</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://slashdot.org/">Slashdot</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://espn.go.com/">Sports</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://translate.google.com/">Translate</a>
+		</div>			
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://www.youtube.com/feed/subscriptions">Videos</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://www.wunderground.com/cgi-bin/findweather/hdfForecast?query=47403">Weather</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://xkcd.com/">xkcd</a>
+		</div>
+		<div class="pure-u-2-24 bookmark_margin"></div>
+		<div class="pure-u-24-24" id="line"></div>
+		<!-- <div class="pure-g sub_header">
+			<div class="pure-u-2-24 header_margin"></div>
+			<div class="pure-u-22-24 header_text">Life</div>
+		</div> -->
+		<div class="pure-u-2-24 bookmark_margin"></div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://www.purduefed.com/" id="footlink">Banking</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://www.coinbase.com/dashboard" id="footlink">Bitcoin</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://www.farmers.com/ePolicyLogin.jsp?tranType=ALL&dest=viewEDoc&lob=F&param=oJcK6IosnuU1mWEto1CyDQ==" id="footlink">Insurance</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="https://whatbox.ca/login" id="footlink">Seed</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://www.amazon.com/" id="footlink">Shop</a>
+		</div>
+		<div class="pure-u-2-24 bookmark">
+			<a href="http://www.newegg.com/" id="footlink">Computers</a>
+		</div>
+
+		<div class="pure-u-10-24 bookmark_margin"></div>	
+
+		<div class="pure-u-24-24 sep_div"></div>
+		<div class="pure-u-24-24 sep_div"></div>
+		<div class="pure-u-24-24 sep_div"></div>
+
+	</div> <!-- THIS IS THE CLOSE OF bg_div -->
+</body>
+</html>

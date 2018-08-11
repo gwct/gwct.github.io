@@ -2,146 +2,123 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
 	<link type="text/css" rel="stylesheet" href="css/pure.css"  media="screen,projection" />
-	<link type="text/css" rel="stylesheet" href="css/scaffold.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/links.css"  media="screen,projection" />
 	<title>Gregg Thomas</title>
 </head>
 
 <body>
-	<!-- <div id="top_grid"></div> -->
-	<div class="pure-g" id="nav_div">
-		<!-- <div class="pure-u-1-8" id="margin"></div> -->
-		<div class="pure-u-24-24" id="nav_col">
-			<a href="index.html"><img class="pure_img" id="logo_nav" src="img/logo5.png"></a>
-			<div class="pure-menu pure-menu-horizontal" id="nav_bar">
-				<ul class="pure-menu-list" id="nav_list">
-					<li class="pure-menu-item"><a href="index.html" class="nav_link">Home</a></li>
-					<li class="pure-menu-item"><a href="pubs.html" class="nav_link">Publications</a></li>
-					<li class="pure-menu-item"><a href="Gregg-Thomas-CV.pdf" class="nav_link" target="_blank">CV</a></li>
-					<li class="pure-menu-item"><a href="#" class="nav_link" id="active">Software & Links</a></li>
-					<li class="pure-menu-item"><a href="http://www.indiana.edu/~hahnlab/" target="_blank" class="nav_link">Hahn Lab</a></li>
-					<!-- <li class="pure-menu-item"><a href="grampa.html" target="_blank" class="nav_link">GRAMPA</a></li> -->
-					<li class="pure-menu-item">
-						<div class="dropdown">
-							<a href="archive.html" id="nav_link_dropdown">Updates</a>
-							<div class="update_drop">
-									<p><b>June 13, 2018</b></p>
-									<p>I was recently featured in an article on IU's IT News & Events page!</p>
-									<p><a href="https://itnews.iu.edu/articles/2018/IU%20doctoral%20student%20explores%20the%20history%20of%20life%20on%20Earth%20.php" target="_blank">Read More</a></p>
-									<p>-------</p>
-									<p><b>May 8, 2018</b> -- I will be giving a talk at <a href="http://conferences.genetics-gsa.org/peqg/2018/index" target="_blank">PEQG</a> this year about my recent work on mutation rates in primates! My talk is Tuesday, May 15 at 12:30PM.</p>
-									<center><a href="archive.html" id="archive">Archive</a></center>
-							</div>
-						</div>
-					</li>
-					<li class="pure-menu-item">
-						<div class="dropdown">
-							<a href="#" id="nav_link_dropdown">Contact</a>
-							<div class="dropdown_links">
-								<img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span>
-							</div>
-						</div>
-					</li>
+	<div class="pure-g" id="desktop_nav">
+		<div class="pure-u-4-24" id="margin"></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a href="index.html"><img class="pure_img" id="logo_nav" src="img/logo/logo6.png"></a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="index.html">Bio & Research</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="pubs.html">Publications</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="Gregg-Thomas-CV.pdf">CV</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="#" id="active">Software & Links</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="http://www.indiana.edu/~hahnlab/" target="_blank">Hahn Lab</a></div>
+		<!-- <div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="archive.html">Updates</a></div> -->
+		<div class="pure-u-2-24 dropdown" id="nav_link_cell">
+			<a href="archive.html" class="nav_link">Updates</a>
+			<div class="update_drop dropdown_container">
+				<p><b>August 9, 2018</b></p>
+				<p>On September 5th, I'll be hosting the <a href="http://i5k.github.io/webinar" target="_blank">i5K webinar</a>
+				and discussing our work on the i5K pilot project to examine genome evolution across 76 species of Arthropods.</p>
+				<p>-------</p>
+				<p><b>June 13, 2018</b></p>
+				<p>I was recently featured in an article on IU's IT News & Events page!</p>
+				<p><a href="https://itnews.iu.edu/articles/2018/IU%20doctoral%20student%20explores%20the%20history%20of%20life%20on%20Earth%20.php" target="_blank">Read More</a></p>
+				<p>-------</p>
+				<center><a href="archive.html" id="archive">Archive</a></center>
+			</div>
+		</div>
+		<div class="pure-u-2-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link">Contact</a>
+			<div class="dropdown_container contact_drop">
+				<div id="email">
+					<img id="email_logo" src="img/contact-logos/email-logo.png">
+				</div>
+				grthomas@indiana.edu
+			</div>
+		</div>
+		<div class="pure-u-4-24" id="margin"></div>
+	</div>
+
+	<div class="pure-g" id="mobile_nav">
+		<div class="pure-u-24-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link">&#9776; Navigation</a>
+			<div class="dropdown_container">
+				<ul class="pure-menu-list">
+					<li><a href="index.html" id="mobile_nav_link">Bio & Research</a></li>
+					<li><a href="pubs.html" id="mobile_nav_link">Publications</a></li>
+					<li><a href="Gregg-Thomas-CV.pdf" id="mobile_nav_link" target="_blank">CV</a></li>
+					<li><a href="#" id="mobile_nav_link">Software & Links</a></li>
+					<li><a href="http://www.indiana.edu/~hahnlab/" target="_blank" id="mobile_nav_link">Hahn Lab</a></li>
+					<li><a href="archive.html" id="mobile_nav_link">Archive</a></li>
+					<!-- <li><img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span></li> -->
 				</ul>
-
-				<div class="mobile_dropdown" id="mobile_nav">
-					<a href="#" id="nav_link_dropdown">Navigation</a>
-					<div class="mobile_dropdown_links">
-						<ul class="pure-menu-list">
-							<li><a href="index.html" class="mobile_nav_link" id="active_drop">Home</a></li>
-							<li><a href="pubs.html" class="mobile_nav_link">Publications</a></li>
-							<li><a href="Gregg-Thomas-CV.pdf" class="mobile_nav_link" target="_blank">CV</a></li>
-							<li><a href="#" class="mobile_nav_link">Software & Links</a></li>
-							<li><a href="http://www.indiana.edu/~hahnlab/" target="_blank" class="mobile_nav_link">Hahn Lab</a></li>
-							<li><a href="archive.html" class="mobile_nav_link">Archive</a></li>
-							<!-- <li><img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span></li> -->
-					</div>
-				</div>
-
 			</div>
-		</div>
-		<!-- <div class="pure-u-1-8" id="margin"></div> -->
-	</div>
-
-	<!-- <div id="sep_div"></div> -->
-
-	<div id="main_div">
-		<div class="pure-g" id="main_grid">
-			<!-- <div class="pure-u-1-8" id="margin"></div> -->
-			<div class="pure-u-24-24 glass" id="main_content">
-				<div class="pure-g" id="main_header">
-					<div class="pure-u-24-24" id="page_header">Links</div>
-				</div>
-				<div id="main_text">
-	        		<h3>My Software</h3>
-	        			<a href="grampa.html" target="_blank">GRAMPA - Gene-tree Reconciliation Algorithm with MUL-trees for Polyploid Analysis</a>
-	        			<ul>Software to identify polyploidy events given a species tree and a set of gene trees. Can count duplications and losses in the
-	        				presence of polyploidy and differentiate between auto- and allopolyploidy events. Developed in
-	        				<a href="https://doi.org/10.1093/sysbio/syx044" target="_blank">Thomas et al. 2017</a></ul>
-	                    <a href="https://github.com/gwct/gwct" targer="_blank">GWCT - Genome-Wide Convergence Tester</a>
-	                    <ul>These scripts and earlier versions of them were used in <a href="http://dx.doi.org/doi:10.1038/ng.3198" target="_blank">Foote et
-		                    al. 2015</a>, <a href="http://dx.doi.org/10.1093/molbev/msv013" target="_blank">Thomas and Hahn 2015</a> and
-		                    <a href="http://dx.doi.org/10.1093/gbe/evw306" target="_blank">Thomas et al. 2017</a> to count convergent and divergent subsitutions
-		                    in a phylogeny.</ul>
-	                    <a href="https://github.com/gwct/core" target="_blank">CORE - COde for Romps in Evolutionary data</a>
-	                    <ul>My personal scripts for manipulating sequence data, phylogenetic trees, and other things.</ul>
-
-					</br>
-	                <h3>Software I have contributed to</h3>
-	                    <a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE - Computational Analysis of Gene Family Evolution</a>
-	                    <ul>Software developed in the Hahn lab to estimate rates of gene family evolution and reconstruct ancestral gene counts.</ul>	                
-					
-					</br>
-					<h3>Project resources</h3>
-						<a href="https://cgi.soic.indiana.edu/~grthomas/i5k-web/main.html" target="_blank">The i5k gene family evolution website</a>
-						</br></br>
-						<a href="https://gwct.github.io/grampa.html" target="_blank">GRAMPA website</a>
-						<!-- </br></br>
-						<a href="https://gwct.github.io/owl-monkey-figs.html" target="_blank">Owl monkey project figures and code</a> -->
-
-					</br></br>
-	                <h3>Helpful Software from Others</h3>
-	                <div class="table">
-	                    <a href="https://github.com/smirarab/ASTRAL" target="_blank">ASTRAL</a> <span id="link_break">/</span> 
-	                    <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download" target="_blank">BLAST</a> <span id="link_break">/</span> 
-	                    <a href="http://tree.bio.ed.ac.uk/software/figtree/" target="_blank">FigTree</a> <span id="link_break">/</span> 
-	                    <a href="http://micans.org/mcl/" target="_blank">MCL</a> <span id="link_break">/</span> 
-	                    <a href="http://www.drive5.com/muscle/" target="_blank">MUSCLE</a> <span id="link_break">/</span> 
-	                    <a href="http://cegg.unige.ch/newick_utils" target="_blank">Newick Utilities</a> <span id="link_break">/</span> 
-	                    <a href="http://abacus.gene.ucl.ac.uk/software/paml.html" target="_blank">PAML</a> <span id="link_break">/</span> 
-	                    <a href="https://github.com/smirarab/pasta" target="_blank">PASTA</a> <span id="link_break">/</span> 
-	                    <a href="https://sourceforge.net/projects/r8s/" target="_blank">r8s</a> <span id="link_break">/</span> 
-	                    <a href="http://sco.h-its.org/exelixis/software.html" target="_blank">RAxML</a> <span id="link_break">/</span> 
-	                    <a href="http://www.atgc-montpellier.fr/sdm/" target="_blank">SDM</a> <span id="link_break">/</span> 
-	                    <a href="http://doua.prabi.fr/software/seaview" target="_blank">SeaView</a>
-	                </div>
-	            </div>
-
-				<div class="pure-g" id="contact_grid">
-					<div class="pure-u-1">
-						<center>
-						<ul class="table logo_links">
-							<li><a href="https://github.com/gwct" id="logolink" target="_blank"><img id="navlogo" src="img/github-logo.png"><span>Github</span></a></li> 
-							<li><div id="midlogo">
-								<a href="https://scholar.google.com/citations?user=4pydfEUAAAAJ&hl=en" id="logolink" target="_blank"><img id="navlogo" src="img/scholar-logo.png"><span>Scholar</span></a>
-							</div></li> 
-							<li><a href="https://twitter.com/greggwcthomas?lang=en" id="logolink" target="_blank"><img id="navlogo" src="img/twitter-logo.png"><span>Twitter</span></a></li>
-						</ul>
-						</center>
-					</div>
-				</div>
-			</div>
-			<!-- <div class="pure-u-1-8" id="margin"></div>	 -->
 		</div>
 	</div>
 
-	<!-- <div id="sep_div"></div> -->
+	<div class="pure-g"id="main_div_links">
+		<div class="pure-u-24-24" id="header">Links & Software</div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-20-24" id="link_text">
+			<h2>My Software</h2>
+			<a href="grampa.html" target="_blank">GRAMPA - Gene-tree Reconciliation Algorithm with MUL-trees for Polyploid Analysis</a>
+			<ul>Software to identify polyploidy events given a species tree and a set of gene trees. Can count duplications and losses in the
+				presence of polyploidy and differentiate between auto- and allopolyploidy events. Developed in
+				<a href="https://doi.org/10.1093/sysbio/syx044" target="_blank">Thomas et al. 2017</a></ul>
+			<a href="https://github.com/gwct/gwct" targer="_blank">GWCT - Genome-Wide Convergence Tester</a>
+			<ul>These scripts and earlier versions of them were used in <a href="http://dx.doi.org/doi:10.1038/ng.3198" target="_blank">Foote et
+				al. 2015</a>, <a href="http://dx.doi.org/10.1093/molbev/msv013" target="_blank">Thomas and Hahn 2015</a>, and
+				<a href="http://dx.doi.org/10.1093/gbe/evw306" target="_blank">Thomas et al. 2017</a> to count convergent and divergent subsitutions
+				in a phylogeny.</ul>
+			<a href="https://github.com/gwct/core" target="_blank">CORE - COde for Romps in Evolutionary data</a>
+			<ul>My personal scripts for manipulating sequence data, phylogenetic trees, and other things.</ul>
+			
+			<h2>Software I have contributed to</h2>
+			<a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE - Computational Analysis of Gene Family Evolution</a>
+			<ul>Software developed in the Hahn lab to estimate rates of gene family evolution and reconstruct ancestral gene counts.</ul>
+			
+			<h2>Helpful software from others</h2>
+			<div class="table">
+				<a href="https://github.com/smirarab/ASTRAL" target="_blank">ASTRAL</a> <span id="link_break">/</span> 
+				<a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download" target="_blank">BLAST</a> <span id="link_break">/</span> 
+				<a href="http://tree.bio.ed.ac.uk/software/figtree/" target="_blank">FigTree</a> <span id="link_break">/</span> 
+				<a href="http://micans.org/mcl/" target="_blank">MCL</a> <span id="link_break">/</span> 
+				<a href="http://www.drive5.com/muscle/" target="_blank">MUSCLE</a> <span id="link_break">/</span> 
+				<a href="http://cegg.unige.ch/newick_utils" target="_blank">Newick Utilities</a> <span id="link_break">/</span> 
+				<a href="http://abacus.gene.ucl.ac.uk/software/paml.html" target="_blank">PAML</a> <span id="link_break">/</span> 
+				<a href="https://github.com/smirarab/pasta" target="_blank">PASTA</a> <span id="link_break">/</span> 
+				<a href="https://sourceforge.net/projects/r8s/" target="_blank">r8s</a> <span id="link_break">/</span> 
+				<a href="http://sco.h-its.org/exelixis/software.html" target="_blank">RAxML</a> <span id="link_break">/</span> 
+				<a href="http://www.atgc-montpellier.fr/sdm/" target="_blank">SDM</a> <span id="link_break">/</span> 
+				<a href="http://doua.prabi.fr/software/seaview" target="_blank">SeaView</a>
+			</div>
+		</div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-24-24" id="sep_div"></div>
+		<div class="pure-u-24-24" id="contact_grid">
+			<center>
+				<ul class="logo_links">
+					<li><a href="https://github.com/gwct" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/github-logo.png"><span>Github</span></a></li> 
+					<li><div id="midlogo">
+						<a href="https://scholar.google.com/citations?user=4pydfEUAAAAJ&hl=en" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/scholar-logo.png"><span>Scholar</span></a>
+					</div></li> 
+					<li><a href="https://twitter.com/greggwcthomas?lang=en" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/twitter-logo.png"><span>Twitter</span></a></li>
+			</ul>
+			</center>
+		</div>
+	</div>
 
 	<div class="pure-g" id="footer">
 		<div class="pure-u-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io/index.html" target="_blank">Gregg Thomas</a> | Some of the CSS used to design this site is from the <a href="https://purecss.io/" target="_blank">Pure CSS</a> project.</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io/index.html" target="_blank">Gregg Thomas</a>, 2018 | Some of the CSS used to design this site is from the <a href="https://purecss.io/" target="_blank">Pure CSS</a> project.</center>
 			</div>
 		</div>
 	</div>

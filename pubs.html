@@ -2,216 +2,287 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
 	<link type="text/css" rel="stylesheet" href="css/pure.css"  media="screen,projection" />
-	<link type="text/css" rel="stylesheet" href="css/scaffold.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/pubs.css"  media="screen,projection" />
 	<title>Gregg Thomas</title>
 </head>
 
 <body>
-	<!-- <div id="top_grid"></div> -->
-	<div class="pure-g" id="nav_div">
-		<!-- <div class="pure-u-1-8" id="margin"></div> -->
-		<div class="pure-u-24-24" id="nav_col">
-			<a href="index.html"><img class="pure_img" id="logo_nav" src="img/logo5.png"></a>
-			<div class="pure-menu pure-menu-horizontal" id="nav_bar">
-				<ul class="pure-menu-list" id="nav_list">
-					<li class="pure-menu-item"><a href="index.html" class="nav_link">Home</a></li>
-					<li class="pure-menu-item"><a href="#" class="nav_link" id="active">Publications</a></li>
-					<li class="pure-menu-item"><a href="Gregg-Thomas-CV.pdf" class="nav_link" target="_blank">CV</a></li>
-					<li class="pure-menu-item"><a href="links.html" class="nav_link">Software & Links</a></li>
-					<li class="pure-menu-item"><a href="http://www.indiana.edu/~hahnlab/" target="_blank" class="nav_link">Hahn Lab</a></li>
-					<!-- <li class="pure-menu-item"><a href="grampa.html" target="_blank" class="nav_link">GRAMPA</a></li> -->
-					<li class="pure-menu-item">
-						<div class="dropdown">
-							<a href="archive.html" id="nav_link_dropdown">Updates</a>
-							<div class="update_drop">
-									<p><b>June 13, 2018</b></p>
-									<p>I was recently featured in an article on IU's IT News & Events page!</p>
-									<p><a href="https://itnews.iu.edu/articles/2018/IU%20doctoral%20student%20explores%20the%20history%20of%20life%20on%20Earth%20.php" target="_blank">Read More</a></p>
-									<p>-------</p>
-									<p><b>May 8, 2018</b> -- I will be giving a talk at <a href="http://conferences.genetics-gsa.org/peqg/2018/index" target="_blank">PEQG</a> this year about my recent work on mutation rates in primates! My talk is Tuesday, May 15 at 12:30PM.</p>
-									<center><a href="archive.html" id="archive">Archive</a></center>
-							</div>
-						</div>
-					</li>
-					<li class="pure-menu-item">
-						<div class="dropdown">
-							<a href="#" id="nav_link_dropdown">Contact</a>
-							<div class="dropdown_links">
-								<img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span>
-							</div>
-						</div>
-					</li>
-				</ul>
-
-				<div class="mobile_dropdown" id="mobile_nav">
-					<a href="#" id="nav_link_dropdown">Navigation</a>
-					<div class="mobile_dropdown_links">
-						<ul class="pure-menu-list">
-							<li><a href="index.html" class="mobile_nav_link" id="active_drop">Home</a></li>
-							<li><a href="#" class="mobile_nav_link">Publications</a></li>
-							<li><a href="Gregg-Thomas-CV.pdf" class="mobile_nav_link" target="_blank">CV</a></li>
-							<li><a href="links.html" class="mobile_nav_link">Software & Links</a></li>
-							<li><a href="http://www.indiana.edu/~hahnlab/" target="_blank" class="mobile_nav_link">Hahn Lab</a></li>
-							<li><a href="archive.html" class="mobile_nav_link">Archive</a></li>
-							<!-- <li><img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span></li> -->
-					</div>
-				</div>
-
+	<div class="pure-g" id="desktop_nav">
+		<div class="pure-u-4-24" id="margin"></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a href="index.html"><img class="pure_img" id="logo_nav" src="img/logo/logo6.png"></a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="index.html">Bio & Research</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="#" id="active">Publications</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="Gregg-Thomas-CV.pdf">CV</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="links.html">Software & Links</a></div>
+		<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="http://www.indiana.edu/~hahnlab/" target="_blank">Hahn Lab</a></div>
+		<!-- <div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="archive.html">Updates</a></div> -->
+		<div class="pure-u-2-24 dropdown" id="nav_link_cell">
+			<a href="archive.html" class="nav_link">Updates</a>
+			<div class="update_drop dropdown_container">
+				<p><b>August 9, 2018</b></p>
+				<p>On September 5th, I'll be hosting the <a href="http://i5k.github.io/webinar" target="_blank">i5K webinar</a>
+				and discussing our work on the i5K pilot project to examine genome evolution across 76 species of Arthropods.</p>
+				<p>-------</p>
+				<p><b>June 13, 2018</b></p>
+				<p>I was recently featured in an article on IU's IT News & Events page!</p>
+				<p><a href="https://itnews.iu.edu/articles/2018/IU%20doctoral%20student%20explores%20the%20history%20of%20life%20on%20Earth%20.php" target="_blank">Read More</a></p>
+				<p>-------</p>
+				<center><a href="archive.html" id="archive">Archive</a></center>
 			</div>
 		</div>
-		<!-- <div class="pure-u-1-8" id="margin"></div> -->
+		<div class="pure-u-2-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link">Contact</a>
+			<div class="dropdown_container contact_drop">
+				<div id="email">
+					<img id="email_logo" src="img/contact-logos/email-logo.png">
+				</div>
+				grthomas@indiana.edu
+			</div>
+		</div>
+		<div class="pure-u-4-24" id="margin"></div>
 	</div>
 
-	<!-- <div id="sep_div"></div> -->
+	<div class="pure-g" id="mobile_nav">
+		<div class="pure-u-24-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link">&#9776; Navigation</a>
+			<div class="dropdown_container">
+				<ul class="pure-menu-list">
+					<li><a href="index.html" id="mobile_nav_link">Bio & Research</a></li>
+					<li><a href="#" id="mobile_nav_link">Publications</a></li>
+					<li><a href="Gregg-Thomas-CV.pdf" id="mobile_nav_link" target="_blank">CV</a></li>
+					<li><a href="links.html" id="mobile_nav_link">Software & Links</a></li>
+					<li><a href="http://www.indiana.edu/~hahnlab/" target="_blank" id="mobile_nav_link">Hahn Lab</a></li>
+					<li><a href="archive.html" id="mobile_nav_link">Archive</a></li>
+					<!-- <li><img id="email_logo" src="img/email-logo.png"><span id="email">grthomas@indiana.edu</span></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
 
-	<div id="main_div">
-		<div class="pure-g" id="main_grid">
-			<!-- <div class="pure-u-1-8" id="margin"></div> -->
-			<div class="pure-u-24-24 glass" id="main_content">
+
+	<div class="pure-g"id="main_div_pub">
+		<div class="pure-u-24-24" id="header">Publications</div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-20-24" id="pub_text">
+			<ul id="presents">
+			</br><h2><span class="pub_year">2018</span></h2>
+				<p><span class="pub_title">The genomic basis of Arthropod diversity</span>
+				</br>&nbsp;&nbsp;Thomas GWC, Dohmen E, Hughes DST, Murali SC, Poelchau M, Glastad K, The i5K Phylogenomics Consortium,
+				</br>&nbsp;&nbsp;Chipman AD, Waterhouse RM, Bornberg-Bauer E, Hahn MW, Richards S. 2018. <em>bioRxiv</em>. 
+				</br>&nbsp;&nbsp;Pre-print DOI: <a href="https://doi.org/10.1101/382945" target="_blank" id="doi_link">10.1101/382945</a></p>
+
+				<p><span class="pub_title">Evolution of salivary glue genes in Drosophila species</span>
+				</br>&nbsp;&nbsp;Da Lage JL, Thomas GWC, Bonneau M, Courtier-Orgogozo V. 2018. <em>bioRxiv</em>. 
+				</br>&nbsp;&nbsp;Pre-print DOI: <a href="https://doi.org/10.1101/359190" target="_blank" id="doi_link">10.1101/359190</a></p>
+
+				<p><span class="pub_title">Reproductive longevity predicts mutation rates in primates</span>
+				</br>&nbsp;&nbsp;Thomas GWC, Wang RJ, Puri A, Harris RA, Raveendran M, Hughes D, Murali S, Williams L,
+				</br>&nbsp;&nbsp;Doddapaneni H, Muzny D, Gibbs R, Abee C, Galinski MR, Worley KC, Rogers J, Radivojac P, Hahn MW. 2018. <em>bioRxiv</em>. 
+				</br>&nbsp;&nbsp;Pre-print DOI: <a href="https://doi.org/10.1101/327627" target="_blank" id="doi_link">10.1101/327627</a></p>
+
+				<p><span class="pub_title">Genome analyses show strong selection on coloration, morphological, and behavioral phenotypes in birds-of-paradise</span>
+				</br>&nbsp;&nbsp;Prost S, Armstrong EE, Nylander J, Thomas GWC, Suh A, Petersen B, Dalen L, Benz B, Blom MPK,
+				</br>&nbsp;&nbsp;Palkopoulou E, Ericson PGP, Irestedt M. 2018. <em>bioRxiv</em>. 
+				</br>&nbsp;&nbsp;Pre-print DOI: <a href="https://doi.org/10.1101/287086" target="_blank" id="doi_link">10.1101/287086 </a></p>
+
+				<p><span class="pub_title">Clonal polymorphism and high heterozygosity in the celibate genome of the Amazon molly</span>
+				</br>&nbsp;&nbsp;Warren WC, García-Pérez R, The Amazon Molly Consortium, Schartl M. 2018. <em>Nature Ecology and Evolution</em>. 2:669–679.
+				</br>&nbsp;&nbsp;DOI: <a href="https://doi.org/10.1038/s41559-018-0473-y" target="_blank" id="doi_link">10.1038/s41559-018-0473-y</a></p>
+
+				<p><span class="pub_title">A model species for agricultural pest genomics: the genome of the Colorado potato beetle, <em>Leptinotarsa decemlineata</em> (Coleoptera: Chrysomelidae)</span>
+				</br>&nbsp;&nbsp;Schoville SD, Chen YH, The Colorado Potato Beetle Genome Consortium, Richards S. 2018. <em>Scientific Reports</em>. 8(1931).
+				</br>&nbsp;&nbsp;DOI: <a href="https://doi.org/10.1038/s41598-018-20154-1" target="_blank" id="doi_link">10.1038/s41598-018-20154-1</a></p>
+
+				<p><span class="pub_title">Sooty mangabey genome sequence provides insight into AIDS resistance in a natural SIV host</span>
+				</br>&nbsp;&nbsp;Palesch D, Bosinger SE, The Sooty Mangabey Genome Consortium, Silvestri G. 2018. <em>Nature</em>. 553:77-81.
+				</br>&nbsp;&nbsp;DOI: <a href="https://doi.org/doi:10.1038/nature25140" target="_blank" id="doi_link">10.1038/nature25140</a></p>
+
+			<h2><span class="pub_year">2017</span></h2>
+				<p><span class="pub_title">Gene-tree reconciliation with MUL-trees to resolve polyploidy events</span>
+				</br>&nbsp;&nbsp;Thomas GWC, Ather SA, and Hahn MW. 2017. <em>Systematic Biology.</em> 66(6):1007-1018.
+				</br>&nbsp;&nbsp;DOI: <a href="https://doi.org/10.1093/sysbio/syx044" target="_blank" id="doi_link">10.1093/sysbio/syx044</a>
+				</br>&nbsp;&nbsp;Software: <a href="grampa.html" target="_blank">GRAMPA</a></p>
+
+				<p><span class="pub_title">The effects of increasing the number of taxa on inferences of molecular convergence</span>
+				</br>&nbsp;&nbsp;Thomas GWC, Hahn MW, and Hahn Y. 2017. <em>Genome Biology and Evolution.</em> 9(1):213-221.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1093/gbe/evw306" target="_blank">10.1093/gbe/evw306</a>
+				</br>&nbsp;&nbsp;Software: <a href="https://github.com/gwct/gwct" target="_blank">GWCT</a></p>
+
+			<h2><span class="pub_year">2015</span></h2>
+				<p><span class="pub_title">The genome of the vervet (Chlorocebus aethiops sabaeus)</span>
+				</br>&nbsp;&nbsp;Warren WC, The Vervet Genome Consortium, Freimer NB. 2015. <em>Genome Research.</em> 25(12):1921-1933.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1101/gr.192922.115" target="_blank">10.1101/gr.192922.115</a></p>
+
+				<p><span class="pub_title">Determining the null model for detecting adaptive convergence from genomic data: a case study using echolocating mammals</span>
+				</br>&nbsp;&nbsp;Thomas GWC and Hahn MW. 2015. <em>Molecular Biology and Evolution.</em> 32(5):1232-1236.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1093/molbev/msv013" target="_blank">10.1093/molbev/msv013</a></p>
+
+				<p><span class="pub_title">Convergent evolution of the genomes of marine mammals</span>
+				</br>&nbsp;&nbsp;Foote AD*, Liu Y*, Thomas GWC*, Vinař T*, et al. 2015. <em>Nature Genetics.</em> 47(3):272-275.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/doi:10.1038/ng.3198" target="_blank">doi:10.1038/ng.3198</a></p>
+
+				<p><span class="pub_title">Highly evolvable malaria vectors: the genomes of 16 Anopheles mosquitoes</span>
+				</br>&nbsp;&nbsp;Neafsey DE, Waterhouse RM, The Anopheles Genome Consortium, Besansky NJ. 2015. <em>Science.</em> 347(6217):1258522
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1126/science.1258522" target="_blank">10.1126/science.1258522</a></p>
+
+			<h2><span class="pub_year">2014</span></h2>
+				<p><span class="pub_title">Comparative analysis of the domestic cat genome reveals genetic signatures underlying feline biology and domestication</span>
+				</br>&nbsp;&nbsp;Montague MJ ... Thomas GWC, Hahn MW ... Warren WC. 2014. <em>PNAS.</em> 111(48):17230-17235.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1073/pnas.1410083111" target="_blank">10.1073/pnas.1410083111</a></p>
+
+				<p><span class="pub_title">Gibbon genome and the fast karyotype evolution of small apes</span>
+				</br>&nbsp;&nbsp;Carbone L, The Gibbon Genome Consortium, Gibbs RA. 2014. <em>Nature.</em> 513(7517):295-201.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1038/nature13679" target="_blank">10.1038/nature13679</a></p>
+
+			<h2><span class="pub_year">2013</span></h2>
+				<p><span class="pub_title">The human mutation rate is increasing, even as it slows</span>
+				</br>&nbsp;&nbsp;Thomas GWC and Hahn MW. 2013. <em>Molecular Biology and Evolution.</em> 31(2):253-257.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1093/molbev/mst218" target="_blank">10.1093/molbev/mst218</a></p>
+
+				<p><span class="pub_title">Estimating gene gain and loss rates in the presence of error in genome assembly and annotation using CAFE 3</span>
+				</br>&nbsp;&nbsp;Han MV, Thomas GWC, Lugo-Martinez J, and Hahn MW. 2013. <em>Molecular Biology and Evolution.</em> 30(8):1987-1997.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1093/molbev/mst100" target="_blank">10.1093/molbev/mst100</a></p>
+			</ul>
+			</br>
+		</div>
+		<div class="pure-u-2-24" id="margin"></div>
+
+
+		<div class="pure-u-24-24" id="header">Presentations</div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-20-24" id="pub_text">
+			<ul id="presents">
+				<p><span class="pub_title">Reproductive longevity predicts mutation rates in primates</span>
+				</br>&nbsp;&nbsp;Population, Evolutionary, and Quantitative Genetics Conference 2018 - Madison, WI - Platform Talk - <a href="slides/2018.05.15-PEQG-owlmonkey.pptx">Slides</a></p>
+
+				<p><span class="pub_title">The evolution of the genes and genomes of 76 arthropod species</span>
+				</br>&nbsp;&nbsp;Evolution Conference 2017 - Portland, OR - Regular Talk - <a href="slides/2017.06.26-Evolution-i5k.pptx">Slides</a> (14 minute version)</p>
+
+				<p><span class="pub_title">The evolution of the genes and genomes of 76 arthropod species</span>
+				</br>&nbsp;&nbsp;Arthropod Genomics Symposium 2017 - South Bend, IN - Invited Talk - <a href="slides/2017.06.09-AGS-i5k.pptx">Slides</a> (20 minute version)</p>
+
+				<p><span class="pub_title">Gene tree reconciliation with MUL-trees for polyploid analysis</span>
+				</br>&nbsp;&nbsp;Evolution Conference 2016 - Austin, TX - Regular Talk - <a href="slides/2016.06.19-Evolution-GRAMPA.pptx">Slides</a></p>
+
+				<p><span class="pub_title">Accounting for sequencing error in phylogenetics</span>
+				</br>&nbsp;&nbsp;Society of Systematic Biologists 2015 - Ann Arbor, MI - Lightning Talk - <a href="slides/2015.05.21-SSB-Error.pptx">Slides</a></p>
+
+				<p><span class="pub_title">Inferring molecular convergence from genomic data</span>
+				</br>&nbsp;&nbsp;Midwest Ecology and Evolution Conference 2015 - Bloomington, IN - Contributed Talk - <a href="slides/2015.03.28-MEEC-Convergence.pptx">Slides</a></p>
+
+				<p><span class="pub_title">Convergent evolution of the genomes of marine mammals</span>
+				</br>&nbsp;&nbsp;Society of Molecular Biology and Evolution 2014 - San Juan, PR - Contributed Talk - <a href="slides/2014.06.12-SMBE-MarineMammals.pptx">Slides</a></p>
+			</ul>
+		</div>
+		<div class="pure-u-2-24" id="margin"></div>
+
+		<div class="pure-u-24-24" id="header">Other Content</div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-20-24" id="pub_text">
+			<ul id="presents">
+				<p><span class="pub_title">Drosophila 25 species phylogeny.</span>
+				</br>&nbsp;&nbsp;Thomas GWC, Hahn MW. 2017. <a href="https://figshare.com/articles/Drosophila_25_species_phylogeny/5450602" target="_blank">FigShare fileset</a>.
+				</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.6084/m9.figshare.5450602" target="_blank">10.6084/m9.figshare.5450602</a></p>
+			</ul>
+		</div>
+		<div class="pure-u-2-24" id="margin"></div>
+
+		<div class="pure-u-24-24" id="contact_grid">
+			<center>
+				<ul class="logo_links">
+					<li><a href="https://github.com/gwct" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/github-logo.png"><span>Github</span></a></li> 
+					<li><div id="midlogo">
+						<a href="https://scholar.google.com/citations?user=4pydfEUAAAAJ&hl=en" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/scholar-logo.png"><span>Scholar</span></a>
+					</div></li> 
+					<li><a href="https://twitter.com/greggwcthomas?lang=en" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/twitter-logo.png"><span>Twitter</span></a></li>
+			</ul>
+			</center>
+		</div>
+	</div>
+<!-- 
+
 				<div class="pure-g" id="main_header">
-					<div class="pure-u-24-24" id="page_header">Publications</div>
+					<div class="pure-u-24-24" id="page_header">Presentations</div>
 				</div>
-				<div id="main_text">
-					</br><h2><span class="pub_year">2018</span></h2>
-						<p><span class="pub_title">The genomic basis of Arthropod diversity</span>
-						</br>&nbsp;&nbsp;Thomas GWC, Dohmen E, Hughes DST, Murali SC, Poelchau M, Glastad K, The i5K Phylogenomics Consortium,
-						</br>&nbsp;&nbsp;Chipman AD, Waterhouse RM, Bornberg-Bauer E, Hahn MW, Richards S. 2018. <em>bioRxiv</em>. 
-						</br>&nbsp;&nbsp;Pre-print DOI: <a href="https://doi.org/10.1101/382945" target="_blank" id="doi_link">10.1101/382945</a></p>
-
-						<p><span class="pub_title">Evolution of salivary glue genes in Drosophila species</span>
-						</br>&nbsp;&nbsp;Da Lage JL, Thomas GWC, Bonneau M, Courtier-Orgogozo V. 2018. <em>bioRxiv</em>. 
-						</br>&nbsp;&nbsp;Pre-print DOI: <a href="https://doi.org/10.1101/359190" target="_blank" id="doi_link">10.1101/359190</a></p>
-
-						<p><span class="pub_title">Reproductive longevity predicts mutation rates in primates</span>
-						</br>&nbsp;&nbsp;Thomas GWC, Wang RJ, Puri A, Harris RA, Raveendran M, Hughes D, Murali S, Williams L,
-						</br>&nbsp;&nbsp;Doddapaneni H, Muzny D, Gibbs R, Abee C, Galinski MR, Worley KC, Rogers J, Radivojac P, Hahn MW. 2018. <em>bioRxiv</em>. 
-						</br>&nbsp;&nbsp;Pre-print DOI: <a href="https://doi.org/10.1101/327627" target="_blank" id="doi_link">10.1101/327627</a></p>
-
-						<p><span class="pub_title">Genome analyses show strong selection on coloration, morphological, and behavioral phenotypes in birds-of-paradise</span>
-						</br>&nbsp;&nbsp;Prost S, Armstrong EE, Nylander J, Thomas GWC, Suh A, Petersen B, Dalen L, Benz B, Blom MPK,
-						</br>&nbsp;&nbsp;Palkopoulou E, Ericson PGP, Irestedt M. 2018. <em>bioRxiv</em>. 
-						</br>&nbsp;&nbsp;Pre-print DOI: <a href="https://doi.org/10.1101/287086" target="_blank" id="doi_link">10.1101/287086 </a></p>
-
-						<p><span class="pub_title">Clonal polymorphism and high heterozygosity in the celibate genome of the Amazon molly</span>
-						</br>&nbsp;&nbsp;Warren WC, García-Pérez R, The Amazon Molly Consortium, Schartl M. 2018. <em>Nature Ecology and Evolution</em>. 2:669–679.
-						</br>&nbsp;&nbsp;DOI: <a href="https://doi.org/10.1038/s41559-018-0473-y" target="_blank" id="doi_link">10.1038/s41559-018-0473-y</a></p>
-
-						<p><span class="pub_title">A model species for agricultural pest genomics: the genome of the Colorado potato beetle, <em>Leptinotarsa decemlineata</em> (Coleoptera: Chrysomelidae)</span>
-						</br>&nbsp;&nbsp;Schoville SD, Chen YH, The Colorado Potato Beetle Genome Consortium, Richards S. 2018. <em>Scientific Reports</em>. 8(1931).
-						</br>&nbsp;&nbsp;DOI: <a href="https://doi.org/10.1038/s41598-018-20154-1" target="_blank" id="doi_link">10.1038/s41598-018-20154-1</a></p>
-
-						<p><span class="pub_title">Sooty mangabey genome sequence provides insight into AIDS resistance in a natural SIV host</span>
-						</br>&nbsp;&nbsp;Palesch D, Bosinger SE, The Sooty Mangabey Genome Consortium, Silvestri G. 2018. <em>Nature</em>. 553:77-81.
-						</br>&nbsp;&nbsp;DOI: <a href="https://doi.org/doi:10.1038/nature25140" target="_blank" id="doi_link">10.1038/nature25140</a></p>
-
-					<h2><span class="pub_year">2017</span></h2>
-	                    <p><span class="pub_title">Gene-tree reconciliation with MUL-trees to resolve polyploidy events</span>
-	                    </br>&nbsp;&nbsp;Thomas GWC, Ather SA, and Hahn MW. 2017. <em>Systematic Biology.</em> 66(6):1007-1018.
-	                    </br>&nbsp;&nbsp;DOI: <a href="https://doi.org/10.1093/sysbio/syx044" target="_blank" id="doi_link">10.1093/sysbio/syx044</a>
-	                    </br>&nbsp;&nbsp;Software: <a href="grampa.html" target="_blank">GRAMPA</a></p>
-
-	                    <p><span class="pub_title">The effects of increasing the number of taxa on inferences of molecular convergence</span>
-	                    </br>&nbsp;&nbsp;Thomas GWC, Hahn MW, and Hahn Y. 2017. <em>Genome Biology and Evolution.</em> 9(1):213-221.
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1093/gbe/evw306" target="_blank">10.1093/gbe/evw306</a>
-	                    </br>&nbsp;&nbsp;Software: <a href="https://github.com/gwct/gwct" target="_blank">GWCT</a></p>
-
-					<h2><span class="pub_year">2015</span></h2>
-	                    <p><span class="pub_title">The genome of the vervet (Chlorocebus aethiops sabaeus)</span>
-	                    </br>&nbsp;&nbsp;Warren WC, The Vervet Genome Consortium, Freimer NB. 2015. <em>Genome Research.</em> 25(12):1921-1933.
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1101/gr.192922.115" target="_blank">10.1101/gr.192922.115</a></p>
-
-	                    <p><span class="pub_title">Determining the null model for detecting adaptive convergence from genomic data: a case study using echolocating mammals</span>
-	                    </br>&nbsp;&nbsp;Thomas GWC and Hahn MW. 2015. <em>Molecular Biology and Evolution.</em> 32(5):1232-1236.
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1093/molbev/msv013" target="_blank">10.1093/molbev/msv013</a></p>
-
-	                    <p><span class="pub_title">Convergent evolution of the genomes of marine mammals</span>
-	                    </br>&nbsp;&nbsp;Foote AD*, Liu Y*, Thomas GWC*, Vinař T*, et al. 2015. <em>Nature Genetics.</em> 47(3):272-275.
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/doi:10.1038/ng.3198" target="_blank">doi:10.1038/ng.3198</a></p>
-
-	                    <p><span class="pub_title">Highly evolvable malaria vectors: the genomes of 16 Anopheles mosquitoes</span>
-	                    </br>&nbsp;&nbsp;Neafsey DE, Waterhouse RM, The Anopheles Genome Consortium, Besansky NJ. 2015. <em>Science.</em> 347(6217):1258522
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1126/science.1258522" target="_blank">10.1126/science.1258522</a></p>
-
-	                <h2><span class="pub_year">2014</span></h2>
-	                    <p><span class="pub_title">Comparative analysis of the domestic cat genome reveals genetic signatures underlying feline biology and domestication</span>
-	                    </br>&nbsp;&nbsp;Montague MJ ... Thomas GWC, Hahn MW ... Warren WC. 2014. <em>PNAS.</em> 111(48):17230-17235.
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1073/pnas.1410083111" target="_blank">10.1073/pnas.1410083111</a></p>
-
-	                    <p><span class="pub_title">Gibbon genome and the fast karyotype evolution of small apes</span>
-	                    </br>&nbsp;&nbsp;Carbone L, The Gibbon Genome Consortium, Gibbs RA. 2014. <em>Nature.</em> 513(7517):295-201.
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1038/nature13679" target="_blank">10.1038/nature13679</a></p>
-
-	                <h2><span class="pub_year">2013</span></h2>
-	                    <p><span class="pub_title">The human mutation rate is increasing, even as it slows</span>
-	                    </br>&nbsp;&nbsp;Thomas GWC and Hahn MW. 2013. <em>Molecular Biology and Evolution.</em> 31(2):253-257.
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1093/molbev/mst218" target="_blank">10.1093/molbev/mst218</a></p>
-
-	                    <p><span class="pub_title">Estimating gene gain and loss rates in the presence of error in genome assembly and annotation using CAFE 3</span>
-	                    </br>&nbsp;&nbsp;Han MV, Thomas GWC, Lugo-Martinez J, and Hahn MW. 2013. <em>Molecular Biology and Evolution.</em> 30(8):1987-1997.
-	                    </br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.1093/molbev/mst100" target="_blank">10.1093/molbev/mst100</a></p>
-	                </br>
-
-					<div class="pure-g" id="main_header">
-						<div class="pure-u-24-24" id="page_header">Presentations</div>
+				<div class="pure-g" id="bio">
+					<div class="pure-u-2-24" id="margin"></div>
+					<div class="pure-u-20-24" id="bio_text">
+						<div id="index_main_text">
+							<ul id="presents">
+								<p><span class="pub_title">Reproductive longevity predicts mutation rates in primates</span>
+								</br>&nbsp;&nbsp;Population, Evolutionary, and Quantitative Genetics Conference 2018 - Madison, WI - Platform Talk - <a href="slides/2018.05.15-PEQG-owlmonkey.pptx">Slides</a></p>
+		
+								<p><span class="pub_title">The evolution of the genes and genomes of 76 arthropod species</span>
+								</br>&nbsp;&nbsp;Evolution Conference 2017 - Portland, OR - Regular Talk - <a href="slides/2017.06.26-Evolution-i5k.pptx">Slides</a> (14 minute version)</p>
+		
+								<p><span class="pub_title">The evolution of the genes and genomes of 76 arthropod species</span>
+								</br>&nbsp;&nbsp;Arthropod Genomics Symposium 2017 - South Bend, IN - Invited Talk - <a href="slides/2017.06.09-AGS-i5k.pptx">Slides</a> (20 minute version)</p>
+		
+								<p><span class="pub_title">Gene tree reconciliation with MUL-trees for polyploid analysis</span>
+								</br>&nbsp;&nbsp;Evolution Conference 2016 - Austin, TX - Regular Talk - <a href="slides/2016.06.19-Evolution-GRAMPA.pptx">Slides</a></p>
+		
+								<p><span class="pub_title">Accounting for sequencing error in phylogenetics</span>
+								</br>&nbsp;&nbsp;Society of Systematic Biologists 2015 - Ann Arbor, MI - Lightning Talk - <a href="slides/2015.05.21-SSB-Error.pptx">Slides</a></p>
+		
+								<p><span class="pub_title">Inferring molecular convergence from genomic data</span>
+								</br>&nbsp;&nbsp;Midwest Ecology and Evolution Conference 2015 - Bloomington, IN - Contributed Talk - <a href="slides/2015.03.28-MEEC-Convergence.pptx">Slides</a></p>
+		
+								<p><span class="pub_title">Convergent evolution of the genomes of marine mammals</span>
+								</br>&nbsp;&nbsp;Society of Molecular Biology and Evolution 2014 - San Juan, PR - Contributed Talk - <a href="slides/2014.06.12-SMBE-MarineMammals.pptx">Slides</a></p>
+							</ul>
+							</br>
+							</br>
+						</div>
 					</div>
-
-	                	<ul id="presents">
-							<li>Population, Evolutionary, and Quantitative Genetics Conference 2018 - Madison, WI - Platform Talk</li>
-	                			<ul><span class="pub_title">Reproductive longevity predicts mutation rates in primates</span> - <a href="slides/2018.05.15-PEQG-owlmonkey.pptx">Slides</a></ul>
-	               			<li>Evolution Conference 2017 - Portland, OR - Regular Talk</li>
-	                			<ul><span class="pub_title">The evolution of the genes and genomes of 76 arthropod species</span> - <a href="slides/2017.06.26-Evolution-i5k.pptx">Slides</a> (14 minute version)</ul>
-	                		<li>Arthropod Genomics Symposium 2017 - South Bend, IN - Invited Talk</li>
-	                			<ul><span class="pub_title">The evolution of the genes and genomes of 76 arthropod species</span> - <a href="slides/2017.06.09-AGS-i5k.pptx">Slides</a> (20 minute version)</ul>
-	                		<li>Evolution Conference 2016 - Austin, TX - Regular Talk</li>
-	                			<ul><span class="pub_title">Gene tree reconciliation with MUL-trees for polyploid analysis</span> - <a href="slides/2016.06.19-Evolution-GRAMPA.pptx">Slides</a></ul>
-		                	<li>Society of Systematic Biologists 2015 - Ann Arbor, MI - Lightning Talk</li>
-		                		<ul><span class="pub_title">Accounting for sequencing error in phylogenetics</span> - <a href="slides/2015.05.21-SSB-Error.pptx">Slides</a></ul>
-		                	<li>Midwest Ecology and Evolution Conference 2015 - Bloomington, IN - Contributed Talk</li>
-		                		<ul><span class="pub_title">Inferring molecular convergence from genomic data</span> - <a href="slides/2015.03.28-MEEC-Convergence.pptx">Slides</a></ul>
-		                	<li>Society of Molecular Biology and Evolution 2014 - San Juan, PR - Contributed Talk</li>
-		                		<ul><span class="pub_title">Convergent evolution of the genomes of marine mammals</span> - <a href="slides/2014.06.12-SMBE-MarineMammals.pptx">Slides</a></ul>
-	                	</ul>
-					</br>
-					
-					<div class="pure-g" id="main_header">
-						<div class="pure-u-24-24" id="page_header">Other Content</div>
+					<div class="pure-u-2-24" id="margin"></div>
+				</div>
+				
+				
+				<div class="pure-g" id="main_header">
+					<div class="pure-u-24-24" id="page_header">Other Content</div>
+				</div>
+				<div class="pure-g" id="bio">
+					<div class="pure-u-2-24" id="margin"></div>
+					<div class="pure-u-20-24" id="bio_text">
+						<div id="index_main_text">
+							<ul id="presents">
+								<p><span class="pub_title">Drosophila 25 species phylogeny.</span>
+								</br>&nbsp;&nbsp;Thomas GWC, Hahn MW. 2017. <a href="https://figshare.com/articles/Drosophila_25_species_phylogeny/5450602" target="_blank">FigShare fileset</a>.
+								</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.6084/m9.figshare.5450602" target="_blank">10.6084/m9.figshare.5450602</a></p>
+							</ul>
+						</div>
 					</div>
-
-						<ul id="presents">
-							<p><span class="pub_title">Drosophila 25 species phylogeny.</span>
-							</br>&nbsp;&nbsp;Thomas GWC, Hahn MW. 2017. <a href="https://figshare.com/articles/Drosophila_25_species_phylogeny/5450602" target="_blank">FigShare fileset</a>.
-							</br>&nbsp;&nbsp;DOI: <a href="http://dx.doi.org/10.6084/m9.figshare.5450602" target="_blank">10.6084/m9.figshare.5450602</a></p>
-							
-
-						</ul>
+					<div class="pure-u-2-24" id="margin"></div>
 				</div>
 
-				<div class="pure-g" id="contact_grid">
+
+				<div class="pure-g" id="contact_grid_pub">
 					<div class="pure-u-1">
 						<center>
 						<ul class="table logo_links">
-							<li><a href="https://github.com/gwct" id="logolink" target="_blank"><img id="navlogo" src="img/github-logo.png"><span>Github</span></a></li> 
+							<li><a href="https://github.com/gwct" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/github-logo.png"><span>Github</span></a></li> 
 							<li><div id="midlogo">
-								<a href="https://scholar.google.com/citations?user=4pydfEUAAAAJ&hl=en" id="logolink" target="_blank"><img id="navlogo" src="img/scholar-logo.png"><span>Scholar</span></a>
+								<a href="https://scholar.google.com/citations?user=4pydfEUAAAAJ&hl=en" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/scholar-logo.png"><span>Scholar</span></a>
 							</div></li> 
-							<li><a href="https://twitter.com/greggwcthomas?lang=en" id="logolink" target="_blank"><img id="navlogo" src="img/twitter-logo.png"><span>Twitter</span></a></li>
+							<li><a href="https://twitter.com/greggwcthomas?lang=en" id="logolink" target="_blank"><img id="navlogo" src="img/contact-logos/twitter-logo.png"><span>Twitter</span></a></li>
 						</ul>
 						</center>
 					</div>
-				</div>
-			</div>
-			<!-- <div class="pure-u-1-8" id="margin"></div>	 -->
+				</div> -->
+			<!-- </div>
 		</div>
-	</div>
+	</div> -->
 
-	<!-- <div id="sep_div"></div> -->
+
 
 	<div class="pure-g" id="footer">
 		<div class="pure-u-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io/index.html" target="_blank">Gregg Thomas</a> | Some of the CSS used to design this site is from the <a href="https://purecss.io/" target="_blank">Pure CSS</a> project.</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io/index.html" target="_blank">Gregg Thomas</a>, 2018 | Some of the CSS used to design this site is from the <a href="https://purecss.io/" target="_blank">Pure CSS</a> project.</center>
 			</div>
 		</div>
 	</div>
