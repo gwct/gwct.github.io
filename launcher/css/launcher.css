@@ -64,28 +64,31 @@ a {
 	-moz-background-size: cover;
 	background-size: cover;
 	content: ' ';
-	height:90vh;
+	min-height:100vh;
 }
-#hero_text{
+#hero_banner {
+	width:100%;
+}
+#hero_text {
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	font-size:3em;
 	font-style:italic;
 	color:#fff;
 }
 @media (max-width: 1025px) {
-	#hero_div { display: none; }
+	#hero_banner { display: none; }
 }
 /*------------------------------------------------------*/
 /* Search grid styles */
 #search_grid {
 	width:100%;
+	color:#fff;
 }
 .search_box{
 	background-color: rgba(209, 209, 224, 0.6);
 	border: none;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #d3d3d3;
 	height: 3rem;
 	width: 75%;
 	font-size: 1rem;
@@ -124,9 +127,9 @@ a {
 }
 @media (max-width: 1025px) {
 	.media_cell { width:100% }
-	#weather_cell { width:75%; margin:0 auto; }
-	#iotd_cell { display: none; }
-	#cal_cell { width:75%; margin:0 auto; padding-top:3vh;}
+	#weather_cell { width:75%; margin:0 auto; padding-bottom:20px; }
+	#iotd_cell { display:none; }
+	#cal_cell { display:none; }
 }
 
 /*------------------------------------------------------*/
@@ -145,7 +148,7 @@ a {
 	width:90%;
 	height:100%;
 	text-decoration:none;
-	background-color:rgba(256,256,256,0);
+	background-color:rgba(255,255,255,0);
 	color:#fff;
 	border-radius:10px;
 	transition:all .4s ease;
