@@ -41,7 +41,8 @@
     background-repeat: no-repeat;
 }
 @media (max-width: 1025px) {
-	#arc_pic_container { width:100%; padding-top:2vh;}
-    #arc_pic { background-position:center; }
-    #arc_text { width:100%; padding:0px 20px; font-size:large;}
+	/* #arc_pic_container { width:100%; padding-top:2vh; padding-bottom:2vh;}
+	#arc_pic { background-position:center; } */
+	#arc_pic_container { display: none; }
+    #arc_text { width:100%; padding:0px 20px; }
 }

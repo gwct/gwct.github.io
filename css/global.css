@@ -188,18 +188,16 @@ the dropdowns
 /* Mobile dropdown menu styles */
 #mobile_nav {
 	display:none;
+	z-index:10;
+	position: -webkit-sticky;
+	position:sticky;
+	top:0px;
+	height:5vh;
+	background-color:#828282;
+	width:100%;
 }
 @media (max-width: 1025px) {
-	#mobile_nav { 
-		display: block; 
-		z-index:10;
-		position: -webkit-sticky;
-		position:sticky;
-		top:0px;
-		height:5vh;
-		background-color:#828282;
-		width:100%;	
-	}
+	#mobile_nav { display: block; }
 }
 #mobile_nav .dropdown_container {
 	margin-top:0;

@@ -43,6 +43,7 @@
 .pub_title {
 	font-size:x-large;
 	color:#e46c0a;
+	font-weight:bold;
 	/* color:#3e62aa; */
 }
 @media (max-width: 1025px) {
