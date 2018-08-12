@@ -41,7 +41,7 @@
 		<div class="pure-g" id="search_grid">
 			<div class="pure-u-3-24 margin"></div>
 			<div class="pure-u-6-24 search_cell" id="google_cell">
-				<p><form method="get" action="http://www.google.com/search">
+				<p><form method="get" action="https://www.google.com/search">
 					<input type="text" class="search_box" name="q" maxlength="255" value="" autofocus/>
 					<script>document.getElementById('gbox1').focus()</script></br>
 					<input class="search_btn" type="submit" value="Google" />
@@ -54,12 +54,12 @@
 				<input class="search_btn" type="submit" id="btnSearch" 
 					onclick="var queryString = document.getElementById('sbox1').value;
 					queryString = queryString.replace(/\\+/g, '&#43;');
-					var url = 'http://scholar.google.com/scholar?q=' + queryString;window.open(url,'_blank');"
+					var url = 'https://scholar.google.com/scholar?q=' + queryString;window.open(url,'_blank');"
 					 value="Scholar"></p>
 			</div>
 
 			<div class="pure-u-6-24 search_cell" id="wiki_cell">
-				<p><form action="http://en.wikipedia.org/wiki/Special:Search">
+				<p><form action="https://en.wikipedia.org/wiki/Special:Search">
 						<input class="search_box" name="search" type="text" value="" /></br>
 						<input class="search_btn" name="fulltext" type="submit" value="Wikipedia" />
 				</form></p>
