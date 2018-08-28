@@ -29,6 +29,10 @@
 
 /*------------------------------------------------------*/
 /* Archive grid styles */
+#arc_entry {
+	margin-left:40px;
+	margin-right:40px;
+}
 #arc_pic_container {
     height:30vh;
 
@@ -45,4 +49,14 @@
 	#arc_pic { background-position:center; } */
 	#arc_pic_container { display: none; }
     #arc_text { width:100%; padding:0px 20px; }
+}
+
+/*------------------------------------------------------*/
+/* Archive spacing styles */
+#arc_line {
+	height:1px;
+	background-color:#d3d3d3;
+	/*margin:20px;*/
+	margin-top:20px;
+	margin-bottom:20px;
 }
