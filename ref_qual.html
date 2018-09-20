@@ -253,7 +253,7 @@ Map qual
 <p>The general behavior we want for this score is that it will be high when we are sure the reference base is correct (as in Read Sets 1 and 2 with reference base A; see Section III for Read Sets) and low when we are sure the reference base is incorrect (as in Read Sets 1 and 2 with reference base T or C; see Section III for Read Sets)</p>
 <div id="method-1" class="section level3">
 <h3>Method 1</h3>
-<p>First, we could sum up the likelihoods of all genotypes that contain the reference allele (<span class="math inline">\(L_{match}\)</span>) and seperately sum up the likelihoods of all the genotypes that do not contain the reference allele (<span class="math inline">\(L_mismatch\)</span>). For instance, if our reference base was an A, then:</p>
+<p>First, we could sum up the likelihoods of all genotypes that contain the reference allele (<span class="math inline">\(L_{match}\)</span>) and seperately sum up the likelihoods of all the genotypes that do not contain the reference allele (<span class="math inline">\(L_{mismatch}\)</span>). For instance, if our reference base was an A, then:</p>
 <p><span class="math display">\[ L_{match} = P(R|\{A,A\}) + P(R|\{A,T\}) + P(R|\{A,C\}) + P(R|\{A,G\})\]</span></p>
 <p>and:</p>
 <p><span class="math display">\[ L_{mismatch} = P(R|\{T,T\}) + P(R|\{T,C\}) + P(R|\{T,G\}) + P(R|\{C,C\}) + P(R|\{C,G\}) + P(R|\{G,G\})\]</span> Then, we could take the difference between these values as <span class="math inline">\(L_{ref}\)</span> and put it on the Phred scale for <span class="math inline">\(Q_{ref}\)</span></p>
