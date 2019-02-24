@@ -154,22 +154,36 @@
 
 		<div class="pure-g" id="search_grid">
 			<div class="pure-u-3-24 margin"></div>
-			<div class="pure-u-6-24 search_cell" id="google_cell">
+			<!-- <div class="pure-u-6-24 search_cell" id="google_cell">
 				<p><form method="get" action="https://www.google.com/search">
 					<input type="text" class="search_box" name="q" maxlength="255" value="" autofocus/>
 					<script>document.getElementById('gbox1').focus()</script></br>
 					<input class="search_btn" type="submit" value="Google" />
 				</form></p>
+			</div> -->
+			<!-- Google search -->
+
+			<div class="pure-u-6-24 search_cell" id="scholar_cell">
+				<p><input type="text" class="search_box" id="sbox2" 
+				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()"/></br>
+				<input class="search_btn" type="submit" id="btnSearch" 
+					onclick="var queryString = document.getElementById('sbox2').value;
+								queryString = queryString.replace(/\\+/g, '&#43;');
+								var url = 'https://duckduckgo.com/?q=' + queryString;
+								window.open(url,'_self');"
+					value="Duck"></p>
 			</div>
+			<!-- Duckduckgo search -->
 
 			<div class="pure-u-6-24 search_cell" id="scholar_cell">
 				<p><input type="text" class="search_box" id="sbox1" 
 				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()"/></br>
 				<input class="search_btn" type="submit" id="btnSearch" 
 					onclick="var queryString = document.getElementById('sbox1').value;
-					queryString = queryString.replace(/\\+/g, '&#43;');
-					var url = 'https://scholar.google.com/scholar?q=' + queryString;window.open(url,'_blank');"
-						value="Scholar"></p>
+								queryString = queryString.replace(/\\+/g, '&#43;');
+								var url = 'https://scholar.google.com/scholar?q=' + queryString;
+								window.open(url,'_blank');"
+					value="Scholar"></p>
 			</div>
 
 			<div class="pure-u-6-24 search_cell" id="wiki_cell">

@@ -127,7 +127,8 @@ a {
 }
 @media (max-width: 1025px) {
 	.media_cell { width:100% }
-	#weather_cell { width:75%; margin:0 auto; padding-bottom:20px; }
+	/* #weather_cell { width:75%; margin:0 auto; padding-bottom:20px; } */
+	#weather_cell { display:none; }
 	#iotd_cell { display:none; }
 	#cal_cell { display:none; }
 }
