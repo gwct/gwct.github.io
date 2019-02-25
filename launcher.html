@@ -165,7 +165,7 @@
 
 			<div class="pure-u-6-24 search_cell" id="scholar_cell">
 				<p><input type="text" class="search_box" id="sbox2" 
-				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()"/></br>
+					onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()"  autofocus/></br>
 				<input class="search_btn" type="submit" id="btnSearch" 
 					onclick="var queryString = document.getElementById('sbox2').value;
 								queryString = queryString.replace(/\\+/g, '&#43;');
