@@ -1,7 +1,7 @@
 /*------------------------------------------------------*/
 /* Hero image styles */
 #top_grid {
-	height:40vh;
+	height:30vh;
     background-image: url(../img/bg/bg08.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -18,7 +18,6 @@
     display: flex;
     justify-content: center;
 	align-items: center;
-
 }
 #name_img {
 	max-height:25vh;
@@ -28,16 +27,18 @@
 /* Main grid styles */
 #main_div_bio {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    background-color: #f3ece7;
-    /* display: flex; */
-    /* justify-content: center; */
+	/* font-family: 'Lato', sans-serif; */
+	/* background-color: #f3ece7; */
+	background-color: #fdfdfd;
     align-items: center;
-    font-size: large;
+	font-size: large;
+	min-height: 60vh;
 }
 
 /*------------------------------------------------------*/
 /* Bio grid styles */
 #bio_pic_container {
+	align-self: center;
 	height:30vh;
 }
 #bio_pic {
@@ -46,75 +47,27 @@
 	width:100%;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 #bio_text {
 	/* padding:20px 20px 20px 20px; */ 
 }
-#research_pic_container {
-	display: flex;
-    justify-content: center;
-	align-items: center;
-	height:30vh;
-}
-#research_pic_1{
-	background-image: url(../img/research/fig3.png);
-	height:100%;
-	width:100%;
-	background-size: contain;
-	background-position:center;
-	background-repeat: no-repeat;
-}
-#research_pic_2{
-	background-image: url(../img/research/conv2.png);
-	height:100%;
-	width:100%;
-	background-size: contain;
-	background-position:center;
-	background-repeat: no-repeat;
-}
-#research_pic_3{
-	background-image: url(../img/research/gfam3.png);
-	height:100%;
-	width:100%;
-	background-size: contain;
-	background-position:center;
-	background-repeat: no-repeat;
-}
-#research_text {
-    padding:0px 20px;
-}
-
-@media (max-width: 1025px) {
-	#bio_pic_container { width:100%;}
-    #bio_pic { background-position:center; }
-    #bio_text { width:100%; padding:0px 20px; font-size:large;}
-    #research_pic_container { width:100%; padding:0px 20px; }
-	#research_text { width:100%; }
-}
-
-/*------------------------------------------------------*/
-/* Contact logo grid styles for index */
-#contact_grid_bio {
-	background-color: #f3ece7;
-	height:8vh;
-	padding-bottom:1vh;
-	color:#000000;
-}
-
-/*------------------------------------------------------*/
-/* Horizontal line seperator styles */
-#horz_line {
-	height:1px;
-	width:100%;
-	margin:20px 50px 20px 50px;
-	background-color:#333333;
-}
 
 /*------------------------------------------------------*/
 /* Hidden image styles */
-span img{ display: none; }
-span:hover img{ display: block; position:absolute; }
+span img{ height:0; opacity: 0; transition: opacity 0.3s linear;}
+span:hover img{ 
+	opacity: 1;
+	height: 400px;
+	position:absolute; 
+	top: 50%; 
+	/* left: 50%;  */
+}
 @media (max-width: 1025px) {
+	#main_content { width: 100% }
+	#bio_pic_container { width:100%;}
+    #bio_pic { background-position:center; }
+	#bio_text { width:100%; padding:0px 20px; font-size:large;}
 	span:hover img{ display: none; }
 }
 

@@ -15,11 +15,13 @@
     font-style: normal;
 }
 body {
-	color:#000;
+	color:#1a1a1a;
 	font-family: 'metropolislight';
+	overflow-y: scroll;
 }
 a {
-	color:#ff8f33;
+	color:#006ddb;
+	/* color:#ff8f33; */
 	/* color:#2e9d95 */
 }
 
@@ -29,15 +31,26 @@ a {
     /* font-family: 'metropolismedium'; */
     /* background-color: rgba(255,153,75,0.85); */
     color:#000;
-	background-color: rgba(46,157,149,0.85);
+	/* background-color: rgba(46,157,149,0.85); */
+	background-color: #ececec;
 	font-size:x-large;
 	/* padding-left:20px; */
 	padding-top:10px;
 	padding-bottom:10px;
 	text-align: center;
 	vertical-align: middle;
-	/* border-bottom:1px solid #333;
-	border-top:1px solid #333; */
+	border-bottom:1px solid #333;
+	border-top:1px solid #333;
+}
+
+.section_header {
+	/* background: #f3ece7;
+	color: #e46c0a; */
+	background-color: #333333;
+	color: #fff;
+	padding: 5px 20px;
+	border-radius:8px;
+	font-size:0.8em;
 }
 
 /*------------------------------------------------------*/
@@ -45,6 +58,7 @@ a {
 #logo_nav {
 	height:5vh;
 	float:left;
+	padding:5px;
 }
 #desktop_nav {
 	z-index:10;
@@ -53,11 +67,13 @@ a {
 	top:0px;
 	height:5vh;
 	/* background-color:#828282; */
-	background-color: rgba(102, 102, 102, 1);
+	/* background-color: rgba(102, 102, 102, 1); */
+	background-color:#fff;
 	text-align: center;
 	vertical-align: middle;
 	display:table;
 	width:100%;
+	box-sizing: border-box;
 	border-bottom:1px solid black;
 }
 
@@ -70,9 +86,10 @@ a {
 	display:table-cell;
 	vertical-align: middle;
 	text-align: center;
+	/* border:1px solid white; */
 }
 .nav_link {
-	color: #fff;
+	color: #333;
 	transition: background-color .2s;
 	font-size:large;
 	display: inline-block;
@@ -85,6 +102,9 @@ a {
 }
 #active {
 	color:#FF994B;
+	/* border-bottom: 1px solid #666666; */
+	/* background-color:#333; */
+	/* border-radius:8px; */
 }
 
 /*------------------------------------------------------*/
@@ -99,7 +119,8 @@ a {
 	visibility:hidden;
 	position:absolute;
 	z-index:1000;
-	background-color: rgb(182, 173, 184);
+	/* background-color: rgb(182, 173, 184); */
+	background-color:#ececec;
 	padding:10px 15px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	margin-top:12px;
@@ -135,13 +156,13 @@ the dropdowns
 	pointer-events: none;
 }
 .dropdown_container:after {
-	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: rgb(182, 173, 184);
+	border-color: rgba(236, 236, 236, 0);
+	border-bottom-color: rgb(236, 236, 236);
 	border-width: 15px;
 	margin-left: -15px;
 }
 .dropdown_container:before {
-	border-color: rgba(194, 225, 245, 0);
+	border-color: rgba(236, 236, 236, 0);
 	border-bottom-color: #595959;
 	border-width: 16px;
 	margin-left: -16px;
@@ -167,8 +188,8 @@ the dropdowns
 	text-decoration:none;   
 }
 #archive:hover { 
-	background-color:#595959;
-	color:#FF994B; 
+	background-color: rgb(206, 200, 208);
+	/* color:#FF994B;  */
 }
 
 /*------------------------------------------------------*/
@@ -193,7 +214,7 @@ the dropdowns
 	position:sticky;
 	top:0px;
 	height:5vh;
-	background-color:#828282;
+	background-color:#fff;
 	width:100%;
 }
 @media (max-width: 1025px) {
@@ -202,7 +223,7 @@ the dropdowns
 #mobile_nav .dropdown_container {
 	margin-top:0;
 	border-radius:0px 0px 8px 8px;
-	border-top:none;
+	border-top:1px solid #999999;
 	min-width: 19vh;
 }
 #mobile_nav .dropdown_container:before, #mobile_nav .dropdown_container:after {
@@ -213,7 +234,7 @@ the dropdowns
 	margin:0 auto;
 }
 #mobile_nav_link {
-	color: #fff;
+	color: #333333;
 	transition:background-color .2s;
 	font-size:large;
 	display: inline-block;
@@ -229,32 +250,6 @@ the dropdowns
 
 /*------------------------------------------------------*/
 /* Contact logo grid styles */
-#contact_grid::before {
-	z-index: -100;
-	position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/bg12a.png);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center center;
-	background-clip: border-box;
-	background-origin: padding-box;
-	-moz-background-size: cover;
-	background-size: cover;
-	content: ' ';
-}
-#contact_grid {
-	position: relative;
-	/* background-color: rgba(0,0,0,0.6); */
-	height:8vh;
-	color:#fff;
-	padding-bottom:20px;
-}
-.table {
-	display: table;   /* Allow the centering to work */
-	margin: 0 auto;
-}
 .logo_links {
 	display: inline-block;
 	margin: 0;
@@ -262,20 +257,9 @@ the dropdowns
 	line-height: 1em;
 	height:70px;
 }
-.logo_links li {
-  float: left;
-}
-.logo_links a:hover {
-  background-color: rgba(182, 173, 184, 0.5);
-  border-radius: 7px;
-}
-.logo_links a span {
-	display:none;
-}
-.logo_links a:hover span {
-	display:block;
-	color: inherit;
-	font-family: 'metropolislight';
+.logo_cont{
+	width:100%;
+	text-align:center;
 }
 #logolink {
 	transition: background-color .2s;
@@ -285,23 +269,32 @@ the dropdowns
 	cursor: pointer;
 	text-decoration: none;
 	color:inherit;
+	text-align:center;
 }
 #logolink:hover {
-	background-color: rgba(182, 173, 184, 0.1);
+	/* background-color: rgba(182, 173, 184, 0.1); */
+	background-color: rgba(182, 173, 184, 0.5);
+	border-radius: 7px;
 }
-#midlogo {
-	padding:0 100px;
+#logolink span {
+	display:none;
+}
+#logolink:hover span {
+	display:block;
+	color: inherit;
+	font-family: 'metropolislight';
 }
 #navlogo {
 	vertical-align:middle;
 	padding: 5px 15px;
 }
+
 @media (max-width: 1025px) {
 	#contact_grid { width: 100%; }
 	#logolink   { padding:0; }
 	#midlogo   { padding:0 100px; }
 	#navlogo  { padding:0; }
-	.logo_links a:hover span { display: none; }
+	#logolink:hover span { display: none; }
 }
 #link_header {}
 #link_main_text {
@@ -312,16 +305,25 @@ the dropdowns
 /*------------------------------------------------------*/
 /* Footer grid styles */
 #footer {
-	/* background-color:rgba(41,65,87); */
-	background-color: rgba(46,157,149,0.85);
-	color:#fff;
-	font-size:x-small;
-	height:3vh;
-	/* border-top:1px solid #333 */
+
+	background-color: #294157;
+	/* background-color: rgba(46,157,149,0.85); */
+	background-color: #fff;
+	color:#333;
+	font-size:small;
+	height:4vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	border-top:1px solid #333;
+
 }
 #footer_text {
-	position:relative;
-	top:50%;
+	/* display: flex;
+	justify-content: center;
+	align-items: center;  */
+	position: relative;
+	top: 50%;
 }
 @media (max-width: 1025px) {
 	#footer { height:6vh; }

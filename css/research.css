@@ -1,0 +1,74 @@
+/*------------------------------------------------------*/
+/* Main grid styles */
+#main_div_res {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	/* font-family: 'Lato', sans-serif; */
+	/* background-color: #f3ece7; */
+	background-color: #fdfdfd;
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+	font-size: large;
+	min-height: 60vh;
+}
+
+/*------------------------------------------------------*/
+/* Research styles */
+.research_header {
+	background-color: #333333;
+	color: #fff;
+	padding: 5px 20px;
+	border-radius:5px;
+	font-size:0.8em;
+}
+#research_pic_container {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	height:40vh;
+}
+#research_pic_1{
+	background-image: url(../img/research/fig3.png);
+	height:100%;
+	width:100%;
+	background-size: contain;
+	background-position:center;
+    background-repeat: no-repeat;
+}
+#research_pic_2{
+	background-image: url(../img/research/conv4.png);
+	height:100%;
+	width:100%;
+	background-size: contain;
+	background-position:center;
+    background-repeat: no-repeat;
+ 
+}
+#research_pic_3{
+	background-image: url(../img/research/gfam3.png);
+	height:100%;
+	width:100%;
+	background-size: contain;
+	background-position:center;
+    background-repeat: no-repeat;
+}
+#research_text {
+    padding:0px 20px;
+}
+
+@media (max-width: 1025px) {
+	#bio_pic_container { width:100%;}
+    #bio_pic { background-position:center; }
+    #bio_text { width:100%; padding:0px 20px; font-size:large;}
+    #research_pic_container { width:100%; padding:0px 20px; }
+	#research_text { width:100%; }
+}
+
+/*------------------------------------------------------*/
+/* Horizontal line seperator styles */
+#horz_line {
+	height:1px;
+	width:100%;
+	margin:20px 50px 20px 50px;
+	background-color:#333333;
+}

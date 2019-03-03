@@ -5,9 +5,33 @@
 ############################################################
 
 library(ggplot2)
+library(ggrepel)
 this.dir <- dirname(parent.frame(2)$ofile)
 setwd(this.dir)
 cat("----------\n")
+
+##########
+# Formats the regression labels for ggplots geom_text()
+# From: https://stackoverflow.com/questions/7549694/adding-regression-line-equation-and-r2-on-graph
+lm_eqn <- function(df, y, x){
+  formula = as.formula(sprintf('%s ~ %s', y, x))
+  m <- lm(formula, data=df);
+  # formating the values into a summary string to print out
+  # ~ give some space, but equal size and comma need to be quoted
+  eq <- substitute(#italic(target) == a + b %.% italic(input)*","~~
+    italic(r)^2~"="~r2,#*","~~italic(p)~"="~pvalue, 
+    list(target = y,
+         input = x,
+         a = format(as.vector(coef(m)[1]), digits = 2), 
+         b = format(as.vector(coef(m)[2]), digits = 2), 
+         r2 = format(summary(m)$r.squared, digits = 3),
+         # getting the pvalue is painful
+         pvalue = format(summary(m)$coefficients[2,'Pr(>|t|)'], digits=1)
+    )
+  )
+  as.character(as.expression(eq));                 
+}
+##########
 
 total_com = c(193262,95746,107004,127158,125852,111824,124553,141228,148834,159247,177903,176445,163967,175616,190806,56589,77901,77074,61287,75272,93205,89581,88468,73150,87006,104450,108758,94232,107588,124535,93313,106469,123234,91790,109150,121728)
 com = c(12173,2237,3436,5392,5934,3523,5347,7001,3728,5772,9226,9920,5959,8863,12002,978,1776,1839,1187,1755,2151,2553,2902,1781,2478,3363,4722,2809,4006,5388,2964,4361,5925,2601,3570,5545)
@@ -32,7 +56,7 @@ micro_cow_total=125045
 #points(109150,3570,col="blue",pch=16)
 #abort
 
-png(filename="conv2.png")
+#png(filename="conv3.png")
 par(mfcol=c(1,1),mar=c(5, 5, 2, 2) + 0.1,mgp=c(3.4,0.9,0))
 com_con_reg = lm(con ~ com)
 
@@ -47,4 +71,49 @@ points(3570,2041,col="black",pch=1,cex=2)
 points(5925,4114,col="black",pch=1,cex=2)
 text(3570+1750,2041-250,labels="Microbat-Dolphin")
 text(5925-1000,4114+300,labels="Microbat-Cow")
-dev.off()
+#dev.off()
+
+###########
+# The same plot but in ggplot
+
+in_data = data.frame("com"=com,"con"=con)
+in_data$pair = NA
+in_data = within(in_data, pair[com==3570 & con==2041] <- "Microbat-Dolphin")
+in_data = within(in_data, pair[com==5925 & con==4114] <- "Microbat-Cow")
+
+md = data.frame("pair"=c("Microbat-Dolphin"),
+                      "com"=c(3570),
+                      "con"=c(2041))
+
+mc = data.frame("pair"=c("Microbat-Cow"),
+                "com"=c(5925),
+                "con"=c(4114))
+
+con_p = ggplot(in_data, aes(com, con)) +
+  geom_smooth(method="lm", se=F, color='black') +
+  geom_point() +
+  geom_text(data=data.frame(),
+            aes(x=2500, y=7000, label=lm_eqn(in_data, 'com','con')),
+            size=4, color='black', parse=T) +
+  geom_point(data=int_data, aes(com, con), shape=1, size=5) +
+  geom_text_repel(data=md, aes(label=pair), nudge_x=3000, nudge_y=-250) +
+  geom_text_repel(data=mc, aes(label=pair), nudge_x=-1000, nudge_y=500) +
+  xlab("Divergent sites") +
+  ylab("Convergent sites") +
+  theme_classic() +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.title=element_text(size=14),
+        legend.position="none",
+        legend.text=element_text(size=12),
+        plot.title=element_text(hjust=0.5, size=8, face="bold")
+  )
+
+print(con_p)
+
+ggsave(file="conv4.png", con_p, width=4, height=4, units="in")

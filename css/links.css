@@ -5,27 +5,61 @@
 	position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../img/bg/code-bg-blur.png);
+    /* background-image: url(../img/bg/code-bg-blur.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
 	background-clip: border-box;
 	background-origin: padding-box;
 	-moz-background-size: cover;
-	background-size: cover;
+	background-size: cover; */
 	content: ' ';
 }
 #main_div_links {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    color:#fff;
+    color:#000000;
     position: relative;
-	background-color: rgba(0,0,0,0.6);
+	/* background-color: rgba(0,0,0,0.6); */
+	/* background-color: #f3ece7; */
+	background-color: #fdfdfd;
 	min-height:92vh;
     /* display: flex; */
     /* justify-content: center; */
     align-items: center;
     font-size: large;
 }
-.table {
-	width:75%;
+
+
+.other_link {
+	height: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.other_link a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+	width:90%;
+	height:100%;
+	text-decoration:none;
+	/* background-color:rgba(255,255,255,0); */
+	color:#333;
+	border-radius:5px;
+	transition:all .4s ease;
+}
+.other_link a:hover{
+	border-radius:15px;
+	background-color:rgba(51, 51, 51, 0.8);
+	border:1px solid rgba(0,0,0,0.8);
+	/* color:#ff8f33; */
+	color: #fff;
+}
+
+@media (max-width: 1025px) {
+	.other_link {width:50%; height:10vh;}
+	.other_link_margin {display:none;}
+	.other_link a { width:100%; font-size:x-large; border-radius:0; border:1px solid grey; background-color:rgba(102,102, 102, 0.5); }
+	.other_link a:hover { background-color:rgba(102, 102, 102, 0.9); }
 }

@@ -1,7 +1,7 @@
 /*------------------------------------------------------*/
 /* Main grid styles */
 #main_div_arc::before {
-	z-index: -100;
+	/* z-index: -100;
 	position: absolute;
     width: 100%;
     height: 100%;
@@ -13,16 +13,15 @@
 	background-origin: padding-box;
 	-moz-background-size: cover;
 	background-size: cover;
-	content: ' ';
+	content: ' '; */
 }
 #main_div_arc {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    color:#fff;
+    color:#000;
     position: relative;
-	background-color: rgba(0,0,0,0.6);
+	/* background-color: rgba(0,0,0,0.6); */
+	background-color: #fdfdfd;
 	min-height:92vh;
-    /* display: flex; */
-    /* justify-content: center; */
     align-items: center;
     font-size: large;
 }
@@ -30,12 +29,9 @@
 /*------------------------------------------------------*/
 /* Archive grid styles */
 #arc_entry {
-	margin-left:40px;
-	margin-right:40px;
 }
 #arc_pic_container {
     height:30vh;
-
 }
 #arc_pic {
 	background-image: url(../img/level-up.png);
@@ -51,12 +47,5 @@
     #arc_text { width:100%; padding:0px 20px; }
 }
 
-/*------------------------------------------------------*/
-/* Archive spacing styles */
-#arc_line {
-	height:1px;
-	background-color:#d3d3d3;
-	/*margin:20px;*/
-	margin-top:20px;
-	margin-bottom:20px;
-}
+
+
