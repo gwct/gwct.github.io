@@ -18,6 +18,7 @@ body {
 	color:#1a1a1a;
 	font-family: 'metropolislight';
 	overflow-y: scroll;
+	
 }
 a {
 	color:#006ddb;
@@ -51,6 +52,17 @@ a {
 	padding: 5px 20px;
 	border-radius:8px;
 	font-size:0.8em;
+}
+@media (max-width: 1025px) {
+	.section_header  { padding:0;  }
+	.section_header_cont { 
+		background-color: #333333; 
+		text-align:center; 
+		padding:0;
+		margin-top:5px;
+		border-radius:8px;
+		/* width:50%; */
+	}
 }
 
 /*------------------------------------------------------*/
@@ -119,7 +131,6 @@ a {
 	visibility:hidden;
 	position:absolute;
 	z-index:1000;
-	/* background-color: rgb(182, 173, 184); */
 	background-color:#ececec;
 	padding:10px 15px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -208,6 +219,7 @@ the dropdowns
 /*------------------------------------------------------*/
 /* Mobile dropdown menu styles */
 #mobile_nav {
+	position:absolute;
 	display:none;
 	z-index:10;
 	position: -webkit-sticky;
@@ -216,15 +228,46 @@ the dropdowns
 	height:5vh;
 	background-color:#fff;
 	width:100%;
+	padding:5px 0px;
+	border-bottom:1px solid black;
+	/* border:1px solid green; */
 }
 @media (max-width: 1025px) {
 	#mobile_nav { display: block; }
 }
-#mobile_nav .dropdown_container {
-	margin-top:0;
+#mobile_nav #nav_link_cell{
+	position:absolute;
+	/* border:1px solid orange; */
+	/* width:100vw; */
+	width:100%;
+	display: flex;
+	/* justify-content: center; */
+	align-items: center; 
+}
+#mobile_nav .nav_link{
+	/* border:1px solid black;	 */
+	/* float:left; */
+}
+#mobile_logo_nav {
+	height:5vh;
+	float:left;
+	/* padding:5px; */
+}
+.mobile_drop {
+	/* position:relative;
+	width:100vw; 
+	margin-top:0; */
 	border-radius:0px 0px 8px 8px;
 	border-top:1px solid #999999;
-	min-width: 19vh;
+	width:100%;
+	top:5vh;
+	margin:0;
+	border:0;
+	border-radius:0;
+	box-shadow:none;
+	padding:0;
+	border-bottom:2px solid #595959;
+	/* border:1px solid red; */
 }
 #mobile_nav .dropdown_container:before, #mobile_nav .dropdown_container:after {
 	display:none;
@@ -232,22 +275,27 @@ the dropdowns
 .dropdown_container li {
 	width:100%;
 	margin:0 auto;
+	padding-top:5px;
 }
 #mobile_nav_link {
 	color: #333333;
 	transition:background-color .2s;
-	font-size:large;
+	font-size:x-large;
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
-	border-radius:5px;
+	text-align:center;
+	/* border-radius:5px; */
 	width:100%;
-	padding:5px;
+	/* padding:5px; */
 }
 #mobile_nav_link:hover {
 	background-color: rgb(206, 200, 208);
 }
-
+.pure-menu-list{
+	/* border:1px solid purple; */
+	width:100%;
+}
 /*------------------------------------------------------*/
 /* Contact logo grid styles */
 .logo_links {
