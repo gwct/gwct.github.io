@@ -86,7 +86,7 @@ a {
 	color:#fff;
 }
 .search_box{
-	background-color: rgba(209, 209, 224, 0.6);
+	background-color: rgba(209, 209, 224, 0.3);
 	border: none;
 	border-bottom: 1px solid #d3d3d3;
 	height: 3rem;
@@ -202,6 +202,9 @@ a {
 .sep_div {
 	height:5vh;
 }
+.big_sep_div {
+	height:100vh
+}
 #sep_hero { 
 	height:5vh;
 	display:block;
@@ -222,5 +225,6 @@ a {
 @media (max-width: 1025px) {
 	.margin { display: none; }
 	#sep_hero { display: none; }
+	.big_sep_div { display: none; }
 }
 
