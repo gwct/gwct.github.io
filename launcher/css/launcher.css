@@ -53,9 +53,9 @@ a {
 }
 
 /*------------------------------------------------------*/
-/* Hero grid styles */
-#hero_div {
-    background-image: url(../img/bg/bg1.jpg);
+/* Main grid styles */
+#body_div {
+    background-image: url(../img/bg/bg16.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
@@ -66,33 +66,43 @@ a {
 	content: ' ';
 	min-height:100vh;
 }
-#hero_banner {
+#env_banner {
 	width:100%;
+	height:10vh;
 }
-#hero_text {
+#motd_text {
 	display: flex;
 	align-items: center;
 	font-size:3em;
 	font-style:italic;
 	color:#fff;
 }
+#clock_cont {
+	display: flex;
+	align-items: center;
+}
+#clock_cell {
+	padding-left: 10px;
+}
 @media (max-width: 1025px) {
-	#hero_banner { display: none; }
+	#env_banner { display: none; }
 }
 /*------------------------------------------------------*/
 /* Search grid styles */
 #search_grid {
 	width:100%;
 	color:#fff;
+	height:10vh;
 }
 .search_box{
-	background-color: rgba(209, 209, 224, 0.3);
+	background-color: rgba(209, 209, 224, 0);
 	border: none;
 	border-bottom: 1px solid #d3d3d3;
-	height: 3rem;
+	height: 2rem;
 	width: 75%;
 	font-size: 1rem;
-	margin: 0 0 15px 0;
+	padding-left:5px;
+	/* margin: 0 0 15px 0; */
 	transition: all 0.3s;
 	display:block;
 	margin:0 auto;
@@ -100,16 +110,20 @@ a {
 .search_box:focus {
 	border-bottom: 1px solid #994d00;
 	box-shadow: 0 1px 0 0 #994d00;
+	background-color: rgba(209, 209, 224, 0.05);
 }
 .search_btn {
-	background-color:#994d00;
-	padding:10px;
+	/* background-color:#994d00; */
+	background-color: rgba(209, 209, 224, 0.2);
+	color: #fff;
+	padding:5px;
 	border:none;
 	border-radius:15px;
 	transition: all 0.3s;
 	display:block;
 	margin:0 auto;
-	width:40%;
+	width:30%;
+	display:none;
 }
 .search_btn:hover {
 	background-color:#B88858;
@@ -150,7 +164,7 @@ a {
 	height:100%;
 	text-decoration:none;
 	background-color:rgba(255,255,255,0);
-	color:#fff;
+	color:#ffffff;
 	border-radius:10px;
 	transition:all .4s ease;
 }
@@ -202,8 +216,11 @@ a {
 .sep_div {
 	height:5vh;
 }
+.top_sep_div {
+	height:5vh;
+}
 .big_sep_div {
-	height:100vh
+	height:35vh;
 }
 #sep_hero { 
 	height:5vh;
@@ -220,11 +237,11 @@ a {
 #line {
 	height:1px;
 	background-color:#d3d3d3;
-	margin:20px 10%;
+	margin:2vh 10%;
 }
 @media (max-width: 1025px) {
 	.margin { display: none; }
 	#sep_hero { display: none; }
-	.big_sep_div { display: none; }
+	.top_sep_div { height:40vh; }
 }
 

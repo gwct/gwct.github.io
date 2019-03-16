@@ -20,32 +20,62 @@
 </head>
 
 <body>
-	<div class="pure-g" id="hero_div">
-		<div class="pure-g" id="hero_banner">
-			<div class="pure-u-1-24 margin"></div>
-			<div class="pure-u-18-24" id="hero_text">consistency</div>
-			<div class="pure-u-4-24 clock_div">
-				<center>
-					<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:240px;height:80px;"src="https://www.clocklink.com/html5embed.php?clock=043&timezone=EST&color=white&size=240&Title=&Message=&Target=&From=2018,1,1,0,0,0&Color=white"></iframe>
-				</center>
-				<!-- https://www.clocklink.com/gallery/view/html5-043 -->
+	<div class="pure-g" id="body_div">
+		<div class="pure-g" id="search_grid">
+			<div class="pure-u-6-24 margin"></div>
+			<!-- <div class="pure-u-6-24 search_cell" id="google_cell">
+				<p><form method="get" action="https://www.google.com/search">
+					<input type="text" class="search_box" name="q" maxlength="255" value="" autofocus/>
+					<script>document.getElementById('gbox1').focus()</script></br>
+					<input class="search_btn" type="submit" value="Google" />
+				</form></p>
+			</div> -->
+			<!-- Google search -->
+
+			<div class="pure-u-4-24 search_cell" id="google_cell">
+				<p><input type="text" class="search_box" id="sbox1" 
+					onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch1').click()" placeholder="Search" autofocus/></br>
+				<input class="search_btn" type="submit" id="btnSearch1" 
+					onclick="var queryString = document.getElementById('sbox1').value;
+								// queryString = queryString.replace(/\\+/g, '&#43;');
+								var url = 'https://duckduckgo.com/?q=' + queryString;
+								window.open(url,'_self');"
+					value="Duck"></p>
 			</div>
-			<div class="pure-u-1-24 margin"></div>
-		</div>
+			<!-- Duckduckgo search -->
 
-		<div class="pure-u-24-24 sep_div"></div>
+			<div class="pure-u-4-24 search_cell" id="scholar_cell">
+				<p><input type="text" class="search_box" id="sbox2" 
+				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch2').click()" placeholder="Scholar"/></br>
+				<input class="search_btn" type="submit" id="btnSearch2" 
+					onclick="var queryString = document.getElementById('sbox2').value;
+								queryString = queryString.replace(/\\+/g, '&#43;');
+								var url = 'https://scholar.google.com/scholar?q=' + queryString;
+								window.open(url,'_blank');"
+					value="Scholar"></p>
+			</div>
 
+			<div class="pure-u-4-24 search_cell" id="wiki_cell">
+				<p><input type="text" class="search_box" id="sbox3" 
+				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch3').click()" placeholder="Wiki"/></br>
+				<input class="search_btn" type="submit" id="btnSearch3" 
+					onclick="var queryString = document.getElementById('sbox3').value;
+								queryString = queryString.replace(/\\+/g, '&#43;');
+								var url = 'https://en.wikipedia.org/wiki/' + queryString;
+								window.open(url,'_blank');"
+					value="Scholar"></p>
 
+				<!-- <p><form action="https://en.wikipedia.org/wiki/Special:Search">
+					<input class="search_box" name="search" type="text" value="" /></br>
+					<input class="search_btn" name="fulltext" type="submit" value="Wikipedia" />
+				</form></p> -->
+			</div>
+			<div class="pure-u-6-24 margin"></div>
+		</div> <!-- end search_grid -->
+
+		<div class="pure-u-24-24 top_sep_div"></div>
 		<div class="pure-u-24-24" id="line"></div>
-		<!-- <div class="pure-g header">
-			<div class="pure-u-1-24 header_margin"></div>
-			<div class="pure-u-23-24 header_text">Bookmarks</div>
-		</div> -->
 
-		<!-- <div class="pure-g sub_header">
-			<div class="pure-u-2-24 header_margin"></div>
-			<div class="pure-u-22-24 header_text">Research</div>
-		</div> -->
 		<div class="pure-u-2-24 bookmark_margin"></div>
 		<div class="pure-u-2-24 bookmark">
 			<a href="http://www.indiana.edu/~hahnlab">Lab</a>
@@ -154,54 +184,28 @@
 
 		<div class="pure-u-4-24 bookmark_margin"></div>	
 		<div class="pure-u-24-24" id="line"></div>
-
-		<div class="pure-g" id="search_grid">
-			<div class="pure-u-3-24 margin"></div>
-			<!-- <div class="pure-u-6-24 search_cell" id="google_cell">
-				<p><form method="get" action="https://www.google.com/search">
-					<input type="text" class="search_box" name="q" maxlength="255" value="" autofocus/>
-					<script>document.getElementById('gbox1').focus()</script></br>
-					<input class="search_btn" type="submit" value="Google" />
-				</form></p>
-			</div> -->
-			<!-- Google search -->
-
-			<div class="pure-u-6-24 search_cell" id="google_cell">
-				<p><input type="text" class="search_box" id="sbox1" 
-					onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch1').click()"  autofocus/></br>
-				<input class="search_btn" type="submit" id="btnSearch1" 
-					onclick="var queryString = document.getElementById('sbox1').value;
-								// queryString = queryString.replace(/\\+/g, '&#43;');
-								var url = 'https://duckduckgo.com/?q=' + queryString;
-								window.open(url,'_self');"
-					value="Duck"></p>
-			</div>
-			<!-- Duckduckgo search -->
-
-			<div class="pure-u-6-24 search_cell" id="scholar_cell">
-				<p><input type="text" class="search_box" id="sbox2" 
-				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch2').click()"/></br>
-				<input class="search_btn" type="submit" id="btnSearch2" 
-					onclick="var queryString = document.getElementById('sbox2').value;
-								queryString = queryString.replace(/\\+/g, '&#43;');
-								var url = 'https://scholar.google.com/scholar?q=' + queryString;
-								window.open(url,'_blank');"
-					value="Scholar"></p>
-			</div>
-
-			<div class="pure-u-6-24 search_cell" id="wiki_cell">
-				<p><form action="https://en.wikipedia.org/wiki/Special:Search">
-					<input class="search_box" name="search" type="text" value="" /></br>
-					<input class="search_btn" name="fulltext" type="submit" value="Wikipedia" />
-				</form></p>
-			</div>
-			<div class="pure-u-3-24 margin"></div>
-		</div> <!-- end search_grid -->
-
-		<div class="pure-u-24-24 sep_div"></div>
 		<div class="pure-u-24-24 big_sep_div"></div>
 
 
+		<div class="pure-g" id="env_banner">
+			<!-- <div class="pure-u-18-24" id="motd_text">consistency</div> -->
+			<div class="pure-u-3-24" id="clock_cont">
+				<div id="clock_cell">
+					<!-- <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:120px;height:40px;"src="https://www.clocklink.com/html5embed.php?clock=043&timezone=EST&color=white&size=120&Title=&Message=&Target=&From=2018,1,1,0,0,0&Color=white"></iframe> -->
+					<iframe src="http://free.timeanddate.com/clock/i6odrl28/n3723/fn14/fs20/fcfff/tct/pct/tt0/tw1/tm1/ts1/tb4" frameborder="0" width="174" height="50" allowTransparency="true"></iframe>
+				</div>
+			</div>
+
+			<div class="pure-u-21-24" id="weather_cont">
+					<a class="weatherwidget-io" href="https://forecast7.com/en/39d17n86d53/bloomington/?unit=us" data-label_1="" data-icons="Climacons Animated" data-textcolor="#ffffff" data-font="Arimo">BLOOMINGTON WEATHER</a>
+					<script>
+						!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+					</script>
+			</div>
+		</div>
+
+		<div class="pure-u-24-24 big_sep_div"></div>
+	
 		<div class="pure-u-2-24 margin"></div>
 		<div class="pure-u-6-24 media_cell" id="iotd_cell">
 			<script>
