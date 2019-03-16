@@ -16,11 +16,36 @@
 						+ currentdate.getMinutes() + ":" 
 						+ currentdate.getSeconds();
 		document.write('<title>Launcher - ' + datetime + '</title>')
+
+		// var currentdate = new Date(); 
+		// var curhour = currentdate.getHours();
+		// var bg = "../img/bg/bg" + curhour + ".jpg"
+		// document.write(curhour)
+		// document.write(bg)
+		// $('body').css('background-image', 'url(' + bg + ');');
+
+		// var backgroundImage = localStorage.getItem('b');
+  		// if (backgroundImage) {
+    	// 	$('body').css('background-image', 'url(' + backgroundImage + ')');    
+  		// } 
 	</script>
 </head>
 
-<body>
+<script>
+	var currentdate = new Date(); 
+	var curhour = currentdate.getHours();
+	if(curhour > 12){
+		curhour = curhour - 12;
+	}
+	var bg = "launcher/img/bg/bg" + curhour + ".jpg"
+	document.write("<body style='background-image: url(" + bg + ");'>");
+</script>
+
+<!-- <body> -->
 	<div class="pure-g" id="body_div">
+		<div class="pure-u-24-24 sep_div"></div>
+
+		<!-- Begin search grid -->
 		<div class="pure-g" id="search_grid">
 			<div class="pure-u-6-24 margin"></div>
 			<!-- <div class="pure-u-6-24 search_cell" id="google_cell">
@@ -71,12 +96,15 @@
 				</form></p> -->
 			</div>
 			<div class="pure-u-6-24 margin"></div>
-		</div> <!-- end search_grid -->
+		</div>
+		<!-- end search_grid -->
 
 		<div class="pure-u-24-24 top_sep_div"></div>
-		<div class="pure-u-24-24" id="line"></div>
 
+		<!-- Begin bookmark grid -->
+		<div class="pure-u-24-24" id="first_line"></div>
 		<div class="pure-u-2-24 bookmark_margin"></div>
+		
 		<div class="pure-u-2-24 bookmark">
 			<a href="http://www.indiana.edu/~hahnlab">Lab</a>
 		</div>
@@ -108,14 +136,11 @@
 		<div class="pure-u-2-24 bookmark">
 			<a href="http://gwct.github.io/grampa-results/grampa-portal.html">GRAMPA</a>
 		</div>
+
 		<div class="pure-u-2-24 bookmark_margin"></div>
 		<div class="pure-u-24-24" id="line"></div>
-
-		<!-- <div class="pure-g sub_header">
-			<div class="pure-u-2-24 header_margin"></div>
-			<div class="pure-u-22-24 header_text">Media</div>
-		</div> -->
 		<div class="pure-u-2-24 bookmark_margin"></div>
+
 		<div class="pure-u-2-24 bookmark">
 			<a href="https://www.goodreads.com/">Books</a>
 		</div>
@@ -147,13 +172,11 @@
 		<div class="pure-u-2-24 bookmark">
 			<a href="http://xkcd.com/">xkcd</a>
 		</div>
+
 		<div class="pure-u-2-24 bookmark_margin"></div>
 		<div class="pure-u-24-24" id="line"></div>
-		<!-- <div class="pure-g sub_header">
-			<div class="pure-u-2-24 header_margin"></div>
-			<div class="pure-u-22-24 header_text">Life</div>
-		</div> -->
 		<div class="pure-u-2-24 bookmark_margin"></div>
+
 		<div class="pure-u-2-24 bookmark">
 			<a href="http://www.purduefed.com/">Banking</a>
 		</div>
@@ -184,9 +207,11 @@
 
 		<div class="pure-u-4-24 bookmark_margin"></div>	
 		<div class="pure-u-24-24" id="line"></div>
+		<!-- End bookmark grid -->
+
 		<div class="pure-u-24-24 big_sep_div"></div>
 
-
+		<!-- Begin environment grid -->
 		<div class="pure-g" id="env_banner">
 			<!-- <div class="pure-u-18-24" id="motd_text">consistency</div> -->
 			<div class="pure-u-3-24" id="clock_cont">
@@ -203,9 +228,28 @@
 					</script>
 			</div>
 		</div>
+		<!-- End environment grid -->
 
 		<div class="pure-u-24-24 big_sep_div"></div>
-	
+
+		<!-- Begin media grid -->
+		<div class="pure-u-2-24 margin"></div>
+		<!-- <div class="pure-u-6-24 media_cell" id="weather_cell">
+			<a class="weatherwidget-io" href="https://forecast7.com/en/39d17n86d53/bloomington/?unit=us" data-label_1="BLOOMINGTON" data-icons="Climacons Animated" data-days="5" data-theme="weather_one" >BLOOMINGTON</a>
+			<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+			</script>
+		</div> -->
+		<!-- 
+			https://weatherwidget.io/ 
+			Noscript: set weatherwidget.io and forecast7.com to TRUSTED 	
+		-->
+
+		<div class="pure-u-12-24 media_cell" id="cal_cell">
+			<center>
+				<iframe id="cal_frame" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=300&amp;wkst=1&amp;bgcolor=%23e6e6e6&amp;src=sonotiro%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+			</center>
+		</div>
 		<div class="pure-u-2-24 margin"></div>
 		<div class="pure-u-6-24 media_cell" id="iotd_cell">
 			<script>
@@ -214,30 +258,12 @@
 				document.write('<center><img class="pure-img" src="launcher/img/iotd/iotd' + curdate + '.jpg"></center>');		
 			</script>
 		</div>
-		<div class="pure-u-1-24 margin"></div>
-		<div class="pure-u-6-24 media_cell" id="weather_cell">
-			<a class="weatherwidget-io" href="https://forecast7.com/en/39d17n86d53/bloomington/?unit=us" data-label_1="BLOOMINGTON" data-icons="Climacons Animated" data-days="5" data-theme="weather_one" >BLOOMINGTON</a>
-			<script>
-				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-			</script>
-			<!-- 
-				https://weatherwidget.io/ 
-				Noscript: set weatherwidget.io and forecast7.com to TRUSTED 	
-			-->
-		</div>
-		<div class="pure-u-1-24 margin"></div>
-		<div class="pure-u-6-24 media_cell" id="cal_cell">
-			<center>
-				<iframe id="cal_frame" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sonotiro%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
-			</center>
-		</div>
 		<div class="pure-u-2-24 margin"></div>
-		<!-- end media section -->
+		<!-- Begin media grid -->
 
 		<div class="pure-u-24-24 sep_div"></div>
-	</div>
+		<div class="pure-u-24-24 sep_div"></div>
 
-	<!-- <div class="pure-g" id="bg_div"></div> -->
-	<!-- THIS IS THE CLOSE OF bg_div -->
+	</div>
 </body>
 </html>
