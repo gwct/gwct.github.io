@@ -22,22 +22,22 @@
 			<div class="pure-u-3-24 margin"></div>
 
 			<div class="pure-u-6-24 search_cell" id="google_cell">
-				<p><form class="search_form" onsubmit="searchEnter(1);">
+				<p><form class="search_form" onsubmit="searchEnter(1); return false;">
 					<input type="text" class="search_box" id="sbox1" placeholder="Search" autofocus/>
-					<input type="submit" hidden>
+					<!-- <input type="submit" hidden> -->
 				</p></form>
 			</div>
 			<!-- Duckduckgo search -->
 
 			<div class="pure-u-6-24 search_cell" id="scholar_cell">
-				<p><form class="search_form" onsubmit="searchEnter(2);">
+				<p><form class="search_form" onsubmit="searchEnter(2); return false;">
 					<input type="text" class="search_box" id="sbox2" placeholder="Scholar"/>
 				</p></form>
 			</div>
 			<!-- Google scholar search -->
 
 			<div class="pure-u-6-24 search_cell" id="wiki_cell">
-				<p><form class="search_form" onsubmit="searchEnter(3);">
+				<p><form class="search_form" onsubmit="searchEnter(3); return false;">
 					<input type="text" class="search_box" id="sbox3" placeholder="Wiki"/>
 				</p></form>
 			</div>

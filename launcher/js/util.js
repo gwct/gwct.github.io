@@ -16,7 +16,7 @@ function timeStamp()
 function updateClock()
 // Gets and formats the current time.
 {
-    var months = [ "Jan", "Feb", "Mar", "Apr", "May", "June",
+    var months = [ "Jan", "Feb", "Mar", "April", "May", "June",
                     "July", "Aug", "Sep", "Oct", "Nov", "Dec" ];
     var currentTime = new Date ( );
     
@@ -74,22 +74,24 @@ function setBackground()
 
 function searchEnter(i)
 // Handles the search forms.
-{
+{  
     if(i==1){
-        //document.getElementById('btnSearch1').click();
         var queryString = document.getElementById('sbox1').value;
         var url = 'https://duckduckgo.com/?q=' + queryString;
-        window.open(url,'_self');
+        window.location.href = url;
+        // Opens in same tab.
     }
     if(i==2){
         var queryString = document.getElementById('sbox2').value;
         var url = 'https://scholar.google.com/scholar?q=' + queryString;
         window.open(url,'_blank');
+        // Opens in new tab.
     }
     if(i==3){
         var queryString = document.getElementById('sbox3').value;
         var url = 'https://en.wikipedia.org/wiki/' + queryString;
         window.open(url,'_blank');
+        // Opens in new tab.
     }
 }
 
