@@ -7,95 +7,43 @@
 	<link type="text/css" rel="stylesheet" href="launcher/css/pure.css"  media="screen,projection" />
 	<link type="text/css" rel="stylesheet" href="launcher/css/launcher.css"  media="screen,projection" />
 	<script language="javascript" type="text/javascript"></script>
-	<script>
-		var currentdate = new Date(); 
-		var datetime = currentdate.getMonth()+1 + "."
-						+ currentdate.getDate()  + "." 
-						+ currentdate.getFullYear() + " @ "  
-						+ currentdate.getHours() + ":"  
-						+ currentdate.getMinutes() + ":" 
-						+ currentdate.getSeconds();
-		document.write('<title>Launcher - ' + datetime + '</title>')
-
-		// var currentdate = new Date(); 
-		// var curhour = currentdate.getHours();
-		// var bg = "../img/bg/bg" + curhour + ".jpg"
-		// document.write(curhour)
-		// document.write(bg)
-		// $('body').css('background-image', 'url(' + bg + ');');
-
-		// var backgroundImage = localStorage.getItem('b');
-  		// if (backgroundImage) {
-    	// 	$('body').css('background-image', 'url(' + backgroundImage + ')');    
-  		// } 
-	</script>
+	<script src="launcher/js/util.js"></script>
+	<script>timeStamp();</script>
 </head>
 
-<script>
-	var currentdate = new Date(); 
-	var curhour = currentdate.getHours();
-	if(curhour > 12){
-		curhour = curhour - 12;
-	}
-	var bg = "launcher/img/bg/bg" + curhour + ".jpg"
-	document.write("<body style='background-image: url(" + bg + ");'>");
-</script>
-
+<script>setBackground();</script>
 <!-- <body> -->
+<!-- <body onload="updateClock(); setInterval('updateClock()', 1000 )"> -->
 	<div class="pure-g" id="body_div">
 		<div class="pure-u-24-24 sep_div"></div>
 
 		<!-- Begin search grid -->
 		<div class="pure-g" id="search_grid">
-			<div class="pure-u-6-24 margin"></div>
-			<!-- <div class="pure-u-6-24 search_cell" id="google_cell">
-				<p><form method="get" action="https://www.google.com/search">
-					<input type="text" class="search_box" name="q" maxlength="255" value="" autofocus/>
-					<script>document.getElementById('gbox1').focus()</script></br>
-					<input class="search_btn" type="submit" value="Google" />
-				</form></p>
-			</div> -->
-			<!-- Google search -->
+			<div class="pure-u-3-24 margin"></div>
 
-			<div class="pure-u-4-24 search_cell" id="google_cell">
-				<p><input type="text" class="search_box" id="sbox1" 
-					onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch1').click()" placeholder="Search" autofocus/></br>
-				<input class="search_btn" type="submit" id="btnSearch1" 
-					onclick="var queryString = document.getElementById('sbox1').value;
-								// queryString = queryString.replace(/\\+/g, '&#43;');
-								var url = 'https://duckduckgo.com/?q=' + queryString;
-								window.open(url,'_self');"
-					value="Duck"></p>
+			<div class="pure-u-6-24 search_cell" id="google_cell">
+				<p><form class="search_form" onsubmit="searchEnter(1);">
+					<input type="text" class="search_box" id="sbox1" placeholder="Search" autofocus/>
+					<input type="submit" hidden>
+				</p></form>
 			</div>
 			<!-- Duckduckgo search -->
 
-			<div class="pure-u-4-24 search_cell" id="scholar_cell">
-				<p><input type="text" class="search_box" id="sbox2" 
-				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch2').click()" placeholder="Scholar"/></br>
-				<input class="search_btn" type="submit" id="btnSearch2" 
-					onclick="var queryString = document.getElementById('sbox2').value;
-								queryString = queryString.replace(/\\+/g, '&#43;');
-								var url = 'https://scholar.google.com/scholar?q=' + queryString;
-								window.open(url,'_blank');"
-					value="Scholar"></p>
+			<div class="pure-u-6-24 search_cell" id="scholar_cell">
+				<p><form class="search_form" onsubmit="searchEnter(2);">
+					<input type="text" class="search_box" id="sbox2" placeholder="Scholar"/>
+				</p></form>
 			</div>
+			<!-- Google scholar search -->
 
-			<div class="pure-u-4-24 search_cell" id="wiki_cell">
-				<p><input type="text" class="search_box" id="sbox3" 
-				onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch3').click()" placeholder="Wiki"/></br>
-				<input class="search_btn" type="submit" id="btnSearch3" 
-					onclick="var queryString = document.getElementById('sbox3').value;
-								queryString = queryString.replace(/\\+/g, '&#43;');
-								var url = 'https://en.wikipedia.org/wiki/' + queryString;
-								window.open(url,'_blank');"
-					value="Scholar"></p>
-
-				<!-- <p><form action="https://en.wikipedia.org/wiki/Special:Search">
-					<input class="search_box" name="search" type="text" value="" /></br>
-					<input class="search_btn" name="fulltext" type="submit" value="Wikipedia" />
-				</form></p> -->
+			<div class="pure-u-6-24 search_cell" id="wiki_cell">
+				<p><form class="search_form" onsubmit="searchEnter(3);">
+					<input type="text" class="search_box" id="sbox3" placeholder="Wiki"/>
+				</p></form>
 			</div>
-			<div class="pure-u-6-24 margin"></div>
+			<!-- Wikipedia search -->
+
+			<div class="pure-u-3-24 margin"></div>
 		</div>
 		<!-- end search_grid -->
 
@@ -214,20 +162,18 @@
 		<!-- Begin environment grid -->
 		<div class="pure-g" id="env_banner">
 			<!-- <div class="pure-u-18-24" id="motd_text">consistency</div> -->
-			<div class="pure-u-3-24" id="clock_cont">
+			<div class="pure-u-1-24 margin"></div>
+			<div class="pure-u-2-24" id="clock_cont">
 				<div id="clock_cell">
-					<!-- <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:120px;height:40px;"src="https://www.clocklink.com/html5embed.php?clock=043&timezone=EST&color=white&size=120&Title=&Message=&Target=&From=2018,1,1,0,0,0&Color=white"></iframe> -->
-					<iframe src="http://free.timeanddate.com/clock/i6odrl28/n3723/fn14/fs20/fcfff/tct/pct/tt0/tw1/tm1/ts1/tb4" frameborder="0" width="174" height="50" allowTransparency="true"></iframe>
-					<!-- <iframe src="launcher/clock.html" frameborder="0" width="174" height="50" allowTransparency="true"></iframe> -->
+					
+					<span id="clock"></span>
 				</div>
 			</div>
 
-			<div class="pure-u-21-24" id="weather_cont">
-					<a class="weatherwidget-io" href="https://forecast7.com/en/39d17n86d53/bloomington/?unit=us" data-label_1="" data-icons="Climacons Animated" data-textcolor="#ffffff" data-font="Arimo">BLOOMINGTON WEATHER</a>
-					<script>
-						!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-					</script>
+			<div class="pure-u-20-24" id="weather_cont">
+				<script>getWeather();</script>
 			</div>
+			<div class="pure-u-1-24 margin"></div>
 		</div>
 		<!-- End environment grid -->
 
@@ -235,17 +181,6 @@
 
 		<!-- Begin media grid -->
 		<div class="pure-u-2-24 margin"></div>
-		<!-- <div class="pure-u-6-24 media_cell" id="weather_cell">
-			<a class="weatherwidget-io" href="https://forecast7.com/en/39d17n86d53/bloomington/?unit=us" data-label_1="BLOOMINGTON" data-icons="Climacons Animated" data-days="5" data-theme="weather_one" >BLOOMINGTON</a>
-			<script>
-				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-			</script>
-		</div> -->
-		<!-- 
-			https://weatherwidget.io/ 
-			Noscript: set weatherwidget.io and forecast7.com to TRUSTED 	
-		-->
-
 		<div class="pure-u-12-24 media_cell" id="cal_cell">
 			<center>
 				<iframe id="cal_frame" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=300&amp;wkst=1&amp;bgcolor=%23e6e6e6&amp;src=sonotiro%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
@@ -253,14 +188,10 @@
 		</div>
 		<div class="pure-u-2-24 margin"></div>
 		<div class="pure-u-6-24 media_cell" id="iotd_cell">
-			<script>
-				var currentdate = new Date(); 
-				var curdate = currentdate.getDate();
-				document.write('<center><img class="pure-img" src="launcher/img/iotd/iotd' + curdate + '.jpg"></center>');		
-			</script>
+			<script>iotd();</script>
 		</div>
 		<div class="pure-u-2-24 margin"></div>
-		<!-- Begin media grid -->
+		<!-- End media grid -->
 
 		<div class="pure-u-24-24 sep_div"></div>
 		<div class="pure-u-24-24 sep_div"></div>

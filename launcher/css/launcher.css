@@ -29,7 +29,6 @@ body {
 }
 a {
 	color:#ff8f33;
-	/* color:#2e9d95 */
 }
 
 /*------------------------------------------------------*/
@@ -37,43 +36,21 @@ a {
 #body_div {
 	min-height:100vh;
 }
-#env_banner {
-	width:100%;
-	height:10vh;
-}
-#motd_text {
-	display: flex;
-	align-items: center;
-	font-size:3em;
-	font-style:italic;
-	/* color:#fff; */
-}
-#clock_cont {
-	display: flex;
-	align-items: center;
-}
-#clock_cell {
-	padding-left: 10px;
-}
-@media (max-width: 1025px) {
-	#env_banner { display: none; }
-}
+
 /*------------------------------------------------------*/
 /* Search grid styles */
 #search_grid {
 	width:100%;
-	/* color:#fff; */
 	height:10vh;
 }
 .search_box{
 	background-color: rgba(209, 209, 224, 0);
 	border: none;
 	border-bottom: 1px solid #d3d3d3;
-	height: 2rem;
+	height: 1.75em;
 	width: 75%;
-	font-size: 1rem;
+	font-size: 1.2em;
 	padding-left:5px;
-	/* margin: 0 0 15px 0; */
 	transition: all 0.3s;
 	display:block;
 	margin:0 auto;
@@ -106,19 +83,6 @@ a {
 }
 
 /*------------------------------------------------------*/
-/* Media grid styles */
-.media_cell {
-	min-height:20vh;
-}
-@media (max-width: 1025px) {
-	.media_cell { width:100% }
-	/* #weather_cell { width:75%; margin:0 auto; padding-bottom:20px; } */
-	#weather_cell { display:none; }
-	#iotd_cell { display:none; }
-	#cal_cell { display:none; }
-}
-
-/*------------------------------------------------------*/
 /* Bookmark grid styles */
 .bookmark {
 	height:7vh;
@@ -135,7 +99,6 @@ a {
 	height:100%;
 	text-decoration:none;
 	background-color:rgba(255,255,255,0);
-	/* color:#ffffff; */
 	color: inherit;
 	border-radius:10px;
 	transition:all .4s ease;
@@ -153,6 +116,48 @@ a {
 	.bookmark a { width:100%; font-size:xx-large; border-radius:0; border:1px solid grey; background-color:rgba(102,102, 102, 0.5); }
 	.bookmark a:hover { background-color:rgba(102, 102, 102, 0.9); }
 }
+
+/*------------------------------------------------------*/
+/* Environmental grid styles */
+#env_banner {
+	width:100%;
+	height:14vh;
+}
+#motd_text {
+	display: flex;
+	align-items: center;
+	font-size:3em;
+	font-style:italic;
+}
+#clock_cont {
+	height:100%;
+	display: flex;
+	align-items: center;
+}
+#clock_cell {
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+}
+#clock{
+	font-size:1.5em;
+}
+@media (max-width: 1025px) {
+	#env_banner { display: none; }
+}
+
+/*------------------------------------------------------*/
+/* Media grid styles */
+.media_cell {
+	min-height:20vh;
+}
+@media (max-width: 1025px) {
+	.media_cell { display:none;}
+	#weather_cell { display:none; }
+	#iotd_cell { display:none; }
+	#cal_cell { display:none; }
+}
+
 /*------------------------------------------------------*/
 /* Grid spacing styles */
 .sep_div {
@@ -162,19 +167,14 @@ a {
 	height:5vh;
 }
 .big_sep_div {
-	height:29vh;
+	height:25vh;
 }
 #vert_line{
 	width:1px;
 	height:100%;
 	background-color:#d3d3d3;
 }
-#line {
-	height:0px;
-	border-bottom:1px solid #d3d3d3;
-	margin:2vh 10%;
-}
-#first_line {
+#line, #first_line {
 	height:0px;
 	border-bottom:1px solid #d3d3d3;
 	margin:2vh 10%;
