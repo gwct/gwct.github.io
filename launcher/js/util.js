@@ -62,9 +62,12 @@ function setBackground()
 // Body tag also include call to updateClock.
 {
     var currentdate = new Date(); 
-	var curhour = currentdate.getHours();
+    var curhour = currentdate.getHours();
 	if(curhour > 12){
 		curhour = curhour - 12;
+    }
+    if(curhour == 0){
+        curhour = 12
     }
 	var bg = "launcher/img/bg/bg" + curhour + ".jpg"
 	document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'>");
