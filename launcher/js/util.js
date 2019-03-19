@@ -63,13 +63,18 @@ function setBackground()
 {
     var currentdate = new Date(); 
     var curhour = currentdate.getHours();
+    var curdate = currentdate.getDate();
+    var dateflag = 1;
 	if(curhour > 12){
 		curhour = curhour - 12;
     }
     if(curhour == 0){
         curhour = 12
     }
-	var bg = "launcher/img/bg/bg" + curhour + ".jpg"
+    if(curdate % 2 == 0){
+        dateflag = 2;
+    }
+	var bg = "launcher/img/bg/bg" + curhour + "-" + dateflag + ".jpg"
 	document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'>");
 }
 
