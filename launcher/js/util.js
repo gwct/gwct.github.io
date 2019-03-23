@@ -74,8 +74,11 @@ function setBackground()
     if(curdate % 2 == 0){
         dateflag = 2;
     }
-	var bg = "launcher/img/bg/bg" + curhour + "-" + dateflag + ".jpg"
-	document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'>");
+    var bg = "launcher/img/bg/bg" + curhour + "-" + dateflag + ".jpg"
+    if(window.innerWidth < 1025){
+        bg = "launcher/img/bg/bg" + curhour + "-" + dateflag + "-m.jpg"
+    }
+    document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'>");
 }
 
 ///////////////////////////////////////////////////////
