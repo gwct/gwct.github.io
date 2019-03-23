@@ -78,6 +78,7 @@ function setBackground()
     if(window.innerWidth < 1025){
         bg = "launcher/img/bg/bg" + curhour + "-" + dateflag + "-m.jpg"
     }
+    // For mobile background.
     document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'>");
 }
 
