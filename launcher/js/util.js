@@ -79,7 +79,12 @@ function setBackground()
         bg = "launcher/img/bg/bg" + curhour + "-" + dateflag + "-m.jpg"
     }
     // For mobile background.
-    document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'>");
+    if(curhour > 8 && curhour < 10){
+        document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'><span id=\"map_span\"><img src=\"launcher/img/lot2.png\"><a href=\"map.html\"><img id=\"hidden\" src=\"launcher/img/zelda-chest-small.png\"></a></span>");
+    }
+    else{
+        document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'>");
+    }
 }
 
 ///////////////////////////////////////////////////////

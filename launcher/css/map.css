@@ -1,0 +1,109 @@
+body {
+	background-image: url(../img/map/map-bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-clip: border-box;
+	background-origin: padding-box;
+	-moz-background-size: cover;
+	background-size: cover;
+	color:#fff;
+	font-family: 'metropolislight';
+	content: ' ';
+}
+
+#body_grid {
+    width: 100%;
+}
+
+#header {
+    background-color: rgba(0,0,0,0.5)
+}
+
+#map_pic {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/*------------------------------------------------------*/
+/* The the image map */
+#map_row {
+    width: 50%;
+    margin:0 auto;
+}
+
+.map_container {
+    margin:0 auto;
+    height:1000px;
+    width:773px;
+}
+
+#map_img {
+    margin:0 auto;
+    height:1000px;
+    width:773px;
+
+}
+  
+.map {
+position:absolute;
+}
+
+
+
+#goron { position:absolute; top:790px; left:285px; width:20px; height:20px;}
+#chest1 { position:absolute; top:80px; left:260px; width:20px; height:20px;}
+#chest2 { position:absolute; top:750px; left:425px; width:20px; height:20px;}
+#chest3 { position:absolute; top:800px; left:525px; width:20px; height:20px;}
+#question { position:absolute; top:600px; left:90px; width:20px; height:20px;}
+
+/*------------------------------------------------------*/
+/* The links for the image map */
+a .goron {
+    display:none;
+    position:relative;
+    /* top:30px; */
+    left:-83px;
+    bottom:0px;
+    right:0px;
+    width:200px;
+    background:rgba(0,0,0,0.8);
+    color:#ffffff;
+    padding:0px;
+    text-align:center!important;
+    border-radius:5px;
+}
+
+a .chest {
+    display:none;
+    position:relative;
+    left:-10px;
+    width:40px;
+    background:rgba(0,0,0,0);
+    color:#ffffff;
+    padding:0px;
+    text-align:center!important;
+    border-radius:5px;
+}
+
+a:hover span {
+    display: block;
+}
+
+a.node {
+    border-radius:5px;
+  }
+  
+a.node:hover { 
+    /* background-color:rgba(0, 0, 0, 0.3); */
+    border-radius:5px;
+    text-decoration:none;
+}
+
+
+/* 
+a {
+    border: 1px solid red;
+} */
+

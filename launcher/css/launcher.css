@@ -171,3 +171,13 @@ a {
 	#first_line { height:1vh; margin:1vh 10%;  border:0; }
 }
 
+#map_span { padding-left: 5px; padding-top:5px; font-size:x-large; color:#FFD700;}
+#map_span #hidden{ height:0; opacity: 0; transition: opacity 0.3s linear;}
+#map_span:hover #hidden{ 
+	opacity: 1;
+	position:absolute; 
+	top: 0; 
+	height: 62px;
+}
+
+
