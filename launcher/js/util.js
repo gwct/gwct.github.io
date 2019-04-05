@@ -106,7 +106,8 @@ function searchEnter(i)
     }
     if(i==3){
         var queryString = document.getElementById('sbox3').value;
-        var url = 'https://en.wikipedia.org/wiki/' + queryString;
+        var url = 'https://en.wikipedia.org/w/index.php?search=' + queryString;
+        //var url = 'https://en.wikipedia.org/wiki/' + queryString;
         window.open(url,'_blank');
         // Opens in new tab.
     }
