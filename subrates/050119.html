@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<title>Sub rates - May 1, 2019 update</title>
+</head>
+
+
+<body>
+    <h1>Substitution rate project - May 1, 2019 update</h1>
+
+    <h3>Progress</h3>
+
+    <p>I have made a species tree from both amino acid and nucleotide coding sequences (CDS) for the 12 mammal species in the analysis:</p>
+    <img src="img/cds-spec-tree.png">
+    <p><b>Figure 1: Species tree made from ~8000 CDS sequences.</b></p>
+
+    <p>I will focus on results for the CDS data only. <b>Note:</b>I could not proceed with the UCSC tree because I couldn't locate the alignments they used to estimate branch lengths. I
+    can pursue this more if it is worthwhile.</p>
+
+    <p>I then estimated divergence times using MCMCtree on this tree using a single calibration point at the root of the tree (between 150 and 167 mya, from Timetree.org).
+        Substitution rate was then calculated by dividing the branch length of the tree by the inferred divergence time for that branch.
+    </p>
+
+    <p>This resulted in the following data:</p>
+
+    <table class="table table-bordered table-hover table-condensed">
+            <thead><tr><th title="Field #1">Species</th>
+            <th title="Field #2">Source</th>
+            <th title="Field #3">Mutation rate per generation</th>
+            <th title="Field #4">IQ tree cds branch length</th>
+            <th title="Field #5">IQ tree cds divergence time</th>
+            <th title="Field #6">IQ tree cds substitution rate</th>
+            </tr></thead>
+            <tbody><tr>
+            <td>Human</td>
+            <td>Avg. 10 studies</td>
+            <td align="right">1.32E-08</td>
+            <td align="right">0.00293</td>
+            <td align="right">6270000</td>
+            <td align="right">4.67E-10</td>
+            </tr>
+            <tr>
+            <td>Chimpanzee</td>
+            <td>Avg. 3 studies</td>
+            <td align="right">1.32E-08</td>
+            <td align="right">0.00305</td>
+            <td align="right">6270000</td>
+            <td align="right">4.86E-10</td>
+            </tr>
+            <tr>
+            <td>Gorilla</td>
+            <td>Besenbacher 2019</td>
+            <td align="right">1.13E-08</td>
+            <td align="right">0.0041</td>
+            <td align="right">8030000</td>
+            <td align="right">5.11E-10</td>
+            </tr>
+            <tr>
+            <td>Orangutan</td>
+            <td>Besenbacher 2019</td>
+            <td align="right">1.66E-08</td>
+            <td align="right">0.00871</td>
+            <td align="right">15150000</td>
+            <td align="right">5.75E-10</td>
+            </tr>
+            <tr>
+            <td>Gibbon</td>
+            <td>Krishna&#39;s data</td>
+            <td align="right">1.09E-08</td>
+            <td align="right">0.01063</td>
+            <td align="right">17780000</td>
+            <td align="right">5.98E-10</td>
+            </tr>
+            <tr>
+            <td>Macaque</td>
+            <td>Wang in prep</td>
+            <td align="right">5.42E-09</td>
+            <td align="right">0.00505</td>
+            <td align="right">8290000</td>
+            <td align="right">6.09E-10</td>
+            </tr>
+            <tr>
+            <td>Vervet</td>
+            <td>Pfeiffer 2017</td>
+            <td align="right">8.80E-09</td>
+            <td align="right">0.00546</td>
+            <td align="right">8290000</td>
+            <td align="right">6.59E-10</td>
+            </tr>
+            <tr>
+            <td>Owl monkey</td>
+            <td>Thomas 2018</td>
+            <td align="right">8.14E-09</td>
+            <td align="right">0.02847</td>
+            <td align="right">42080000</td>
+            <td align="right">6.77E-10</td>
+            </tr>
+            <tr>
+            <td>Mouse lemur</td>
+            <td>Campbell 2017 (talk)</td>
+            <td align="right">8.80E-09</td>
+            <td align="right">0.05776</td>
+            <td align="right">72260000</td>
+            <td align="right">7.99E-10</td>
+            </tr>
+            <tr>
+            <td>Mouse</td>
+            <td>Lindsay 2016 (preprint)</td>
+            <td align="right">3.90E-09</td>
+            <td align="right">0.15395</td>
+            <td align="right">151250000</td>
+            <td align="right">1.02E-09</td>
+            </tr>
+            <tr>
+            <td>Cow</td>
+            <td>Harland 2017 (preprint)</td>
+            <td align="right">1.17E-08</td>
+            <td align="right">0.10046</td>
+            <td align="right">94250000</td>
+            <td align="right">1.07E-09</td>
+            </tr>
+            </tbody></table>
+
+
+    <h3>Ideas for comparing mutation and substitution rates</h3>
+
+    <p>I was thinking we could take each pair of species and get the ratio of mutation rate and compare it to the ratio of substitution rate. We can take the ratio of these two ratios. 
+        I expect this ratio of ratios to be 1.</p>
+    <p>My thinking is that, if the rates are the same, the ratio of ratios will be 1. If the rates are different due to some technical error, they will be different in the same way for every species pair, 
+        resulting in a ratio of ratios of 1.
+        If they are different for some biological reason, they will differ in different ways for species pairs and the ratios will be all over the place. Let me know if this line of thinking makes sense to you.</p>
+
+    <p>It is clear that these ratios are not 1 for many species:</p>
+
+    <img src="img/ratio-ratios.png">
+    <p><b>Figure 2: For every species pair, the ratio of mutation rate divided by the ratio of substitution rate.</b></p>
+
+    <p>For example, to get the point for human-mouse in <b>Figure 2</b>, I took the ratio of the mutation rates for each species in the data table above and divided it by the ratio of substitution rates:</p>
+
+    <p>(1.32E-08 / 3.90E-09) / (4.67E-10 / 1.02E-09) = 7.39</p>
+
+    <p>7.39 is the number plotted and this was repeated for every species pair.</p>
+
+    </br>
+    <img src="img/ratio-reg.png">
+    <p><b>Figure 3: For every species pair, the mutation rate ratio vs. the substitution rate ratio.</b></p>
+
+    <h3>Considerations</h3>
+    <ul>
+        <li>This is using all sites. I could calculate branch lengths from dS only by doing pairwise dS calculations and using those to make a NJ tree and redo.</li>
+        <li>Do we even need to use divergence times? Could I just calculate the ratio of branch lengths as the ratio of substitution rates?</li>
+        <li>If we do need divergence times, I can work on getting more/better fossil calibrations (maybe Dan has these?).</li>
+    </ul>
+
+    <h3>Triplet trees</h3>
+
+    <p>I have also proceeded in the triplet analysis. I have calculated dS for every species pair with a randomly chosen outgroup. 
+        I could proceed in a similar fashion as above and calculate ratios of ratios, but I had some thoughts:</p>
+
+    <ul>
+        <li>There are 220 possible triplets. By randomly choosing a single outgroup for each pair I've only done 55 of these. Would it be a good idea to calculate dS for all triplets and average dS for
+            species pairs with different outgroups? For example, we would have dS calculations for human-chimpanzee-gorilla and human-chimpanzee-mouse. Would averaging these distances for human-chimpanzee
+            give us a more accurate relative substitution rate? The problem here is that for pairs further out in the tree, there are fewer triplets to average (cow would only have one triplet per species).
+        </li>
+    </ul>
+
+</body>
+</html>
