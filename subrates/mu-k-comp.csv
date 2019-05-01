@@ -1,12 +1,12 @@
 Species,Source,Mutation rate per generation,IQ tree cds branch length,IQ tree cds divergence time,IQ tree cds substitution rate
-Human,Avg. 10 studies,1.32E-08,0.00293,6270000,4.67E-10
-Chimpanzee,Avg. 3 studies,1.32E-08,0.00305,6270000,4.86E-10
-Gorilla,Besenbacher 2019,1.13E-08,0.0041,8030000,5.11E-10
-Orangutan,Besenbacher 2019,1.66E-08,0.00871,15150000,5.75E-10
-Gibbon,Krishna's data,1.09E-08,0.01063,17780000,5.98E-10
-Macaque,Wang in prep,5.42E-09,0.00505,8290000,6.09E-10
-Vervet,Pfeiffer 2017,8.80E-09,0.00546,8290000,6.59E-10
-Owl monkey,Thomas 2018,8.14E-09,0.02847,42080000,6.77E-10
-Mouse lemur,Campbell 2017 (talk),8.80E-09,0.05776,72260000,7.99E-10
-Mouse,Lindsay 2016 (preprint),3.90E-09,0.15395,151250000,1.02E-09
-Cow,Harland 2017 (preprint),1.17E-08,0.10046,94250000,1.07E-09
+Human,Avg. 10 studies,1.32E-08,0.0026,8210000,3.17E-10
+Chimpanzee,Avg. 3 studies,1.32E-08,0.00265,8210000,3.23E-10
+Gorilla,Besenbacher 2019,1.13E-08,0.00356,10450000,3.41E-10
+Orangutan,Besenbacher 2019,1.66E-08,0.0077,18930000,4.07E-10
+Gibbon,Krishna's data,1.09E-08,0.00924,21610000,4.28E-10
+Macaque,Wang in prep,5.42E-09,0.00433,10630000,4.07E-10
+Vervet,Pfeiffer 2017,8.80E-09,0.00478,10630000,4.50E-10
+Owl monkey,Thomas 2018,8.14E-09,0.02514,37530000,6.70E-10
+Mouse lemur,Campbell 2017 (talk),8.80E-09,0.05219,54750000,9.53E-10
+Mouse,Lindsay 2016 (preprint),3.90E-09,0.15511,65650000,2.36E-09
+Cow,Harland 2017 (preprint),1.17E-08,0.08434,124010000,6.80E-10
