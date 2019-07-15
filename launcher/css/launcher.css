@@ -182,7 +182,6 @@ a {
 
 /*------------------------------------------------------*/
 /* Dropdown bookmarks */
-
 .drop_list {
 	display: none;
 	position: absolute;
@@ -196,9 +195,14 @@ a {
 	border-radius:5px;
   }
 
-
 /* Show the dropdown menu on hover */
 .drop_cont:hover .drop_list {display:block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .drop_cont:hover .drop_link {background-color: rgba(0,0,0,1);}
+
+@media (max-width: 1025px) {
+	.drop_cont {width:50%; height:20vh;}
+	.drop_cont .bookmark {width:100%;}
+	.drop_list {width:50%; height:20vh;}
+}
