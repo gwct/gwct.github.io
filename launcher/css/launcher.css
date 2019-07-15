@@ -180,4 +180,25 @@ a {
 	height: 62px;
 }
 
+/*------------------------------------------------------*/
+/* Dropdown bookmarks */
 
+.drop_list {
+	display: none;
+	position: absolute;
+	/* min-width: 160px; */
+	width:8.3333%;
+	z-index: 1;
+  }
+
+.drop_list a {
+	background-color:rgba(0,0,0,1);
+	border-radius:5px;
+  }
+
+
+/* Show the dropdown menu on hover */
+.drop_cont:hover .drop_list {display:block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.drop_cont:hover .drop_link {background-color: rgba(0,0,0,1);}
