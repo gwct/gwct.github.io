@@ -115,7 +115,23 @@ function searchEnter(i)
 
 ///////////////////////////////////////////////////////
 
-function getWeather()
+function getWeatherMT()
+// Writes the weather widget.
+{
+    document.write("<a class='weatherwidget-io' href='https://forecast7.com/en/46d88n114d00/missoula/?unit=us' data-label_1='' data-icons='Climacons Animated' data-textcolor='#ffffff' data-font='Arimo'>MISSOULA WEATHER</a>");
+    !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;
+            js.src='https://weatherwidget.io/js/widget.min.js';
+            fjs.parentNode.insertBefore(js,fjs);
+        }
+    }
+    (document,'script','weatherwidget-io-js');
+}
+
+function getWeatherIN()
 // Writes the weather widget.
 {
     document.write("<a class='weatherwidget-io' href='https://forecast7.com/en/39d17n86d53/bloomington/?unit=us' data-label_1='' data-icons='Climacons Animated' data-textcolor='#ffffff' data-font='Arimo'>BLOOMINGTON WEATHER</a>");
@@ -139,7 +155,6 @@ function getWeather()
     // </script>
     // v2.0 settings
 }
-
 
 ///////////////////////////////////////////////////////
 

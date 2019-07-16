@@ -126,6 +126,9 @@ a {
 #clock{
 	font-size:1.5em;
 }
+#in {
+	font-size:1.5em;
+}
 @media (max-width: 1025px) {
 	#env_banner { display: none; }
 }
