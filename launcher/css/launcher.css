@@ -26,7 +26,9 @@ body {
 	color:#fff;
 	font-family: 'metropolislight';
 	content: ' ';
+	scrollbar-width: none;
 }
+
 a {
 	color:#ff8f33;
 }
