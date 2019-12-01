@@ -1,0 +1,123 @@
+<!doctype html>
+<head>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-98263199-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+	<title>Drosophila GRAMPA Analysis</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link type="text/css" rel="stylesheet" href="css/scaffold.css"  media="screen,projection" />
+	<link rel='shortcut icon' href='img/drosophila.ico' type='image/x-icon'/ >
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+	<div class="grid" id="nav">
+		<div class="col col-1" id="nav_left">
+			<img id="logo_img" src="img/drosophila_logo.png">
+		</div>
+		<div class="col col-1-spacer-main"></div>
+		<div class="col col-10" id="nav_right">
+			Drosophila Polyploid analysis with GRAMPA
+		</div>
+	</div>
+
+	<div class="grid" id="nav_bar">
+		<div class="col col-1" id="nav_div">
+			<div class="dropdown">
+				<a href="#" class="navlink" id="nav_btn">Species list</a>
+					<div class="dropdown_table">
+						<table class="striped centered">
+							<thead><th>Species name</th><th>Species ID</th></thead>
+							<tr><td>D. grimshawi</td><td>dgri</td></tr>
+							<tr><td>D. virilis</td><td>dvir</td></tr>
+							<tr><td>D. mojavensis</td><td>dmoj</td></tr>
+							<tr><td>D. willistoni</td><td>dwil</td></tr>
+							<tr><td>D. persimilis</td><td>dper</td></tr>
+							<tr><td>D. pseudoobscura</td><td>dpse</td></tr>
+							<tr><td>D. ananassae</td><td>dana</td></tr>
+							<tr><td>D. erecta</td><td>dere</td></tr>
+							<tr><td>D. yakuba</td><td>dyak</td></tr>
+							<tr><td>D. melanogaster</td><td>dmel</td></tr>
+							<tr><td>D. sechellia</td><td>dsec</td></tr>
+							<tr><td>D. simulans</td><td>dsim</td></tr>
+						</table>
+					</div>
+			</div>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="inputs/fly.tre" class="navlink" id="nav_btn">Species tree</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="inputs/fly_trees.txt" class="navlink" id="nav_btn">Gene trees</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="results/fly_tree_filtered.txt" class="navlink" id="nav_btn">Gene trees (filtered)</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="results/flies_out.txt" class="navlink" id="nav_btn">Main output table</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="results/flies_out_det.txt" class="navlink" id="nav_btn">Detailed output</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="results/flies_out_checknums.txt" class="navlink" id="nav_btn">Checknum file</a>
+		</div>
+
+	</div>
+
+	<div class="grid" id="main_grid">
+		<div class="col col-1"></div>
+		<div class="col col-5">
+			<h2>Drosophila input phylogeny</h2>
+			<img src="img/fly_phylo.png" id="phylo_img">
+			<h3>H1 Node: All possible nodes</h3>
+			<h3>H2 Nodes: All possible nodes</h3>
+			<h3>11,129 trees after filtering</h3>
+		</div>
+		<div class="col col-5">
+			<h2>Drosophila MUL-tree</h2>
+			<img src="img/fly_mul_phylo.png" id="phylo_img">
+			<h3>Optimal H1 node: 8</h3>
+			<h3>Optimal H2 node: 11</h3>
+		</div>
+		<div class="col col-1""></div>
+	</div>
+
+	<div class="grid" id="divider">
+		<div class="col col-1-margin"></div>
+		<div class="col col-11"><div class="divider"></div></div>
+		<div class="col col-1-margin"></div>
+	</div>
+
+	<div class="grid" id="main_grid" style="padding-bottom:20px;">
+		<div class="col col-1" id="plot_margin"></div>
+		<div class="col col-10" id="plot_content">
+			<div id="cde96cd8-2cbc-4e72-b69b-1421ebaf1581" style="height: 500; width: 1000px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("cde96cd8-2cbc-4e72-b69b-1421ebaf1581", [{"opacity": 0.6, "y": [192666, 193109, 198839, 200727, 208103, 208103, 212620, 217081, 219271, 219301, 219735, 219805, 220510, 221530, 221798, 221799, 222370, 222406, 222625, 223621, 223813, 224103, 224333, 224873, 225398, 225454, 225847, 225937, 226097, 226161, 226395, 227061, 227190, 227269, 227308, 227414, 227494, 227494, 227518, 227518, 227672, 227849, 227861, 228105, 228177, 228177, 228184, 228195, 228233, 228299, 228326, 228363, 228734, 229028, 229302, 229409, 229668, 229670, 229820, 229847, 229865, 229899, 230024, 230108, 230129, 230212, 230318, 230412, 230483, 230571, 230634, 230673, 230755, 230843, 230851, 230867, 231109, 231144, 231151, 231181, 231203, 231230, 231277, 231313, 231339, 231407, 231407, 231441, 231579, 231644, 231853, 231886, 231906, 231928, 231938, 231938, 232000, 232020, 232057, 232063, 232140, 232165, 232181, 232190, 232209, 232213, 232218, 232291, 232294, 232345, 232353, 232377, 232396, 232407, 232425, 232442, 232454, 232483, 232485, 232489, 232498, 232527, 232543, 232546, 232588, 232634, 232653, 232684, 232694, 232728, 232742, 232793, 232799, 232813, 232813, 232833, 232834, 232897, 232908, 232950, 233002, 233002, 233005, 233018, 233045, 233108, 233118, 233145, 233149, 233153, 233231, 233232, 233250, 233267, 233294, 233314, 233342, 233345, 233356, 233371, 233374, 233422, 233476, 233498, 233531, 233595, 233613, 233616, 233618, 233619, 233637, 233652, 233714, 233794, 233800, 233883, 233888, 233917, 233937, 233961, 234000, 234031, 234048, 234081, 234085, 234141, 234167, 234187, 234230, 234237, 234275, 234289, 234354, 234355, 234369, 234372, 234392, 234395, 234399, 234410, 234437, 234448, 234458, 234464, 234470, 234480, 234510, 234521, 234524, 234525, 234534, 234555, 234561, 234582, 234597, 234611, 234624, 234627, 234628, 234631, 234641, 234669, 234716, 234722, 234741, 234747, 234756, 234761, 234774, 234814, 234814, 234814, 234828, 234837, 234844, 234851, 234866, 234917, 234918, 234925, 234954, 234972, 234979, 234986, 235001, 235004, 235014, 235043, 235047, 235057, 235068, 235093, 235100, 235100, 235104, 235123, 235125, 235125, 235140, 235146, 235151, 235151, 235152, 235173, 235188, 235197, 235214, 235220, 235245, 235247, 235258, 235268, 235268, 235270, 235279, 235282, 235282, 235296, 235300, 235315, 235318, 235329, 235333, 235337, 235356, 235363, 235372, 235420, 235424, 235450, 235459, 235459, 235463, 235490, 235492, 235502, 235510, 235511, 235512, 235512, 235515, 235532, 235544, 235559, 235562, 235564, 235574, 235602, 235602, 235613, 235635, 235635, 235638, 235674, 235674, 235724, 235891, 235901, 236018, 236063, 236126, 236128, 236226, 236274, 236441, 236441, 236568, 236658, 236714, 236882, 236949, 237031, 237083, 237173, 237254, 237292, 237424, 237530, 237546, 237595, 237606, 237710, 237710, 237867, 237876, 237996, 238140, 238212, 238212, 238435, 238497, 238598, 238691, 238718, 238720, 238727, 238824, 239042, 239049, 239141, 239216, 239227, 239283, 239298, 239420, 239490, 239661, 239664, 239712, 239853, 239872, 239905, 240023, 240130, 240274, 240290, 240385, 240391, 240498, 240528, 240534, 240577, 240597, 240697, 240701, 240737, 240828, 240917, 241010, 241072, 241096, 241213, 241247, 241268, 241329, 241374, 241374, 241499, 241671, 242466, 242501, 242907, 243740, 243936, 244939, 245004, 245030, 245213, 245213, 245218, 245306, 245622, 245726, 245964, 246112, 247119, 247181, 247416, 248692, 248908, 248937, 249277, 249535, 249637, 250545, 250705, 253167, 253242, 253449, 253610, 253722, 254019, 254019, 254082, 254293, 254490, 254779, 255394, 255617, 257127, 258092, 258817, 258857, 262037], "type": "scatter", "mode": "markers", "x": ["<8>-<11>", "<9>-<11>", "<7>-<11>", "<2>-dwil", "<10>-<2>", "<10>-<11>", "<3>-<11>", "<6>-<11>", "<4>-<11>", "dana-<11>", "<7>-<2>", "<2>-<3>", "<8>-<2>", "dpse-<11>", "<9>-<2>", "<2>-<9>", "dwil-<2>", "<5>-<11>", "dper-<11>", "dwil-<11>", "<2>-dana", "ST", "<7>-dwil", "<7>-dgri", "<2>-dper", "<2>-dpse", "dyak-<11>", "<6>-dyak", "dere-<11>", "<6>-dere", "<6>-dwil", "<4>-dwil", "<6>-dgri", "dvir-dgri", "<5>-dwil", "<2>-<8>", "<1>-dgri", "<1>-<2>", "<4>-<7>", "<4>-<6>", "<6>-<2>", "<1>-<11>", "<8>-<10>", "dgri-dvir", "<2>-<11>", "<2>-<10>", "<5>-dgri", "<3>-<2>", "<4>-dgri", "dsim-<11>", "dsec-<11>", "dmoj-<2>", "<10>-dgri", "<4>-<2>", "dmel-<11>", "dmoj-<11>", "<2>-dmel", "dyak-dwil", "<7>-<1>", "dere-dwil", "<2>-<7>", "dvir-<11>", "<2>-dere", "dana-dwil", "<2>-dyak", "<10>-dmoj", "<5>-<2>", "dsim-dwil", "dyak-dgri", "dsec-dwil", "dere-dgri", "<10>-dvir", "<5>-dmoj", "dgri-<11>", "<5>-dvir", "dana-dgri", "dere-<7>", "<2>-dsim", "dsim-dgri", "<10>-<1>", "dsec-dgri", "dana-<2>", "dyak-<7>", "<6>-dmoj", "<5>-dana", "<4>-dmel", "<6>-dvir", "<1>-dwil", "<5>-<7>", "<2>-dsec", "<7>-<10>", "dyak-<6>", "<5>-<3>", "dsim-dana", "<5>-<6>", "<5>-dmel", "<5>-dper", "dmel-dwil", "dsec-dana", "<4>-dsim", "dyak-dana", "<2>-<6>", "<4>-dmoj", "dere-dana", "dsec-dmel", "<5>-dpse", "<6>-<1>", "dmoj-dgri", "<4>-dvir", "<9>-dgri", "dpse-dwil", "dyak-dmoj", "dere-<6>", "dsim-dmoj", "dsec-dmoj", "dper-dwil", "dmel-dgri", "dyak-dvir", "dere-dmoj", "dpse-dgri", "dsim-dvir", "dsec-dvir", "dsim-dmel", "dper-dgri", "dere-dvir", "<4>-dsec", "dsim-dper", "<8>-dwil", "<5>-dyak", "<5>-dere", "dgri-dmoj", "<6>-<3>", "dsim-dpse", "<6>-<4>", "<6>-<7>", "<8>-dgri", "dsec-dper", "<1>-dana", "dmel-dsim", "dsec-dpse", "<9>-dwil", "<9>-<10>", "<4>-dana", "<4>-<3>", "<9>-dmoj", "dsec-<6>", "<9>-dvir", "<2>-<4>", "dyak-dper", "dvir-<2>", "<5>-<1>", "dyak-dpse", "dyak-dmel", "dere-dper", "<4>-<1>", "<1>-dper", "<11>-<11>", "dere-dpse", "<1>-dpse", "dyak-dsim", "<3>-dwil", "dyak-<2>", "dere-dmel", "<3>-dgri", "<2>-<5>", "dmel-dsec", "<7>-<9>", "dere-dsim", "dere-<2>", "dmel-dmoj", "dmoj-dwil", "dvir-dwil", "dmel-dvir", "dmel-dana", "dsim-<6>", "dwil-dgri", "dyak-<3>", "<1>-dmel", "dyak-dsec", "<6>-dana", "<8>-dmoj", "dsim-<3>", "dere-<3>", "<8>-dvir", "dgri-dwil", "<1>-dsim", "dere-dsec", "<1>-dere", "dsec-<3>", "<7>-dmoj", "dsec-dere", "<1>-dyak", "dmel-dper", "<7>-dvir", "dsec-dyak", "<3>-dana", "<4>-<5>", "dvir-dana", "dgri-dgri", "dsim-dere", "dmel-dpse", "dmel-dere", "dsim-dyak", "dpse-<2>", "<3>-dsim", "<6>-dper", "dmoj-dana", "dmel-dyak", "<3>-dmoj", "<4>-dper", "dwil-dmoj", "dper-<2>", "dvir-dper", "<3>-dvir", "dwil-dvir", "<4>-dpse", "dvir-dpse", "dgri-dana", "<1>-dsec", "dsim-<2>", "<3>-dmel", "dper-dsim", "<6>-dpse", "dvir-dmel", "dmoj-dmel", "dsec-<2>", "dmoj-dper", "dmoj-dsim", "dvir-dsim", "<7>-<8>", "<7>-dana", "dmoj-dpse", "dgri-dsim", "dper-dmel", "<7>-dper", "dgri-dmel", "dwil-dana", "<1>-<3>", "dgri-dper", "dwil-dwil", "dana-dmoj", "dgri-dpse", "<3>-dsec", "dvir-dere", "dmoj-dere", "dana-dvir", "dwil-dsim", "dwil-dmel", "<8>-dper", "dana-dsim", "<3>-dere", "dvir-dyak", "dper-dana", "dyak-dyak", "dmoj-dyak", "dgri-dere", "dsec-<5>", "dsec-dsim", "dpse-dsim", "<7>-dpse", "dpse-dper", "dpse-<3>", "dsim-dsim", "<3>-dyak", "dana-dmel", "dper-dsec", "dper-dere", "dgri-dyak", "dper-dmoj", "dpse-dmel", "dmoj-dsec", "dper-<3>", "dper-dpse", "dvir-dsec", "dsim-<7>", "<8>-dpse", "dpse-dmoj", "dmel-dmel", "dpse-dana", "dper-dyak", "dwil-dere", "dsec-<7>", "dper-dvir", "dgri-dsec", "dana-dana", "dpse-dvir", "dmoj-dmoj", "dwil-dper", "dwil-dyak", "dana-dere", "dyak-dere", "dyak-<4>", "dana-dper", "dwil-dpse", "dper-dper", "dvir-dvir", "dpse-dere", "dwil-dsec", "dvir-dmoj", "dvir-<1>", "dere-dere", "dana-dpse", "dsec-dsec", "dana-dyak", "dpse-dpse", "dyak-<1>", "dana-dsec", "dmoj-<1>", "dmoj-dvir", "dpse-dyak", "dsim-<5>", "dsim-dsec", "dpse-dsec", "dere-dyak", "dere-<4>", "dere-<1>", "dana-<1>", "dmel-<3>", "<6>-<8>", "<4>-<8>", "<7>-<3>", "dmel-<2>", "dsim-<1>", "dsec-<1>", "<8>-<9>", "<8>-<3>", "<5>-<8>", "<9>-<1>", "dyak-<5>", "dvir-<3>", "dwil-<3>", "dere-<5>", "dmoj-<3>", "<5>-<4>", "dgri-<3>", "dana-<3>", "dmel-<7>", "dmel-<1>", "dpse-<1>", "dper-<1>", "<8>-<1>", "dgri-<2>", "dgri-<1>", "<3>-<3>", "<1>-<5>", "dsec-<4>", "dsim-<4>", "dmel-<5>", "dmel-<6>", "<3>-<1>", "<3>-<5>", "<1>-<6>", "dwil-<1>", "dvir-<5>", "dper-<5>", "dmoj-<5>", "dgri-<5>", "dwil-<5>", "<1>-<7>", "dana-<5>", "<5>-<5>", "dpse-<5>", "dyak-<8>", "dmel-<4>", "dere-<8>", "<1>-<4>", "dvir-<6>", "<3>-<6>", "dmoj-<6>", "dgri-<6>", "<2>-<2>", "dper-<6>", "<3>-<7>", "dwil-<6>", "dana-<6>", "dsim-<8>", "<1>-<1>", "dpse-<6>", "<6>-<6>", "dvir-<4>", "dsec-<8>", "dmoj-<4>", "dvir-<7>", "dmoj-<7>", "<3>-<4>", "dgri-<4>", "dgri-<7>", "dper-<4>", "dwil-<4>", "dper-<7>", "dwil-<7>", "dana-<4>", "<4>-<4>", "dpse-<4>", "<7>-<7>", "dana-<8>", "dana-<7>", "dpse-<7>", "<6>-<9>", "dmel-<8>", "<4>-<9>", "<1>-<8>", "<3>-<10>", "<5>-<9>", "dvir-<8>", "dwil-<8>", "dmoj-<8>", "<3>-<8>", "<3>-<9>", "dgri-<8>", "dana-<9>", "<6>-<10>", "dper-<8>", "dpse-<8>", "<8>-<8>", "<4>-<10>", "dyak-<9>", "dere-<9>", "dsim-<9>", "dsec-<9>", "dana-<10>", "dpse-<9>", "dper-<9>", "<5>-<10>", "dmel-<9>", "<1>-<9>", "dmoj-<9>", "dvir-<9>", "dyak-<10>", "dgri-<9>", "dere-<10>", "dwil-<10>", "dwil-<9>", "dpse-<10>", "dper-<10>", "<1>-<10>", "<9>-<9>", "dsim-<10>", "dsec-<10>", "dmel-<10>", "dmoj-<10>", "dvir-<10>", "dgri-<10>", "<10>-<10>"]}], {"autosize": false, "title": "GRAMPA Results: flies_out.txt", "paper_bgcolor": "#fffae6", "plot_bgcolor": "#e1e1ea", "yaxis": {"titlefont": {"color": "#737373", "family": "Arial, sans-serif", "size": 20}, "title": "Score"}, "height": 500, "width": 1000, "titlefont": {"family": "Arial, sans-serif", "size": 30}, "xaxis": {"tickangle": 90, "titlefont": {"color": "#737373", "family": "Arial, sans-serif", "size": 20}, "title": "H1-H2 Node"}, "margin": {"b": 150, "r": 20, "pad": 0, "t": 70, "l": 70}}, {"linkText": "Export to plot.ly", "showLink": true})</script>
+		</div>
+		<div class="col col-1" id="plot_margin"></div>
+	</div>
+
+
+	<div class="grid" id="footer_grid">
+		<div class="col col-12" id="footer">
+			Site designed and maintained by <a href="https://gwct.github.io/index.html">Gregg Thomas</a> -- Contact: grthomas@indiana.edu -- Some of the CSS used here is from the <a href="http://materializecss.com/">Materialize Project</a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -80,7 +80,7 @@ function setBackground()
     }
     // For mobile background.
     if(curhour > 7 && curhour < 10){
-        document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'><span id=\"map_span\"><img src=\"launcher/img/map/lot2.png\"><a href=\"map.html\"><img id=\"hidden\" src=\"launcher/img/map/zelda-chest-small.png\"></a></span>");
+        document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'><span id=\"map_span\"><img src=\"launcher/img/map/lot2.png\"><a href=\"launcher/map.html\"><img id=\"hidden\" src=\"launcher/img/map/zelda-chest-small.png\"></a></span>");
     }
     else{
         document.write("<body onload=\"updateClock(); setInterval('updateClock()', 1000 )\" style='background-image: url(" + bg + ");'>");

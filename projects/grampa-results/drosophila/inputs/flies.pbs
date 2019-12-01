@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -k o
+#PBS -l nodes=1:ppn=1,walltime=60:00:00,vmem=10GB
+#PBS -M grthomas@indiana.edu
+#PBS -m abe
+#PBS -N flies_grampa
+#PBS -j oe
+
+time -p /N/u/grthomas/Mason/bin/grampa/grampa.py -s /N/u/grthomas/Mason/grampa_data/flies/fly.tre -g /N/u/grthomas/Mason/grampa_data/flies/fly_trees.txt -o /N/u/grthomas/Mason/grampa_data/flies/flies_out.txt -c 10
+

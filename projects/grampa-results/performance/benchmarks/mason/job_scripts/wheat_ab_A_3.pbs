@@ -1,0 +1,18 @@
+#!/bin/bash
+#PBS -k o
+#PBS -l nodes=1:ppn=6,walltime=48:00:00,vmem=32GB
+#PBS -M grthomas@indiana.edu
+#PBS -m abe
+#PBS -N grampa_wheat_3
+#PBS -j oe
+
+module load python/2.7.9
+module load collectl
+SAMPLEINTERVAL=10
+COLLECTLDIRECTORY=/N/dc2/scratch/grthomas/wheat-3/
+mkdir $COLLECTLDIRECTORY
+collectl -F1 -i$SAMPLEINTERVAL:$SAMPLEINTERVAL -sZl --procfilt u$UID -f $COLLECTLDIRECTORY &
+time -p python2.7 /N/u/grthomas/Mason/grampa-mp/grampa-mp.py -s /N/u/grthomas/Mason/grampa_data/wheat/wheat_A.tre -g /N/u/grthomas/Mason/grampa_data/wheat/wheat_AB_trees.txt -o /N/u/grthomas/Mason/grampa-mp/wheat_3 -c 10 -v 0 -p 3
+collectl_stop.sh
+
+

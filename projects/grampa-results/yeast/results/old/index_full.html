@@ -1,0 +1,130 @@
+<!doctype html>
+	<head>
+		<title>Yeast GRAMPA Analysis</title>
+		<link type="text/css" rel="stylesheet" href="css/scaffold.css"  media="screen,projection" />
+		<link rel='shortcut icon' href='img/yeast.ico' type='image/x-icon'/ >
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	</head>
+
+<body>
+
+	<div class="grid" id="nav">
+		<div class="col col-1" id="nav_left">
+			<img id="logo_img" src="img/yeast_logo.png">
+		</div>
+		<div class="col col-1-spacer-main"></div>
+		<div class="col col-10" id="nav_right">
+			Yeast Polyploid analysis with GRAMPA
+		</div>
+	</div>
+
+	<div class="grid" id="nav_bar">
+		<div class="col col-1" id="nav_div">
+			<a href="index.html" class="navlink" id="nav_btn">Yeast new</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<div class="dropdown">
+				<a href="#" class="navlink" id="nav_btn">Species list</a>
+					<div class="dropdown_table">
+						<table class="striped centered">
+							<thead><th>Species name</th><th>AKA</th><th>Species ID</th></thead>
+							<tr><td>Schizosaccharomyces pombe</td><td></td><td>SCHPO</td></tr>
+							<tr><td>Yarrowia lipolytica</td><td></td><td>YARLI</td></tr>
+							<tr><td>Nadsonia fulvescens</td><td></td><td>45786A</td></tr>
+							<tr><td>Dekkera bruxellensis</td><td></td><td>DEKBR</td></tr>
+							<tr><td>Debaryomyces hansenii</td><td></td><td>DEBHA</td></tr>
+							<tr><td>Scheffersomyces stipitis</td><td>Pichia stipitis</td><td>PICST</td></tr>
+							<tr><td>Candida albicans</td><td></td><td>CANAL</td></tr>
+							<tr><td>Wickerhamomyces anomalus</td><td></td><td>HANAN</td></tr>
+							<tr><td>Kluyveromyces lactis</td><td></td><td>KLULA</td></tr>
+							<tr><td>Ashbya gossypii</td><td></td><td>ASHGO</td></tr>
+							<tr><td>Lachancea kluyveri</td><td>Saccharomyces kluyveri</td><td>SACKL</td></tr>
+							<tr><td>Lachancea waltii</td><td>Kluyveromyces waltii</td><td>KLUWA</td></tr>
+							<tr><td>Lachancea thermotolerans</td><td></td><td>LACTH</td></tr>
+							<tr><td>Torulaspora delbrueckii</td><td></td><td>TORDC</td></tr>
+							<tr><td>Zygosaccharomyces rouxii</td><td></td><td>ZYGRO</td></tr>
+							<tr><td>Tetrapisispora blattae</td><td></td><td>1071379A</td></tr>
+							<tr><td>Tetrapisispora phaffii</td><td></td><td>TETPH</td></tr>
+							<tr><td>Vanderwaltozyma polyspora</td><td></td><td>VANPO</td></tr>
+							<tr><td>Kazachstania naganishii</td><td></td><td>588726A</td></tr>
+							<tr><td>Kazachstania africana</td><td></td><td>KAZAF</td></tr>
+							<tr><td>Naumovozyma dairenensis</td><td></td><td>NAUDC</td></tr>
+							<tr><td>Naumovozyma castellii</td><td>Saccharomyces castellii</td><td>SACCA</td></tr>
+							<tr><td>Saccharomyces bayanus</td><td></td><td>SACBA</td></tr>
+							<tr><td>Saccharomyces cerevisiae</td><td></td><td>YEAST</td></tr>
+							<tr><td>Candida glabrata</td><td></td><td>CANGA</td></tr>
+							<tr><td>Nakaseomyces bacillisporus</td><td></td><td>51600A</td></tr>
+							<tr><td>Candida castellii</td><td></td><td>51914A</td></tr>
+						</table>
+					</div>
+			</div>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="inputs/yeast_spec.tre" class="navlink" id="nav_btn">Species tree</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="inputs/yeast_trees_final.txt" class="navlink" id="nav_btn">Gene trees</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="results/yeast_trees_final_filtered_full.txt" class="navlink" id="nav_btn">Gene trees (filtered)</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="results/yeast_full.txt" class="navlink" id="nav_btn">Main output table</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="results/yeast_full_det.txt" class="navlink" id="nav_btn">Detailed output</a>
+		</div>
+
+		<div class="col col-1" id="nav_div">
+			<a href="results/yeast_full_checknums.txt" class="navlink" id="nav_btn">Checknum file</a>
+		</div>
+
+	</div>
+
+	<div class="grid" id="main_grid">
+		<div class="col col-1"></div>
+		<div class="col col-5">
+			<h2>Yeast input phylogeny</h2>
+			<img src="img/yeast_phylo.png" id="phylo_img">
+			<h3>H1 Nodes: 11, 19, 20, 21</h3>
+			<h3>H2 Nodes: ZYGRO, TORDC, 9, 8, 22, 5, 7, 21, 20, 23, 24, HANAN</h3>
+			<h3>3,803 trees after filtering</h3>
+		</div>
+		<div class="col col-5">
+			<h2>Yeast MUL-tree</h2>
+			<img src="img/yeast_full_mul_phylo.png" id="phylo_img">
+			<h3>Optimal H1 node: 19</h3>
+			<h3>Optimal H2 node: 21</h3>
+		</div>
+		<div class="col col-1""></div>
+	</div>
+
+	<div class="grid" id="divider">
+		<div class="col col-1-margin"></div>
+		<div class="col col-11"><div class="divider"></div></div>
+		<div class="col col-1-margin"></div>
+	</div>
+
+	<div class="grid" id="main_grid" style="padding-bottom:20px;">
+		<div class="col col-1" id="plot_margin"></div>
+		<div class="col col-10" id="plot_content">
+			<div id="e76b6d28-2c7c-4727-870f-95219a50f560" style="height: 500; width: 1000px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("e76b6d28-2c7c-4727-870f-95219a50f560", [{"opacity": 0.6, "y": [140988, 141469, 142008, 142649, 142649, 143789, 144540, 144639, 144639, 144951, 145296, 145671, 146191, 146235, 146256, 146314, 146314, 146318, 146339, 146553, 146598, 146617, 146717, 146771, 147041, 147130, 147200, 147712, 147788, 148031, 148156, 148238, 148327, 148394, 148547, 148645, 148661, 149523, 149663, 149760, 153462], "type": "scatter", "mode": "markers", "x": ["<19>-<21>", "<20>-<22>", "<19>-<22>", "<20>-<21>", "<20>-<9>", "<19>-<9>", "<19>-HANAN", "<21>-<8>", "<21>-<22>", "<20>-<23>", "<20>-HANAN", "<19>-<23>", "<21>-<7>", "<19>-ZYGRO", "<20>-<24>", "<20>-ZYGRO", "<20>-TORDC", "<11>-<22>", "<19>-TORDC", "<19>-<8>", "<21>-HANAN", "<11>-HANAN", "<11>-<9>", "<19>-<24>", "<21>-<23>", "<21>-<5>", "<21>-<24>", "<11>-ZYGRO", "<11>-TORDC", "<19>-<5>", "<20>-<8>", "<20>-<5>", "<19>-<7>", "<11>-<21>", "<11>-<24>", "<11>-<23>", "<20>-<7>", "<11>-<5>", "<11>-<8>", "<11>-<7>", "<21>-<21>"]}], {"autosize": false, "title": "GRAMPA Results: yeast_full.txt", "paper_bgcolor": "#fffae6", "plot_bgcolor": "#e1e1ea", "yaxis": {"titlefont": {"color": "#737373", "family": "Arial, sans-serif", "size": 20}, "title": "Score"}, "height": 500, "width": 1000, "titlefont": {"family": "Arial, sans-serif", "size": 30}, "xaxis": {"tickangle": 90, "titlefont": {"color": "#737373", "family": "Arial, sans-serif", "size": 20}, "title": "H1-H2 Node"}, "margin": {"b": 150, "r": 20, "pad": 0, "t": 70, "l": 70}}, {"linkText": "Export to plot.ly", "showLink": true})</script>
+		</div>
+		<div class="col col-1" id="plot_margin"></div>
+	</div>
+
+
+	<div class="grid" id="footer_grid">
+		<div class="col col-12" id="footer">
+			Site designed and maintained by <a href="https://gwct.github.io/index.html">Gregg Thomas</a> -- Contact: grthomas@indiana.edu -- Some of the CSS used here is from the <a href="http://materializecss.com/">Materialize Project</a>
+		</div>
+	</div>
+
+</body>
+</html>

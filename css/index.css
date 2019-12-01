@@ -1,7 +1,7 @@
 /*------------------------------------------------------*/
 /* Hero image styles */
 #top_grid {
-	height:30vh;
+	height:27vh;
     background-image: url(../img/bg/bg08.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -52,6 +52,11 @@
 #bio_text {
 	/* padding:20px 20px 20px 20px; */ 
 }
+#contact{
+    max-width: 100%;
+    height: auto;
+}
+
 
 /*------------------------------------------------------*/
 /* Hidden image styles */
@@ -70,7 +75,6 @@ span:hover img{
 	#bio_text { width:100%; padding:0px 20px; font-size:large;}
 	span:hover img{ display: none; }
 }
-
 
 
 
