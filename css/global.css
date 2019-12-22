@@ -44,23 +44,28 @@ a {
 	border-top:1px solid #333;
 }
  
+.section_header_cont {
+	/* border: 1px solid blue; */
+}
+
 .section_header {
 	/* background: #f3ece7;
 	color: #e46c0a; */
-	background-color: #333333;
+	background-color: #666666;
 	color: #fff;
 	padding: 5px 20px;
-	border-radius:8px;
+	/* border-radius:8px; */
 	font-size:0.8em;
+	/* border:1px solid red; */
 }
 @media (max-width: 1025px) {
 	.section_header  { padding:0;  }
 	.section_header_cont { 
-		background-color: #333333; 
+		/* background-color: #333333;  */
 		text-align:center; 
 		padding:0;
 		margin-top:5px;
-		border-radius:8px;
+		/* border-radius:8px; */
 	}
 }
 

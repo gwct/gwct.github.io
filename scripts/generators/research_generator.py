@@ -20,9 +20,11 @@ html_template = """
 
     <div class="pure-g" id="main_div_res">
         <div class="pure-u-24-24" id="header">Research</div>
+
         <div class="pure-u-2-24" id="margin"></div>
-        <div class="pure-u-20-24 section_header_cont"><h1><span class="section_header">Mutation rate variation</span></h1></div>
+        <div class="pure-u-20-24 section_header_cont"><h1><div class="section_header">Mutation rate variation</div></h1></div>
         <div class="pure-u-2-24" id="margin"></div>
+
         <div class="pure-u-2-24" id="margin"></div>
         <div class="pure-u-10-24" id="research_text">
             <p align="justify">Mutations play a key role in disease and in the long-term evolution of populations. That means the rate at which mutations
@@ -35,15 +37,15 @@ html_template = """
             <div id="research_pic_1"></div>
         </div>
         <div class="pure-u-2-24" id="margin"></div>
-        <div class="pure-u-24-24" id="horz_line"></div>
+
+        <div class="pure-u-24-24" id="sep_div"></div>
+
         <div class="pure-u-2-24" id="margin"></div>
-        <div class="pure-u-20-24 section_header_cont"><h1><span class="section_header">Molecular convergence</span></h1></div>
+        <div class="pure-u-20-24 section_header_cont"><h1><div class="section_header">Molecular convergence</div></h1></div>
         <div class="pure-u-2-24" id="margin"></div>
-        <div class="pure-u-1-24" id="margin"></div>
-        <div class="pure-u-8-24" id="research_pic_container">
-            <div id="research_pic_2"></div>
-        </div>
-        <div class="pure-u-12-24" id="research_text">
+
+        <div class="pure-u-2-24" id="margin"></div>
+        <div class="pure-u-10-24" id="research_text">
             <p align="justify">Convergent evolution occurs when distantly related lineages evolve to share the same trait. A general assumption is that
                     for a trait to converge in multiple lineages, it must be adaptive. That means convergent evolution provides a great opportunity
                     to study adaptation. Until recently, convergent	evolution was only observed at the phenotypic level (i.e. the defensive quills
@@ -52,14 +54,19 @@ html_template = """
                     convergent amino acid substitutions occur all the time by chance in nature. This makes it difficult to pick out which convergent
                     changes are actually special. I've done work in this area to develop methods to detect molecular convergence while avoiding many
                     pitfalls that come from high levels of background convergence.</p>		
-            </div>	
-        <div class="pure-u-3-24" id="margin"></div>
+        </div>
+        <div class="pure-u-2-24" id="margin"></div>
+        <div class="pure-u-8-24" id="research_pic_container">
+            <div id="research_pic_2"></div>
+        </div>
+        <div class="pure-u-2-24" id="margin"></div>
+
         <div class="pure-u-24-24" id="sep_div"></div>
-        <div class="pure-u-24-24" id="horz_line"></div>
-        
+
         <div class="pure-u-2-24" id="margin"></div>
-        <div class="pure-u-20-24 section_header_cont"><h1><span class="section_header">Gene family evolution</span></h1></div>
+        <div class="pure-u-20-24 section_header_cont"><h1><div class="section_header">Gene family evolution</div></h1></div>
         <div class="pure-u-2-24" id="margin"></div>
+
         <div class="pure-u-2-24" id="margin"></div>
         <div class="pure-u-10-24" id="research_text">	
             <p align="justify">Another type of mutation is deletion or duplication of long stretches of DNA. This can lead to gene duplication
