@@ -37,8 +37,8 @@ html_template = """
 			<h3 align="justify">Hi! I am a postdoctoral research associate in the Division of Biological Sciences at the University of Montana under 
 			the advisement of <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good</a>.</h3> I previously studied at Indiana University with 
 				<a href="http://www.indiana.edu/~hahnlab/" target="_blank">Matt Hahn</a>.
-			<p align="justify">I'm excited to understand the processes and patterns of molecular evolution by using genomic and phylogenetics, and working 
-				through some of the problems that large amount of genomic data has presented. To this end, I have worked on modeling mutation rate variation 
+			<p align="justify">I'm excited to understand the processes and patterns of molecular evolution by using genomics and phylogenetics, and working 
+				through some of the problems that vast amounts of genomic data has presented. To this end, I have worked on modeling mutation rate variation 
 				in mammals, detecting convergent evolution on genomic data, and analyzing gene families in a number of species. I contributed to latest 
 				version of <a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE</a> to account for error in gene family analysis, and I developed 
 				the program <a href="https://gwct.github.io/grampa" target="_blank" id="doi_link">GRAMPA</a> to study polyploidy in the context of gene tree 
