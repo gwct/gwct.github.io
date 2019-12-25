@@ -22,8 +22,7 @@ html_template = """
 		<div class="pure-u-24-24" id="header">Publications</div>
 		<div class="pure-u-2-24" id="margin"></div>
 		<div class="pure-u-20-24" id="pub_text">
-			
-			<div class="section_header_cont"><h1><div class="section_header">Pre-prints</div></h1></div>
+			<div class="section_header_cont"><div class="section_header">Pre-prints</div></div>
 			<ul id="presents">
 				<p><span class="pub_title">Origins and long-term patterns of copy-number variation in rhesus macaques</span>
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Wang RJ, Nguyen J, Harris RA, Raveendran M, Rogers J, Hahn MW. 2019. <em>bioRxiv</em>.
@@ -42,8 +41,7 @@ html_template = """
 				</br>&nbsp;&nbsp;Resources: <a href="https://i5k.gitlab.io/ArthroFam/" target="_blank">ArthroFam website</a></p>
 			</ul>
 
-			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
-			<div class="section_header_cont"><h1><div class="section_header">2019</div></h1></div>
+			<div class="section_header_cont"><div class="section_header">2019</div></div>
 			<ul id="presents">
 				<p><span class="pub_title">Tissue-specific expression profiles and positive selection analysis in the tree swallow (<em>Tachycineta bicolor</em>) using a <em>de novo</em> transcriptome assembly</span>
 				</br>&nbsp;&nbsp;Bentz AB, <b>Thomas GWC</b>, Rusch DB, Rosvall KA. 2019. <em>Scientific Reports</em>. 9:15849.
@@ -70,8 +68,7 @@ html_template = """
 				</br>&nbsp;&nbsp;Resources: <a href="https://cafe-portal.gitlab.io/bop/" target="_blank">Website</a></p></p>
 			</ul>
 
-			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
-			<div class="section_header_cont"><h1><div class="section_header">2018</div></h1></div>
+			<div class="section_header_cont"><div class="section_header">2018</div></div>
 			<ul id="presents">
 				<p><span class="pub_title">Reproductive longevity predicts mutation rates in primates</span>
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Wang RJ, Puri A, Harris RA, Raveendran M, Hughes DST, Murali SC, Williams LE,
@@ -93,8 +90,7 @@ html_template = """
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/doi:10.1038/nature25140" target="_blank" id="doi_link">10.1038/nature25140</a></p>
 			</ul>
 
-			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
-			<div class="section_header_cont"><h1><div class="section_header">2017</div></h1></div>
+			<div class="section_header_cont"><div class="section_header">2017</div></div>
 			<ul id="presents">
 				<p><span class="pub_title">Gene-tree reconciliation with MUL-trees to resolve polyploidy events</span>
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Ather SA, and Hahn MW. 2017. <em>Systematic Biology.</em> 66(6):1007-1018.
@@ -107,8 +103,7 @@ html_template = """
 				</br>&nbsp;&nbsp;Software: <a href="https://github.com/gwct/gwct" target="_blank">GWCT</a></p>
 			</ul>
 
-			<div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div>
-			<div class="section_header_cont"><h1><div class="section_header">2015</div></h1></div>
+			<div class="section_header_cont"><div class="section_header">2015</div></div>
 			<ul id="presents">
 				<p><span class="pub_title">The genome of the vervet (Chlorocebus aethiops sabaeus)</span>
 				</br>&nbsp;&nbsp;Warren WC, <b>The Vervet Genome Consortium</b>, Freimer NB. 2015. <em>Genome Research.</em> 25(12):1921-1933.
@@ -127,8 +122,7 @@ html_template = """
 				</br>&nbsp;&nbsp;doi: <a href="http://dx.doi.org/10.1126/science.1258522" target="_blank">10.1126/science.1258522</a></p>
 			</ul>
 
-			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
-			<div class="section_header_cont"><h1><div class="section_header">2014</div></h1></div>
+			<div class="section_header_cont"><div class="section_header">2014</div></div>
 			<ul id="presents">
 				<p><span class="pub_title">Comparative analysis of the domestic cat genome reveals genetic signatures underlying feline biology and domestication</span>
 				</br>&nbsp;&nbsp;Montague MJ ... <b>Thomas GWC</b>, Hahn MW ... Warren WC. 2014. <em>PNAS.</em> 111(48):17230-17235.
@@ -139,8 +133,7 @@ html_template = """
 				</br>&nbsp;&nbsp;doi: <a href="http://dx.doi.org/10.1038/nature13679" target="_blank">10.1038/nature13679</a></p>
 			</ul>
 
-			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
-			<div class="section_header_cont"><h1><div class="section_header">2013</div></h1></div>
+			<div class="section_header_cont"><div class="section_header">2013</div></div>
 			<ul id="presents">
 				<p><span class="pub_title">The human mutation rate is increasing, even as it slows</span>
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b> and Hahn MW. 2013. <em>Molecular Biology and Evolution.</em> 31(2):253-257.

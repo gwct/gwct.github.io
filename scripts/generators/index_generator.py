@@ -20,7 +20,7 @@ html_template = """
 
 	<div class="pure-g" id="top_grid">
 		<div class="pure-u-24-24" id="hero">
-			<img class="pure_img" id="name_img" src="img/logo/name5.png">
+			<img class="pure_img" id="name_img" src="img/me/name5.png">
 		</div>
 	</div>
 
@@ -34,28 +34,29 @@ html_template = """
 		</div>
 		<div class="pure-u-1-24" id="margin"></div>
 		<div class="pure-u-15-24" id="bio_text">
-			<h3 align="justify">Hi! I am a postdoctoral research associate in the Division of Biological Sciences at the University of Montana under the advisement of 
-				<a href="http://www.thegoodlab.org/" target="_blank">Jeff Good</a>.</h3> I previously studied at Indiana University with 
+			<h3 align="justify">Hi! I am a postdoctoral research associate in the Division of Biological Sciences at the University of Montana under 
+			the advisement of <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good</a>.</h3> I previously studied at Indiana University with 
 				<a href="http://www.indiana.edu/~hahnlab/" target="_blank">Matt Hahn</a>.
-			<p align="justify">I'm excited to work on inferring phylogenies with the vast amount of genomic data that's now available, and working through some of 
-				the problems that amount of data has presented. I'm interested in using phylogenetics to identify genomic changes that underlay interesting phenotypic
-				adaptations throughout the tree of life. To this end, I have worked on modeling mutation rate variation in mammals, detecting convergent evolution 
-				on genomic data, and analyzing gene families in a number of species. I contributed to latest version of <a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE</a>
-				 to account for error in gene family analysis, and I developed the program <a href="https://gwct.github.io/grampa" target="_blank" id="doi_link">GRAMPA</a> 
-				 to study polyploidy in the context of gene tree topologies.
-				<!-- I also have an interest in the biology of extremophiles.</p> -->
-				I also wrote the program <a href="https://gwct.github.io/referee" target="_blank" id="doi_link">Referee</a> to annotate genome assemblies with quality scores.</p>
+			<p align="justify">I'm excited to understand the processes and patterns of molecular evolution by using genomic and phylogenetics, and working 
+				through some of the problems that large amount of genomic data has presented. To this end, I have worked on modeling mutation rate variation 
+				in mammals, detecting convergent evolution on genomic data, and analyzing gene families in a number of species. I contributed to latest 
+				version of <a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE</a> to account for error in gene family analysis, and I developed 
+				the program <a href="https://gwct.github.io/grampa" target="_blank" id="doi_link">GRAMPA</a> to study polyploidy in the context of gene tree 
+				topologies. <!-- I also have an interest in the biology of extremophiles.</p> --> I also wrote the program 
+				<a href="https://gwct.github.io/referee" target="_blank" id="doi_link">Referee</a> to annotate genome assemblies with quality scores.</p>
 			<p align="justify">Outside of the lab, I have a passion for 
-				<span id="hidden">do<img src="img/me/jenny.jpg"></span><span id="hidden">gs<img src="img/me/momo.jpg"></span><span id="hidden"><img src="img/me/iggy.jpg"></span>
-				 and </span><span id="hidden">animals<img src="img/me/pip.jpg"></span> in general. <!-- I volunteer every weekend at the local animal shelter to try and help
-				out. --> I also enjoy being active and doing <span id="hidden"> puzzles<img src="img/me/puzzles.jpg"></span> with my partner!</p>
+				<span id="hidden">do<img src="img/me/jenny.jpg"></span><span id="hidden">gs<img src="img/me/momo.jpg"></span>
+				 and </span><span id="hidden">animals<img src="img/me/pip.jpg"></span> 
+				 in general. <!-- I volunteer every weekend at the local animal shelter to try and help
+				out. --> I also enjoy being active and doing 
+				<span id="hidden"> puzzles<img src="img/me/puzzles.jpg"></span> with my partner!</p>
 
 			<!-- <p>Contact: grthomas [at] indiana [dot] edu</p> -->
 			<div class="pure-u-2-24" id="margin"></div>
 		</div>
 
         <!--<div class="pure-u-10-24" id="margin"></div>	-->
-        <div class="pure-u-24-24"><center><img class="pure_img" id="contact" src="img/me/cont.png"></center></div>
+        <div class="pure-u-24-24"><center><img class="pure_img" id="contact" src="img/contact/cont.png"></center></div>
         <!--<div class="pure-u-10-24" id="margin"></div>-->
 
 		<div class="pure-u-24-24" id="sep_div"></div>

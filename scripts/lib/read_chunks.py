@@ -12,10 +12,22 @@ def readNav(active_url):
     navfile = "../html-chunks/nav.html";
     navlines = open(navfile, "r").readlines()
     for x in range(len(navlines)):
-        if active_url in navlines[x]:
-            navlines[x] = navlines[x].replace(active_url, "#");
-            if 'class="nav_link"' in navlines[x]:
+        if active_url != "index.html":
+            if active_url in navlines[x]:
+                navlines[x] = navlines[x].replace(active_url, "#");
+                if 'id="nav_link_cell"' in navlines[x]:
+                    navlines[x] = navlines[x].replace('class="nav_link"', 'class="nav_link" id="active"');
+                    navlines[x] = navlines[x].replace('id="nav_link_cell"', 'id="nav_link_cell_active"');
+
+        if active_url == "archive.html":
+            if "dropdown" in navlines[x]:
+                navlines[x] = navlines[x].replace('id="nav_link_cell"', 'id="nav_link_cell_active"');
+            if "Updates" in navlines[x]:
                 navlines[x] = navlines[x].replace('class="nav_link"', 'class="nav_link" id="active"');
+
+        if "mobile_nav" in navlines[x]:
+            break;
+            
     return "".join(navlines);
 
 def readLinks():
