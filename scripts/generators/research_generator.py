@@ -38,7 +38,7 @@ html_template = """
                 </p>
             </div>
             
-            <div class="section_header_cont"><h2><div class="section_header">Mutation rate variation</div></h2></div>
+            <div class="section_header_cont"><div class="section_header">Mutation rate variation</div></div>
             <div class="pure-g">
                 <div class="pure-u-2-24" id="margin"></div>
                 <div class="pure-u-20-24" id="res_row">
@@ -61,7 +61,7 @@ html_template = """
 
             <div class="pure-u-24-24" id="sep_div"></div>
 
-            <div class="section_header_cont"><h2><div class="section_header">Molecular convergence</div></h2></div>
+            <div class="section_header_cont"><div class="section_header">Molecular convergence</div></div>
             <div class="pure-g">
                 <div class="pure-u-2-24" id="margin"></div>
                 <div class="pure-u-20-24" id="res_row">
@@ -89,7 +89,7 @@ html_template = """
 
             <div class="pure-u-24-24" id="sep_div"></div>
 
-            <div class="section_header_cont"><h2><div class="section_header">Gene family evolution</div></h2></div>
+            <div class="section_header_cont"><div class="section_header">Gene family evolution</div></div>
             <div class="pure-g">
                 <div class="pure-u-2-24" id="margin"></div>
                 <div class="pure-u-20-24" id="res_row">

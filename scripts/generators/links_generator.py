@@ -24,7 +24,7 @@ html_template = """
 		<div class="pure-u-2-24" id="margin"></div>
 		<div class="pure-u-20-24" id="link_text">
 			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
-			<!-- <div class="section_header_cont"><h2><div class="section_header">My Software</div></h2></div> -->
+			<!-- <div class="section_header_cont"><div class="section_header">My Software</div></div> -->
 				<div class="pure-g">
 					<div class="pure-u-2-24" id="margin"></div>
 					<div class="pure-u-20-24" id="link_row">
@@ -115,7 +115,7 @@ html_template = """
 				<div class="pure-u-24-24" id="sep_div"></div>
 			
 			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
-			<div class="section_header_cont"><h2><div class="section_header">Software I have contributed to</div></h2></div>
+			<div class="section_header_cont"><div class="section_header">Software I have contributed to</div></div>
 				<div class="pure-g">
 						<div class="pure-u-2-24" id="margin"></div>
 						<div class="pure-u-20-24" id="link_row">
@@ -137,7 +137,7 @@ html_template = """
 
 					<div class="pure-u-24-24" id="sep_div"></div>
 
-			<div class="section_header_cont"><h2><div class="section_header">Project resources</div></h2></div>
+			<div class="section_header_cont"><div class="section_header">Project resources</div></div>
 				<div class="pure-g">
 					<div class="pure-u-2-24" id="margin"></div>
 					<div class="pure-u-20-24" id="link_row">
@@ -245,7 +245,7 @@ html_template = """
 
 				<div class="pure-u-24-24" id="sep_div"></div>
 
-			<div class="section_header_cont"><h2><div class="section_header">People</div></h2></div>
+			<div class="section_header_cont"><div class="section_header">People</div></div>
 			<div class="pure-g">
 				<div class="pure-u-2-24" id="margin"></div>
 				<div class="pure-u-20-24" id="link_row">
@@ -287,7 +287,7 @@ html_template = """
 			<div class="pure-u-24-24" id="sep_div"></div>
 
 			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
-			<div class="section_header_cont"><h2><div class="section_header">Helpful software from others</div></h2></div>
+			<div class="section_header_cont"><div class="section_header">Helpful software from others</div></div>
 			<div class="pure-g other_link_row">
 				<div class="pure-u-4-24 other_link_margin" id="margin"></div>
 				<div class="pure-u-2-24 other_link"><a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download" target="_blank">BLAST</a></div>
