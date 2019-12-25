@@ -2,8 +2,8 @@
 /* Global page styles */
 @font-face {
     font-family: 'metropolis';
-    src: url('fonts/metropolis/metropolis-light-webfont.woff2') format('woff2'),
-         url('fonts/metropolis/metropolis-light-webfont.woff') format('woff');
+    src: url('fonts/Metropolis/metropolis-light-webfont.woff2') format('woff2'),
+         url('fonts/Metropolis/metropolis-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
