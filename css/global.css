@@ -336,18 +336,21 @@ the dropdowns
 /*------------------------------------------------------*/
 /* Footer grid styles */
 #footer {
+	font-family: "Courier New", Courier, monospace;
 	background-color: #fff;
 	color:#333;
-	font-size:small;
-	height:4vh;
+	font-size:0.6em;
+	height:3vh;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 	border-top:1px solid #333;
 }
 #footer_text {
-	position: relative;
-	top: 50%;
 }
 @media (max-width: 1025px) {
 	#footer { height:6vh; }
