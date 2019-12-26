@@ -23,6 +23,21 @@ html_template = """
 		<div class="pure-u-2-24" id="margin"></div>
 		<div class="pure-u-20-24" id="arc_text">
 			<div id="arc_entry">
+				<div class="section_header_cont"><div class="section_header">December 26, 2019</div></div>
+				<ul>
+					<p>I recently (Nov. 1, 2019) gave a <a href="http://www.cooper-lab.org/chalk.html" target="_blank">CHALK</a> talk to my colleagues here
+						at the University of Montana about my reasearch (past and future). It was a great learning experience for me to give a talk in this format.</p>
+
+					<p>Jeff and I also recently (Nov. 10-13, 2019) visited the <a href="https://www.lsu.edu/mns/" target="_blank">LSU Museum of Natural Science</a> 
+						to discuss upcoming collaborations with rodent specialists <a href="https://esselstyn.github.io/" target="_blank">Jake Esselstyn</a>, 
+						<a href="https://museumsvictoria.com.au/about-us/staff/natural-sciences/terrestrial-zoology/dr-kevin-rowe/" target="_blank">Kevin Rowe</a>,
+						and <a href="https://scholar.google.com/citations?user=iVRhKXQAAAAJ&hl=en&oi=ao" target="_blank">Carl Hutter</a>.
+						This was a great opportunity to spend time with these scientists in the Museum and meet others at LSU!</p>
+				</ul>
+			</div>
+			<div class="pure-u-24-24" id="arc_sep_div"></div>
+
+			<div id="arc_entry">
 				<div class="section_header_cont"><div class="section_header">August 2, 2019</div></div>
 				<ul>
 					<p>On July 1, 2019 I successfully defended my dissertation! It is titled 

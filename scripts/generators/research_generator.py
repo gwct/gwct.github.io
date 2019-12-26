@@ -25,14 +25,15 @@ html_template = """
             <!-- <div class="pure-u-2-24" id="margin"></div> -->
             <div id="res_intro_cont">
                 <p id="res_intro">
-                    My main research interests center around molecular evolution -- the changes that accrue in the DNA sequence
-                    of a population or species over time. Molecular evolution can be driven by many factors, including evolution
-                    of the mutation rate, natural selection, and life history variation between species. Additionally, false
-                    inferences of molecular change can be caused by systematic error in the genome sequencing and comparative
-                    pipelines, and unaccounted phylogenetic discordance. Using phylogenetics and comparative genomics, I aim
-                    to identify general patterns of molecular evolution and specific links between molecular changes and 
-                    phenotypes. In the process, I develop <a href="links.html" style="color:#FF994B;">software</a> to solve specific problems 
-                    and to help account for systematic errors through the genomic workflow.
+                    My main research interests center around how changes in DNA sequences play a role in adapation. Molecular evolution 
+                    &mdash; the changes that accrue in the DNA sequence of a population or species over time &mdash; can be driven by many 
+                    factors, including evolution of the mutation rate, natural selection, and life history variation between 
+                    species. Additionally, false inferences of molecular change can be caused by systematic error in the genome 
+                    sequencing and comparative pipelines, and unaccounted phylogenetic discordance. Using phylogenetics and 
+                    comparative genomics, I am interested in studying adaptation by identifying general patterns of molecular 
+                    evolution and specific links between molecular changes and phenotypes. In the process, I develop 
+                    <a href="links.html" style="color:#FF994B;">software</a> 
+                    to solve specific problems and to help account for systematic errors through the genomic workflow.
 
                     Below I outline some of the specific ways I have pursued these goals up to this point!
                 </p>
