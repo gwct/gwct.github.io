@@ -32,12 +32,15 @@ html_template = """
 				<p><span class="pub_title">Paternal age in rhesus macaques is positively associated with germline mutation accumulation but not with measures of offspring sociability</span>
 				</br>&nbsp;&nbsp;Wang RJ, <b>Thomas GWC</b>, Raveendran M, Harris RA, Doddapaneni H, Muzny DM, Capitanio JP, Radivojac P, Rogers J, Hahn MW. 2019. <em>bioRxiv</em>.
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/706705" target="_blank" id="doi_link">10.1101/706705</a></p>
+			</ul>
 
-				<p><span class="pub_title">Gene content evolution in the Arthropods</span>
+			<div class="section_header_cont"><div class="section_header">2020</div></div>
+			<ul id="presents">
+				<p><span class="pub_title">Gene content evolution in the arthropods</span>
 				<!-- <p><span class="pub_title">The genomic basis of Arthropod diversity</span> -->
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Dohmen E, Hughes DST, Murali SC, Poelchau M, Glastad K, The i5K Phylogenomics Consortium,
-				</br>&nbsp;&nbsp;Chipman AD, Waterhouse RM, Bornberg-Bauer E, Hahn MW, Richards S. 2018. <em>bioRxiv</em>. 
-				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/382945" target="_blank" id="doi_link">10.1101/382945</a>
+				</br>&nbsp;&nbsp;Chipman AD, Waterhouse RM, Bornberg-Bauer E, Hahn MW, Richards S. 2018. <em>Genome Biology</em>. 21(15). 
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1186/s13059-019-1925-7" target="_blank" id="doi_link">10.1186/s13059-019-1925-7</a>
 				</br>&nbsp;&nbsp;Resources: <a href="https://i5k.gitlab.io/ArthroFam/" target="_blank">ArthroFam website</a></p>
 			</ul>
 
