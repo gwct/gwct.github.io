@@ -41,7 +41,7 @@ html_template = """
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Dohmen E, Hughes DST, Murali SC, Poelchau M, Glastad K, The i5K Phylogenomics Consortium,
 				</br>&nbsp;&nbsp;Chipman AD, Waterhouse RM, Bornberg-Bauer E, Hahn MW, Richards S. 2018. <em>Genome Biology</em>. 21(15). 
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1186/s13059-019-1925-7" target="_blank" id="doi_link">10.1186/s13059-019-1925-7</a>
-				</br>&nbsp;&nbsp;Resources: <a href="https://i5k.gitlab.io/ArthroFam/" target="_blank">ArthroFam website</a></p>
+				</br>&nbsp;&nbsp;Resources: <a href="https://arthrofam.org" target="_blank">ArthroFam website</a></p>
 			</ul>
 
 			<div class="section_header_cont"><div class="section_header">2019</div></div>
