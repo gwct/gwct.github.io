@@ -62,7 +62,7 @@
 	#link_row { display:inline-block; max-height:100%; }
 	#link_img_cont { display:inline-block; width:100%; }
 	#link_img { margin: 0 auto; max-height:20vh; }
-	#link_desc { display:inline-block; width:100%; }
+	#link_desc { display:inline-block; width:100%; text-align:left; }
 }
 /*------------------------------------------------------*/
 /* Other software link styles */

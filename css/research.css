@@ -45,10 +45,11 @@
 	/* border: 1px solid green; */
 }
 @media (max-width: 1025px) {
+	#res_intro { text-align:left; }
 	#res_row { display:inline-block; max-height:100%; }
 	#res_img_cont { display:inline-block; width:100%; padding-top:20px; }
 	#res_img { margin: 0 auto; max-height:30vh; }
-	#res_desc { display:inline-block; width:100%; }
+	#res_desc { display:inline-block; width:100%; text-align:left; }
 	#sep_div { display: none; }
 }
 /*------------------------------------------------------*/
