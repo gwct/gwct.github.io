@@ -349,6 +349,7 @@ the dropdowns
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 	border-top:1px solid #333;
+	width:100%;
 }
 #footer_text {
 }

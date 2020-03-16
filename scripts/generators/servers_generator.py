@@ -18,28 +18,58 @@ html_template = """
 <body>
 
 
-    <div class="pure-g" id="main_div_links">
+     <div class="pure-g" id="main_div_links">
 	<div class="pure-u-24-24" id="header">Good lab computational resources</div>
-		<div class="pure-u-24-24" id="sep_div"></div>
+	<div class="pure-g" id="desktop_nav">
+		<div class="pure-u-5-24" id="margin"></div>
+			<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="servers.html#musculus">Musculus</a></div>
+			<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="servers.html#lepus">Lepus</a></div>
+			<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="servers.html#rattus">Rattus</a></div>
+			<div class="pure-u-3-24" id="nav_link_cell"><a class="nav_link" href="servers.html#carnation">Carnation</a></div>
+			<div class="pure-u-3-24" id="nav_link_cell"><a class="nav_link" href="servers.html#reincarnation">Reincarnation</a></div>
+			<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="servers.html#griz">Griz</a></div>
+		<div class="pure-u-4-24" id="margin"></div>
+	</div>
+
+	<div class="pure-g" id="mobile_nav">
+		<div class="pure-u-24-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link"><img class="pure_img" id="mobile_logo_nav" src="griz/img/nav.png"></a>
+			<div class="dropdown_container mobile_drop">
+				<ul class="pure-menu-list">
+					<li><a href="servers.html#musculus" id="mobile_nav_link">Musculus</a></li>
+					<li><a href="servers.html#lepus" id="mobile_nav_link">Lepus</a></li>
+					<li><a href="servers.html#rattus" id="mobile_nav_link">Rattus</a></li>
+					<li><a href="servers.html#carnation" id="mobile_nav_link">Carnation</a></li>
+					<li><a href="servers.html#reincarnation" id="mobile_nav_link">Reincarnation</a></li>
+					<li><a href="servers.html#griz" id="mobile_nav_link">Griz</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+		<div class="pure-u-24-24" id="server_sep_div"></div>
 		<div class="pure-u-2-24" id="margin"></div>
 		<div class="pure-u-20-24" id="link_text">
 			<!-- <div class="pure-g" id="line_cont"><div class="pure-u-24-24" id="line"></div></div> -->
 			<!-- <div class="section_header_cont"><div class="section_header">My Software</div></div> -->
-				<div class="pure-g">
+			<a name="musculus"></a>	
+			<div class="pure-g">
 					<div class="pure-u-2-24" id="margin"></div>
 					<div class="pure-u-20-24" id="server_row">
 						<div id="server_img_cont">
+							<h1>Musculus</h1>
 							<img class="pure-img" id="server_img" src="img/logo/musculus.png">
 						</div>
 						<div id="server_desc">
-							<h3>Musculus (musculus.dbs.umt.edu:22)</h3>
+							<h1>musculus.dbs.umt.edu:22</h1>
 
 							<table id="sum-tab">
-								<tr><td class="td-label">Access: </td class="td-label"><td>Good lab</td></tr>
-								<tr><td class="td-label">Operating System: </td class="td-label"><td>Linux version 4.4.0-135-generic</td></tr>
-								<tr><td class="td-label">Processor: </td class="td-label"><td>Intel Xeon Processor E5-2650 @ 2GHz (8 cores, 16 threads)</td></tr>
-								<tr><td class="td-label">Memory: </td class="td-label"><td>200GB</td></tr>
-								<tr><td class="td-label">Storage:</td class="td-label"><td>One 40TB HDD containing one partition and several logical volumes</td></tr>
+								<tr><td class="td-label">Access: </td><td>Good lab</td></tr>
+								<tr><td class="td-label">Operating System: </td><td>Linux version 4.4.0-135-generic</td></tr>
+								<tr><td class="td-label">Processor: </td><td>Intel Xeon Processor E5-2650 @ 2GHz (8 cores, 16 threads)</td></tr>
+								<tr><td class="td-label">Memory: </td><td>200GB</td></tr>
+								<tr><td class="td-label">Storage:</td><td>One 40TB HDD containing one partition and several logical volumes</td></tr>
 							</table>
 
 							<center>
@@ -56,23 +86,28 @@ html_template = """
 					<div class="pure-u-2-24" id="margin"></div>
 				</div>
 
-				<div class="pure-u-24-24" id="sep_div"></div>
-
+				<div class="pure-u-24-24" id="server_sep_div"></div>
+				<div class="pure-u-2-24" id="margin"></div>
+				<div class="pure-u-20-24" id="server_line"></div>
+				<div class="pure-u-2-24" id="margin"></div>
+				
+				<a name="lepus"></a>
 				<div class="pure-g">
 					<div class="pure-u-2-24" id="margin"></div>
 					<div class="pure-u-20-24" id="server_row">
 						<div id="server_img_cont">
+							<h1>Lepus</h1>
 							<img class="pure-img" id="server_img" src="img/logo/lepus.png">
 						</div>
 						<div id="server_desc">
-							<h3>Lepus (lepus.dbs.umt.edu:22)</h3>
+							<h1>lepus.dbs.umt.edu:22</h1>
 
 							<table id="sum-tab">
-								<tr><td class="td-label">Access: </td class="td-label"><td>Good lab</td></tr>
-								<tr><td class="td-label">Operating System: </td class="td-label"><td>Linux version 4.4.0-109-generic</td></tr>
-								<tr><td class="td-label">Processor: </td class="td-label"><td>Intel Xeon Processor E5-2650 @ 2GHz (8 cores, 16 threads)</td></tr>
-								<tr><td class="td-label">Memory: </td class="td-label"><td>200GB</td></tr>
-								<tr><td class="td-label">Storage:</td class="td-label">
+								<tr><td class="td-label">Access: </td><td>Good lab</td></tr>
+								<tr><td class="td-label">Operating System: </td><td>Linux version 4.4.0-109-generic</td></tr>
+								<tr><td class="td-label">Processor: </td><td>Intel Xeon Processor E5-2650 @ 2GHz (8 cores, 16 threads)</td></tr>
+								<tr><td class="td-label">Memory: </td><td>200GB</td></tr>
+								<tr><td class="td-label">Storage:</td>
 									<td>
 										One 12TB HDD containing several partitions, including the OS</br>
 										One 12TB HDD containing one partition</br>
@@ -97,23 +132,28 @@ html_template = """
 					<div class="pure-u-2-24" id="margin"></div>
 				</div>
 
-				<div class="pure-u-24-24" id="sep_div"></div>
+				<div class="pure-u-24-24" id="server_sep_div"></div>
+				<div class="pure-u-2-24" id="margin"></div>
+				<div class="pure-u-20-24" id="server_line"></div>
+				<div class="pure-u-2-24" id="margin"></div>
 
+				<a name="rattus"></a>	
 				<div class="pure-g">
 					<div class="pure-u-2-24" id="margin"></div>
 					<div class="pure-u-20-24" id="server_row">
 						<div id="server_img_cont">
+							<h1>Rattus</h1>
 							<img class="pure-img" id="server_img" src="img/logo/rat.png">
 						</div>
 						<div id="server_desc">
-							<h3>Rat (?? -- Coming soon!)</h3>
+							<h1>(Coming soon!)</h1>
 
 							<table id="sum-tab">
-								<tr><td class="td-label">Access: </td class="td-label"><td>Good lab</td></tr>
-								<tr><td class="td-label">Operating System: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Processor: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Memory: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Storage:</td class="td-label"><td>12 HDD x 16TB (192TB) Network attached storage</td>
+								<tr><td class="td-label">Access: </td><td>Good lab</td></tr>
+								<tr><td class="td-label">Operating System: </td><td></td></tr>
+								<tr><td class="td-label">Processor: </td><td></td></tr>
+								<tr><td class="td-label">Memory: </td><td></td></tr>
+								<tr><td class="td-label">Storage:</td><td>12 HDD x 16TB (192TB) Network attached storage</td>
 								</tr>
 							</table>
 
@@ -127,24 +167,29 @@ html_template = """
 					<div class="pure-u-2-24" id="margin"></div>
 				</div>
 
-				<div class="pure-u-24-24" id="sep_div"></div>
+				<div class="pure-u-24-24" id="server_sep_div"></div>
+				<div class="pure-u-2-24" id="margin"></div>
+				<div class="pure-u-20-24" id="server_line"></div>
+				<div class="pure-u-2-24" id="margin"></div>
 
+				<a name="carnation"></a>	
 				<div class="pure-g">
 					<div class="pure-u-2-24" id="margin"></div>
 					<div class="pure-u-20-24" id="server_row">
 						<div id="server_img_cont">
+							<h1><a href="http://hs.umt.edu/dbs/labs/genomics/bioinformatics/servers.php" target="_blank">Carnation</a></h1>
 							<img class="pure-img" id="server_img" src="img/logo/carnation.png">
 						</div>
 						<div id="server_desc">
-							<h3><a href="http://hs.umt.edu/dbs/labs/genomics/bioinformatics/servers.php" target="_blank">Carnation</a> (carnation.dbs.umt.edu:2225)</h3>
+							<h1>carnation.dbs.umt.edu:2225</h1>
 
 							<table id="sum-tab">
 								<tr><td class="td-label">Access: </td><td><a href="http://hs.umt.edu/dbs/labs/genomics/default.php" target="_blank">Genomics Core Laboratory</a></td></tr>
-								<tr><td class="td-label">Operating System: </td class="td-label"><td>Linux version 4.4.0-104-generic</td></tr>
-								<tr><td class="td-label">Processor: </td class="td-label"><td>4 x Intel Xeon CPU E7-8860 v3 @ 2.20GHz (64 cores, 128 threads total)</td></tr>
-								<tr><td class="td-label">Memory: </td class="td-label"><td>2TB</td></tr>
-								<tr><td class="td-label">Storage:</td class="td-label"><td>200TB</td></tr>
-								<tr><td class="td-label">Summary:</td class="td-label"><td><a href="http://hs.umt.edu/dbs/labs/genomics/bioinformatics/servers.php" target="_blank">http://hs.umt.edu/dbs/labs/genomics/bioinformatics/servers.php</a></td></tr>
+								<tr><td class="td-label">Operating System: </td><td>Linux version 4.4.0-104-generic</td></tr>
+								<tr><td class="td-label">Processor: </td><td>4 x Intel Xeon CPU E7-8860 v3 @ 2.20GHz (64 cores, 128 threads total)</td></tr>
+								<tr><td class="td-label">Memory: </td><td>2TB</td></tr>
+								<tr><td class="td-label">Storage:</td><td>200TB</td></tr>
+								<tr><td class="td-label">Summary:</td><td><a href="http://hs.umt.edu/dbs/labs/genomics/bioinformatics/servers.php" target="_blank">http://hs.umt.edu/dbs/labs/genomics/bioinformatics/servers.php</a></td></tr>
 							</table>
 
 						</div>
@@ -152,55 +197,88 @@ html_template = """
 					<div class="pure-u-2-24" id="margin"></div>
 				</div>
 
-				<div class="pure-u-24-24" id="sep_div"></div>
+				<div class="pure-u-24-24" id="server_sep_div"></div>
+				<div class="pure-u-2-24" id="margin"></div>
+				<div class="pure-u-20-24" id="server_line"></div>
+				<div class="pure-u-2-24" id="margin"></div>
 
+				<a name="reincarnation"></a>	
 				<div class="pure-g">
 					<div class="pure-u-2-24" id="margin"></div>
 					<div class="pure-u-20-24" id="server_row">
 						<div id="server_img_cont">
+							<h1>Reincarnation</h1>
 							<img class="pure-img" id="server_img" src="img/logo/reincarnation.png">
 						</div>
 						<div id="server_desc">
-							<h3>Reincarnation (?? -- Coming soon!)</h3>
-
-							<table id="sum-tab">
-								<tr><td class="td-label">Access: </td><td><a href="http://hs.umt.edu/dbs/labs/genomics/default.php" target="_blank">Genomics Core Laboratory</a></td></tr>
-								<tr><td class="td-label">Operating System: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Processor: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Memory: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Storage:</td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Summary:</td class="td-label"></td></tr>
-							</table>
-
+							<h4>Now incorporated into the Griz cluster! See <a href="griz/nodes.html">Griz node info</a> for stats.</h4>
 						</div>
 					</div>
 					<div class="pure-u-2-24" id="margin"></div>
 				</div>
 
 
-				<div class="pure-u-24-24" id="sep_div"></div>
+				<div class="pure-u-24-24" id="server_sep_div"></div>
+				<div class="pure-u-2-24" id="margin"></div>
+				<div class="pure-u-20-24" id="server_line"></div>
+				<div class="pure-u-2-24" id="margin"></div>
 
+				<a name="griz"></a>	
 				<div class="pure-g">
 					<div class="pure-u-2-24" id="margin"></div>
 					<div class="pure-u-20-24" id="server_row">
 						<div id="server_img_cont">
+							<h1><a href="http://docs.gscc.umt.edu/overview/hardware/" target="_blank">Griz</a></h1>
 							<img class="pure-img" id="server_img" src="img/logo/griz.png">
 						</div>
 						<div id="server_desc">
-							<h3>Griz (?? -- Coming soon!)</h3>
+							<h1>griz.gscc.umt.edu</h1>
 
 							<table id="sum-tab">
 								<tr><td class="td-label">Access: </td><td>University-wide</td></tr>
-								<tr><td class="td-label">Operating System: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Processor: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Memory: </td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Storage:</td class="td-label"><td></td></tr>
-								<tr><td class="td-label">Summary:</td class="td-label"></td></tr>
+								<tr><td class="td-label">Summary:</td><td><a href="http://docs.gscc.umt.edu/overview/hardware/" target="_blank">Griz docs</a></td></tr>
+								<tr><td class="td-label">Login info: </td><td>NetID and password</td></tr>
+								<tr><td class="td-label">On campus login: </td><td>griz.gscc.umt.edu (head node)</td></tr>
+								<tr><td class="td-label">Off campus login: </td><td><strike>login.gscc.umt.edu (login node)</strike> <-- Not yet available. Use VPN and login to head node when off campus.</td></tr>
+								<tr><td class="td-label">Operating System: </td><td>CentOS 7.x</td></tr>
 							</table>
-
 						</div>
 					</div>
 					<div class="pure-u-2-24" id="margin"></div>
+				</div>
+
+				<div class="pure-g">
+					<div class="pure-u-2-24" id="margin"></div>
+					<div class="pure-u-20-24"><h2>Griz links</h2></div>
+					<div class="pure-u-2-24" id="margin"></div>
+				</div>
+
+
+				<div class="pure-g" id="griz_links">
+					<div class="pure-u-2-24" id="margin"></div>
+					<div class="pure-u-4-24" id="griz_link_cont">
+						<a href="griz/files.html">Transfer & Store Files</a>
+					</div>
+
+					<div class="pure-u-4-24" id="griz_link_cont">
+						<a href="griz/install.html">Installing Software</a>
+					</div>
+
+					<div class="pure-u-4-24" id="griz_link_cont">
+						<a href="griz/jobs.html">Running Jobs</a>
+					</div>
+
+					<div class="pure-u-4-24" id="griz_link_cont">
+						<a href="griz/nodes.html">Node Info</a>
+					</div>
+
+					<div class="pure-u-4-24" id="griz_link_cont">
+						<a href="griz/links.html">Other Links</a>
+					</div>
+
+
+					<div class="pure-u-2-24" id="margin"></div>
+
 				</div>
 
 			</div>
