@@ -42,6 +42,37 @@ html_template = """
 			<div class="pure-u-2-24" id="margin"></div>
 			<div class="pure-u-20-24" id="server_row">
 				<div id="griz_node_desc">
+				
+					<h2>Storing files on Griz</h2>
+
+					<p>Currently, the main storage space on the Griz cluster is the 
+						<a href="https://www.beegfs.io/content/" target="_blank"><code>beegfs</code></a> file system. This system has 800TB of 
+						storage and will likely turn into scratch space in the future. In the meantime, we have a pretty free reign here, so go 
+						ahead and make a folder there and store stuff.
+					</p>
+
+					<div id="msg_cont">
+						<div id="msg">
+							<div id="msg_banner">Important!</div>
+							<div id="msg_text">
+								<p>Make sure this isn't the only place you are storing your data! Best practice is to have at least 2 backups.</p>
+							</div>
+						</div>
+					</div>
+
+					<p>Navigate to /mnt/beegfs/:</p>
+
+					<code>cd /mnt/beegfs/</code>
+
+					<p>Create a directory the same as your username (NetID):</p>
+
+					<code>mkdir gt156213e</code>
+
+					<p>And enjoy the space!</p>
+
+					<div id="section_sep_top"></div>
+					<div id="section_line"></div>
+					<div id="section_sep_btm"></div>
 
 					<h2>Transferring files to Griz</h2>
 
@@ -69,37 +100,6 @@ html_template = """
 					<p>When transferring files from Carnation, the port for the Good Lab docker container needs to be specified as follows:</p>
 
 					<code>rsync -avzh -e 'ssh -p 2225' gregg_thomas@carnation.dbs.umt.edu:/home/gregg_thomas/data/ .</code>
-
-					<div id="section_sep_top"></div>
-					<div id="section_line"></div>
-					<div id="section_sep_btm"></div>
-					
-					<h2>Storing files on Griz</h2>
-
-					<p>Currently, the main storage space on the Griz cluster is the 
-						<a href="https://www.beegfs.io/content/" target="_blank"><code>beegfs</code></a> file system. This system has 800TB of 
-						storage and will likely turn into scratch space in the future. In the meantime, we have a pretty free reign here, so go 
-						ahead and make a folder there and store stuff.
-					</p>
-
-					<div id="msg_cont">
-						<div id="msg">
-							<div id="msg_banner">Important!</div>
-							<div id="msg_text">
-								<p>Make sure this isn't the only place you are storing your data! Best practice is to have at least 2 backups.</p>
-							</div>
-						</div>
-					</div>
-
-					<p>Navigate to /mnt/beegfs/:</p>
-
-					<code>cd /mnt/beegfs/</code>
-
-					<p>Create a directory the same as your username (NetID):</p>
-
-					<code>mkdir gt156213e</code>
-
-					<p>And enjoy the space!</p>
 
 				</div>
 			</div>

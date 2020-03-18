@@ -65,14 +65,16 @@ html_template = """
 							<div id="msg_text">
 								<p>
 									When downloading Anaconda to install on Griz, make sure you select "Linux" at the top. The website tries to 
-									guess what you want to install based on your current OS.
+									guess what you want to install based on your current OS, which may be different that the desired OS on the cluster.
 								</p>
 							</div>
 						</div>
 					</div>
 
-					<p id="imp_link">
-						<a href="https://www.anaconda.com/distribution/#download-section" target="_blank">https://www.anaconda.com/distribution/#download-section</a>
+					<p>
+						<div id="imp_link_cont">
+							<a id="imp_link" href="https://www.anaconda.com/distribution/#download-section" target="_blank">Anaconda Download</a>
+						</div>
 					</p>
 
 					<p>
@@ -107,9 +109,14 @@ html_template = """
 						Here are the official docs for managing conda enviornments: 
 					</p>
 
+
+					<div id="imp_link_cont">
+						<a id="imp_link" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" target="_blank">Anaconda Environments</a>
+					</div>
+
+
 					<p>
-						Below I will run through some of the basics. Official docs for conda environments are 
-						<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" target="_blank">here</a>.
+						Below I will run through some of the basics.
 					</p>
 
 					<h4>01. Starting Anaconda</h4>
@@ -133,30 +140,7 @@ html_template = """
 						should be created! The command prompt prefix should now be the name of your environment (<code>biotools</code> in this example).
 					</p>							
 					
-					<h4>03. Installing software in an environment</h4>
-
-					<p>
-						To install software in this environment, search for the package you want on <a href="https://anaconda.org/bioconda" target="_blank">bioconda</a> 
-						and run the appropriate command. For example, to install samtools:
-					</p>
-
-					<code>conda install -c bioconda samtools</code>
-
-					<p>Install as much software as you like! It should all be self-contained within this environment.</p>
-
-					<h4>04. Exiting an environment</h4>
-
-					<p>
-						When you are in an environment and wish to exit it, simply type:
-					</p>
-
-					<code>conda deactivate</code>
-
-					<p>
-						If you are in an environment, this will take you to the (base) Anaconda state. If you are in (base), it will exit Anaconda.
-					</p>	
-
-					<h4>05. Starting an environment</h4>
+					<h4>03. Starting an environment</h4>
 
 					<p>
 						To start a particular enviornment, be sure Anaconda is running ((base) is in your prompt), and run:
@@ -171,8 +155,8 @@ html_template = """
 
 					<div id="msg_cont">
 						<div id="msg">
-							<div id="msg_banner">Recommendation</div>
-							<div id="msg_text">
+							<div id="rec_banner">Recommendation</div>
+							<div id="rec_text">
 								<p>
 									I recommend adding the following commands to your <code>.bash_profile</code> file so they are run automatically everytime
 									you log in.
@@ -184,6 +168,29 @@ html_template = """
 							</div>
 						</div>
 					</div>
+
+					<h4>04. Installing software in an environment</h4>
+
+					<p>
+						To install software in this environment, search for the package you want on <a href="https://anaconda.org/bioconda" target="_blank">bioconda</a> 
+						and run the appropriate command. For example, to install samtools:
+					</p>
+
+					<code>conda install -c bioconda samtools</code>
+
+					<p>Install as much software as you like! It should all be self-contained within this environment.</p>
+
+					<h4>05. Exiting an environment</h4>
+
+					<p>
+						When you are in an environment and wish to exit it, simply type:
+					</p>
+
+					<code>conda deactivate</code>
+
+					<p>
+						If you are in an environment, this will take you to the (base) Anaconda state. If you are in (base), it will exit Anaconda.
+					</p>	
 
 					<div id="section_sep_top"></div>
 					<div id="section_line"></div>
@@ -198,17 +205,39 @@ html_template = """
 						This is less than optimal for our purposes.
 					</p>
 
-					<h4>Building from source or installing binaries yourself</h4>
+					<div id="section_sep_top"></div>
+					<div id="section_line"></div>
+					<div id="section_sep_btm"></div>
+
+					<h2>Building from source or installing binaries yourself</h2>
 
 					<p>
 						It is of course still possible to install software yourself locally if you wish to forego Anaconda, but there's no way to
 						guarantee that all dependencies will be installed for a given piece of software.
 					</p>
 
-					<h4>R</h4>
+					<div id="section_sep_top"></div>
+					<div id="section_line"></div>
+					<div id="section_sep_btm"></div>
+
+					<h2>Installing & Using R</h2>
 
 					<p>
-						Still working this out. <!-- source /share/apps/R-3.6.1//runNewR.sh -->
+						One of the administrators has a self-compiled version of R that has been optimized somehow. He recommends using this for now by running:
+					</p>
+
+					<code>source /share/apps/R-3.6.1/runNewR.sh</code>
+
+					<p>
+						However, I am uncertain how this will be maintained in the future. R is available as a module, but again I don't know how that will be maintained.
+						Our best solution may be to install R ourselves. Fortunately, this is easy with Anaconda. Be sure you are in the environment in which you want to 
+						run R and type:
+					</p>
+
+					<code>conda install -c bioconda r</code>
+
+					<p>
+						Package installations may be a bit slower and show some bioconda messages/warnings, but they should still work. Let me know if you run into any problems!
 					</p>
 
 				</div>

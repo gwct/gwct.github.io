@@ -12,6 +12,7 @@ parser.add_argument("--research", dest="research", help="Without --all: build re
 parser.add_argument("--pubs", dest="pubs", help="Without --all: build pubs.html. With --all: exlude pubs.html", action="store_true", default=False);
 parser.add_argument("--links", dest="links", help="Without --all: build links.html. With --all: exlude links.html", action="store_true", default=False);
 parser.add_argument("--archive", dest="archive", help="Without --all: build archive.html. With --all: exlude archive.html", action="store_true", default=False);
+parser.add_argument("--servers", dest="servers", help="Without --all: build servers.html. With --all: exlude servers.html", action="store_true", default=False);
 args = parser.parse_args();
 # Input options.
 
@@ -24,6 +25,7 @@ pages = {
     'pubs' : args.pubs,
     'links' : args.links,
     'archive' : args.archive,
+    'servers' : args.servers
 }
 
 if args.all:
@@ -43,6 +45,9 @@ if pages['links']:
 
 if pages['archive']:
     os.system("python archive_generator.py");
+
+if pages['servers']:
+    os.system("python servers_generator.py");
     
 print("----------\nDone!");
 

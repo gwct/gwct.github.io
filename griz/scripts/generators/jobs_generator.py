@@ -28,7 +28,7 @@ html_template = """
 		</div>
 
 		<div class="pure-u-12-24" id="griz_title">
-			<h1>Job management with SLURM</h1>
+			<h1>Job management with <span id="hidden">SLURM<img src="img/slurm.png"></span></h1>
 		</div>
 		<div class="pure-u-4-24" id="margin"></div>
 	</div>
@@ -80,6 +80,7 @@ html_template = """
 <pre>
 	#!/bin/bash
 	#SBATCH --job-name=[job name]
+	#SBATCH --output="/path/to/desired/directory/%x-%j.out"
 	#SBATCH --mail-user=[your email]
 	#SBATCH --mail-type=ALL
 	#SBATCH --partition=good_lab_cpu
@@ -107,14 +108,15 @@ html_template = """
 
 					<p>Full documentation of the <code>sbatch</code> options can be found at the following link:</p>
 
-					<p id="imp_link">
-						<a href="https://slurm.schedmd.com/sbatch.html" target="_blank">https://slurm.schedmd.com/sbatch.html</a>
-					</p>
+					<div id="imp_link_cont">
+						<a id="imp_link" href="https://slurm.schedmd.com/sbatch.html" target="_blank">SLURM sbatch Docs</a>
+					</div>
 
 					<p>Briefly, the options above are:</p>
 
 <pre>
 	--job-name:	A name to give your job that will appear in the queue.
+	--output:	Location for SLURM to write log files. Default is same location as job script. %x represents job name and %j represents job ID.
 	--mail-user:	An email address to receive updates from SLURM about job progress.
 	--mail-type:	What type of email updates you'd like to receive (NONE, BEGIN, END, FAIL, ALL).
 	--partition:	The type of node you want to run your job on. See <a href="nodes.html">Node info</a>.
@@ -171,8 +173,10 @@ html_template = """
 						See the following docs for more info
 					</p>
 
-					<p id="imp_link">
-						<a href="https://slurm.schedmd.com/salloc.html" target="_blank">https://slurm.schedmd.com/salloc.html</a>
+					<p>
+						<div id="imp_link_cont">
+							<a id="imp_link" href="https://slurm.schedmd.com/salloc.html" target="_blank">SLURM salloc Docs</a>
+						</div>
 					</p>
 
 					<div id="msg_cont">
@@ -191,8 +195,8 @@ html_template = """
 
 					<div id="msg_cont">
 						<div id="msg">
-							<div id="msg_banner">Recommendation</div>
-							<div id="msg_text">
+							<div id="rec_banner">Recommendation</div>
+							<div id="rec_text">
 								<p>
 									Include this function in your <code>.bash_profile</code> to quickly start a basic interactive compute node:
 								</p>

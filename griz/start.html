@@ -1,0 +1,204 @@
+
+<!doctype html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
+    <link type="text/css" rel="stylesheet" href="../css/pure.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/global.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/servers.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/griz.css"  media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
+    <title>Griz logins</title>
+</head>
+
+<body>
+	<div class="pure-u-24-24" id="header">Good lab Griz cluster docs &mdash; Getting Started</div>
+
+		<div class="pure-g" id="desktop_nav">
+		<div class="pure-u-1-24" id="margin"></div>
+			<div class="pure-u-3-24" id="nav_link_cell"><a class="nav_link" href="../servers.html">All servers</a></div>
+			<div class="pure-u-3-24" id="nav_link_cell_active"><a class="nav_link" id="active" href="#">Getting Started</a></div>
+			<div class="pure-u-4-24" id="nav_link_cell"><a class="nav_link" href="files.html">Transfer & store files</a></div>
+			<div class="pure-u-4-24" id="nav_link_cell"><a class="nav_link" href="install.html">Installing software</a></div>
+			<div class="pure-u-3-24" id="nav_link_cell"><a class="nav_link" href="jobs.html">Run jobs</a></div>
+			<div class="pure-u-3-24" id="nav_link_cell"><a class="nav_link" href="nodes.html">Node info</a></div>
+			<div class="pure-u-2-24" id="nav_link_cell"><a class="nav_link" href="links">Links</a></div>
+		<div class="pure-u-1-24" id="margin"></div>
+	</div>
+
+	<div class="pure-g" id="mobile_nav">
+		<div class="pure-u-24-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link"><img class="pure_img" id="mobile_logo_nav" src="img/nav.png"></a>
+			<div class="dropdown_container mobile_drop">
+				<ul class="pure-menu-list">
+					<li><a href="../servers.html" id="mobile_nav_link">All servers</a></li>
+					<li><a href="start.html" id="mobile_nav_link">Getting Started</a></li>
+					<li><a href="files.html" id="mobile_nav_link">Transfer & store file</a></li>
+					<li><a href="install.html" id="mobile_nav_link">Installing software</a></li>
+					<li><a href="jobs.html" id="mobile_nav_link">Run jobs</a></li>
+					<li><a href="nodes.html" id="mobile_nav_link">Node info</a></li>
+					<li><a href="links.html" id="mobile_nav_link">Links</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="pure-u-24-24" id="server_sep_div"></div>
+	<div class="pure-g" id="griz_head_row">
+		<div class="pure-u-4-24" id="margin"></div>
+		<div class="pure-u-4-24" id="griz_img_cont">
+			<img class="pure-img" id="griz_img" src="../img/logo/griz.png">
+		</div>
+
+		<div class="pure-u-12-24" id="griz_title">
+			<h1>Logging in to Griz</h1>
+		</div>
+		<div class="pure-u-4-24" id="margin"></div>
+	</div>
+
+	<div class="pure-g" id="griz_main_div">
+		<div class="pure-u-24-24" id="server_sep_div"></div>
+		<div class="pure-u-2-24" id="margin"></div>
+		<div class="pure-u-20-24" id="griz_main_row">
+
+		<div class="pure-g">
+			<div class="pure-u-2-24" id="margin"></div>
+			<div class="pure-u-20-24" id="server_row">
+				<div id="griz_node_desc">
+
+					<p>
+						Griz has two nodes to which we can login and interact with the cluster, either by ssh or FTP:
+					</p>
+<pre>
+	Head node:	griz.gscc.umt.edu (on campus access only)
+	Login node:	login.gscc.umt.edu (on campus access with off campus access available soon)
+</pre>
+
+					<p>
+						Both of these nodes can be used to navigate the file system and submit jobs. Until the login node is setup for 
+						off-campus access you will need to login to UM's VPN before attempting to log on to one of the log in nodes when 
+						not on campus:
+					</p>
+
+					<div id="imp_link_cont">
+						<a id="imp_link" href="https://www.umt.edu/it/support/vpn/default.php" target="_blank">UM VPN Docs</a>
+					</div>
+
+					<h2>SSH logins</h2>
+
+					<div id="section_sep_top"></div>
+					<div id="section_line"></div>
+					<div id="section_sep_btm"></div>
+
+					<p>
+						To log in to Griz with a command line interface to navigate the file system and submit jobs, you will need an SSH client.
+						On MacOS, Linux, and newer Windows installs an SSH client is pre-installed. Simply open your terminal and type:
+					</p>
+
+					<code>ssh [NetID as username]@[server name]</code>
+
+					<p>Accept any fingerprint prompts and enter your password when prompted and you should be good to go!</p>
+
+					<p>Explicitly, if I wanted to log in to the head node, I would type:</p>
+
+					<code>ssh gt156213e@griz.gscc.umt.edu</code>
+
+					<p></p>
+
+					<div id="msg_cont">
+						<div id="msg">
+							<div id="rec_banner">Recommendation</div>
+							<div id="rec_text">
+								<p>
+									Though newer versions of Windows 10 have an SSH client pre-installed, I still prefer the PuTTY SSH client:
+								</p>
+								<div id="imp_link_cont">
+									<a id="imp_link" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">PuTTY Download</a>
+								</div>
+								<p></p>
+
+							</div>
+						</div>
+					</div>
+
+					<div id="section_sep_top"></div>
+					<div id="section_line"></div>
+					<div id="section_sep_btm"></div>
+
+					<h2>FTP logins</h2>
+
+					<p>
+						For drag-and-drop file transfers, and FTP client may be preferred. I recommend 
+						<a href="https://filezilla-project.org/" target="_blank">FileZilla</a> for MacOS and Linux and
+						<a href="https://winscp.net/eng/index.php" target="_blank">WinSCP</a> for Windows.
+					</p>
+
+					<p>
+						Usage is similar regardless of FTP client chosen. Simply find in the GUI where you can enter the username and 
+						server address for the server you want to login to and connect. Enter your password when prompted. Then you should
+						be able to drag and drop files between your local computer and the remote server via the FTP GUI.
+					</p>
+
+					<div id="msg_cont">
+						<div id="msg">
+							<div id="rec_banner">Recommendation</div>
+							<div id="rec_text">
+								<p>
+									For both SSH and FTP logins, consider setting up public-key authentication to login. 
+									This can provide enhanced security and ease of access compared to logging in with a password.
+									See the following for in depth instructions:
+								</p>
+								<div id="imp_link_cont">
+									<a id="imp_link" href="https://kb.iu.edu/d/aews" target="_blank">Set up SSH public-key authentication</a>
+								</div>
+								<p></p>
+							</div>
+						</div>
+					</div>
+
+					<div id="section_sep_top"></div>
+					<div id="section_line"></div>
+					<div id="section_sep_btm"></div>
+
+					<h2>TightVNC Remote Desktop logins</h2>
+
+					<p>
+						We also have available to us remote desktop software called TightVNC:
+					</p>
+					
+					<div id="imp_link_cont">
+						<a id="imp_link" href="https://www.tightvnc.com/download.html" target="_blank">TightVNC Download</a>
+					</div>
+
+					<p>
+						Using TightVNC, you will be able to login to one of the nodes and be able to interact with the filesystem with 
+						your mouse and keyboard as if you were sitting at the remote node with a monitor. You can even interact 
+						with the <a href="jobs.html">SLURM job management software</a> from the remote desktop and open a terminal
+						from within the remote desktop.
+					</p>
+
+					<p>
+						This remote desktop software will prove useful in many situations. However, while some of you may be more 
+						comfortable interacting with the cluster in this fashion, I highly recommend logging
+						in through a command line interface with SSH!
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pure-u-24-24" id="sep_div"></div>
+
+
+        <div class="pure-g" id="footer">
+		<div class="pure-u-1">
+			<div id="footer_text">
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | 
+					<!-- email: <img class="pure_img" src="img/contact/cont-footer.png"> |  -->
+					<a href="https://purecss.io/" target="_blank">Pure CSS</a> | Page built: 03/17/2020 13:39:20 MDT</center>
+			</div>
+		</div>
+	</div>
+</body>

@@ -102,6 +102,9 @@ pre {
     border-top:1px dotted #333333;
 }
 
+
+/*------------------------------------------------------*/
+/* Message box styles */
 #msg_cont {
     width:100%;
     display:flex;
@@ -133,22 +136,84 @@ pre {
     border-bottom-right-radius:2px;
     box-shadow: 2px 2px 2px #cccccc;
 }
-
 #msg_text p {
     padding: 0px 20px;
     font-style:italic;
 }
 
-#imp_link {
-    text-align:center;
-    font-size:1.2em;
+#rec_banner {
+    width:100%;
+	align-items:left;
+    background-color:#8cd9af;
+    padding:5px;
+    font-size:1.4em;
+    border-left: 5px solid #3CB371;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    box-shadow: 2px 2px 2px #cccccc;
+}
+#rec_text {
+    width:100%;
+	align-items:left;
+    background-color:#ffffff;
+    padding:1px 5px;
+    border-left: 5px solid #3CB371;
+    border-bottom-left-radius:2px;
+    border-bottom-right-radius:2px;
+    box-shadow: 2px 2px 2px #cccccc;
+}
+#rec_text p {
+    padding: 0px 20px;
+    font-style:italic;
 }
 
 
+/*------------------------------------------------------*/
+/* Important link styles */
+#imp_link_cont {
+    width:100%;
+    display:flex;
+	justify-content:center;
+    align-items:center;
+}
+#imp_link {
+    text-align:center;
+    font-size:1.2em;
+    padding:10px;
+    color:#ffffff;
+    background-color:#3399ff;
+    border:1px solid #006ddb;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+#imp_link:hover {
+    border-radius:15px;
+    background-color:#ffffff;
+    color:#006ddb;
+}
+
+
+/*------------------------------------------------------*/
+/* Hidden image styles */
+span img{ height:0; opacity: 0; transition: opacity 0.3s linear; border-radius:5px;}
+span:hover img{ 
+	opacity: 1;
+	height: 200px;
+	position:absolute; 
+	top: 30%; 
+	left: 50%; 
+}
+
+
+/*------------------------------------------------------*/
+/* Mobile styles */
 @media (max-width: 1025px) {
     #griz_img_cont { display:inline-block; width:100%; }
     #griz_img { margin: 0 auto; max-height:20vh; }
     #griz_title { display:inline-block; width:100%; text-align:center; }
     /* #griz_main_div { border: 1px solid blue; } */
     #griz_head_row { min-height: 30vh; }
+    span:hover img{ display: none; }
 }

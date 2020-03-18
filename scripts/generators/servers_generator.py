@@ -256,28 +256,32 @@ html_template = """
 
 				<div class="pure-g" id="griz_links">
 					<div class="pure-u-2-24" id="margin"></div>
-					<div class="pure-u-4-24" id="griz_link_cont">
+
+					<div class="pure-u-3-24" id="griz_link_cont">
+						<a href="griz/start.html">Getting Started</a>
+					</div>
+
+					<div class="pure-u-3-24" id="griz_link_cont">
 						<a href="griz/files.html">Transfer & Store Files</a>
 					</div>
 
-					<div class="pure-u-4-24" id="griz_link_cont">
+					<div class="pure-u-3-24" id="griz_link_cont">
 						<a href="griz/install.html">Installing Software</a>
 					</div>
 
-					<div class="pure-u-4-24" id="griz_link_cont">
+					<div class="pure-u-3-24" id="griz_link_cont">
 						<a href="griz/jobs.html">Running Jobs</a>
 					</div>
 
-					<div class="pure-u-4-24" id="griz_link_cont">
+					<div class="pure-u-3-24" id="griz_link_cont">
 						<a href="griz/nodes.html">Node Info</a>
 					</div>
 
-					<div class="pure-u-4-24" id="griz_link_cont">
+					<div class="pure-u-3-24" id="griz_link_cont">
 						<a href="griz/links.html">Other Links</a>
 					</div>
 
-
-					<div class="pure-u-2-24" id="margin"></div>
+					<div class="pure-u-3-24" id="margin"></div>
 
 				</div>
 

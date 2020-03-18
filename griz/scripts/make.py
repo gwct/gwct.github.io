@@ -7,6 +7,7 @@ print("# Script call: " + " ".join(sys.argv) + "\n----------");
 
 parser = argparse.ArgumentParser(description="Gets stats from a bunch of abyss assemblies.");
 parser.add_argument("--all", dest="all", help="Build all pages", action="store_true", default=False);
+parser.add_argument("--start", dest="start", help="Without --all: build start.html. With --all: exlude start.html", action="store_true", default=False);
 parser.add_argument("--files", dest="files", help="Without --all: build files.html. With --all: exlude files.html", action="store_true", default=False);
 parser.add_argument("--install", dest="install", help="Without --all: build install.html. With --all: exlude install.html", action="store_true", default=False);
 parser.add_argument("--jobs", dest="jobs", help="Without --all: build jobs.html. With --all: exlude jobs.html", action="store_true", default=False);
@@ -19,6 +20,7 @@ args = parser.parse_args();
 os.chdir("generators");
 
 pages = {
+    'start' : args.start,
     'files' : args.files,
     'install' : args.install,
     'jobs' : args.jobs,
@@ -28,6 +30,9 @@ pages = {
 
 if args.all:
     pages = { page : False if pages[page] == True else True for page in pages };
+
+if pages['start']:
+    os.system("python start_generator.py");
 
 if pages['files']:
     os.system("python files_generator.py");
