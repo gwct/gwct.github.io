@@ -27,7 +27,7 @@
 /* Main grid styles */
 #bio_row {
     align-items: center;
-	min-height: 30vh;
+	min-height: 35vh;
 }
 #email_row {
     align-items: center;
@@ -86,7 +86,6 @@ span:hover .hidden_img{
 	#email-margin { width:5%; }
 	span:hover .hidden_img{ display: none; }
 	#margin { width: 0%; display: none; }
-
 }
 
 
