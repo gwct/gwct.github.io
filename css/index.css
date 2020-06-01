@@ -1,7 +1,7 @@
 /*------------------------------------------------------*/
 /* Hero image styles */
 #top_grid {
-	height:29vh;
+	height:30vh;
     background-image: url(../img/me/bg08.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -25,15 +25,22 @@
 
 /*------------------------------------------------------*/
 /* Main grid styles */
-#main_div_bio {
+#bio_row {
     align-items: center;
-	min-height: 62vh;
+	min-height: 30vh;
+}
+#email_row {
+    align-items: center;
+	min-height: 2vh;
+}
+#contact_row {
+    align-items: center;
+	min-height: 10vh;
 }
 
 /*------------------------------------------------------*/
 /* Bio grid styles */
 #bio_pic_container {
-	align-self: center;
 	height:30vh;
 }
 #bio_pic {
@@ -44,6 +51,9 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
+#bio_text {
+	text-align: justify;
+}
 #contact {
     max-width: 100%;
     height: auto;
@@ -51,21 +61,36 @@
 
 /*------------------------------------------------------*/
 /* Hidden image styles */
-span img{ height:0; opacity: 0; transition: opacity 0.3s linear;}
-span:hover img{ 
+.hidden_img { 
+	display:none; 
+	transition: opacity 0.3s linear; 
+}
+span:hover .hidden_img{ 
+	display:block;
 	opacity: 1;
 	height: 400px;
+	width: auto;
 	position:absolute; 
 	top: 50%; 
-	left: 50%; 
+	left: 50%;
 }
+
+/*------------------------------------------------------*/
+/* Responsive media styles */
 @media (max-width: 1025px) {
-	#main_content { width: 100% }
-	#bio_pic_container { width:100%;}
-    #bio_pic { background-position:center; }
-	#bio_text { width:100%; padding:0px 20px; font-size:large;}
-	span:hover img{ display: none; }
+	#bio_row { flex-wrap: wrap; }
+	#bio_pic_container { display:inline-block; width:100%; }
+    /* #bio_pic { background-position:center; } */
+	#bio_text { display:inline-block; width:100%; padding:0px 20px; font-size:large; text-align:left; }
+	#email-col { width:90%; }
+	#email-margin { width:5%; }
+	span:hover .hidden_img{ display: none; }
+	#margin { width: 0%; display: none; }
+
 }
+
+
+
 
 
 

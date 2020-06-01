@@ -1,68 +1,43 @@
 /*------------------------------------------------------*/
-/* Main grid styles */
-#main_div_links::before {
-	z-index: -100;
-	position: absolute;
-    width: 100%;
-    height: 100%;
-    /* background-image: url(../img/bg/code-bg-blur.png);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center center;
-	background-clip: border-box;
-	background-origin: padding-box;
-	-moz-background-size: cover;
-	background-size: cover; */
-	content: ' ';
-}
-#main_div_links {
-	min-height:92vh;
-}
-
-/*------------------------------------------------------*/
 /* Main link styles */
-#link_row {
+#link-section {
 	display:flex;
-	max-height:12vh;
-	padding:20px 0px;
+	/* height:30vh; */
+	min-height:12vh;
 }
-#link_img_cont {
+#link-img-col {
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	width:10%;
-	height:auto;
-	padding:0px 4px 4px 4px;
+	height: 12vh;
 }
-#link_img {
-	max-height:100%;
-	max-width:100%;
+#link-img-link {
+	display:flex;
+	justify-content: center;
+	
+}
+#link-img {
+	max-height:12vh;
+	width:auto;
 	border:2px solid #333;
 	border-radius:5px;
 }
-#link_img:hover {
+#link-img:hover {
 	border:2px solid #749abe;
-		border-radius:10px;
-		transition:0.2s;
+	border-radius:10px;
+	transition:0.2s;
 }
-#link_img_link{
-	height:100%;
-	width:100%;
-}
-#link_desc{
-	display:flex;
-    justify-content: center;
-	align-items: left;
-	flex-direction: column;
-	width:90%;
+#link-text {
+	padding:40px;
 	text-align:justify;
-	/* border: 1px solid green; */
+	overflow:ellipsis;
 }
 @media (max-width: 1025px) {
-	#link_row { display:inline-block; max-height:100%; }
-	#link_img_cont { display:inline-block; width:100%; }
-	#link_img { margin: 0 auto; max-height:20vh; }
-	#link_desc { display:inline-block; width:100%; text-align:left; }
+	#link-section { flex-wrap:wrap; }
+	#link-img-col { flex-wrap:wrap; width:100%; }
+	#link-img { margin: auto; }
+	#link-text { width: 100%; text-align:left; padding-top:20px; }
+	#margin { display: none; }
 }
 /*------------------------------------------------------*/
 /* Other software link styles */
@@ -71,6 +46,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
 .other_link a {
 	display: flex;
@@ -92,6 +68,7 @@
 }
 
 @media (max-width: 1025px) {
+	.other_link_row { flex-wrap: wrap; }
 	.other_link { width:50%; height:10vh; }
 	.other_link_margin { display:none; }
 	.other_link a { 

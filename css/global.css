@@ -22,13 +22,14 @@ body {
 	font-size: 1.1em;
 	background-color: #ececec;
 	overflow-y: scroll;
+	margin:0;
 }
-a {
-	color:#006ddb;
-}
+a {	color:#006ddb; }
+img { width: 100%; }
 
 /*------------------------------------------------------*/
 /* Header styles */
+
 #header {
     color:#fff;
 	background-color: #294157;
@@ -42,7 +43,7 @@ a {
 #header::after {
 	font-size:unset;
 }
-.section_header {
+#section_header {
 	background-color: #749abe;
 	color: #fff;
 	padding: 5px 20px;
@@ -65,6 +66,7 @@ a {
 /* Desktop nav bar styles */
 #logo_nav {
 	height:5vh;
+	width:auto;
 	float:left;
 	padding:5px;
 }
@@ -204,7 +206,7 @@ the dropdowns
 
 /*------------------------------------------------------*/
 /* Contact dropdown menu styles */
-.contact_drop {
+/* .contact_drop {
 	font-size:large;
 	margin-left:-45px;
 }
@@ -213,7 +215,7 @@ the dropdowns
 	display: block;
 	margin:auto;
 	padding-bottom:5px;
-}
+} */
 
 /*------------------------------------------------------*/
 /* Mobile dropdown menu styles */
@@ -260,10 +262,14 @@ the dropdowns
 #mobile_nav .dropdown_container:before, #mobile_nav .dropdown_container:after {
 	display:none;
 }
-.dropdown_container li {
+.dropdown_list {
+	list-style-type:none;
+	padding:0;
+}
+.dropdown_list_item {
 	width:100%;
-	margin:0 auto;
-	padding-top:5px;
+	padding:5px 0px;
+	margin:0;	
 }
 #mobile_nav_link {
 	color: #333333;
@@ -274,6 +280,7 @@ the dropdowns
 	text-decoration: none;
 	text-align:center;
 	width:100%;
+	
 }
 #mobile_nav_link:hover {
 	background-color: rgb(206, 200, 208);
@@ -283,6 +290,10 @@ the dropdowns
 }
 /*------------------------------------------------------*/
 /* Contact logo grid styles */
+#contact_row{
+	padding-top:20px;
+	
+}
 .logo_links {
 	display: inline-block;
 	margin: 0;
@@ -314,6 +325,10 @@ the dropdowns
 #logolink:hover span {
 	display:block;
 	color: inherit;
+}
+#navlogo_cont {
+	display:flex;
+	justify-content:center;
 }
 #navlogo {
 	vertical-align:middle;
@@ -350,6 +365,7 @@ the dropdowns
     box-sizing: border-box;
 	border-top:1px solid #333;
 	width:100%;
+	
 }
 #footer_text {
 }
