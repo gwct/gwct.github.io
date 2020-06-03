@@ -30,7 +30,7 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p><span class="pub_title">Genus-wide characterization of bumblebee genomes reveals variation associated with key ecological and behavioral traits of pollinators</span>
-			</br>&nbsp;&nbsp;Sun C, ... <b>Thomas GWC</b>, ..., Hahn MW. 2019, ..., Mueller RL. <em>bioRxiv</em>.
+			</br>&nbsp;&nbsp;Sun C, Huang J, ... <b>Thomas GWC</b>, ..., Hahn MW, ..., Mueller RL. 2020. <em>bioRxiv</em>.
 			</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2020.05.29.122879 " target="_blank" id="doi_link">10.1101/2020.05.29.122879</a></p>
 
 			<p><span class="pub_title">Origins and long-term patterns of copy-number variation in rhesus macaques</span>
