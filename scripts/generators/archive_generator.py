@@ -22,6 +22,25 @@ html_template = """
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">July 20, 2020</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="arc_entry">
+		<ul>
+			<p>Earlier this summer I was awarded the Indiana University Graduate School Distinguished Ph.D. Disseratation award! I am so honored and excited to have been chosen for this award!
+				The graduate school has since nominated my dissertation for the Council of Graduate Schools Distinguished Dissertation award.</p>
+
+			<p>On July 21, 2020 I will be giving a talk at the <a href="http://i5k.github.io/ags2020" target="_blank">vitrual Arthropod Genomics Symposium</a> regarding our 
+				<a href="https://doi.org/10.1186/s13059-019-1925-7" target="_blank">recent publication</a> of the i5K pilot project. I'll be summarizing our results from this
+				broad comparative study.</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
+
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">May 30, 2020</div>
         <div class="col-2-24" id="margin"></div>
 	</div>
