@@ -25,7 +25,7 @@ html_template = """
         <div class="col-20-24">
             <div id="res-intro-cont">
                 <p id="res-intro">
-                    My main research interests center around how changes in DNA sequences play a role in adapation. Molecular evolution 
+                    My main research interests center around how changes in DNA sequences play a role in adaptation. Molecular evolution 
                     &mdash; the changes that accrue in the DNA sequence of a population or species over time &mdash; can be driven by many 
                     factors, including evolution of the mutation rate, natural selection, and life history variation between 
                     species. Additionally, false inferences of molecular change can be caused by systematic error in the genome 

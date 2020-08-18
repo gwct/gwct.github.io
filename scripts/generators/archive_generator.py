@@ -22,6 +22,22 @@ html_template = """
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">August 18, 2020</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="arc_entry">
+		<ul>
+			<p>In September, I will be giving a workshop on genome assembly with <a href="http://elliearmstrong.mystrikingly.com/" target="_blank">Ellie Armstrong</a> at this year's online
+			<a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen</a>.</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
+
+
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">July 20, 2020</div>
         <div class="col-2-24" id="margin"></div>
 	</div>
