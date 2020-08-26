@@ -1,0 +1,240 @@
+<!doctype html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
+    <link type="text/css" rel="stylesheet" href="css/grid.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/links.css"  media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
+    <title>ConGen2020 - Assembly workshop</title>
+</head>
+
+<body>
+    <div class="row" id="desktop_nav">
+		<div class="col-4-24" id="margin"></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="index.html">Intro</a></div>
+		<div class="col-4-24" id="nav_link_cell_active"><a class="nav_link" id="active" href="#">Workshop</a></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html" target="_blank">Programs</a></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="links.html">Links</a></div>
+		<div class="col-u-4-24" id="margin"></div>
+	</div>
+
+	<div class="row" id="mobile_nav">
+		<div class="col-24-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/me/logo-nav1.png"></a>
+			<div class="dropdown_container mobile_drop">
+				<ul class="dropdown_list">
+					<li class="dropdown_list_item"><a href="index.html" id="mobile_nav_link">Bio</a></li>
+					<li class="dropdown_list_item"><a href="research.html" id="mobile_nav_link">Research</a></li>
+					<li class="dropdown_list_item"><a href="pubs.html" id="mobile_nav_link">Publications</a></li>
+					<li class="dropdown_list_item"><a href="Gregg-Thomas-CV.pdf" id="mobile_nav_link" target="_blank">CV</a></li>
+					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Software & Links</a></li>
+					<li class="dropdown_list_item"><a href="archive.html" id="mobile_nav_link">Updates</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+   	<div class="row" id="header">Getting started</div>
+
+    <div class="row" id="link-section">
+        <div class="col-4-24" id="margin"></div>
+        
+        <div class="col-16-24" id="main_content">
+            <h2>Genome assembly workshop</h2>
+
+                <p>Hello! Today we'll be going through some hands-on activities to help you get familiar with the steps involved in genome assembly and quality assessment.
+                    We'll be working almost exclusively in the RStudio browser interface that you should be familiar with by now, but if you have questions or problems
+                    at any point please feel free to ask! Just in case, here's a annotated picture of roughly what you should be seeing right now. If you are seeing something drastically
+                    different or something that you don't understand, let us know.
+                </p>
+
+                <div class="row" id="img-row">
+                    <!-- <div class="col-2-24" id="margin"></div> -->
+                    <div class="col-24-24" id="img-col">
+                        <img id="res-img" src="img/congen-interface.png">
+                        <center><span class="fig-caption">Figure 1.1: The RStudio interface for running commands and browsing files.</span></center>
+                    </div>
+                    <!-- <div class="col-2-24" id="margin"></div> -->
+                </div>
+
+                <p>Most of our work will be done as bash commands typed in the Terminal provided by RStudio. Throughout this walkthrough, commands will be presented
+                    as follows:
+                </p>
+
+                <center><pre class="cmd"><code>this is an example command</code></pre></center>
+
+                <p>Following each command will be a table that goes through and explains each part of the command explicitly:</p>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">this</td><td class="tcol-2">An example command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">is</td><td class="tcol-2">An example option used in the example command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">an</td><td class="tcol-2">An example option used in the example command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">example</td><td class="tcol-2">An example option used in the example command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">command</td><td class="tcol-2">An example option used in the example command</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p>The goal of providing these tables is to break-down some of the 'black box' that command line tools can sometimes feel like.
+                    Hopefully this is helpful. If not, feel free to skip over these tables when you see them!</p>
+
+                <p>Additionally, one of the most important and often overlooked parts of bioinformatic analyses is to simply look at ones data.
+                    There will be several points where we stop to simply look at the output of a given program or command. When we do, a snippet
+                    of the output will be presented in the walkthrough as follows:
+                </p>
+
+                <p>Here I've clipped the top of some example output:</p>
+                <pre class="text"><code>Here is an example output
+Looking at your data is very important!
+You can catch problems before you use the data in later analyses.</code></pre>
+
+            <div id="section_sep_top"></div>
+            <div id="section_line"></div>
+            <div id="section_sep_btm"></div>
+
+            <h2>Drosophila data</h2>
+
+                <p>Today we'll be talking about genome assembly. While the programs that perform the various steps of assembly have greatly improved over
+                    the past few years, genome assembly is still generally a slow, multi-step process. Given that, we'll be working with a smaller 150Mb
+                    genome from <em>Drosophila pseudoobscura</em>. Many times we will limit our data to just chromosome 2 (32Mb) of </em>D. pseudoobscura</em> to speed up
+                    run times even more.
+                </p>
+
+                <p><em>D. pseudoobscura</em> is a species of fruit fly that diverged from the well known <em>D. melanogaster</em> model species roughly 50
+                    million years ago. <em>D. pseudoobscura</em> chromosome 2 is homologous to <em>D. melanogaster</em> chromosome arm 3R.
+                </p>
+
+                <div class="row" id="img-row">
+                    <div class="col-4-24" id="margin"></div>
+                    <div class="col-16-24" id="img-col">
+                        <img id="res-img" src="img/drosophila.png">
+                        <center><span class="fig-caption">Figure 1.2: Drosophila phylogeny and homology between chromosome arms. 
+                            From <a href="https://www.genetics.org/content/179/3/1601" target="blank">Schaeffer et al. 2008</a></span></center>
+                    </div>
+                    <div class="col-4-24" id="margin"></div>
+                </div>
+
+                <p>Using these data, we'll be performing the following tasks today:</p>
+
+                <ol>
+                    <li>Assembling the <em>D. pseudoobscura</em> genome and assessing the quality of said assembly.</li>
+                    <li>Mapping reads from <em>D. pseudoobscura</em> chromosome 2 to <em>D. melanogaster</em> chromosome 3R.</li>
+                    <li>Assessing how iterative mapping of reads from <em>D. pseudoobscura</em> chromosome 2 to <em>D. melanogaster</em> affects divergence estimates.</li>
+                </ol>
+
+            <div id="section_sep_top"></div>
+            <div id="section_line"></div>
+            <div id="section_sep_btm"></div>
+
+            <h2>Input files & Output prep</h2>
+                <p>In your file browser, if you click to navigate to the <code class="inline">congen-assembly/</code> folder, you should see the following folders</p>
+
+                <div class="table-cont">
+                    <table class="norm-table">
+                        <thead><th class="tcol-1">Folder</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1"><code class="inline">dmel-3R-reference/</code></td><td class="tcol-2">A folder containing the <em>D. melanogaster</em> chromosome 3R sequence file and its indices.</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1"><code class="inline">dpse-reads/</code></td><td class="tcol-2">A folder containing Nanopore long reads and Illumina short reads for <em>D. pseudoobscura</em>.</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1"><code class="inline">dpse-2-reference/</code></td><td class="tcol-2">A folder containing the sequence for chromosome 2 from <em>D. pseudoobscura</em>.</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1"><code class="inline">expected-outputs/</code></td><td class="tcol-2">Pre-run outputs for all the programs we run today. 
+                                If you get stuck or something takes too long, look for the expected output here</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1"><code class="inline">scripts/</code></td><td class="tcol-2">A couple supplementary scripts for data analysis.</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <p>Let's get started by making the output directories for our tasks today:</p>
+
+                <center><pre class="cmd"><code>mkdir alignments</code></pre></center>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">mkdir</td><td class="tcol-2">The Linux make directory command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">alignments</td><td class="tcol-2">The name of the directory where we will generate and store our alignments for comparing assemblies and read mappings</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <center><pre class="cmd"><code>mkdir assemblies</code></pre></center>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">mkdir</td><td class="tcol-2">The Linux make directory command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">assemblies</td><td class="tcol-2">The name of the directory where we will generate and store our assemblies</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <center><pre class="cmd"><code>mkdir mapped-reads</code></pre></center>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">mkdir</td><td class="tcol-2">The Linux make directory command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">mapped-reads</td><td class="tcol-2">The name of the directory where we will generate and store our read mappings</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p>Some other programs we run will create their own output directories. We should now be ready to run the commands to generate assemblies 
+                    and read mappings. But first, let's get familiar with our input data, <a href="reads.html">sequences and reads...</a>
+                </p>
+
+
+
+        </div>
+        <div class="col-4-24" id="margin"></div>
+    </div>
+
+    <div class="row" id="link-section">
+        <div class="col-3-24" id="margin"></div>
+        <div class="col-6-24" id="nav-btn">
+            <a href="index.html">&lt; Previous</a>    
+        </div>
+        <div class="col-6-24" id="nav-margin"></div>
+        <div class="col-6-24" id="nav-btn">
+            <a href="reads.html">Next &gt;</a>
+        </div>
+        <div class="col-3-24" id="margin"></div>
+    </div>
+
+    <div class="row" id="footer">
+		<div class="col-1">
+			<div id="footer_text">
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 08/18/2020 10:40:04 MDT</center>
+			</div>
+        </div>
+    </div>
+</body>

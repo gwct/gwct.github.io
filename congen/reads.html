@@ -1,0 +1,210 @@
+<!doctype html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
+    <link type="text/css" rel="stylesheet" href="css/grid.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/links.css"  media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
+    <title>ConGen2020 - Assembly workshop</title>
+</head>
+
+<body>
+    <div class="row" id="desktop_nav">
+		<div class="col-4-24" id="margin"></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="index.html">Intro</a></div>
+		<div class="col-4-24" id="nav_link_cell_active"><a class="nav_link" id="active" href="#">Workshop</a></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html" target="_blank">Programs</a></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="links.html">Links</a></div>
+		<div class="col-u-4-24" id="margin"></div>
+	</div>
+
+	<div class="row" id="mobile_nav">
+		<div class="col-24-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/me/logo-nav1.png"></a>
+			<div class="dropdown_container mobile_drop">
+				<ul class="dropdown_list">
+					<li class="dropdown_list_item"><a href="index.html" id="mobile_nav_link">Bio</a></li>
+					<li class="dropdown_list_item"><a href="research.html" id="mobile_nav_link">Research</a></li>
+					<li class="dropdown_list_item"><a href="pubs.html" id="mobile_nav_link">Publications</a></li>
+					<li class="dropdown_list_item"><a href="Gregg-Thomas-CV.pdf" id="mobile_nav_link" target="_blank">CV</a></li>
+					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Software & Links</a></li>
+					<li class="dropdown_list_item"><a href="archive.html" id="mobile_nav_link">Updates</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+   	<div class="row" id="header">Sequences & Reads</div>
+
+    <div class="row" id="link-section">
+        <div class="col-4-24" id="margin"></div>
+        
+        <div class="col-16-24" id="main_content">
+            <h2>FASTA format</h2>
+
+                <p>One common format used to store biological sequence data is the FASTA format. Let's take a look at one of the reference sequences stored in FASTA format with the following command:</p>
+
+                <center><pre class="cmd"><code>less -S dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa</code></pre></center>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">less</td><td class="tcol-2">A Linux text file viewer (use space to scroll down, b to scroll up, and q to exit)</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">-S</td><td class="tcol-2">Turn off line-wrapping within less (use the left and right arrow keys to scroll left and right).</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa</td><td class="tcol-2">The path to the file you want to view</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p>Here I've clipped the top of this output:</p>
+
+                <pre class="text"><code>>3R dna:chromosome chromosome:BDGP6.28:3R:1:32079331:1 REF
+ACGGGACCGAGTATAGTACCAGTACGCGACCAGTACGGGAGCAGTACGGAACCAATACGG
+GTCCAGTACGGGTCCAGTACGGGTCCAGTACGGGTCCAGTACGGGACCAGTACGGGACCG</code></pre>
+
+                <p>We can see that the first line begins with the greater than symbol (<code class="inline">></code>). This indicates that it is a header line for the following sequence.
+                    Header lines can contain whatever information the file creator thought would be important to annotate the sequence. In most cases, it will have a name
+                    for the sequence and some information about its location in the genome.</p>
+
+                <p>After the header line comes the sequence. Sequences can be split up to multiple lines, but always form a single string that refers back to the previous header. 
+                    There can also be multiple headers/sequences in a single FASTA file.</p>
+
+            <div id="section_sep_top"></div>
+            <div id="section_line"></div>
+            <div id="section_sep_btm"></div>
+
+            <h2>FASTQ format</h2>
+
+                <p>Reads require a different format because they are need to store another important piece of information regarding sequence data: per-base quality scores.
+                    To accomplish this, the FASTQ format is used. We can see an example of FASTQ format with the reads provided:</p>
+
+                <center><pre class="cmd"><code>zless -S dpse-2-reads/illumina/pse-chr2_1.fastq.gz</code></pre></center>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">zless</td><td class="tcol-2">A Linux compressed text file viewer 
+                                (use <code class="inline">&lt;space&gt;</code> to scroll down, <code class="inline">b</code> 
+                                to scroll up, and <code class="inline">q</code> to exit)</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">-S</td><td class="tcol-2">Turn off line-wrapping within <code class="inline">zless</code> 
+                                (use the <code class="inline">&lt;left arrow&gt;</code> and <code class="inline">&lt;right arrow&gt;</code> to scroll left and right).</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">dpse-2-reads/illumina/pse-chr2_1.fastq.gz</td><td class="tcol-2">The path to the file you want to view</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <p>Here is what the first few lines of that file should look like:</p>
+                <pre class="text"><code>@SRR11230564.32890235/1
+TGATAATAAAACAACTTATTGCCCCCCTCTGGCAATACACTCTCCCGGTGTGGGGGGCCCTGACATGTAAAACGCAAATAAGAAGAATCCAGGGACAGCAGAACAAAATAATCAGAAATGCACTACTAGATCGGAAGAGCACACGTCTGAA
++
+AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
+@SRR11230564.32288433/1
+ATTGTGTGTATGTTGTATTTTTCCCTAAGCACTTCATTTCTTGTGTAGCGTCCAGCTAGTAGTGCATTTCTGATTATTTTGTTCTGCTGTCCCTGGATTCTTCTTATTTGCGTTTTACATGTCAGGGCCCCCCACACCGGGAGATCGGAAG
++
+AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJFJJJJJJJJJJJJJJ&lt;JJJJJAJJJJJJFJF</code></pre>
+
+                <p>So as you can see there's a lot more information here. In FASTQ, lines that start with the at <code class="inline">@</code> character are the header lines and
+                    can contain any amount of information about the sequence, including it's ID, information about the sequencing machine that generated it, and whether
+                    it is one of a pair of reads. In this case, since these reads were downloaded from the SRA, only an ID and the pair number (<code class="inline">/1</code>)
+                    are included. In the snippet above there are two lines starting with <code class="inline">@</code>, meaning we are looking at information for two reads.</p>
+
+                <p>Following the header line are lines that contain sequences corresponding to that header, just like in FASTA formatted files. However, after this
+                    is a line that starts with <code class="inline">+</code>. This is a linker line between the sequence and the quality scores. It can be left blank with just the
+                    <code class="inline">+</code> sign, or can contain header information as well.
+                </p>
+
+                <p>After the linker line are the <b>ASCII encoded Phred-scaled quality scores.</b></p>
+
+            <div id="section_sep_top"></div>
+            <div id="section_line"></div>
+            <div id="section_sep_btm"></div>
+
+            <h2>Phred quality scores</h2>
+
+                <p>Sequencing machines read sequences as signals such as fluorescence or changes in pH or charge. Many sequencing machines can measure the intensity
+                    of these signals and other factors at run-time to assign the probabilty that the base called at each position is an error. These error probabilities
+                    are transformed into quality scores as follows:</p>
+
+                <p><span class="math display" id="eqn">\[ Q = -10\log P(error)\]</span></p>
+
+                <p>Scores resulting from this transformation are known as Phred scores because they were first used by the base-calling software Phred and usually range from 0 to 40.</p>
+
+                <p>To encode these scores into FASTQ files, they are converted to an ASCII character. Briefly, starting with the number 33, each character on an English keyboard
+                    has a corresponding integer code (called the decimal value or DEC). To convert Phred scores to ASCII characters, we first add 33 to the Phred score and look up that
+                    value in the ASCII table.</p>
+
+                <div class="row" id="img-row">
+                    <div class="col-4-24" id="margin"></div>
+                    <div class="col-16-24" id="img-col">
+                        <img id="res-img" src="img/ascii-table.png">
+                        <center><span class="fig-caption">Figure 2.1: ASCII table.</span></center>
+                    </div>
+                    <div class="col-4-24" id="margin"></div>
+                </div>
+
+                <p>Converting from ASCII characters back to error probabilities is just the reverse of this process. For example, the first ASCII character in the quality strin
+                    of the first read above is <code class="inline">A</code>. Looking this up in the table, <code class="inline">A</code> has a DEC value of 65. The corresponding Phred score would then be
+                    65 - 33 = 32. And then we convert back to error probability with the reverse of the above equation:
+                </p>
+
+                <p><span class="math display" id="eqn">\[ P(error) = 10^{-\frac{Q}{10}} \]</span></p>
+
+                <p>Using this equation, a score of 32 means the probability that this base is called erroneously is 0.00063</p>
+
+            <div id="section_sep_top"></div>
+            <div id="section_line"></div>
+            <div id="section_sep_btm"></div>
+
+            <h2>Assessing read quality with <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a></h2>
+
+        </div>
+
+
+        <div class="col-4-24" id="margin"></div>
+    </div>
+
+    <div class="row" id="link-section">
+        <div class="col-3-24" id="margin"></div>
+        <div class="col-6-24" id="nav-btn">
+            <a href="start.html">&lt; Previous</a>    
+        </div>
+        <div class="col-6-24" id="nav-margin"></div>
+        <div class="col-6-24" id="nav-btn">
+            <a href="#">Next &gt;</a>
+        </div>
+        <div class="col-3-24" id="margin"></div>
+    </div>
+
+
+    <div class="row" id="footer">
+		<div class="col-1">
+			<div id="footer_text">
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 08/18/2020 10:40:04 MDT</center>
+			</div>
+        </div>
+    </div>
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+    <script>
+        (function () {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        })();
+    </script>
+
+</body>
