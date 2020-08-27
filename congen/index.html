@@ -5,44 +5,51 @@
     <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
     <link type="text/css" rel="stylesheet" href="css/grid.css"  media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/links.css"  media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
     <title>ConGen2020 - Assembly workshop</title>
 </head>
 
 <body>
-    	<div class="row" id="desktop_nav">
+    <div class="row" id="desktop_nav">
 		<div class="col-4-24" id="margin"></div>
 		<div class="col-4-24" id="nav_link_cell_active"><a class="nav_link" id="active" href="#">Intro</a></div>
-		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="start.html">Workshop</a></div>
-		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html" target="_blank">Programs</a></div>
+        <!-- <div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="start.html">Workshop</a></div> -->
+        <div class="col-4-24 dropdown" id="nav_link_cell">
+			<a href="start.html" class="nav_link">Workshop</a>
+			<div class="dropdown_container desktop_drop">
+				<ul class="dropdown_list">
+					<li class="dropdown_list_item"><a href="start.html" id="dropdown_nav_link">Start</a></li>
+					<li class="dropdown_list_item"><a href="reads.html" id="dropdown_nav_link">Reads</a></li>
+					<li class="dropdown_list_item"><a href="#" id="dropdown_nav_link">Assembly</a></li>
+					<li class="dropdown_list_item"><a href="mapping.html" id="dropdown_nav_link">Mapping</a></li>
+					<li class="dropdown_list_item"><a href="iterative-mapping.html" id="dropdown_nav_link">Iterative mapping</a></li>
+				</ul>
+            </div>
+        </div>
+        <div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html">Programs</a></div>
 		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="links.html">Links</a></div>
 		<div class="col-u-4-24" id="margin"></div>
 	</div>
 
 	<div class="row" id="mobile_nav">
 		<div class="col-24-24 dropdown" id="nav_link_cell">
-			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/me/logo-nav1.png"></a>
+			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/nav.png"></a>
 			<div class="dropdown_container mobile_drop">
 				<ul class="dropdown_list">
-					<li class="dropdown_list_item"><a href="index.html" id="mobile_nav_link">Bio</a></li>
-					<li class="dropdown_list_item"><a href="research.html" id="mobile_nav_link">Research</a></li>
-					<li class="dropdown_list_item"><a href="pubs.html" id="mobile_nav_link">Publications</a></li>
-					<li class="dropdown_list_item"><a href="Gregg-Thomas-CV.pdf" id="mobile_nav_link" target="_blank">CV</a></li>
-					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Software & Links</a></li>
-					<li class="dropdown_list_item"><a href="archive.html" id="mobile_nav_link">Updates</a></li>
+					<li class="dropdown_list_item"><a href="intro.html" id="mobile_nav_link">Intro</a></li>
+					<li class="dropdown_list_item"><a href="start.html" id="mobile_nav_link">Workshop</a></li>
+					<li class="dropdown_list_item"><a href="programs.html" id="mobile_nav_link">Programs</a></li>
+					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Links</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
-   	<!-- <div class="row" id="header">Getting started</div> -->
-
-    <div class="row" id="link-section">
+    <div class="row">
         <div class="col-4-24" id="margin"></div>
         
         <div class="col-16-24" id="main_content">
-            <h1>Welcome to the <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2020</a> virtual genome assembly workshop!</h1>
+            <h1>Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2020</a> genome assembly workshop!</h1>
 
                 <p>This web page will guide you through the genome assembly and read mapping activities we have planned for you today!</p>
 
@@ -58,7 +65,7 @@
                     </div>
                     <div class="col-20-24" id="inst-text">
                         <p><a href="https://gwct.github.io/" target="_blank">Gregg Thomas</a>: A postdoctoral researcher in <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good's</a>
-                            lab at the University of Montana. Gregg studies aspects of molecular evolution to determine what forces drive divergence between species.
+                            lab at the University of Montana. Gregg studies molecular evolution to determine what forces drive divergence and adaptation between species.
                         </p>
                     </div>
                 </div>
@@ -95,12 +102,10 @@
                 <center><h1><a href="start.html">Get Started</a></h1></center>
 
                 <div class="row" id="link-row">
-                    <div class="col-4-24" id="btm-link"><a href="reads.html">Reads</a></div>
-                    <div class="col-4-24" id="btm-link"><a href="assembly.html">Assembly</a></div>
-                    <div class="col-4-24" id="btm-link"><a href="mapping.html">Mapping</a></div>
-                    <div class="col-4-24" id="btm-link"><a href="iterative-mapping.html">Iterative mapping</a></div>
-                    <div class="col-4-24" id="btm-link"><a href="divergence.html">Divergence</a></div>
-                    <div class="col-4-24" id="btm-link"><a href="reads.html">Reads</a></div>
+                    <div class="col-6-24" id="btm-link"><a href="reads.html">Reads</a></div>
+                    <div class="col-6-24" id="btm-link"><a href="assembly.html">Assembly</a></div>
+                    <div class="col-6-24" id="btm-link"><a href="mapping.html">Mapping</a></div>
+                    <div class="col-6-24" id="btm-link"><a href="iterative-mapping.html">Iterative mapping</a></div>
                 </div>
         </div>
         <div class="col-4-24" id="margin"></div>

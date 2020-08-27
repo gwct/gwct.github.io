@@ -5,7 +5,6 @@
     <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
     <link type="text/css" rel="stylesheet" href="css/grid.css"  media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/links.css"  media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
     <title>ConGen2020 - Assembly workshop</title>
 </head>
@@ -14,38 +13,49 @@
     <div class="row" id="desktop_nav">
 		<div class="col-4-24" id="margin"></div>
 		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="index.html">Intro</a></div>
-		<div class="col-4-24" id="nav_link_cell_active"><a class="nav_link" id="active" href="#">Workshop</a></div>
-		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html" target="_blank">Programs</a></div>
+        <!-- <div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="start.html">Workshop</a></div> -->
+        <div class="col-4-24 dropdown" id="nav_link_cell_active">
+			<a href="#.html" class="nav_link"  id="active">Workshop</a>
+			<div class="dropdown_container desktop_drop">
+				<ul class="dropdown_list">
+					<li class="dropdown_list_item"><a href="start.html" id="dropdown_nav_link">Start</a></li>
+					<li class="dropdown_list_item"><a href="reads.html" id="dropdown_nav_link">Reads</a></li>
+					<li class="dropdown_list_item"><a href="#" id="dropdown_nav_link">Assembly</a></li>
+					<li class="dropdown_list_item"><a href="mapping.html" id="dropdown_nav_link">Mapping</a></li>
+					<li class="dropdown_list_item"><a href="iterative-mapping.html" id="dropdown_nav_link">Iterative mapping</a></li>
+				</ul>
+            </div>
+        </div>
+        <div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html">Programs</a></div>
 		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="links.html">Links</a></div>
 		<div class="col-u-4-24" id="margin"></div>
 	</div>
 
 	<div class="row" id="mobile_nav">
 		<div class="col-24-24 dropdown" id="nav_link_cell">
-			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/me/logo-nav1.png"></a>
+			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/nav.png"></a>
 			<div class="dropdown_container mobile_drop">
 				<ul class="dropdown_list">
-					<li class="dropdown_list_item"><a href="index.html" id="mobile_nav_link">Bio</a></li>
-					<li class="dropdown_list_item"><a href="research.html" id="mobile_nav_link">Research</a></li>
-					<li class="dropdown_list_item"><a href="pubs.html" id="mobile_nav_link">Publications</a></li>
-					<li class="dropdown_list_item"><a href="Gregg-Thomas-CV.pdf" id="mobile_nav_link" target="_blank">CV</a></li>
-					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Software & Links</a></li>
-					<li class="dropdown_list_item"><a href="archive.html" id="mobile_nav_link">Updates</a></li>
+					<li class="dropdown_list_item"><a href="index.html" id="mobile_nav_link">Intro</a></li>
+					<li class="dropdown_list_item"><a href="start.html" id="mobile_nav_link">Workshop</a></li>
+					<li class="dropdown_list_item"><a href="programs.html" id="mobile_nav_link">Programs</a></li>
+					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Links</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
+
    	<div class="row" id="header">Getting started</div>
 
-    <div class="row" id="link-section">
+    <div class="row">
         <div class="col-4-24" id="margin"></div>
         
         <div class="col-16-24" id="main_content">
             <h2>Genome assembly workshop</h2>
 
                 <p>Hello! Today we'll be going through some hands-on activities to help you get familiar with the steps involved in genome assembly and quality assessment.
-                    We'll be working almost exclusively in the RStudio browser interface that you should be familiar with by now, but if you have questions or problems
+                    We'll be working exclusively in the RStudio browser interface that you should be familiar with by now, but if you have questions or problems
                     at any point please feel free to ask! Just in case, here's a annotated picture of roughly what you should be seeing right now. If you are seeing something drastically
                     different or something that you don't understand, let us know.
                 </p>
@@ -91,13 +101,38 @@
                 <p>The goal of providing these tables is to break-down some of the 'black box' that command line tools can sometimes feel like.
                     Hopefully this is helpful. If not, feel free to skip over these tables when you see them!</p>
 
+                <div id="msg_cont">
+                    <div id="msg">
+                        <div id="msg_banner">Tip - Help menus</div>
+                        <div id="msg_text">
+                            <p>
+                                A general convention among software developers is to provide a help menu for programs that lists common options. These can generally
+                                viewed from the command line with the <code class="inline">-h</code> option as follows:
+                            </p>
+
+                            <center><code class="inline">&lt;program&gt; -h</code> &nbsp;<em>-or-</em>&nbsp; <code class="inline">&lt;program&gt; &lt;sub-program&gt; -h</code></center>
+
+                            <p>For Linux commands, help is generally available with the <code class="inline">man</code> command (man is short for manual):</p>
+
+                            <center><code class="inline">man &lt;command&gt;</code></center>
+
+                            <p><code class="inline">man</code> opens a text viewer that can be navigated with the arrow keys and exited simply by typing <code class="inline">q</code>.
+                                If you're ever stuck or want to know more about a program's options, try these!
+                            </p>
+
+
+                            <p></p>
+    
+                        </div>
+                    </div>
+                </div>
+
                 <p>Additionally, one of the most important and often overlooked parts of bioinformatic analyses is to simply look at ones data.
-                    There will be several points where we stop to simply look at the output of a given program or command. When we do, a snippet
+                    There will be several points where we stop to look at the output of a given program or command. When we do, a snippet
                     of the output will be presented in the walkthrough as follows:
                 </p>
 
-                <p>Here I've clipped the top of some example output:</p>
-                <pre class="text"><code>Here is an example output
+                <pre class="text"><code>Here is some made up output.
 Looking at your data is very important!
 You can catch problems before you use the data in later analyses.</code></pre>
 
@@ -211,14 +246,11 @@ You can catch problems before you use the data in later analyses.</code></pre>
                 <p>Some other programs we run will create their own output directories. We should now be ready to run the commands to generate assemblies 
                     and read mappings. But first, let's get familiar with our input data, <a href="reads.html">sequences and reads...</a>
                 </p>
-
-
-
         </div>
         <div class="col-4-24" id="margin"></div>
     </div>
 
-    <div class="row" id="link-section">
+    <div class="row">
         <div class="col-3-24" id="margin"></div>
         <div class="col-6-24" id="nav-btn">
             <a href="index.html">&lt; Previous</a>    

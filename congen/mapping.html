@@ -5,7 +5,6 @@
     <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
     <link type="text/css" rel="stylesheet" href="css/grid.css"  media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/links.css"  media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
     <title>ConGen2020 - Assembly workshop</title>
 </head>
@@ -14,39 +13,60 @@
     <div class="row" id="desktop_nav">
 		<div class="col-4-24" id="margin"></div>
 		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="index.html">Intro</a></div>
-		<div class="col-4-24" id="nav_link_cell_active"><a class="nav_link" id="active" href="#">Workshop</a></div>
-		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html" target="_blank">Programs</a></div>
+        <!-- <div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="start.html">Workshop</a></div> -->
+        <div class="col-4-24 dropdown" id="nav_link_cell_active">
+			<a href="#.html" class="nav_link"  id="active">Workshop</a>
+			<div class="dropdown_container desktop_drop">
+				<ul class="dropdown_list">
+					<li class="dropdown_list_item"><a href="start.html" id="dropdown_nav_link">Start</a></li>
+					<li class="dropdown_list_item"><a href="reads.html" id="dropdown_nav_link">Reads</a></li>
+					<li class="dropdown_list_item"><a href="#" id="dropdown_nav_link">Assembly</a></li>
+					<li class="dropdown_list_item"><a href="mapping.html" id="dropdown_nav_link">Mapping</a></li>
+					<li class="dropdown_list_item"><a href="iterative-mapping.html" id="dropdown_nav_link">Iterative mapping</a></li>
+				</ul>
+            </div>
+        </div>
+        <div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html">Programs</a></div>
 		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="links.html">Links</a></div>
 		<div class="col-u-4-24" id="margin"></div>
 	</div>
 
 	<div class="row" id="mobile_nav">
 		<div class="col-24-24 dropdown" id="nav_link_cell">
-			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/me/logo-nav1.png"></a>
+			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/nav.png"></a>
 			<div class="dropdown_container mobile_drop">
 				<ul class="dropdown_list">
-					<li class="dropdown_list_item"><a href="index.html" id="mobile_nav_link">Bio</a></li>
-					<li class="dropdown_list_item"><a href="research.html" id="mobile_nav_link">Research</a></li>
-					<li class="dropdown_list_item"><a href="pubs.html" id="mobile_nav_link">Publications</a></li>
-					<li class="dropdown_list_item"><a href="Gregg-Thomas-CV.pdf" id="mobile_nav_link" target="_blank">CV</a></li>
-					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Software & Links</a></li>
-					<li class="dropdown_list_item"><a href="archive.html" id="mobile_nav_link">Updates</a></li>
+					<li class="dropdown_list_item"><a href="index.html" id="mobile_nav_link">Intro</a></li>
+					<li class="dropdown_list_item"><a href="start.html" id="mobile_nav_link">Workshop</a></li>
+					<li class="dropdown_list_item"><a href="programs.html" id="mobile_nav_link">Programs</a></li>
+					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Links</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
+
    	<div class="row" id="header">Read Mapping</div>
 
-    
-    <div class="row" id="link-section">
+    <div class="row">
         <div class="col-4-24" id="margin"></div>
         
         <div class="col-16-24" id="main_content">
 
-            <p>Now that we're familiar with de novo assembly, let's look at another strategy for genome assembly: reference-guided assembly by read mapping. We'll be
-                using BWA to map some short reads from D. pseudoobscura chromosome 2 to the homologous chromosome 3 in D. melanogaster and then assessing the read mapping.
+            <p>Now that we're familiar with de novo assembly, let's look at another strategy for genome assembly: reference-guided assembly by read mapping. Using this strategy, the
+                raw reads aren't put back together, but rather aligned to a reference genome:
             </p>
+
+            <div class="row" id="img-row">
+                <div class="col-4-24" id="margin"></div>
+                <div class="col-16-24" id="img-col">
+                    <img id="res-img" src="img/ref-guided-assembly-1.png">
+                    <center><span class="fig-caption">Figure 4.1: Reference guided assembly via read-mapping.</span></center>
+                </div>
+                <div class="col-4-24" id="margin"></div>
+            </div>
+
+            <p>We'll be using BWA to map some short reads from D. pseudoobscura chromosome 2 to the homologous chromosome 3 in D. melanogaster and then assessing the read mapping.</p>
 
             <h2>Mapping reads with <a href="https://github.com/lh3/bwa" target="_blank">BWA</a> and <a href="http://www.htslib.org/" target="_blank">samtools</a></h2>
 
@@ -208,12 +228,12 @@ SRR11230564.16812502    99      3R      35215   0       55S20M76S       =       
 
 
                 <div class="row" id="img-row">
-                    <div class="col-4-24" id="margin"></div>
-                    <div class="col-16-24" id="img-col">
+                    <div class="col-6-24" id="margin"></div>
+                    <div class="col-12-24" id="img-col">
                         <img id="res-img" src="img/sam-cols.png">
-                        <center><span class="fig-caption">Figure 4.1: The column definitions of SAM/BAM formatted files. <a href="https://genomics.sschmeier.com/ngs-mapping/index.html#table-sam" target="_blank">Source</a>.</span></center>
+                        <center><span class="fig-caption">Figure 4.2: The column definitions of SAM/BAM formatted files. <a href="https://genomics.sschmeier.com/ngs-mapping/index.html#table-sam" target="_blank">Source</a>.</span></center>
                     </div>
-                    <div class="col-4-24" id="margin"></div>
+                    <div class="col-6-24" id="margin"></div>
                 </div>
 
             <div id="section_sep_top"></div>
@@ -322,6 +342,22 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
 
                 <p>This should print all 1376 duplicate reads to the screen.</p>
 
+                <p>From here, the mapped reads can be used to calculate genotype likelihoods at each position to infer where the reference genome and the mapped genome differ. These variants can be used
+                    in downstream analyses to assess divergence, phylogenetic relationships, selection, or any other comparative analysis you can think of.
+                </p>
+
+                <div class="row" id="img-row">
+                    <div class="col-4-24" id="margin"></div>
+                    <div class="col-16-24" id="img-col">
+                        <img id="res-img" src="img/ref-guided-assembly-2.png">
+                        <center><span class="fig-caption">Figure 4.3: Variant calling from mapped reads. Green sites are true variants while dark red sites are sequencing errors.</span></center>
+                    </div>
+                    <div class="col-4-24" id="margin"></div>
+                </div>
+                
+                <p>We won't cover this in detail today, but we've provided a list of several variant calling programs on the <a href="programs.html" target="_blank">Programs</a> page.</p>
+
+
             <div id="section_sep_top"></div>
             <div id="section_line"></div>
             <div id="section_sep_btm"></div>    
@@ -335,7 +371,7 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
                     be covered by reads.
                 </p>
 
-                <p>One way for estimating coverage is to use the Lander/Waterman equation:</p>
+                <p>One way for estimating coverage is to use the Lander/Waterman (<a href="https://doi.org/10.1016/0888-7543(88)90007-9" target="_blank">1988</a>) equation:</p>
 
                 <p><span class="math display" id="eqn">\[ Coverage = \frac{LN}{G} \]</span></p>
 
@@ -369,24 +405,24 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
                 </p>
 
                 <center>
-                <div class="table-cont">
-                    <table class="small-table">
-                        <tr>
-                            <td class="tcol-1"><code class="inline">L</code></td><td class="tcol-2">150</td>
-                        </tr>
-                        <tr>
-                            <td class="tcol-1"><code class="inline">N</code></td><td class="tcol-2">537507 * 2</td>
-                        </tr>
-                        <tr>
-                            <td class="tcol-1"><code class="inline">G</code></td><td class="tcol-2">32000000</td>
-                        </tr>
-                    </table>
-                </div>
+                    <div class="table-cont">
+                        <table class="small-table">
+                            <tr>
+                                <td class="tcol-1"><code class="inline">L</code></td><td class="tcol-2">150</td>
+                            </tr>
+                            <tr>
+                                <td class="tcol-1"><code class="inline">N</code></td><td class="tcol-2">537507 * 2</td>
+                            </tr>
+                            <tr>
+                                <td class="tcol-1"><code class="inline">G</code></td><td class="tcol-2">32000000</td>
+                            </tr>
+                        </table>
+                    </div>
                 </center>
 
                 <p><span class="math display" id="eqn">\[ Coverage = \frac{150 * 537507 * 2}{32000000} = 5.04 \]</span></p>
 
-                <p>So we estimate our coverage at 5.04, meaning that we would expect every position to be covered by 5 reads.</p>
+                <p>So we estimate our coverage at <b>5.04</b>, meaning that we would expect every position to be covered by 5 reads.</p>
 
                 <p>Let's see if this matches up to the observed read depth. First, lets use <code class="inline">samtools depth</code> to get the number
                     of reads that map to each position.
@@ -450,9 +486,9 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
                 <pre class="text"><code># Avg. read depth: 3.948774</code></pre>
 
                 <p>This is lower than expected. Why? One cause would be many reads having sequencing errors leading to unmapped reads. Another cause could be that 
-                    the reads that contain the most variation between the two species were not able to be mapped. This is referred to as reference bias: reads that 
-                    contain variation cannot be mapped, so the final mapped reads end up looking more like the reference genome than they actually are. Iterative
-                    mapping attempts to address this issue.
+                    the reads that contain the most variation between the two species were not able to be mapped. This is referred to as <b>reference bias</b>: reads that 
+                    contain too much variation cannot be mapped, so the final mapped reads end up looking more like the reference genome than they actually are. <b>Iterative
+                    mapping</b> attempts to address this issue.
                 </p>
 
         </div>
@@ -461,14 +497,14 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
         <div class="col-4-24" id="margin"></div>
     </div>
 
-    <div class="row" id="link-section">
+    <div class="row">
         <div class="col-3-24" id="margin"></div>
         <div class="col-6-24" id="nav-btn">
             <a href="#">&lt; Previous</a>    
         </div>
         <div class="col-6-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn">
-            <a href="#">Next &gt;</a>
+            <a href="iterative-mapping.html">Next &gt;</a>
         </div>
         <div class="col-3-24" id="margin"></div>
     </div>
