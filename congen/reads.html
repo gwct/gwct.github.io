@@ -51,6 +51,8 @@
         <div class="col-4-24" id="margin"></div>
         
         <div class="col-16-24" id="main_content">
+
+            <a name="fasta"></a>	
             <h2>FASTA format</h2>
 
                 <p>One common format used to store biological sequence data is the FASTA format. Let's take a look at one of the reference sequences stored in FASTA format with the following command:</p>
@@ -93,6 +95,7 @@ GTCCAGTACGGGTCCAGTACGGGTCCAGTACGGGTCCAGTACGGGACCAGTACGGGACCG</code></pre>
             <div id="section_line"></div>
             <div id="section_sep_btm"></div>
 
+            <a name="fastq"></a>	
             <h2>FASTQ format</h2>
 
                 <p>Reads require a different format because they are need to store another important piece of information regarding sequence data: per-base quality scores.
@@ -146,6 +149,7 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
             <div id="section_line"></div>
             <div id="section_sep_btm"></div>
 
+            <a name="phred"></a>	
             <h2>Phred quality scores</h2>
 
                 <p>Sequencing machines read sequences as signals such as fluorescence or changes in pH or charge. Many sequencing machines can measure the intensity
@@ -182,15 +186,164 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
             <div id="section_line"></div>
             <div id="section_sep_btm"></div>
 
+            <a name="fastqc"></a>	
             <h2>Assessing read quality with <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a></h2>
+                
+                <p>One of the first things one should do after receiving the sequence data (reads) is to assess their quality. This means acquiring some basic
+                    statistics, such as number of reads, average read length, average quality, etc.
+                </p>
+
+                <p>Fortunately, since this is such a common task, there are programs out there that help. One of the most widely used is <code class="inline">fastqc</code>.
+                    This program takes as input a set of reads in <b>FASTQ</b> format and generates an HTML file with several plots that can be viewed within a web browser.
+                </p>
+
+                <p>Let's try to run <code class="inline">fastqc</code> on some of our short read (Illumina) data for <em>D. pseudoobscura</em> chromosome 2. First, let's navigate
+                    to the folder that contains our reads:
+                </p>
+
+                <center><pre class="cmd"><code>cd dpse-2-reads/illumina/</code></pre></center>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">dpse-2-reads/illumina/</td><td class="tcol-2">The path to the directory you want to change to.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p><code class="inline">fastqc</code> requires a pre-made output directory. Let's make one here:</p>
+
+                <center><pre class="cmd"><code>mkdir fastqc-output</code></pre></center>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">mkdir</td><td class="tcol-2">The Linux make directory command</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">fastqc-output</td><td class="tcol-2">The desired name of the new directory.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p>And now we can run <code class="inline">fastqc</code>:</p>
+
+                <center><pre class="cmd"><code>fastqc pse-chr2_1.fastq.gz pse-chr2_2.fastq.gz -o fastqc-output/</code></pre></center>
+
+                <div class="table-cont">
+                    <table class="cmd-table">
+                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                        <tr>
+                            <td class="tcol-1">fastqc</td><td class="tcol-2">Invoke the <code class="inline">fastqc</code> program.</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">pse-chr2_1.fastq.gz</td><td class="tcol-2">The first input read file.</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">pse-chr2_2.fastq.gz</td><td class="tcol-2">The second input read file.</td>
+                        </tr>
+                        <tr>
+                            <td class="tcol-1">-o fastqc-output/</td><td class="tcol-2">The <code class="inline">-o</code> option specifies the output directory.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p>Unlike most of our other commands today, this won't output a file that can be viewed easily from the terminal. Rather the HTML output should be viewed
+                    in the browser. To do that, let's use the file browser on the right hand side of the screen to navigate with the mouse to 
+                    <code class="inline">dpse-2-reads/illumina/fastqc-output/</code>. Once you're there you should see 4 files, two <code class="inline">.html</code> files
+                    and two <code class="inline">.zip</code> files. One file per type per input file. We can ignore the <code class="inline">.zip</code> for now. They contain
+                    the raw output if we ever want to look at that ourselves. But FastQC helpfully summarizes it with the HTML files. Click on the file
+                    <code class="inline">pse-chr2_1_fastqc.html</code> and then click on <code class="inline">View in Web Browser</code> to open the file in a new browswer tab.
+                </p>
+
+                <div id="msg_cont">
+                    <div id="msg">
+                        <div id="msg_banner">Tip - Unblock pop-ups</div>
+                        <div id="msg_text">
+                            <p>
+                                The first time you select <code class="inline">View in Web Browser</code> you may get a warning that your browser does not allow pop-ups. There
+                                should also be an option to allow pop-ups from this site. Click on that option and the file should open in a new tab. If not, click on the file and
+                                select <code class="inline">View in Web Browser</code> again to open.
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <p>The FastQC output should display a number of plots and summary statistics which can be scrolled through or navigated to with the links on the left.</p>
+
+                <div class="row" id="img-row">
+                    <div class="col-7-24" id="margin"></div>
+                    <div class="col-10-24" id="img-col">
+                        <img id="res-img" src="img/fastqc-1.png">
+                        <center><span class="fig-caption">Figure 2.2: Basic FastQC statistics from <code class="inline">pse-chr2_1.fastq.gz</code>.</span></center>
+                    </div>
+                    <div class="col-7-24" id="margin"></div>
+                </div>
+
+                <p>This tells us we've sequenced <b>537507</b> reads that range from 30-151bp long (though the vast majority are 150bp). It also tells us that none of the reads
+                    are considered low quality by FastQC. That's good! But let's take a look at the quality score distribution anyway:
+                </p>
+
+                <a name="fastqc-bq"></a>	
+                <div class="row" id="img-row">
+                    <div class="col-6-24" id="margin"></div>
+                    <div class="col-12-24" id="img-col">
+                        <img id="res-img" src="img/fastqc-2.png">
+                        <center><span class="fig-caption">Figure 2.3: Distribution of <b>Phred quality scores</b> based on position in read in <code class="inline">pse-chr2_1.fastq.gz</code>.</span></center>
+                    </div>
+                    <div class="col-6-24" id="margin"></div>
+                </div>
+                
+                <p>This shows that for most positions in most reads we have the highest quality score possible (40), with a bit of a drop-off towards the end of reads. This
+                    drop-off towards the end is usually caused by <b>de-phasing</b>. De-phasing happens because of the random nature of sequencing by synthesis. At any given spot
+                    on a flow-cell there may be thousands of cloned PCR fragments to be sequenced. During each cycle of the machine, nucleotides are washed over these spots and
+                    incorporated into the sequence -- but not in 100% of the fragments at a given spot. Just by chance, some sequences may not be extended in a given cycle, adding
+                    noise to the signal, which accumulates towards the ends of reads.
+                </p>
+
+                <p>Despite this, I would still say this is high-quality data. Just to see, here is an example of poorer quality data from the FastQC homepage:</p>
+
+                <div class="row" id="img-row">
+                    <div class="col-6-24" id="margin"></div>
+                    <div class="col-12-24" id="img-col">
+                        <img id="res-img" src="img/fastqc-3.png">
+                        <center><span class="fig-caption">Figure 2.4: An example of poor quality reads. 
+                            <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">Source</a>.</span></center>
+                    </div>
+                    <div class="col-6-24" id="margin"></div>
+                </div>
+
+                <p>The only red flag in our reads is adapter content. Recall that adapters are the short sequences of nucleotides that allow the cloned DNA fragments to
+                    affix to the flowcell. Needless to say we wouldn't want to incorporate these sequences in our assemblies. Fortunately, most assemblers and read mappers
+                    trim these off automatically.    
+                </p>
+
+                <p>In general there are several pre-processing tasks you could perform to filter your reads, including:</p>
+
+                <ol>
+                    <li>Trimming adapters</li>
+                    <li>Trimming low quality positions</li>
+                    <li>Decontamination</li>
+                    <li>Removal of duplicate reads</li>
+                </ol>
+
+                <p>But in general, I allow the assembly and mapping programs to handle these tasks. The one exception being the marking of duplicate reads after read
+                    mapping, which is something we'll do in the <a href="mapping.html">Read mapping</a> section. But for now, let's move on to
+                    <a href="assembly.html">Assembly</a>...
+                </p>
 
         </div>
-
 
         <div class="col-4-24" id="margin"></div>
     </div>
 
-    <div class="row">
+    <div class="row" id="btm-nav">
         <div class="col-3-24" id="margin"></div>
         <div class="col-6-24" id="nav-btn">
             <a href="start.html">&lt; Previous</a>    

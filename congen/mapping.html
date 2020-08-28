@@ -66,8 +66,16 @@
                 <div class="col-4-24" id="margin"></div>
             </div>
 
+            <p>Reference-guided assembly with read mapping has several advantages, including being fast and obviating the need for de novo genome annotation (as long as the
+                reference genome is annotated). On the other hand, read mapping limits the type of mutations that can be inferred. For instance, while structural variation can
+                be indirectly inferred based on relative read-depth, large genome rearrangements between the reference and the sample cannot be captured simply by read mapping.
+                In other words, there's a lot about genome evolution that cannot be answered by mapping reads. Nevertheless, its utility and ease makes it a go-to strategy for
+                systems with good reference genomes.
+            </p>
+
             <p>We'll be using BWA to map some short reads from D. pseudoobscura chromosome 2 to the homologous chromosome 3 in D. melanogaster and then assessing the read mapping.</p>
 
+            <a name="bwa"></a>	
             <h2>Mapping reads with <a href="https://github.com/lh3/bwa" target="_blank">BWA</a> and <a href="http://www.htslib.org/" target="_blank">samtools</a></h2>
 
                 <p>BWA is a short-read alignment program and is very straightforward. Simply tell it the reads you want to map and the reference genome and it will take care of the rest:</p>
@@ -123,10 +131,11 @@
             <div id="section_line"></div>
             <div id="section_sep_btm"></div>    
 
+            <a name="sam"></a>	
             <h2>Mapped reads in SAM/BAM format</h2>
 
                 <p>After this runs, we should get the file <code class="inline">mapped-reads/dpse2-to-dmel3R.bam</code> which contains the mapped reads in BAM format. SAM format is a text format
-                    that contains one mapped read per line, along with information about the mapping. BAM format is just the compressed version of SAM format.
+                    that contains one mapped read per line, along with information about the mapping and BAM is just the compressed version of SAM format.
                 </p>
 
                 <p><code class="inline">samtools view</code> is a helpful tool that let's us retrieve lines from these files and convert between formats. SAM files also contain headers that
@@ -240,6 +249,7 @@ SRR11230564.16812502    99      3R      35215   0       55S20M76S       =       
             <div id="section_line"></div>
             <div id="section_sep_btm"></div>    
 
+            <a name="mkdup"></a>	
             <h2>Marking duplicate reads in a BAM/SAM file</h2>
 
                 <p>Duplicate reads can lead to spurious results for analyses that rely on depth of coverage, such as inferences of copy number variation. Depending on the sequencing
@@ -362,6 +372,7 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
             <div id="section_line"></div>
             <div id="section_sep_btm"></div>    
 
+            <a name="depth"></a>	
             <h2>Assessing mapped reads</h2>
 
                 <p>One of the most common questions you'll hear when mapping reads to a reference (or even during de novo assembly) is what is the average read depth?
@@ -485,10 +496,11 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
 
                 <pre class="text"><code># Avg. read depth: 3.948774</code></pre>
 
-                <p>This is lower than expected. Why? One cause would be many reads having sequencing errors leading to unmapped reads. Another cause could be that 
-                    the reads that contain the most variation between the two species were not able to be mapped. This is referred to as <b>reference bias</b>: reads that 
-                    contain too much variation cannot be mapped, so the final mapped reads end up looking more like the reference genome than they actually are. <b>Iterative
-                    mapping</b> attempts to address this issue.
+                <p>This is lower than expected based on our calculation with the Lander/Waterman equation. Why? One cause would be many reads having sequencing errors leading to 
+                    unmapped reads. This doesn't seem to be the case for our data, based on the <a href="reads.html#fastqc-bq">FastQC results we obtained earlier</a>. Another cause could be that the reads that 
+                    contain the most variation between the two species were not able to be mapped. This is referred to as <b>reference bias</b>: reads that contain too
+                     much variation cannot be mapped, so the final mapped reads end up looking more like the reference genome than they actually are. <b>Iterative mapping</b> 
+                     attempts to address this issue.
                 </p>
 
         </div>
@@ -497,7 +509,7 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
         <div class="col-4-24" id="margin"></div>
     </div>
 
-    <div class="row">
+    <div class="row" id="btm-nav">
         <div class="col-3-24" id="margin"></div>
         <div class="col-6-24" id="nav-btn">
             <a href="#">&lt; Previous</a>    

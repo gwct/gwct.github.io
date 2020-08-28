@@ -86,6 +86,7 @@
         <div id="section_line"></div>
         <div id="section_sep_btm"></div>  
 
+        <a name="pseudo-it"></a>	
         <h2>Iterative read mapping with <a href="https://github.com/goodest-goodlab/pseudo-it" target="_blank">pseudo-it</a></h2>
 
             <p>Pseudo-it is software designed to mitigate the effects of reference bias by using an iterative mapping approach to generate pseudo-reference assemblies. It performs the following
@@ -177,6 +178,11 @@
                 a pseudo-assembly. You can explore the output folder <code class="inline">dpse-pesudo-it</code> to see what's there.
             </p>
 
+        <div id="section_sep_top"></div>
+        <div id="section_line"></div>
+        <div id="section_sep_btm"></div>
+
+        <a name="iters"></a>	
         <h2>Quantifying the reduction in reference bias</h2>
 
             <p>In order to see how <code class="inline">pseudo-it</code> has reduced reference bias, we need to first generate the consensus sequence after one iteration:</p>
@@ -221,6 +227,7 @@
                 <li>The consensus sequence from the second iteration should appear to be more diverged.</li>
             </ol>
 
+            <a name="more-reads"></a>	
             <h3>01. More reads should map to the second iteration</h3>
 
                 <p>This is fairly easy to check with <code class="inline">samtools flagstat</code>. First, we can run flagstat on the BAM file from the first iteration:</p>
@@ -342,6 +349,7 @@
 
                 <p>Again, a modest increase from 3.95, but a step in the right direction, showing that iterative mapping improves read depth.</p>
             
+            <a name="lower-pi"></a>	
             <h3>02. The consensus sequence from the second iteration should appear to be more diverged.</h3>
 
                 <p>There are many ways to calculate divergence. We'll use the simplest one: the percent identity, or the number of sites that match between the alignment of two sequences.
@@ -536,7 +544,7 @@
         <div class="col-4-24" id="margin"></div>
     </div>
 
-    <div class="row">
+    <div class="row" id="btm-nav">
         <div class="col-3-24" id="margin"></div>
         <div class="col-6-24" id="nav-btn">
             <a href="mapping.html">&lt; Previous</a>    

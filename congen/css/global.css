@@ -497,12 +497,23 @@ table {
 	display:flex;
 	min-height:12vh;
 } */
+#btm-nav {
+	z-index:10;
+	position: -webkit-sticky;
+	font-family:'opensans';
+	position:sticky;
+	bottom:0px;
+	height:3vh;
+	background-color:#fff;
+	border-top:1px solid #294157;
+}
+
 #nav-margin {
-	background-color:#ececec;
+	/* background-color:#ececec; */
 }
 #nav-btn {
 	/* background-color:#ececec; */
-	height:5em;
+	/* height:5em; */
 	border-radius:10px;
 }
 #nav-btn a {
@@ -511,7 +522,7 @@ table {
 	justify-content: center;
 	width:100%;
 	height:100%;
-	font-size:1.5em;
+	font-size:1.2em;
 	text-decoration: none;
 }
 
