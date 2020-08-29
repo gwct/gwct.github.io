@@ -14,6 +14,8 @@
     font-style: normal;
 }
 
+html { height:100%; padding:0; margin:0; overflow:auto; }
+
 body {
 	color:#1a1a1a;
 	/* font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; */
@@ -23,49 +25,20 @@ body {
 	text-align: justify;
 	background-color: #ffffff;
 	overflow-y: scroll;
+	padding: 0;
 	margin:0;
+	height:100%;
+	/* border:3px solid purple; */
+
 }
 a {	color:#006ddb; }
 img { width: 100%; }
 
 #eqn { font-size: 2.5em; }
+#links-list { list-style: none };
 
 @media (max-width: 1025px) {
 	body { background-color: #ececec; }
-}
-/*------------------------------------------------------*/
-/* Header styles */
-
-#header {
-    color:#fff;
-	background-color: #294157;
-	font-size:1.5em;
-	padding-top:10px;
-	padding-bottom:10px;
-	text-align: center;
-	vertical-align: middle;
-	/* border-bottom:1px solid #333; */
-}
-#header::after {
-	font-size:unset;
-}
-#section_header {
-	background-color: #749abe;
-	color: #fff;
-	padding: 5px 20px;
-	margin: 20px 0px;
-	font-size:1.25em;
-	font-weight:bold;
-	border-bottom: 2px solid #294157;
-	border-left: 2px solid #294157;
-}
-@media (max-width: 1025px) {
-	.section_header  { padding:0; }
-	.section_header_cont { 
-		text-align:center; 
-		padding:0;
-		margin-top:5px;
-	}
 }
 
 /*------------------------------------------------------*/
@@ -251,19 +224,72 @@ img { width: 100%; }
 
 /*------------------------------------------------------*/
 /* Main grid styles */
-
-#main_content{
-	background-color:#ececec;
-	padding:0 100px;
-	min-height:92vh;
-	/* margin: 20px; */
-	/* border:1px solid red; */
+#section-cont{
+	/* min-height:100%; */
+	/* border: 1px solid green; */
 }
-/* #margin { height: 100vh; background-color: red;} */
+#section-row {
+	background-color:#ececec;
+	min-height:100%;
+	/* border:1px solid green; */
+}
+#section-content{
+	background-color:#ececec;
+	height:100%;
+	/* padding:0 100px; */
+	/* min-height:92vh; */
+	/* margin: 20px; */
+	/* border:1px solid blue; */
+}
+#inner-margin{
+	background-color:#ececec;
+	/* min-height:100%; */
+	/* border:1px solid blue; */
+}
 
 @media (max-width: 1025px) {
-	#main_content { width: 90%; padding: 0; text-align:left; }
-	#margin { width: 10%; }
+	#section-col { width: 100%; padding: 0; text-align:left; }
+	#outer-margin { width: 0; }
+}
+
+/*------------------------------------------------------*/
+/* Header styles */
+
+#header {
+    color:#fff;
+	background-color: #294157;
+	font-size:1.8em;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align: center;
+	vertical-align: middle;
+	/* border-bottom:1px solid #333; */
+}
+#header::after {
+	font-size:unset;
+}
+#top-row{
+	height:2vh;
+	background-color: #ececec;
+}
+#section-header-row {
+	background-color: #ececec;
+	/* border:1px solid red; */
+}
+#section-header {
+	background-color: #ececec;
+	color: #333;
+	padding: 5px 20px;
+	font-size:1.6em;
+	font-weight:bold;
+	border-bottom: 2px solid #294157;
+	border-left: 2px solid #294157;
+	width: 90%;
+	margin:auto;
+}
+@media (max-width: 1025px) {
+	#section-header  { padding:0; }
+	#section-header-row { width: 100%; text-align:center; }
 }
 
 /*------------------------------------------------------*/
@@ -396,7 +422,6 @@ table {
 }
 .small-table tr {
 	border-bottom:1px solid #333333;
-
 }
 .small-table .tcol-1 {
 	padding:5px 10px;
@@ -405,6 +430,30 @@ table {
 .small-table .tcol-2 {
 	padding:5px 10px;
 	width: 90%
+}
+
+/*------------------------------------------------------*/
+/* Program table styles (only used once in programs.html) */
+.prog-table {
+	/* border-collapse: collapse;
+	background-color:#ffffff;
+	border: 1px dotted #666666; */
+}
+.prog-table thead {
+	background-color: #333333;
+	color: #ffffff;
+}
+.prog-table tr {
+	border-bottom:1px solid #333333;
+}
+.prog-table th {
+	padding: 0 20px
+}
+.prog-table td {
+	padding: 0 20px
+}
+#used-prog {
+	background-color: #c6ecd9;
 }
 
 /*------------------------------------------------------*/
@@ -475,6 +524,17 @@ table {
 
 /*------------------------------------------------------*/
 /* Bottom nav links in index */
+#start-btn {
+	border: 1px solid #006ddb;
+	padding:10px;
+	border-radius:10px;
+	text-decoration: none;
+	transition: 0.3s ease;
+}
+#start-btn:hover{
+	border-radius:20px;
+	background-color:#ffffff;
+}
 #btm-link {
 	height:5em;
 	border-radius:10px;
@@ -483,11 +543,21 @@ table {
 	display: flex;
 	align-items: center; 
 	justify-content: center;
+	text-align:center;
 	width:100%;
-	height:100%;
+	/* height:100%; */
+	padding:10px;
 	font-size:1.1em;
 	text-decoration: none;
+	border:1px solid #006ddb;
+	border-radius:10px;
+	transition: 0.3s ease;
 }
+#btm-link a:hover{
+	border-radius:20px;
+	background-color:#ffffff;
+}
+
 @media (max-width: 1025px) {
 	#btm-link { display: none;}
 }
