@@ -18,129 +18,128 @@ html_template = """
 <body>
     {nav}
 
-    <div class="row" id="section-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-col">
-            <div class="row" id="section-row">
-                <div class="col-2-24" id="inner-margin"></div>
-                <div class="col-20-24" id="section-content">
+    <div class="row" id="header">Genomic programs</div>
 
-                    <p>Here is a list of programs used in the genome assembly and variant calling process. Very basic information is provided about each program. 
-                        Check the paper and program documentation links for more extensive information. If you feel any information is inaccurate or out of date,
-                        or if you want to recommend a program to add to the lists, please contact <a href="https://gwct.github.io/" target="_blank">me</a>.
-                    </p>
-
-                    <p>Programs listed with a <span id="used-prog">GREEN BACKGROUND</span> are ones used in this workshop.</p>
-            
-                </div>
-                <div class="col-2-24" id="inner-margin"></div>
+    <div class="row" id="body-row">
+        <div class="col-3-24" id="side-nav-cont">
+            <div id="side-nav">
+                <span id="side-header">Page contents</span>
+                <ul>
+                    <li><a href="programs.html#top">Intro</a></li>
+                    <li><a href="programs.html#asm-table">Genome assembly programs</a></li>
+                    <li><a href="programs.html#map-table">Read mapping programs</a></li>
+                    <li><a href="programs.html#var-table">Single-nucleotide variant callers</a></li>
+                    <li><a href="programs.html#other-table">Other helpful programs</a></li>
+                </ul>
             </div>
         </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
 
-    <a name="asm-table"></a>
-    <div class="row" id="section-header-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-header-row">
-            <div id="section-header">Genome assembly programs</div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
+        <div class="col-21-24" id="main-cont">
+            <a class="internal-link" name="top"></a>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
 
-    <div class="row" id="section-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-col">
-            <div class="row" id="section-row">
-                <div class="col-2-24" id="inner-margin"></div>
-                <div class="col-20-24" id="section-content">
+                            <p>Here is a list of programs used in the genome assembly and variant calling process. Very basic information is provided about each program. 
+                                Check the paper and program documentation links for more extensive information. If you feel any information is inaccurate or out of date,
+                                or if you want to recommend a program to add to the lists, please contact <a href="https://gwct.github.io/" target="_blank">me</a>.
+                            </p>
 
-                    {asm_table}
-                    <div id="sep_div"></div>
-
+                            <p>Programs listed with a <span id="used-prog">GREEN BACKGROUND</span> are ones used in this workshop.</p>
+                    
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
                 </div>
-                <div class="col-2-24" id="inner-margin"></div>
             </div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
 
-    <a name="map-table"></a>
-    <div class="row" id="section-header-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-header-row">
-            <div id="section-header">Read mapping programs</div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
-
-    <div class="row" id="section-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-col">
-            <div class="row" id="section-row">
-                <div class="col-2-24" id="inner-margin"></div>
-                <div class="col-20-24" id="section-content">
-
-                    {map_table}
-                    <div id="sep_div"></div>
-
+            <a class="internal-link" name="asm-table"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Genome assembly programs</div>
                 </div>
-                <div class="col-2-24" id="inner-margin"></div>
             </div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
 
-    <a name="var-table"></a>
-    <div class="row" id="section-header-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-header-row">
-            <div id="section-header">Single-nucleotide variant calling programs</div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
+                            {asm_table}
+                            <div id="sep_div"></div>
 
-    <div class="row" id="section-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-col">
-            <div class="row" id="section-row">
-                <div class="col-2-24" id="inner-margin"></div>
-                <div class="col-20-24" id="section-content">
-
-                    {var_table}
-                    <div id="sep_div"></div>
-
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
                 </div>
-                <div class="col-2-24" id="inner-margin"></div>
             </div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
 
-    <a name="other-table"></a>
-    <div class="row" id="section-header-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-header-row">
-            <div id="section-header">Other helpful programs</div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
-
-    <div class="row" id="section-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-col">
-            <div class="row" id="section-row">
-                <div class="col-2-24" id="inner-margin"></div>
-                <div class="col-20-24" id="section-content">
-
-                    {other_table}
-                    <div id="sep_div"></div>
-
+            <a class="internal-link" name="map-table"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Read mapping programs</div>
                 </div>
-                <div class="col-2-24" id="inner-margin"></div>
             </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            {map_table}
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="internal-link" name="var-table"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Single-nucleotide variant calling programs</div>
+                </div>
+            </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            {var_table}
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="internal-link" name="other-table"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Other helpful programs</div>
+                </div>
+            </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            {other_table}
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+        
         </div>
-        <div class="col-2-24" id="outer-margin"></div>
     </div>
 
     {footer}

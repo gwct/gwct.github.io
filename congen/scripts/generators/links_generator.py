@@ -18,23 +18,68 @@ html_template = """
 <body>
     {nav}
 
-    <div class="row">
-        <div class="col-4-24" id="margin"></div>
-        
-        <div class="col-16-24" id="main_content">
-
-        	<!--<div class="row" id="section-header-row">
-                <div class="col-24-24" id="section_header">ConGen2020</div>
-	        </div>-->
-
-            <ul id="links-list">
-                <li><a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2020</a></li>
-
-            </ul>
-            <div id="sep_div"></div>
+    <div class="row" id="section-cont">
+        <div class="col-4-24" id="outer-margin"></div>
+        <div class="col-16-24" id="section-col">
+            <div class="row" id="section-row">
+                <div class="col-2-24" id="inner-margin"></div>
+                <div class="col-20-24" id="section-content">
+                    <h4>Find here a list of links to relevant resources.</h4>
+                </div>
+                <div class="col-2-24" id="inner-margin"></div>
+            </div>
         </div>
-        <div class="col-4-24" id="margin"></div>
+        <div class="col-4-24" id="outer-margin"></div>
     </div>
+
+    <a name="links"></a>
+    <div class="row" id="section-header-cont">
+        <div class="col-4-24" id="outer-margin"></div>
+        <div class="col-16-24" id="section-header-row">
+            <div id="section-header">ConGen2020</div>
+        </div>
+        <div class="col-4-24" id="outer-margin"></div>
+    </div>
+    <div class="row" id="section-cont">
+        <div class="col-4-24" id="outer-margin"></div>
+        <div class="col-16-24" id="section-col">
+            <div class="row" id="section-row">
+                <div class="col-2-24" id="inner-margin"></div>
+                <div class="col-20-24" id="section-content">
+
+                    <ul id="links-list">
+                        <li><a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2020</a></li>
+                    </ul>
+                    <div id="sep_div"></div>
+
+                </div>
+                <div class="col-2-24" id="inner-margin"></div>
+            </div>
+        </div>
+        <div class="col-4-24" id="outer-margin"></div>
+    </div>
+
+    <a name="slides"></a>
+    <div class="row" id="section-header-cont">
+        <div class="col-4-24" id="outer-margin"></div>
+        <div class="col-16-24" id="section-header-row">
+            <div id="section-header">Slides</div>
+        </div>
+        <div class="col-4-24" id="outer-margin"></div>
+    </div>
+    <div class="row" id="section-cont">
+        <div class="col-4-24" id="outer-margin"></div>
+        <div class="col-16-24" id="section-col">
+            <div class="row" id="section-row">
+                <div class="col-2-24" id="inner-margin"></div>
+                <div class="col-20-24" id="section-content">
+                    <p>Content</p>
+                </div>
+                <div class="col-2-24" id="inner-margin"></div>
+            </div>
+        </div>
+        <div class="col-4-24" id="outer-margin"></div>
+    </div>   
 
     {footer}
 </body>

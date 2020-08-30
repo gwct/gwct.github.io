@@ -33,7 +33,7 @@ html_template = """
         <div class="col-4-24" id="outer-margin"></div>
     </div>
 
-<a name="instructors"></a>
+    <a name="instructors"></a>
     <div class="row" id="section-header-cont">
         <div class="col-4-24" id="outer-margin"></div>
         <div class="col-16-24" id="section-header-row">
@@ -41,7 +41,6 @@ html_template = """
         </div>
         <div class="col-4-24" id="outer-margin"></div>
     </div>
-
     <div class="row" id="section-cont">
         <div class="col-4-24" id="outer-margin"></div>
         <div class="col-16-24" id="section-col">
@@ -94,7 +93,6 @@ html_template = """
         </div>
         <div class="col-4-24" id="outer-margin"></div>
     </div>
-
     <div class="row" id="section-cont">
         <div class="col-4-24" id="outer-margin"></div>
         <div class="col-16-24" id="section-col">

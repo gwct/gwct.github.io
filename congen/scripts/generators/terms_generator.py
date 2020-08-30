@@ -20,56 +20,64 @@ html_template = """
 
     <div class="row" id="header">Terminology & File Formats</div>
 
-    <a name="terms"></a>
-    <div class="row" id="section-header-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-header-row">
-            <div id="section-header">Definitions</div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
-
-    <div class="row" id="section-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-col">
-            <div class="row" id="section-row">
-                <div class="col-2-24" id="inner-margin"></div>
-                <div class="col-20-24" id="section-content">
-
-                    {terms_table}
-                    <div id="sep_div"></div>
-
-                </div>
-                <div class="col-2-24" id="inner-margin"></div>
+    <div class="row" id="body-row">
+        <div class="col-3-24" id="side-nav-cont">
+            <div id="side-nav">
+                <span id="side-header">Page contents</span>
+                <ul>
+                    <li><a href="terms.html#terms">Term definitions</a></li>
+                    <li><a href="terms.html#formats">Common file formats</a></li>
+                </ul>
             </div>
         </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
 
-    <a name="formats"></a>
-    <div class="row" id="section-header-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-header-row">
-            <div id="section-header">File formats</div>
-        </div>
-        <div class="col-2-24" id="outer-margin"></div>
-    </div>
-
-    <div class="row" id="section-cont">
-        <div class="col-2-24" id="outer-margin"></div>
-        <div class="col-20-24" id="section-col">
-            <div class="row" id="section-row">
-                <div class="col-2-24" id="inner-margin"></div>
-                <div class="col-20-24" id="section-content">
-
-                    {formats_table}
-                    <div id="sep_div"></div>
-
-                </div>
-                <div class="col-2-24" id="inner-margin"></div>
+        <div class="col-21-24" id="main-cont">
+            <div class="row" id="top-row-cont">
+                <div class="col-24-24" id="top-row"></div>
             </div>
+            <a class="internal-link" name="terms"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Definitions of frequently used terms</div>
+                </div>
+            </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            {terms_table}
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="internal-links" name="formats"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">File formats</div>
+                </div>
+            </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            {formats_table}
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="col-2-24" id="outer-margin"></div>
     </div>
 
     {footer}
