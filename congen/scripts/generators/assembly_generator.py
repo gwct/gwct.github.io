@@ -18,6 +18,7 @@ html_template = """
 <body>
     {nav}
 
+    <a class="internal-link" name="top"></a>
     <div class="row" id="header">Genome assembly</div>
 
     <div class="row" id="body-row">
@@ -34,7 +35,6 @@ html_template = """
         </div>
 
         <div class="col-21-24" id="main-cont">
-            <a class="internal-link" name="top"></a>
             <div class="row" id="section-cont">
                 <div class="col-24-24" id="section-col">
                     <div class="row" id="section-row">

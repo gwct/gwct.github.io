@@ -18,6 +18,7 @@ html_template = """
 <body>
     {nav}
 
+    <a class="internal-link" name="terms"></a>
     <div class="row" id="header">Terminology & File Formats</div>
 
     <div class="row" id="body-row">
@@ -35,7 +36,6 @@ html_template = """
             <div class="row" id="top-row-cont">
                 <div class="col-24-24" id="top-row"></div>
             </div>
-            <a class="internal-link" name="terms"></a>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
                     <div id="section-header">Definitions of frequently used terms</div>

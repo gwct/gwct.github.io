@@ -18,7 +18,8 @@ html_template = """
 <body>
     {nav}
 
-    <div class="row" id="header">Genomic programs</div>
+    <a class="internal-link" name="top"></a>
+    <div class="row" id="header">Genomics programs</div>
 
     <div class="row" id="body-row">
         <div class="col-3-24" id="side-nav-cont">
@@ -35,7 +36,6 @@ html_template = """
         </div>
 
         <div class="col-21-24" id="main-cont">
-            <a class="internal-link" name="top"></a>
             <div class="row" id="section-cont">
                 <div class="col-24-24" id="section-col">
                     <div class="row" id="section-row">
