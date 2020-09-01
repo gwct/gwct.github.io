@@ -87,7 +87,14 @@
                             <p>Many factors can play a role in the ultimate success of a genome assembly, including sequencing error rate, heterozygosity of the target genome, length of the target genome,
                                 and number and length of reads sequenced.
                             </p>
-                
+
+                            <!-- <p>As we discussed in the lecture, there are a couple differences between assembling short-reads and assembling long-reads. First, the underlying representation of the contig assembly
+                                graph. Short reads can employ a de Bruijn graph based approach that uses k-mers to further break down the reads to find overlaps. This has the advantage of preventing pairwise
+                                comparisons of all reads, which is computationally intensive. The de Bruijn graph can also use Eulerian path algorithms, which are easier to solve, and employ error-correction
+                                based on structures in the assembly graph (i.e. bubbles and tips).</p>
+
+                            <p>While long read assemblies can be done using de Bruijn graph based approaches, -->
+
                             <p>Today, we'll be using both long and short reads to assemble the <em>D. pseudoobscura</em> genome and then using several metrics to assess the resulting assemblies.</p>
 
                         </div>
@@ -108,7 +115,39 @@
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
 
-                        <p>Content
+                            <p>SPAdes is a de Bruijn graph based assembler that can handle many types of data, both short and long reads. It is highly automated, and combines results from graphs built from multiple
+                                values of k. SPAdes, while relatively fast among genome assemblers, still takes a while to run, so today we'll be running one assembly of <em>D. pseudoobscura</em> on short reads only
+                                and compare it to a pre-made assembly that uses both long and short reads.
+
+                            <p>Let's start by generating the short read assembly:
+
+                            <center><pre class="cmd"><code>spades.py -1 /dpse-2-reads/illumina/chr2-1mil_1.fastq.gz -2 /dpse-2-reads/illumina/chr2-1mil_1.fastq.gz -o spades-illumina -t 16 --isolate</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">spades.py</td><td class="tcol-2">Call the main SPAdes interface script.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">-1 /dpse-2-reads/illumina/chr2-1mil_1.fastq.gz</td><td class="tcol-2">The path to the first read-pair file.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">-2 /dpse-2-reads/illumina/chr2-1mil_2.fastq.gz</td><td class="tcol-2">The path to the second read-pair file.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">-o assemblies/spades-illumina/</td><td class="tcol-2">The path to the desired output directory.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">-t 16</td><td class="tcol-2">The number of threads SPAdes can use.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">--isolate</td><td class="tcol-2">--isolate</td>
+                                    </tr>
+                                </table> 
+                            </div>
+
+                            <p>This will build the SPAdes assembly from the Illumina short reads. It should take about XXminutes to run.</p>
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
@@ -178,7 +217,7 @@
     <div class="row" id="footer">
 		<div class="col-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 08/30/2020 00:00:38 MDT</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/01/2020 12:09:17 MDT</center>
 			</div>
 		</div>
 	</div>
