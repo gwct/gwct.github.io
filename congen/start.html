@@ -220,7 +220,26 @@ You can catch problems before you use the data in later analyses.</code></pre>
                     <div class="row" id="section-row">
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
-                            <p>In your file browser, if you click to navigate to the <code class="inline">congen-assembly/</code> folder, you should see the following folders</p>
+
+                            <p>The data we'll be working with today are mainly sequences in FASTA and FASTQ format (more on those in a moment). The input files are located on the server at
+                                <code class="inline">/data/gregg_thomas/</code>. We can look at what is in that folder with the <code class="inline">ls</code> command. Make sure you've
+                                selected your Terminal window and type the following:
+                            </p>
+
+                            <center><pre class="cmd"><code>ls /data/gregg_thomas/</code></pre></center>
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">ls</td><td class="tcol-2">The Linux list directory command to view the files in a folder.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">/data/gregg_thomas/</td><td class="tcol-2">The name of the directory you want to view</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <p>You should see the following folders listed</p>
 
                             <div class="table-cont">
                                 <table class="norm-table">
@@ -229,22 +248,71 @@ You can catch problems before you use the data in later analyses.</code></pre>
                                         <td class="tcol-1"><code class="inline">dmel-3R-reference/</code></td><td class="tcol-2">A folder containing the <em>D. melanogaster</em> chromosome 3R sequence file and its indices.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1"><code class="inline">dpse-reads/</code></td><td class="tcol-2">A folder containing Nanopore long reads and Illumina short reads for <em>D. pseudoobscura</em>.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1"><code class="inline">dpse-2-reference/</code></td><td class="tcol-2">A folder containing the sequence for chromosome 2 from <em>D. pseudoobscura</em>.</td>
+                                        <td class="tcol-1"><code class="inline">dpse-reads/</code></td><td class="tcol-2">A folder containing Nanopore and PacBio long reads and Illumina short 
+                                            reads for <em>D. pseudoobscura</em>.</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1"><code class="inline">expected-outputs/</code></td><td class="tcol-2">Pre-run outputs for all the programs we run today. 
                                             If you get stuck or something takes too long, look for the expected output here</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1"><code class="inline">scripts/</code></td><td class="tcol-2">A couple supplementary scripts for data analysis.</td>
+                                        <td class="tcol-1"><code class="inline">scripts/</code></td><td class="tcol-2">A few supplementary scripts for data analysis.</td>
                                     </tr>
                                 </table>
                             </div>
                             
-                            <p>Let's get started by making the output directories for our tasks today:</p>
+                            <p>Now let's make sure we're in our home directory before we prepare our outputs:</p>
+
+                            <center><pre class="cmd"><code>cd ~</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">~</td><td class="tcol-2">The path to the directory you want to change to. In Linux, <code class="inline">~</code> is a 
+                                            shortcut meaning "the current user's home directory."</td>
+                                    </tr>
+                                </table>
+                            </div>                            
+
+                            <p>I like to try and think ahead about what outputs my project will produce and make those directories early on, which helps me plan out my workflows. First, let's make a project
+                                folder:
+                            </p>
+
+                            <center><pre class="cmd"><code>mkdir congen-assembly</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">mkdir</td><td class="tcol-2">The Linux make directory command</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">congen-assembly</td><td class="tcol-2">The name of the main project folder where we will keep everything organized.</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <p>And let's go into that directory:</p>
+
+                            <center><pre class="cmd"><code>cd congen-assembly</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">congen-assembly</td><td class="tcol-2">The path to the directory you want to change to.</td>
+                                    </tr>
+                                </table>
+                            </div>     
+
+                            <p>Today we'll be generating assemblies, read mappings, and alignments, so let's prepare an output directory for each of those tasks.</p>
 
                             <center><pre class="cmd"><code>mkdir alignments</code></pre></center>
 
@@ -319,7 +387,7 @@ You can catch problems before you use the data in later analyses.</code></pre>
     <div class="row" id="footer">
 		<div class="col-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 08/30/2020 00:00:37 MDT</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/03/2020 10:14:18 MDT</center>
 			</div>
 		</div>
 	</div>

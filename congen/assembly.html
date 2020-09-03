@@ -277,7 +277,29 @@
 
                             <p>This should display a nice table of statstics:</p>
 
-                            <pre class="text"><code>The table.</code></pre>
+                            <pre class="text"><code>---------------- Information for assembly 'assemblies/illumina-only-spades/scaffolds.fasta' ----------------
+
+
+                                         Number of scaffolds     133829
+                                     Total size of scaffolds  159563605
+                                            Longest scaffold     656252
+                                           Shortest scaffold         78
+                                 Number of scaffolds > 1K nt       7924   5.9%
+                                Number of scaffolds > 10K nt       2178   1.6%
+                               Number of scaffolds > 100K nt        357   0.3%
+                                 Number of scaffolds > 1M nt          0   0.0%
+                                Number of scaffolds > 10M nt          0   0.0%
+                                          Mean scaffold size       1192
+                                        Median scaffold size        109
+                                         N50 scaffold length      65232
+                                          L50 scaffold count        626
+                                                 scaffold %A      27.22
+                                                 scaffold %C      22.57
+                                                 scaffold %G      22.66
+                                                 scaffold %T      27.43
+                                                 scaffold %N       0.12
+                                         scaffold %non-ACGTN       0.00
+                             Number of scaffold non-ACGTN nt          0</code></pre>
 
                             <p>We know that <em>D. pseudoobscura</em> has a genome size of roughly 150Mb in 6 chromosomes. So the assembly size of <code class="inline">159563605</code>
                                 is about right, but we've only been able to resolve <code class="inline">133829</code> scaffolds. No where near the 6 chromosomes we would ideally want.
@@ -370,9 +392,31 @@
                                 Fragmented, and Missing genes present in an assembly among a set of universal orthologs.
                             </p>
 
-                            <p>You'll learn more about BUSCO in the next session, but for now we'll just take a look at a sample output from our SPAdes Illumina assembly.</p>
+                            <p>You'll learn more about BUSCO in the next session, but for now we'll just take a look at a sample output from our SPAdes assemblies.</p>
 
-                            <pre class="text"><code>The table.</code></pre>
+                            <div class="row" id="img-row">
+                                <div class="col-7-24" id="margin"></div>
+                                <div class="col-10-24" id="img-col">
+                                    <img id="res-img" src="img/busco-short.png">
+                                    <center><span class="fig-caption">Figure 3.3: BUSCO results for the short read SPAdes assembly.</span></center>
+                                </div>
+                                <div class="col-7-24" id="margin"></div>
+                            </div>     
+
+                            <p></p>
+
+                            <div class="row" id="img-row">
+                                <div class="col-7-24" id="margin"></div>
+                                <div class="col-10-24" id="img-col">
+                                    <img id="res-img" src="img/busco-long.png">
+                                    <center><span class="fig-caption">Figure 3.4: BUSCO results for the long read SPAdes assembly.</span></center>
+                                </div>
+                                <div class="col-7-24" id="margin"></div>
+                            </div>     
+
+                            <p>What we can see here is that, despite the short read assembly being much more fragmented, we still recover 98% of the universal copy orthologs,
+                                identical to the long read alignment. Depending on the questions you are asking, short read assemblies may be sufficient.
+                            </p>
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
@@ -400,7 +444,7 @@
 
                             <p>All of these are simple to generate. Today we'll just generate the <code class="inline">samtools faidx</code> for our SPAdes Illumina assembly:</p>
 
-                            <center><pre class="cmd"><code>samtools faidx assemblies/spades-illumina/scaffolds.fasta</code></pre></center>
+                            <center><pre class="cmd"><code>samtools faidx assemblies/illumina-only-spades/scaffolds.fasta</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -412,14 +456,14 @@
                                         <td class="tcol-1">faidx</td><td class="tcol-2">Call the <code class="inline">faidx</code> sub-program within <code class="inline">samtools</code></td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">assemblies/spades-illumina/scaffolds.fasta</td><td class="tcol-2">The path to the FASTA file to index</td>
+                                        <td class="tcol-1">assemblies/illumina-only-spades/scaffolds.fasta</td><td class="tcol-2">The path to the FASTA file to index</td>
                                     </tr>
                                 </table>
                             </div>
 
-                            <p>This should run fairly quickly and will produce the file <code class="inline">assemblies/spades-illumina/scaffolds.fasta.fai</code> file that we can look at</p>
+                            <p>This should run fairly quickly and will produce the file <code class="inline">assemblies/illumina-only-spades/scaffolds.fasta.fai</code> file that we can look at</p>
 
-                            <center><pre class="cmd"><code>less -S assemblies/spades-illumina/scaffolds.fasta.fai</code></pre></center>
+                            <center><pre class="cmd"><code>less -S assemblies/illumina-only-spades/scaffolds.fasta.fai</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -440,7 +484,25 @@
                                 </table>
                             </div>
 
-                            <pre class="text"><code>The table.</code></pre>
+                            <pre class="text"><code>NODE_1_length_656252_cov_29.014074      656252  36      60      61
+NODE_2_length_575306_cov_27.441711      575306  667262  60      61
+NODE_3_length_562891_cov_29.873761      562891  1252193 60      61
+NODE_4_length_438072_cov_30.397365      438072  1824502 60      61
+NODE_5_length_388373_cov_29.564742      388373  2269912 60      61
+NODE_6_length_381978_cov_29.826266      381978  2664794 60      61
+NODE_7_length_364204_cov_28.969093      364204  3053175 60      61
+NODE_8_length_351331_cov_28.605180      351331  3423486 60      61
+NODE_9_length_348425_cov_29.467863      348425  3780709 60      61
+NODE_10_length_333664_cov_29.009230     333664  4134979 60      61
+NODE_11_length_325795_cov_29.005299     325795  4474242 60      61
+NODE_12_length_315498_cov_28.812061     315498  4805504 60      61
+NODE_13_length_304746_cov_29.743095     304746  5126298 60      61
+NODE_14_length_301147_cov_28.087172     301147  5436161 60      61
+NODE_15_length_300141_cov_28.878596     300141  5742365 60      61
+NODE_16_length_291038_cov_28.065040     291038  6047546 60      61
+NODE_17_length_279739_cov_29.975989     279739  6343472 60      61
+NODE_18_length_267631_cov_28.541939     267631  6627911 60      61
+NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
 
                             <p><code class="inline">.fai</code> files are pretty straightforward. They contain tab-delimited columns with information for one scaffold on each row. Column 1
                                 indicates the scaffold name, Column 2 the length, Column 3 a byte index, Column 4 the number of bases per line, and Column 5 the number of bytes per line
@@ -523,7 +585,7 @@
     <div class="row" id="footer">
 		<div class="col-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/01/2020 23:49:47 MDT</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/03/2020 15:53:51 MDT</center>
 			</div>
 		</div>
 	</div>
