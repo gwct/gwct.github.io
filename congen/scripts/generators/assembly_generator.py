@@ -77,7 +77,7 @@ html_template = """
             <a class="internal-link" name="spades"></a>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
-                    <div id="section-header">Assembly with short reads with <a href="https://github.com/ablab/spades/" target="_blank">SPAdes</a></div>
+                    <div id="section-header">Assembly short reads with <a href="https://github.com/ablab/spades/" target="_blank">SPAdes</a></div>
                 </div>
             </div>
             <div class="row" id="section-cont">
@@ -92,7 +92,7 @@ html_template = """
 
                             <p>Let's start by generating the short read assembly:
 
-                            <center><pre class="cmd"><code>spades.py -1 /dpse-2-reads/illumina/chr2-1mil_1.fastq.gz -2 /dpse-2-reads/illumina/chr2-1mil_1.fastq.gz -o assemblies/spades-illumina -t 16 --isolate</code></pre></center>
+                            <center><pre class="cmd"><code>spades.py -1 dpse-chr2-reads/illumina-subsample/chr2-1mil_1.fastq.gz -2 dpse-chr2-reads/illumina-subsample/chr2-1mil_2.fastq.gz -k 77 -o assemblies/spades-illumina-chr2-k77 -t 4 --isolate</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -101,16 +101,20 @@ html_template = """
                                         <td class="tcol-1">spades.py</td><td class="tcol-2">Call the main SPAdes interface script.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-1 /dpse-2-reads/illumina/chr2-1mil_1.fastq.gz</td><td class="tcol-2">The path to the first read-pair file.</td>
+                                        <td class="tcol-1">-1 dpse-chr2-reads/illumina/chr2-1mil_1.fastq.gz</td><td class="tcol-2">The path to the first read-pair file.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-2 /dpse-2-reads/illumina/chr2-1mil_2.fastq.gz</td><td class="tcol-2">The path to the second read-pair file.</td>
+                                        <td class="tcol-1">-2 dpse-chr2-reads/illumina/chr2-1mil_2.fastq.gz</td><td class="tcol-2">The path to the second read-pair file.</td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td class="tcol-1">-k 77</td><td class="tcol-2">The <em>k</em>-mer value. The length of sub-string overlaps used to construct the de Bruijn graph.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-o assemblies/spades-illumina/</td><td class="tcol-2">The path to the desired output directory.</td>
+                                        <td class="tcol-1">-o assemblies/spades-illumina-chr2-k77</td><td class="tcol-2">The path to the desired output directory.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-t 16</td><td class="tcol-2">The number of threads SPAdes can use.</td>
+                                        <td class="tcol-1">-t 4</td><td class="tcol-2">The number of threads SPAdes can use. The default value is 16, but since there are 4 of us to a server we'll
+                                            limit it to 4.</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">--isolate</td><td class="tcol-2">--isolate</td>
@@ -118,13 +122,35 @@ html_template = """
                                 </table> 
                             </div>
 
-                            <p>This will build the SPAdes assembly from the Illumina short reads. It should take about XX minutes to run.</p>
+                            <p>This will build the SPAdes assembly from the Illumina short reads. It should take about 4 minutes to run.</p>
 
-                            <p>SPAdes creates many output files within the specified output directory, including assemblies for multiple k-values. The final assembly will be constructed by comparing
-                                portions of each of the k-mer graphs and selecting the most resolved regions
+                            <p>SPAdes creates many output files within the specified output directory. Normally, this would include assemblies for multiple k-values. 
+                                The final assembly would be constructed by comparing portions of each of the <em>k</em>-mer graphs and selecting the most resolved regions. However,
+                                due to time constraints, we have limited <code class="inline">spades</code> to one value of <em>k</em>=77.
                             </p>
 
-                            <p>The final assembly will be in the file <code class="inline">scaffolds.fasta</code>
+                            <p>Recall that <em>k</em> is the length of the sub-strings used to construct the de Bruijn graph. Reads a broken up into all possible strings of length <em>k</em>.
+                                Counterintuitively, this actually leads to smaller graphs than the overlap graphs, which use full reads, because in the de Bruijn graph, identical overlaps (repeats) are
+                                collapsed into a single node:
+                            </p>
+
+                            <div class="row" id="img-row">
+                                <div class="col-8-24" id="margin"></div>
+                                <div class="col-8-24" id="img-col">
+                                    <img id="res-img" src="img/pevzner-2001.png">
+                                    <center><span class="fig-caption">Figure 3.2: Figure 2 from <a href="https://doi.org/10.1073/pnas.171285098" target="_blank">Pevzner 2001</a>
+                                        showing how repeats are compacted in a de Bruijn graph.</span></center>
+                                </div>
+                                <div class="col-8-24" id="margin"></div>
+                            </div>                                   
+
+                            <p>Selection of <em>k</em> is critical. A <em>k</em> that is too low will mean your graph will have too many collapsed repeats and be unresolvable. Imagine a
+                                <em>k</em>=2, which would essentially be a graph made up of the 4 nucleotides looping back on themselves. On the other hand, a <em>k</em> that is too high
+                                could lead to graphs with too few overlaps, making the assembly of longer contigs impossible. Fortunately, most modern assembly algorithms (including SPAdes)
+                                optimize over many values of <em>k</em>, obviating the need for <em>k</em>-mer selection by the user.
+                            </p>
+
+                            <p>The final assembly for this run will be in the file <code class="inline">assemblies/spades-illumina-chr2-k77/scaffolds.fasta</code>
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
@@ -191,10 +217,14 @@ html_template = """
                             <p>These statistics are relatively easy to calculate, but there are also tools that can summarize these and more for a given assembly.
                                 <a href="https://doi.org/10.1186/2047-217X-2-10" target="_blank">Assemblathon</a> was a competition to assess genome assemblers in 2013. They have helpfully made available
                                 some of the scripts they use to quantify final genome assemblies in their <a href="https://doi.org/10.1186/2047-217X-2-10" target="_blank">github repository</a>. We will 
-                                use one of their scripts to gather some basic statistics about the genome assembly we just produced:
+                                use one of their scripts to gather some basic statistics about a genome assembly.
                             </p>
 
-                            <center><pre class="cmd"><code>perl /usr/bin/assemblathon_stats.pl assemblies/illumina-only-spades/scaffolds.fasta > assemblies/illumina-assemblathon.txt</code></pre></center>
+                            <p>Instead of using the assembly we just produced, which is only of a single chromosome, we've provided several <em>D. pseudoobscura</em> genomes to compare in the
+                                <code class="inline">expected-outputs/assemblies/</code> folder. Let's run the <code class="inline">assemblathon</code> script on one of them:
+                            </p>
+
+                            <center><pre class="cmd"><code>perl /usr/bin/assemblathon_stats.pl expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta > assemblies/spades-illumina-only-assemblathon.txt</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -206,25 +236,22 @@ html_template = """
                                         <td class="tcol-1">/usr/bin/assemblathon_stats.pl</td><td class="tcol-2">The path to the <code class="inline">perl</code> script to run.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">assemblies/illumina-only-spades/scaffolds.fasta</td><td class="tcol-2">The input FASTA file containing a genome assembly.</td>
+                                        <td class="tcol-1">expected-outputs/assemblies/illumina-only-spades/scaffolds.fasta</td><td class="tcol-2">The input FASTA file containing a genome assembly.</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">&gt;</td><td class="tcol-2">This redirects the output from the command specified before it into the file specified after it.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-t 16</td><td class="tcol-2">The number of threads SPAdes can use.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1">assemblies/illumina-assemblathon.txt</td><td class="tcol-2">The desired output file.</td>
+                                        <td class="tcol-1">assemblies/spades-illumina-only-assemblathon.txt</td><td class="tcol-2">The desired output file.</td>
                                     </tr>
                                 </table> 
                             </div>                        
 
-                            <p>This should produce the file <code class="inline">assemblies/illumina-assemblathon.txt</code> which contains several statistics about the assembly</p>
+                            <p>This should produce the file <code class="inline">assemblies/spades-illumina-only-assemblathon.txt</code> which contains several statistics about the assembly</p>
 
                             <p>Let's take a look at this file:</p>
                             
-                            <center><pre class="cmd"><code>less -S assemblies/illumina-assemblathon.txt</code></pre></center>
+                            <center><pre class="cmd"><code>less -S assemblies/spades-illumina-only-assemblathon.txt</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -240,7 +267,7 @@ html_template = """
                                             (use the <code class="inline">&lt;left arrow&gt;</code> and <code class="inline">&lt;right arrow&gt;</code> to scroll left and right).</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">assemblies/illumina-assemblathon.txt</td><td class="tcol-2">The path to the file you want to view</td>
+                                        <td class="tcol-1">assemblies/spades-illumina-only-assemblathon.txt</td><td class="tcol-2">The path to the file you want to view</td>
                                     </tr>
                                 </table>
                             </div>
@@ -273,13 +300,13 @@ html_template = """
 
                             <p>We know that <em>D. pseudoobscura</em> has a genome size of roughly 150Mb in 6 chromosomes. So the assembly size of <code class="inline">159563605</code>
                                 is about right, but we've only been able to resolve <code class="inline">133829</code> scaffolds. No where near the 6 chromosomes we would ideally want.
-                                Such a fragmented assembly would make annotation difficult with genes likely being split between scaffolds.
+                                Such a fragmented assembly could make annotation difficult with genes likely being split between scaffolds, and analysis of structural variation impossible.
                             </p>
 
                             <p>What about some other assemblies? We've provided several more assemblies of <em>D. pseudoobscura</em> in the <code class="list">expected-outputs/assemblies/</code> folder,
                                 including a SPAdes assembly with long reads (PacBio + Nanopore), a <a href="https://github.com/fenderglass/Flye/" target="_blank">Flye</a>
                                 assembly with just PacBio reads and a Flye assembly with just Nanopore reads. The assemblathon output files are there as well, but the statistics we've talked about
-                                are summarized in the following table:
+                                are summarized in the following table, as well as the latest published <em>D. pseudoobscura</em> genome on the SRA:
                             </p>
 
                             <div class="table-cont">
@@ -412,9 +439,9 @@ html_template = """
                                 <code class="inline>bwa index</code>, and <code class="inline">picard CreateSequenceDictionary</code>.
                             </p>
 
-                            <p>All of these are simple to generate. Today we'll just generate the <code class="inline">samtools faidx</code> for our SPAdes Illumina assembly:</p>
+                            <p>All of these are simple to generate. Today we'll just generate the <code class="inline">samtools faidx</code> for our pre-generated SPAdes Illumina assembly:</p>
 
-                            <center><pre class="cmd"><code>samtools faidx assemblies/illumina-only-spades/scaffolds.fasta</code></pre></center>
+                            <center><pre class="cmd"><code>samtools faidx expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -426,14 +453,14 @@ html_template = """
                                         <td class="tcol-1">faidx</td><td class="tcol-2">Call the <code class="inline">faidx</code> sub-program within <code class="inline">samtools</code></td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">assemblies/illumina-only-spades/scaffolds.fasta</td><td class="tcol-2">The path to the FASTA file to index</td>
+                                        <td class="tcol-1">expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta</td><td class="tcol-2">The path to the FASTA file to index</td>
                                     </tr>
                                 </table>
                             </div>
 
-                            <p>This should run fairly quickly and will produce the file <code class="inline">assemblies/illumina-only-spades/scaffolds.fasta.fai</code> file that we can look at</p>
+                            <p>This should run fairly quickly and will produce the file <code class="inline">expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta.fai</code> file that we can look at</p>
 
-                            <center><pre class="cmd"><code>less -S assemblies/illumina-only-spades/scaffolds.fasta.fai</code></pre></center>
+                            <center><pre class="cmd"><code>less -S expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta.fai</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -449,7 +476,7 @@ html_template = """
                                             (use the <code class="inline">&lt;left arrow&gt;</code> and <code class="inline">&lt;right arrow&gt;</code> to scroll left and right).</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">assemblies/spades-illumina/scaffolds.fasta.fai</td><td class="tcol-2">The path to the file you want to view</td>
+                                        <td class="tcol-1">expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta/scaffolds.fasta.fai</td><td class="tcol-2">The path to the file you want to view</td>
                                     </tr>
                                 </table>
                             </div>
@@ -480,7 +507,7 @@ NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
 
                             <p>Other indices that we won't generate directly today include the BWA index files, which make it easier to map reads to an assembly:
 
-                            <center><pre class="cmd"><code>bwa index assemblies/spades-illumina/scaffolds.fasta</code></pre></center>
+                            <center><pre class="cmd-ne"><code>bwa index assemblies/spades-illumina/scaffolds.fasta</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -499,7 +526,7 @@ NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
 
                             <p>And the Picard Dictionary file, which used by variant callers such as GATK and other programs:
 
-                            <center><pre class="cmd"><code>Picard CreateSequenceDictionary I=assemblies/spades-illumina/scaffolds.fasta O=assemblies/spades-illumina/scaffolds.dict</code></pre></center>
+                            <center><pre class="cmd-ne"><code>Picard CreateSequenceDictionary I=assemblies/spades-illumina/scaffolds.fasta O=assemblies/spades-illumina/scaffolds.dict</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">

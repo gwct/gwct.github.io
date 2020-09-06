@@ -65,7 +65,7 @@ html_template = """
 
                     <div class="row" id="instructor">
                         <div class="col-4-24" id="inst-img-cont">
-                            <img id="inst-img" src="img/ea-tmp.jpg">
+                            <img id="inst-img" src="img/ea.jpg">
                         </div>
                         <div class="col-20-24" id="inst-text">
                             <p><a href="http://elliearmstrong.mystrikingly.com/" target="_blank">Ellie Armstrong</a>: A PhD student at Stanford University co-advised by

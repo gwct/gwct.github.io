@@ -136,7 +136,7 @@ GTCCAGTACGGGTCCAGTACGGGTCCAGTACGGGTCCAGTACGGGACCAGTACGGGACCG</code></pre>
                             <p>Reads require a different format because they are need to store another important piece of information regarding sequence data: per-base quality scores.
                                 To accomplish this, the FASTQ format is used. We can see an example of FASTQ format with the reads provided:</p>
             
-                            <center><pre class="cmd"><code>zless -S dpse-2-reads/illumina/pse-chr2_1.fastq.gz</code></pre></center>
+                            <center><pre class="cmd"><code>zless -S dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -152,7 +152,7 @@ GTCCAGTACGGGTCCAGTACGGGTCCAGTACGGGTCCAGTACGGGACCAGTACGGGACCG</code></pre>
                                             (use the <code class="inline">&lt;left arrow&gt;</code> and <code class="inline">&lt;right arrow&gt;</code> to scroll left and right).</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">dpse-2-reads/illumina/pse-chr2_1.fastq.gz</td><td class="tcol-2">The path to the file you want to view</td>
+                                        <td class="tcol-1">dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz</td><td class="tcol-2">The path to the file you want to view</td>
                                     </tr>
                                 </table>
                             </div>
@@ -255,43 +255,9 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
                                 This program takes as input a set of reads in <b>FASTQ</b> format and generates an HTML file with several plots that can be viewed within a web browser.
                             </p>
             
-                            <p>Let's try to run <code class="inline">fastqc</code> on some of our short read (Illumina) data for <em>D. pseudoobscura</em> chromosome 2. First, let's navigate
-                                to the folder that contains our reads:
-                            </p>
+                            <p>Let's try to run <code class="inline">fastqc</code> on some of our short read (Illumina) data for <em>D. pseudoobscura</em> chromosome 2.</p>
             
-                            <center><pre class="cmd"><code>cd dpse-2-reads/illumina/</code></pre></center>
-            
-                            <div class="table-cont">
-                                <table class="cmd-table">
-                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
-                                    <tr>
-                                        <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1">dpse-2-reads/illumina/</td><td class="tcol-2">The path to the directory you want to change to.</td>
-                                    </tr>
-                                </table>
-                            </div>
-            
-                            <p><code class="inline">fastqc</code> requires a pre-made output directory. Let's make one here:</p>
-            
-                            <center><pre class="cmd"><code>mkdir fastqc-output</code></pre></center>
-            
-                            <div class="table-cont">
-                                <table class="cmd-table">
-                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
-                                    <tr>
-                                        <td class="tcol-1">mkdir</td><td class="tcol-2">The Linux make directory command</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1">fastqc-output</td><td class="tcol-2">The desired name of the new directory.</td>
-                                    </tr>
-                                </table>
-                            </div>
-            
-                            <p>And now we can run <code class="inline">fastqc</code>:</p>
-            
-                            <center><pre class="cmd"><code>fastqc pse-chr2_1.fastq.gz pse-chr2_2.fastq.gz -o fastqc-output/</code></pre></center>
+                            <center><pre class="cmd"><code>fastqc dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz dpse-chr2-reads/illumina/pse-chr2_2.fastq.gz -o fastqc-output/</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -300,18 +266,20 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
                                         <td class="tcol-1">fastqc</td><td class="tcol-2">Invoke the <code class="inline">fastqc</code> program.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">pse-chr2_1.fastq.gz</td><td class="tcol-2">The first input read file.</td>
+                                        <td class="tcol-1">dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz</td><td class="tcol-2">The first input read file.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">pse-chr2_2.fastq.gz</td><td class="tcol-2">The second input read file.</td>
+                                        <td class="tcol-1">dpse-chr2-reads/illumina/pse-chr2_2.fastq.gz</td><td class="tcol-2">The second input read file.</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">-o fastqc-output/</td><td class="tcol-2">The <code class="inline">-o</code> option specifies the output directory.</td>
                                     </tr>
                                 </table>
                             </div>
+
+                            <p>This should take less than a minute to run, during which you'll see some progress reported on the screen.</p>
             
-                            <p>Unlike most of our other commands today, this won't output a file that can be viewed easily from the terminal. Rather the HTML output should be viewed
+                            <p>Unlike most of our other commands today, this won't output a text file that can be viewed easily from the terminal. Rather the HTML output should be viewed
                                 in the browser. To do that, let's use the file browser on the right hand side of the screen to navigate with the mouse to 
                                 <code class="inline">dpse-2-reads/illumina/fastqc-output/</code>. Once you're there you should see 4 files, two <code class="inline">.html</code> files
                                 and two <code class="inline">.zip</code> files. One file per type per input file. We can ignore the <code class="inline">.zip</code> for now. They contain
@@ -332,14 +300,25 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
                                     </div>
                                 </div>
                             </div>
-            
-                            <p>The FastQC output should display a number of plots and summary statistics which can be scrolled through or navigated to with the links on the left.</p>
+
+                            <p></p>
+
+                            <div class="row" id="img-row">
+                                <!-- <div class="col-2-24" id="margin"></div> -->
+                                <div class="col-24-24" id="img-col">
+                                    <img id="res-img" src="img/fastqc-screenshot.png">
+                                    <center><span class="fig-caption">Figure 2.2: A screenshot of the RStudio interface showing how to view an HTML file.</span></center>
+                                </div>
+                                <!-- <div class="col-2-24" id="margin"></div> -->
+                            </div>                            
+
+                            <p>Once you have it open, the FastQC output should display a number of plots and summary statistics which can be scrolled through or navigated to with the links on the left.</p>
             
                             <div class="row" id="img-row">
                                 <div class="col-7-24" id="margin"></div>
                                 <div class="col-10-24" id="img-col">
                                     <img id="res-img" src="img/fastqc-1.png">
-                                    <center><span class="fig-caption">Figure 2.2: Basic FastQC statistics from <code class="inline">pse-chr2_1.fastq.gz</code>.</span></center>
+                                    <center><span class="fig-caption">Figure 2.3: Basic FastQC statistics from <code class="inline">pse-chr2_1.fastq.gz</code>.</span></center>
                                 </div>
                                 <div class="col-7-24" id="margin"></div>
                             </div>
@@ -353,7 +332,7 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
                                 <div class="col-6-24" id="margin"></div>
                                 <div class="col-12-24" id="img-col">
                                     <img id="res-img" src="img/fastqc-2.png">
-                                    <center><span class="fig-caption">Figure 2.3: Distribution of <b>Phred quality scores</b> based on position in read in <code class="inline">pse-chr2_1.fastq.gz</code>.</span></center>
+                                    <center><span class="fig-caption">Figure 2.4: Distribution of <b>Phred quality scores</b> based on position in read in <code class="inline">pse-chr2_1.fastq.gz</code>.</span></center>
                                 </div>
                                 <div class="col-6-24" id="margin"></div>
                             </div>
@@ -371,7 +350,7 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
                                 <div class="col-6-24" id="margin"></div>
                                 <div class="col-12-24" id="img-col">
                                     <img id="res-img" src="img/fastqc-3.png">
-                                    <center><span class="fig-caption">Figure 2.4: An example of poor quality reads. 
+                                    <center><span class="fig-caption">Figure 2.5: An example of poor quality reads. 
                                         <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">Source</a>.</span></center>
                                 </div>
                                 <div class="col-6-24" id="margin"></div>
@@ -382,7 +361,7 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
                                 trim these off automatically.    
                             </p>
             
-                            <p>In general there are several pre-processing tasks you could perform to filter your reads, including:</p>
+                            <p>There are several pre-processing tasks you could perform to filter your reads, including:</p>
             
                             <ol>
                                 <li>Trimming adapters</li>
@@ -434,7 +413,7 @@ AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
     <div class="row" id="footer">
 		<div class="col-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 08/30/2020 00:00:38 MDT</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/05/2020 20:28:10 MDT</center>
 			</div>
 		</div>
 	</div>

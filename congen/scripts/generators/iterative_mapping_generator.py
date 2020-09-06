@@ -149,7 +149,7 @@ html_template = """
 
                             <p>And now we can run <code class="inline">psuedo-it</code> on <em>D. pseudoobscura</em> chromosome 2 with two iterations:</p>
 
-                            <center><pre class="cmd"><code>pseudo_it -ref dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa -pe1 dpse-2-reads/illumina/pse-chr2_1.fastq.gz -pe2 dpse-2-reads/illumina/pse-chr2_2.fastq.gz -i 2 -p 8 -o dpse-pseudo-it</code></pre></center>
+                            <center><pre class="cmd"><code>pseudo_it -ref dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa -pe1 dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz -pe2 dpse-chr2-reads/illumina/pse-chr2_2.fastq.gz -i 2 -p 4 -o dpse-pseudo-it</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -162,16 +162,17 @@ html_template = """
                                         reference genome to which we are mapping. In this case, we'll be mapping to <em>D. melanogaster</em> chromosome 3R.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-pe1 dpse-2-reads/illumina/pse-chr2_1.fastq.gz</td><td class="tcol-2">Tells <code class="inline">pseudo_it</code> the path to the file containing the first pairs of reads.</td>
+                                        <td class="tcol-1">-pe1 dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz</td><td class="tcol-2">Tells <code class="inline">pseudo_it</code> the path to the file containing the first pairs of reads.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-pe2 dpse-2-reads/illumina/pse-chr2_2.fastq.gz</td><td class="tcol-2">Tells <code class="inline">pseudo_it</code> the path to the file containing the second pairs of reads.</td>
+                                        <td class="tcol-1">-pe2 dpse-chr2-reads/illumina/pse-chr2_2.fastq.gz</td><td class="tcol-2">Tells <code class="inline">pseudo_it</code> the path to the file containing the second pairs of reads.</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">-i 2</td><td class="tcol-2">This option sets <code class="inline">pseudo_it</code> to run 2 iterations.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-p 8</td><td class="tcol-2">This option tells <code class="inline">pseudo_it</code> to use 8 cores when mapping and calling variants.</td>
+                                        <td class="tcol-1">-p 4</td><td class="tcol-2">This option tells <code class="inline">pseudo_it</code> to use 4 cores when mapping and calling variants. 
+                                            For a whole genome, I would recommend 4 cores per chromosomes</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">-o dpse-pseudo-it</td><td class="tcol-2">This tells <code class="inline">pseudo_it</code> the desired output directory. This directory will be created if it does not exist.</td>
@@ -180,8 +181,32 @@ html_template = """
                             </div>
 
                             <p>This will perform the steps outlined above twice (mapping, variant calling, consensus) and will save the relevant files for each iteration, including a final consensus FASTA file as
-                                a pseudo-assembly. You can explore the output folder <code class="inline">dpse-pesudo-it</code> to see what's there.
+                                a pseudo-assembly. You can explore the output folder <code class="inline">dpse-pesudo-it</code> to see what's there. You can view its progress on the screen as it runs.
                             </p>
+
+                            <p>Note that this runs an entire gamut of mapping, variant calling, and consensus sequence generation, which can take a very long time (about 1 week for a mammalian whole genome with 4 iterations
+                                and 4 cores per chromosome). Even for our single chromosome from <em>D. pseudoobscura</em> this would take over an hour. So let's go ahead and cancel this run by hitting
+                                <code class="inline">&lt;ctrl&gt;+c</code> while the Terminal is selected.
+                            </p>
+
+                                <div id="msg_cont">
+                                    <div id="msg">
+                                        <div id="msg_banner">Tip - Cancelling command line programs</div>
+                                        <div id="msg_text">
+                                            <p>
+                                                Sometimes you'll start a command and realize something is wrong or decide you want to do something else, so you'll want to <b>cancel</b> the command.
+                                                In a bash terminal this is done with the following keystroke:
+                                            </p>
+
+                                            <center><code class="inline">&lt;ctrl&gt;+c</code></center>
+
+                                            <p>But be careful not to stop a program you want to keep running!</p>
+
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p></p>                       
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
@@ -201,9 +226,9 @@ html_template = """
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
 
-                            <p>In order to see how <code class="inline">pseudo-it</code> has reduced reference bias, we need to first generate the consensus sequence after one iteration:</p>
+                            <p>In order to see how <code class="inline">pseudo-it</code> has reduced reference bias, we would first need to generate the consensus sequence after <b>one iteration</b>:</p>
 
-                            <center><pre class="cmd"><code>pseudo_it -ref dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa -pe1 dpse-2-reads/illumina/pse-chr2_1.fastq.gz -pe2 dpse-2-reads/illumina/pse-chr2_2.fastq.gz -i 1 -p 8 -resume dpse-pseudo-it</code></pre></center>
+                            <center><pre class="cmd-ne"><code>pseudo_it -ref dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa -pe1 dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz -pe2 dpse-chr2-reads/illumina/pse-chr2_2.fastq.gz -i 1 -p 4 -resume dpse-pseudo-it</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -225,7 +250,8 @@ html_template = """
                                         <td class="tcol-1">-i 1</td><td class="tcol-2">This option sets <code class="inline">pseudo_it</code> to run 1 iteration.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-p 8</td><td class="tcol-2">This option tells <code class="inline">pseudo_it</code> to use 8 cores when mapping and calling variants.</td>
+                                        <td class="tcol-1">-p 4</td><td class="tcol-2">This option tells <code class="inline">pseudo_it</code> to use 4 cores when mapping and calling variants.
+                                            For a whole genome, I would recommend 4 cores per chromosomes</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">-resume dpse-pseudo-it</td><td class="tcol-2">Using the <code class="inline">resume</code> flag tells <code class="inline">pseudo_it</code> that some of the files have already been generated in this
@@ -234,9 +260,9 @@ html_template = """
                                 </table> 
                             </div>
 
-                            <p>After this has finished, we can directly compare the outputs between iteration 1 and iteration 2. Remember, reference bias makes mapped reads look more similar to the reference that
-                                expected, so we can outline a couple of expectations to test:
-                            </p>
+                            <p>However, since this would also take some time, we'll just move forward with the provided expected output in <code class="inline">dpse-pseudo-it</code>.</p>
+                            
+                            <p>Remember, reference bias makes mapped reads look more similar to the reference that expected, so we can outline a couple of expectations to test:</p>
 
                             <ol>
                                 <li>More reads should map to the second iteration.</li>
@@ -248,7 +274,7 @@ html_template = """
 
                                 <p>This is fairly easy to check with <code class="inline">samtools flagstat</code>. First, we can run flagstat on the BAM file from the first iteration:</p>
 
-                                <center><pre class="cmd"><code>samtools flagstat dpse-pseudo-it/iter-01/bam/merged-rg-mkdup-iter-01.bam.gz</code></pre></center>
+                                <center><pre class="cmd"><code>samtools flagstat expected-outputs/dpse-pseudo-it/iter-01/bam/merged-rg-mkdup-iter-01.bam.gz</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -260,7 +286,7 @@ html_template = """
                                             <td class="tcol-1">flagstat</td><td class="tcol-2">Use the <code class="inline">flagstat</code> sub-program implemented within <code class="inline">samtools</code>.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">dpse-pseudo-it/iter-01/bam/merged-rg-mkdup-iter-01.bam.gz</td><td class="tcol-2">The path to the input BAM file.</td>
+                                            <td class="tcol-1">expected-outputs/dpse-pseudo-it/iter-01/bam/merged-rg-mkdup-iter-01.bam.gz</td><td class="tcol-2">The path to the input BAM file.</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -271,7 +297,7 @@ html_template = """
                                 
                                 <p>Now let's check the second iteration:</p>
 
-                                <center><pre class="cmd"><code>samtools flagstat dpse-pseudo-it/iter-02/bam/merged-rg-mkdup-iter-02.bam.gz</code></pre></center>
+                                <center><pre class="cmd"><code>samtools flagstat expected-outputs/dpse-pseudo-it/iter-02/bam/merged-rg-mkdup-iter-02.bam.gz</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -283,7 +309,7 @@ html_template = """
                                             <td class="tcol-1">flagstat</td><td class="tcol-2">Use the <code class="inline">flagstat</code> sub-program implemented within <code class="inline">samtools</code>.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">dpse-pseudo-it/iter-02/bam/merged-rg-mkdup-iter-02.bam.gz</td><td class="tcol-2">The path to the input BAM file.</td>
+                                            <td class="tcol-1">expected-outputs/dpse-pseudo-it/iter-02/bam/merged-rg-mkdup-iter-02.bam.gz</td><td class="tcol-2">The path to the input BAM file.</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -297,25 +323,9 @@ html_template = """
                                     iterative mapping has improved read depth.
                                 </p>
 
-                                <p>First, let's navigate to the second iteration BAM directory:</p>
-
-                                <center><pre class="cmd"><code>cd dpse-pseudo-it/iter-02/bam/</code></pre></center>
-
-                                <div class="table-cont">
-                                    <table class="cmd-table">
-                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
-                                        <tr>
-                                            <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command.</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tcol-1">dpse-pseudo-it/iter-02/bam/</td><td class="tcol-2">The path to the directory we want to change to.</td>
-                                        </tr>
-                                    </table>
-                                </div>
-
                                 <p>Then, like before, let's run <code class="inline">samtools depth</code> on our BAM file:</p>
 
-                                <center><pre class="cmd"><code>samtools depth merged-rg-mkdup-iter-02.bam.gz > dpse2-to-dmel3R-pi2-depth.tab</code></pre></center>
+                                <center><pre class="cmd"><code>samtools depth expected-outputs/dpse-pseudo-it/iter-02/bam/merged-rg-mkdup-iter-02.bam.gz > dpse2-to-dmel3R-pi2-depth.tab</code></pre></center>
                 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -327,7 +337,7 @@ html_template = """
                                             <td class="tcol-1">depth</td><td class="tcol-2">Use the <code class="inline">depth</code> sub-program within <code class="inline">samtools</code>.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">merged-rg-mkdup-iter-02.bam.gz</td><td class="tcol-2">The input BAM/SAM file.</td>
+                                            <td class="tcol-1">expected-outputs/dpse-pseudo-it/iter-01/bam/merged-rg-mkdup-iter-02.bam.gz</td><td class="tcol-2">The input BAM/SAM file.</td>
                                         </tr>
                                         <tr>
                                             <td class="tcol-1">&gt;</td><td class="tcol-2">This redirects the output that would have been printed to the screen to a file instead.</td>
@@ -340,7 +350,7 @@ html_template = """
 
                                 <p>And let's calculate average depth with our custom R script:</p>
 
-                                <center><pre class="cmd"><code>Rscript ../../../scripts/depth_plot.r dpse2-to-dmel3R-pi2-depth.tab</code></pre></center>
+                                <center><pre class="cmd"><code>Rscript scripts/depth_plot.r dpse2-to-dmel3R-pi2-depth.tab</code></pre></center>
                 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -357,8 +367,7 @@ html_template = """
                                     </table>
                                 </div>
 
-                                <p>This will generate two plots, a per-site read depth chromoplot (<code class="inline">depth-plot.png</code>) and a read depth histogram (<code class="inline">depth-hist.png</code>). 
-                                    Importantly, it also tells us the average read depth:
+                                <p>This will generate a read depth histogram (<code class="inline">depth-hist.png</code>) and tell us the average read depth:
                                 </p>
 
                                 <pre class="text"><code># Avg. read depth: 4.174893</code></pre> 
@@ -376,26 +385,9 @@ html_template = """
                                     I've found this program useful for generating between species chromosome alignments.
                                 </p>
 
-                                <p>First, let's navigate back to the main directory:</p>
-
-                                <center><pre class="cmd"><code>cd ../../../</code></pre></center>
-
-                                <div class="table-cont">
-                                    <table class="cmd-table">
-                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
-                                        <tr>
-                                            <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command.</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tcol-1">../../../</td><td class="tcol-2">The path to the directory you want to change to. <code class="inline">..</code> is a shortcut that means "one directory up", so thi
-                                                moves us up 3 directories.</td>
-                                        </tr>
-                                    </table> 
-                                </div>
-
                                 <p>Next, let's use <code class="inline">minimap2</code> to generate an alignment between the first iteration of mapping and the original <em>D. melanogaster</em> 3R reference:</p>
 
-                                <center><pre class="cmd"><code>minimap2 -x asm10 dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa dpse-pseudo-it/iter-01/fa/iter-01-final.fa > alignments/dpse-2-pi-1-to-dmel3.paf</code></pre></center>
+                                <center><pre class="cmd"><code>minimap2 -x asm10 dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa expected-outputs/dpse-pseudo-it/iter-01/fa/iter-01-final.fa > alignments/dpse-2-pi-1-to-dmel3.paf</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -407,14 +399,11 @@ html_template = """
                                             <td class="tcol-1">-x asm10</td><td class="tcol-2">Set this to indicate assembly-to-reference mapping.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">-x asm10</td><td class="tcol-2">Set this to indicate assembly-to-reference mapping.</td>
-                                        </tr>
-                                        <tr>
                                             <td class="tcol-1">dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa</td><td class="tcol-2">The path to the reference genome FASTA file. 
                                                 In this case, <em>D. melanogaster</em> chromosome 3R.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">dpse-pseudo-it/iter-01/fa/iter-01-final.fa</td><td class="tcol-2">The path to the assembly FASTA file. In this case, the consensus sequence of <em>D. pseudoobscura</em>
+                                            <td class="tcol-1">expected-outputs/dpse-pseudo-it/iter-01/fa/iter-01-final.fa</td><td class="tcol-2">The path to the assembly FASTA file. In this case, the consensus sequence of <em>D. pseudoobscura</em>
                                                 after <b>one</b> iteration of mapping.</td>
                                         </tr>
                                         <tr>
@@ -499,7 +488,7 @@ html_template = """
 
                                 <p>Next, run <code class="inline">minimap2</code> on the second iteration of mapping:
 
-                                <center><pre class="cmd"><code>minimap2 -x asm10 dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa dpse-pseudo-it/iter-02/fa/iter-02-final.fa > alignments/dpse-2-pi-2-to-dmel3.paf</code></pre></center>
+                                <center><pre class="cmd"><code>minimap2 -x asm10 dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa expected-outputs/dpse-pseudo-it/iter-02/fa/iter-02-final.fa > alignments/dpse-2-pi-2-to-dmel3.paf</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -518,7 +507,7 @@ html_template = """
                                                 In this case, <em>D. melanogaster</em> chromosome 3R.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">dpse-pseudo-it/iter-02/fa/iter-02-final.fa</td><td class="tcol-2">The path to the assembly FASTA file. In this case, the consensus sequence of <em>D. pseudoobscura</em>
+                                            <td class="tcol-1">expected-outputs/dpse-pseudo-it/iter-02/fa/iter-02-final.fa</td><td class="tcol-2">The path to the assembly FASTA file. In this case, the consensus sequence of <em>D. pseudoobscura</em>
                                                 after <b>two</b> iterations of mapping.</td>
                                         </tr>
                                         <tr>
@@ -552,7 +541,9 @@ html_template = """
                                 <pre class="text"><code># Percent matching bases: 94.541</code></pre>
 
                                 <p>Compared to the previous 95.015%, the % identity has decreased with an iteration of mapping as expected. This means we are likely capturing more variation in this 
-                                    version of the pseudo-reference. *chef's kiss*</p>
+                                    version of the pseudo-reference.</p>
+
+                                <h3>This brings us to <a href="end.html">the end</a> of our workshop. Thanks for attending!</h3>
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>

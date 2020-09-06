@@ -73,7 +73,15 @@ html_template = """
             <div class="row" id="section-row">
                 <div class="col-2-24" id="inner-margin"></div>
                 <div class="col-20-24" id="section-content">
-                    <p>Content</p>
+
+                    <ul id="links-list">
+                        <li><a href="slides/congen-assembly-lecture.pptx" download>Lecture slides</a></li>
+                        <li><a href="slides/congen-assembly-workshop.pptx" download>Workshop slides</a></li>
+                    </ul>
+
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+
                 </div>
                 <div class="col-2-24" id="inner-margin"></div>
             </div>

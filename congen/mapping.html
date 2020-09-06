@@ -114,7 +114,7 @@
 
                             <p>BWA is a short-read alignment program and is very straightforward. Simply tell it the reads you want to map and the reference genome and it will take care of the rest:</p>
 
-                            <center><pre class="cmd"><code>bwa mem -t 4 dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa dpse-2-reads/illumina/pse-chr2_1.fastq.gz dpse-2-reads/illumina/pse-chr2_2.fastq.gz | samtools sort > mapped-reads/dpse2-to-dmel3R.bam</code></pre></center>
+                            <center><pre class="cmd"><code>bwa mem -t 4 dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz dpse-chr2-reads/illumina/pse-chr2_2.fastq.gz | samtools sort > mapped-reads/dpse2-to-dmel3R.bam</code></pre></center>
             
                             <p>You'll notice that in this command we're actually taking the output from BWA and piping it directly into <code class="inline">samtools</code> to sort the resulting read
                                 mappings by coordinate. This sorting is required by many programs that process mapped reads.
@@ -138,10 +138,10 @@
                                         <td class="tcol-1">dmel-3R-reference/Drosophila_melanogaster.BDGP6.28.dna.chromosome.3R.fa</td><td class="tcol-2">The path to the reference genome file</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">dpse-2-reads/illumina/pse-chr2_1.fastq.gz</td><td class="tcol-2">The path to the FASTQ file containin the first pairs of reads</td>
+                                        <td class="tcol-1">dpse-chr2-reads/illumina/pse-chr2_1.fastq.gz</td><td class="tcol-2">The path to the FASTQ file containin the first pairs of reads</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">dpse-2-reads/illumina/pse-chr2_2.fastq.gz</td><td class="tcol-2">The path to the FASTQ file containin the second pairs of reads</td>
+                                        <td class="tcol-1">dpse-chr2-reads/illumina/pse-chr2_2.fastq.gz</td><td class="tcol-2">The path to the FASTQ file containin the second pairs of reads</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">|</td><td class="tcol-2">This pipe means that the output from the command specified before it will be used as input to the command specified after it</td>
@@ -340,7 +340,8 @@ SRR11230564.16812502    99      3R      35215   0       55S20M76S       =       
                                         <td class="tcol-1">M=dpse2-to-dmel3R-dupmets.txt</td><td class="tcol-2">The name for a file to output some metrics</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">CREATE_INDEX=true</td><td class="tcol-2">Tells picard to also create and index file for the output file. These indices are necessary for other programs to use the file.</td>
+                                        <td class="tcol-1">CREATE_INDEX=true</td><td class="tcol-2">Tells picard to also create and index file for the output BAM file. 
+                                            These indices are necessary for other programs to use the file.</td>
                                     </tr>
                                 </table>
                             </div>
@@ -362,7 +363,7 @@ SRR11230564.16812502    99      3R      35215   0       55S20M76S       =       
                                             searches the file for the string and prints lines that contain matches to the screen. Can be used with regular expression pattern matching.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">-a2</td><td class="tcol-2">Tells <code class="inline">grep</code>to also print the two lines after the match is found.</td>
+                                        <td class="tcol-1">-a2</td><td class="tcol-2">Tells <code class="inline">grep</code> to also print the two lines after the match is found.</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">"## METRICS CLASS"</td><td class="tcol-2">The pattern we want to search for.</td>
@@ -555,8 +556,8 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
                                 </table>
                             </div>
             
-                            <p>This script will take a couple of minutes to run, but should print the average read depth to the screen and create 2 output files:
-                                <code class="inline">depth-plot.png</code> and <code class="inline">depth-plot.png</code>. I see that average read depth is about 4:
+                            <p>This script will take a couple of minutes to run, but should print the average read depth to the screen a histogram of read depth:
+                                <code class="inline">depth-hist.png</code>, which you can look at by clicking on it in the file browser if you'd like. I see that average read depth is about 4:
                             </p>
             
                             <pre class="text"><code># Avg. read depth: 3.948774</code></pre>
@@ -606,7 +607,7 @@ Unknown Library 844     200412  2766    673346  134     621     0       0.003426
     <div class="row" id="footer">
 		<div class="col-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 08/30/2020 00:00:38 MDT</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/05/2020 22:05:51 MDT</center>
 			</div>
 		</div>
 	</div>

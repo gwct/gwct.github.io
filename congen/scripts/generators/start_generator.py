@@ -120,7 +120,12 @@ html_template = """
                                     </div>
                                 </div>
 
-                                <p>Additionally, one of the most important and often overlooked parts of bioinformatic analyses is to simply look at ones data.
+                                <p>Commands that you should run will have a <span style="background-color:#c6ecd9;">green background</span>. We will also provide some commands that are beneficial
+                                    to see, but do not necessarily need to be run using a <span style="background-color:#ffb3b3;">red background</span>, like so:
+
+                                <center><pre class="cmd-ne"><code>this is an example command that won't be run</code></pre></center>
+
+                                <p>Additionally, one of the most important and often overlooked parts of bioinformatics analyses is to simply look at ones data.
                                     There will be several points where we stop to look at the output of a given program or command. When we do, a snippet
                                     of the output will be presented in the walkthrough as follows:
                                 </p>
@@ -191,47 +196,12 @@ You can catch problems before you use the data in later analyses.</code></pre>
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
 
+                            <h3>Copying input data</h3>
+
                             <p>The data we'll be working with today are mainly sequences in FASTA and FASTQ format (more on those in a moment). The input files are located on the server at
-                                <code class="inline">/data/gregg_thomas/</code>. We can look at what is in that folder with the <code class="inline">ls</code> command. Make sure you've
-                                selected your Terminal window and type the following:
+                                <code class="inline">~/instructor_materials/Gregg_Thomas/congen-assembly/</code>. Let's make a copy of this directory in our home directory so we don't 
+                                have to worry about that path anymore. First, make sure you are in your home directory:
                             </p>
-
-                            <center><pre class="cmd"><code>ls /data/gregg_thomas/</code></pre></center>
-                            <div class="table-cont">
-                                <table class="cmd-table">
-                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
-                                    <tr>
-                                        <td class="tcol-1">ls</td><td class="tcol-2">The Linux list directory command to view the files in a folder.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1">/data/gregg_thomas/</td><td class="tcol-2">The name of the directory you want to view</td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <p>You should see the following folders listed</p>
-
-                            <div class="table-cont">
-                                <table class="norm-table">
-                                    <thead><th class="tcol-1">Folder</th><th class="tcol-2">Description</th></thead>
-                                    <tr>
-                                        <td class="tcol-1"><code class="inline">dmel-3R-reference/</code></td><td class="tcol-2">A folder containing the <em>D. melanogaster</em> chromosome 3R sequence file and its indices.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1"><code class="inline">dpse-reads/</code></td><td class="tcol-2">A folder containing Nanopore and PacBio long reads and Illumina short 
-                                            reads for <em>D. pseudoobscura</em>.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1"><code class="inline">expected-outputs/</code></td><td class="tcol-2">Pre-run outputs for all the programs we run today. 
-                                            If you get stuck or something takes too long, look for the expected output here</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1"><code class="inline">scripts/</code></td><td class="tcol-2">A few supplementary scripts for data analysis.</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            
-                            <p>Now let's make sure we're in our home directory before we prepare our outputs:</p>
 
                             <center><pre class="cmd"><code>cd ~</code></pre></center>
 
@@ -242,31 +212,33 @@ You can catch problems before you use the data in later analyses.</code></pre>
                                         <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">~</td><td class="tcol-2">The path to the directory you want to change to. In Linux, <code class="inline">~</code> is a 
-                                            shortcut meaning "the current user's home directory."</td>
+                                        <td class="tcol-1">~</td><td class="tcol-2">The path to the directory you want to change to. In bash, 
+                                            <code class="inline">~</code> is a shortcut meaning "the current user's home directory."</td>
                                     </tr>
                                 </table>
-                            </div>                            
+                            </div>                                
+                            
+                            <p>Now let's make a copy of the data directory:</p>
 
-                            <p>I like to try and think ahead about what outputs my project will produce and make those directories early on, which helps me plan out my workflows. First, let's make a project
-                                folder:
-                            </p>
-
-                            <center><pre class="cmd"><code>mkdir congen-assembly</code></pre></center>
+                            <center><pre class="cmd"><code>cp instructor_materials/Gregg_Thomas/congen-assembly/ .</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
-                                        <td class="tcol-1">mkdir</td><td class="tcol-2">The Linux make directory command</td>
+                                        <td class="tcol-1">cp</td><td class="tcol-2">The Linux copy command</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">congen-assembly</td><td class="tcol-2">The name of the main project folder where we will keep everything organized.</td>
+                                        <td class="tcol-1">instructor_materials/Gregg_Thomas/congen-assembly/</td><td class="tcol-2">The path to the directory you want to copy.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">.</td><td class="tcol-2">The path to the new copy. In bash, <code class="inline">.</code> is a shortcut meaning
+                                            "the same name." So this will copy the directory to our current location with the name <code class="inline">congen-assembly</code></td>
                                     </tr>
                                 </table>
-                            </div>
+                            </div>            
 
-                            <p>And let's go into that directory:</p>
+                            <p>Let's move into this folder with <code class="inline">cd</code> again since we'll spend the rest of the workshop here:</p>
 
                             <center><pre class="cmd"><code>cd congen-assembly</code></pre></center>
 
@@ -280,9 +252,64 @@ You can catch problems before you use the data in later analyses.</code></pre>
                                         <td class="tcol-1">congen-assembly</td><td class="tcol-2">The path to the directory you want to change to.</td>
                                     </tr>
                                 </table>
-                            </div>     
+                            </div>                                      
+                            
+                            <p>
+                                And now we can look at what is in that folder with the <code class="inline">ls</code> command. Make sure you've
+                                selected your Terminal window and type the following:
+                            </p>
 
-                            <p>Today we'll be generating assemblies, read mappings, and alignments, so let's prepare an output directory for each of those tasks.</p>
+                            <center><pre class="cmd"><code>ls</code></pre></center>
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">ls</td><td class="tcol-2">The Linux list directory command to view the files in a folder. Shows files in current folder by default.</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <p>You should see the following folders listed</p>
+
+                            <div class="table-cont">
+                                <table class="norm-table">
+                                    <thead><th class="tcol-1">Folder</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1"><code class="inline">dmel-3R-reference/</code></td><td class="tcol-2">A folder containing the <em>D. melanogaster</em> chromosome 3R sequence file and its indices.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1"><code class="inline">dpse-chr2-reads/</code></td><td class="tcol-2">A folder containing Illumina short reads for <em>D. pseudoobscura</em>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1"><code class="inline">expected-outputs/</code></td><td class="tcol-2">Pre-run outputs for all the programs we run today. 
+                                            If you get stuck or something takes too long, look for the expected output here</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1"><code class="inline">scripts/</code></td><td class="tcol-2">A few supplementary scripts for data analysis.</td>
+                                    </tr>
+                                </table>
+                            </div> 
+
+                            <div id="msg_cont">
+                                <div id="msg">
+                                    <div id="msg_banner">Tip - Pre-generated outputs</div>
+                                    <div id="msg_text">
+                                        <p>
+                                            We have tried to anticipate the expected outputs from the commands we run today. If you get behind or stuck on something, try moving on to the next
+                                            step by adding <code class="inline">expected-outputs/</code> to the beginning of the path for input you were expected to generate for the next command.
+                                            Feel free to ask us for help for any specific command.
+                                        </p>
+
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>                       
+
+                            <h3>Preparing output directories</h3>
+
+                            <p>I like to try and think ahead about what outputs my project will produce and make those directories early on, which helps me plan out my workflows. 
+                                Today we'll be generating assemblies, read mappings, and alignments, so let's prepare an output directory for each of those tasks.
+                            </p>
 
                             <center><pre class="cmd"><code>mkdir alignments</code></pre></center>
 
@@ -325,6 +352,22 @@ You can catch problems before you use the data in later analyses.</code></pre>
                                     </tr>
                                 </table>
                             </div>
+
+                            <p>We'll also be running the program FastQC, which requires a pre-made output directory:
+
+                            <center><pre class="cmd"><code>mkdir fastqc-output</code></pre></center>
+            
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">mkdir</td><td class="tcol-2">The Linux make directory command</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">fastqc-output</td><td class="tcol-2">The desired name of the new directory.</td>
+                                    </tr>
+                                </table>
+                            </div>                            
 
                             <p>Some other programs we run will create their own output directories. We should now be ready to run the commands to generate assemblies 
                                 and read mappings. But first, let's get familiar with our input data, <a href="reads.html">sequences and reads...</a>
