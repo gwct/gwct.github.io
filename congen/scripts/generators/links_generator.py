@@ -79,6 +79,35 @@ html_template = """
                         <li><a href="slides/congen-assembly-workshop.pptx" download>Workshop slides</a></li>
                     </ul>
 
+                    <div id="sep_div"></div>
+
+                </div>
+                <div class="col-2-24" id="inner-margin"></div>
+            </div>
+        </div>
+        <div class="col-4-24" id="outer-margin"></div>
+    </div>   
+
+ <a name="inst-links"></a>
+    <div class="row" id="section-header-cont">
+        <div class="col-4-24" id="outer-margin"></div>
+        <div class="col-16-24" id="section-header-row">
+            <div id="section-header">Instructors</div>
+        </div>
+        <div class="col-4-24" id="outer-margin"></div>
+    </div>
+    <div class="row" id="section-cont">
+        <div class="col-4-24" id="outer-margin"></div>
+        <div class="col-16-24" id="section-col">
+            <div class="row" id="section-row">
+                <div class="col-2-24" id="inner-margin"></div>
+                <div class="col-20-24" id="section-content">
+
+                    <ul id="links-list">
+                        <li><a href="http://elliearmstrong.mystrikingly.com" target="_blank">Ellie Armstrong</a> - PhD student at Stanford University</li>
+                        <li><a href="https://gwct.github.io/" target="_blank">Gregg Thomas</a> - Postdoc at the University of Montana</li>
+                    </ul>
+
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
 

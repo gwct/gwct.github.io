@@ -183,7 +183,7 @@ html_template = """
                                             If you have an expected genome size from a closely related organism or other analysis, this can help determine how much of the genome you have assembled.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1"><code class="inline">N50</code></td><td class="tcol-2">The length, N, of the scaffold/contig such that 50% ofo the 
+                                        <td class="tcol-1"><code class="inline">N50</code></td><td class="tcol-2">The length, N, of the scaffold/contig such that 50% of the 
                                             assembly is contained in scaffolds of length N and longer. In other words, at least half of the nucleotides in the assembly belongs to contigs with the 
                                             N50 length or longer.</td>
                                     </tr>
