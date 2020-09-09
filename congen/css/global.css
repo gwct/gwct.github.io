@@ -388,8 +388,8 @@ table {
 	width: 34%
 }
 @media (max-width: 1025px) {
-	.cmd-table .tcol-1 { width: 50%; }
-	.cmd-table .tcol-2 { width: 50%; }
+	.cmd-table .tcol-1 { max-width: 50%; overflow-wrap: break-word; word-break: break-all;}
+	.cmd-table .tcol-2 { max-width: 50%;}
 }
 /*------------------------------------------------------*/
 /* Normal table styles (only used in start.html and mapping.html) */
