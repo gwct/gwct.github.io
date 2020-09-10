@@ -220,13 +220,16 @@ You can catch problems before you use the data in later analyses.</code></pre>
                             
                             <p>Now let's make a copy of the data directory:</p>
 
-                            <center><pre class="cmd"><code>cp instructor_materials/Gregg_Thomas/congen-assembly/ .</code></pre></center>
+                            <center><pre class="cmd"><code>cp -r instructor_materials/Gregg_Thomas/congen-assembly/ .</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
                                         <td class="tcol-1">cp</td><td class="tcol-2">The Linux copy command</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">-r</td><td class="tcol-2">Recursively copy all files in a directory.</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">instructor_materials/Gregg_Thomas/congen-assembly/</td><td class="tcol-2">The path to the directory you want to copy.</td>

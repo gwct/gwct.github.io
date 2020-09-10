@@ -66,7 +66,7 @@ html_template = """
 
                             <p>While long read assemblies can be done using de Bruijn graph based approaches, -->
 
-                            <p>Today, we'll be using both long and short reads to assemble the <em>D. pseudoobscura</em> genome and then using several metrics to assess the resulting assemblies.</p>
+                            <p>Today, we'll be using both short reads to assemble the <em>D. pseudoobscura</em> genome and then using several metrics to compare several assemblies.</p>
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
@@ -148,6 +148,10 @@ html_template = """
                                 <em>k</em>=2, which would essentially be a graph made up of the 4 nucleotides looping back on themselves. On the other hand, a <em>k</em> that is too high
                                 could lead to graphs with too few overlaps, making the assembly of longer contigs impossible. Fortunately, most modern assembly algorithms (including SPAdes)
                                 optimize over many values of <em>k</em>, obviating the need for <em>k</em>-mer selection by the user.
+                            </p>
+
+                            <p>Take a look at this <a href="https://github.com/rrwick/Bandage/wiki/Effect-of-kmer-size" target="_blank">nice visualization</a> of how <em>k</em> affects
+                                assembly graph structure. Visualizations done using <a href="https://github.com/rrwick/Bandage/" target="_blank">Bandage</a>.
                             </p>
 
                             <p>The final assembly for this run will be in the file <code class="inline">assemblies/spades-illumina-chr2-k77/scaffolds.fasta</code>

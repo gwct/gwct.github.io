@@ -139,9 +139,15 @@ for table in tables:
                     continue;
 
                 if cur_header == "Link":
-                    cur_rows += "<td><a href='" + cur_col + "' target='_blank'>Wikipedia</a></td>";
+                    if cur_col == "NA":
+                        cur_rows += "<td>NA</td>"
+                    else:
+                        cur_rows += "<td><a href='" + cur_col + "' target='_blank'>Wikipedia</a></td>";
                 elif cur_header == "Specs":
-                    cur_rows += "<td><a href='" + cur_col + "' target='_blank'>Link</a></td>";
+                    if cur_col == "NA":
+                        cur_rows += "<td>NA</td>"
+                    else:
+                        cur_rows += "<td><a href='" + cur_col + "' target='_blank'>Link</a></td>";
                 else:
                     if c == 0:
                         cur_rows += "<td><b>" + cur_col + "</b></td>";
