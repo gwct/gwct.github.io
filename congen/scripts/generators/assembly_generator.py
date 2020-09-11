@@ -228,7 +228,7 @@ html_template = """
                                 <code class="inline">expected-outputs/assemblies/</code> folder. Let's run the <code class="inline">assemblathon</code> script on one of them:
                             </p>
 
-                            <center><pre class="cmd"><code>perl /usr/bin/assemblathon_stats.pl expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta > assemblies/spades-illumina-only-assemblathon.txt</code></pre></center>
+                            <center><pre class="cmd"><code>perl /usr/bin/assemblathon_stats.pl expected-outputs/assemblies/spades-illumina-only.fasta > assemblies/spades-illumina-only-assemblathon.txt</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -240,7 +240,7 @@ html_template = """
                                         <td class="tcol-1">/usr/bin/assemblathon_stats.pl</td><td class="tcol-2">The path to the <code class="inline">perl</code> script to run.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">expected-outputs/assemblies/illumina-only-spades/scaffolds.fasta</td><td class="tcol-2">The input FASTA file containing a genome assembly.</td>
+                                        <td class="tcol-1">expected-outputs/assemblies/illumina-only-spades.fasta</td><td class="tcol-2">The input FASTA file containing a genome assembly.</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">&gt;</td><td class="tcol-2">This redirects the output from the command specified before it into the file specified after it.</td>
@@ -278,7 +278,7 @@ html_template = """
 
                             <p>This should display a nice table of statstics:</p>
 
-                            <pre class="text"><code>---------------- Information for assembly 'assemblies/illumina-only-spades/scaffolds.fasta' ----------------
+                            <pre class="text"><code>---------------- Information for assembly 'assemblies/illumina-only-spades.fasta' ----------------
 
 
                                          Number of scaffolds     133829
@@ -445,7 +445,7 @@ html_template = """
 
                             <p>All of these are simple to generate. Today we'll just generate the <code class="inline">samtools faidx</code> for our pre-generated SPAdes Illumina assembly:</p>
 
-                            <center><pre class="cmd"><code>samtools faidx expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta</code></pre></center>
+                            <center><pre class="cmd"><code>samtools faidx expected-outputs/assemblies/spades-illumina-only.fasta</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -457,14 +457,14 @@ html_template = """
                                         <td class="tcol-1">faidx</td><td class="tcol-2">Call the <code class="inline">faidx</code> sub-program within <code class="inline">samtools</code></td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta</td><td class="tcol-2">The path to the FASTA file to index</td>
+                                        <td class="tcol-1">expected-outputs/assemblies/spades-illumina-only.fasta</td><td class="tcol-2">The path to the FASTA file to index</td>
                                     </tr>
                                 </table>
                             </div>
 
-                            <p>This should run fairly quickly and will produce the file <code class="inline">expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta.fai</code> file that we can look at</p>
+                            <p>This should run fairly quickly and will produce the file <code class="inline">expected-outputs/assemblies/spades-illumina-only.fasta.fai</code> file that we can look at</p>
 
-                            <center><pre class="cmd"><code>less -S expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta.fai</code></pre></center>
+                            <center><pre class="cmd"><code>less -S expected-outputs/assemblies/spades-illumina-only.fasta.fai</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -480,7 +480,7 @@ html_template = """
                                             (use the <code class="inline">&lt;left arrow&gt;</code> and <code class="inline">&lt;right arrow&gt;</code> to scroll left and right).</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">expected-outputs/assemblies/spades-illumina-only/scaffolds.fasta/scaffolds.fasta.fai</td><td class="tcol-2">The path to the file you want to view</td>
+                                        <td class="tcol-1">expected-outputs/assemblies/spades-illumina-only.fasta.fai</td><td class="tcol-2">The path to the file you want to view</td>
                                     </tr>
                                 </table>
                             </div>
@@ -511,7 +511,7 @@ NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
 
                             <p>Other indices that we won't generate directly today include the BWA index files, which make it easier to map reads to an assembly:
 
-                            <center><pre class="cmd-ne"><code>bwa index assemblies/spades-illumina/scaffolds.fasta</code></pre></center>
+                            <center><pre class="cmd-ne"><code>bwa index assemblies/spades-illumina-only.fasta</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -523,14 +523,14 @@ NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
                                         <td class="tcol-1">index</td><td class="tcol-2">Call the <code class="inline">index</code> sub-program within <code class="inline">bwa</code></td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">assemblies/spades-illumina/scaffolds.fasta</td><td class="tcol-2">The path to the FASTA file to index</td>
+                                        <td class="tcol-1">assemblies/spades-illumina-only.fasta</td><td class="tcol-2">The path to the FASTA file to index</td>
                                     </tr>
                                 </table>
                             </div>                            
 
                             <p>And the Picard Dictionary file, which used by variant callers such as GATK and other programs:
 
-                            <center><pre class="cmd-ne"><code>Picard CreateSequenceDictionary I=assemblies/spades-illumina/scaffolds.fasta O=assemblies/spades-illumina/scaffolds.dict</code></pre></center>
+                            <center><pre class="cmd-ne"><code>Picard CreateSequenceDictionary I=assemblies/spades-illumina-only.fasta O=assemblies/spades-illumina-only.dict</code></pre></center>
             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -543,10 +543,10 @@ NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
                                             sub-program within <code class="inline">picard</code></td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">I=assemblies/spades-illumina/scaffolds.fasta</td><td class="tcol-2">The path to the FASTA file</td>
+                                        <td class="tcol-1">I=assemblies/spades-illumina-only.fasta</td><td class="tcol-2">The path to the FASTA file</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">O=assemblies/spades-illumina/scaffolds.dict</td><td class="tcol-2">The path to the desired output file</td>
+                                        <td class="tcol-1">O=assemblies/spades-illumina-only.dict</td><td class="tcol-2">The path to the desired output file</td>
                                     </tr>
                                 </table>
                             </div>

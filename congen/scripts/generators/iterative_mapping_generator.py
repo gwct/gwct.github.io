@@ -337,7 +337,7 @@ html_template = """
                                             <td class="tcol-1">depth</td><td class="tcol-2">Use the <code class="inline">depth</code> sub-program within <code class="inline">samtools</code>.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">expected-outputs/dpse-pseudo-it/iter-01/bam/merged-rg-mkdup-iter-02.bam.gz</td><td class="tcol-2">The input BAM/SAM file.</td>
+                                            <td class="tcol-1">expected-outputs/dpse-pseudo-it/iter-02/bam/merged-rg-mkdup-iter-02.bam.gz</td><td class="tcol-2">The input BAM/SAM file.</td>
                                         </tr>
                                         <tr>
                                             <td class="tcol-1">&gt;</td><td class="tcol-2">This redirects the output that would have been printed to the screen to a file instead.</td>
