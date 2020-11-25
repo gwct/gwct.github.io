@@ -20,6 +20,7 @@ html_template = """
 
     <div class="row" id="header">Publications</div>
 
+	<!--
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">Pre-prints</div>
@@ -29,10 +30,6 @@ html_template = """
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
-			<p><span class="pub_title">Genus-wide characterization of bumblebee genomes reveals variation associated with key ecological and behavioral traits of pollinators</span>
-			</br>&nbsp;&nbsp;Sun C, Huang J, ... <b>Thomas GWC</b>, ..., Hahn MW, ..., Mueller RL. 2020. <em>bioRxiv</em>.
-			</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2020.05.29.122879 " target="_blank" id="doi_link">10.1101/2020.05.29.122879</a></p>
-
 			<p><span class="pub_title">Origins and long-term patterns of copy-number variation in rhesus macaques</span>
 			</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Wang RJ, Nguyen J, Harris RA, Raveendran M, Rogers J, Hahn MW. 2019. <em>bioRxiv</em>.
 			</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/749416" target="_blank" id="doi_link">10.1101/749416</a>
@@ -40,6 +37,7 @@ html_template = """
 		</ul>
 	</div>
 	<div class="col-2-24" id="margin"></div>
+	-->
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
@@ -50,8 +48,17 @@ html_template = """
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
+			<p><span class="pub_title">Origins and long-term patterns of copy-number variation in rhesus macaques</span>
+			</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Wang RJ, Nguyen J, Harris RA, Raveendran M, Rogers J, Hahn MW. 2020. <em>Molecular Biology & Evolution</em>.
+			</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/molbev/msaa303" target="_blank" id="doi_link">10.1093/molbev/msaa303</a>
+			</br>&nbsp;&nbsp;Resources: <a href="https://github.com/gwct/macaque-cnv-figs" target="_blank">Figures</a></p>
+
+			<p><span class="pub_title">Genus-wide characterization of bumblebee genomes reveals variation associated with key ecological and behavioral traits of pollinators</span>
+			</br>&nbsp;&nbsp;Sun C, Huang J, ... <b>Thomas GWC</b>, ..., Hahn MW, ..., Mueller RL. 2020. <em>Molecular Biology & Evolution</em>.
+			</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/molbev/msaa240 " target="_blank" id="doi_link">10.1093/molbev/msaa240</a></p>
+
 			<p><span class="pub_title">Paternal age in rhesus macaques is positively associated with germline mutation accumulation but not with measures of offspring sociability</span>
-			</br>&nbsp;&nbsp;Wang RJ, <b>Thomas GWC</b>, Raveendran M, Harris RA, Doddapaneni H, Muzny DM, Capitanio JP, Radivojac P, Rogers J, Hahn MW. <em>Genome Research</em>.
+			</br>&nbsp;&nbsp;Wang RJ, <b>Thomas GWC</b>, Raveendran M, Harris RA, Doddapaneni H, Muzny DM, Capitanio JP, Radivojac P, Rogers J, Hahn MW. <em>Genome Research</em>. 30:826-834.
 			</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/gr.255174.119" target="_blank" id="doi_link">10.1101/gr.255174.119</a>
 
 			<p><span class="pub_title">Gene content evolution in the arthropods</span>
@@ -225,6 +232,9 @@ html_template = """
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
+			<p><span class="pub_title">Patterns of molecular evolution in Arthropods (with Elias Dohmen)</span>
+			</br>&nbsp;&nbsp;Arthropod Genomics Symposium 2020 - Virtual - Invited Talk - <a href="slides/2020.07.21-AGS-i5k.pptx">Slides</a></p>
+
 			<p><span class="pub_title">Reproductive longevity predicts mutation rates in primates</span>
 			</br>&nbsp;&nbsp;Population, Evolutionary, and Quantitative Genetics Conference 2018 - Madison, WI - Platform Talk - <a href="slides/2018.05.15-PEQG-owlmonkey.pptx">Slides</a></p>
 
@@ -248,6 +258,17 @@ html_template = """
 		</ul>
 	</div>
 	<div class="col-2-24" id="margin"></div>
+
+	<div class="row" id="header">Workshops</div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="pub">
+		<ul id="presents">
+			<p><span class="pub_title">Genome Assembly (with <a href="http://elliearmstrong.mystrikingly.com/" target="_blank">Ellie Armstrong</a>)</span>
+			</br>&nbsp;&nbsp;ConGen 2020: Population Genomic Data Analysis Course/Workshop - Virtual - <a href="congen/slides/congen-assembly-lecture.pptx">Slides</a>
+				- <a href="https://gwct.github.io/congen/" target="_blank">Workshop website</a></p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>	
 
 	<div class="row" id="header">Other Content</div>
 	<div class="col-2-24" id="margin"></div>
