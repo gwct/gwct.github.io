@@ -72,7 +72,7 @@ html_template = """
                     <h3>Prerequisites</h3>
                     <p>
                         Familiarity with command-line interfaces, some programming experience, basic understanding of probability and statistics. All of these skills can be learned
-                        in the Practical Computing for Biology course.
+                        in the Practical Computing for Biology course. Basic understanding of genetics and the "central dogma" of molecular biology.
                     </p>
 
                     <a name="struct"></a>

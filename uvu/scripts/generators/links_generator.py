@@ -48,9 +48,9 @@ html_template = """
                 <div class="col-20-24" id="section-content">
 
                     <ul id="links-list">
-                        <li><a href="slides/uvu-sequencing-lecture.pptx" download>Sequencing lecture slides</a></li>
+                        <li><a href="slides/Gregg-Thomas-UVU-teaching.pptx" download>Sequencing lecture slides</a></li>
                         <li><a href="#" download>Lab 01 slides</a> (I will make the content available as slides or a PDF for offline access to lab activities)</li> 
-                        <li><a href="slides/uvu-research-slides.pptx" download>Research presentation</a></li>
+                        <li><a href="slides/Gregg-Thomas-UVU-teaching.pptx" download>Research presentation</a></li>
                     </ul>
 
                     <div id="sep_div"></div>
