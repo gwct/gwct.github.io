@@ -32,7 +32,7 @@ html_template = """
                     <li><a href="syllabus.html#policies">Course Policies</a></li>
                     <li><a href="syllabus.html#attendance">Attendance</a></li>
                     <li><a href="syllabus.html#acad-integrity">Academic Honesty & Integrity</a></li>
-                    <li><a href="syllabus.html#accomodations">Accomodations for Disabilities</a></li>
+                    <li><a href="syllabus.html#accommodations">Accommodations for Disabilities</a></li>
                     <li><a href="syllabus.html#inclusivity">Inclusivity in the Classroom</a></li>
                     <li><a href="syllabus.html#office-hours">Office Hours</a></li>
                 </ul>
@@ -337,8 +337,8 @@ html_template = """
                                 </li>
                             </ul>
 
-                            <a class="internal-link" name="accomodations"></a>
-                            <h3>Accomodations for Disabilities</h3>
+                            <a class="internal-link" name="accommodations"></a>
+                            <h3>Accommodations for Disabilities</h3>
                             <p>
                                 As an instructor I strive to make my teaching materials as open and accessible as possible. If you are struggling in class or note any 
                                 way I could improve in this area, please do not hesitate to contact me. All course materials will be posted online and any note-taking 
