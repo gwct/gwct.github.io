@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link rel='shortcut icon' href='launcher/img/favicon.ico' type='image/x-icon'/ >
-	<link type="text/css" rel="stylesheet" href="launcher/css/pure.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="launcher/css/grid.css"  media="screen,projection" />
 	<link type="text/css" rel="stylesheet" href="launcher/css/launcher.css"  media="screen,projection" />
 	<script language="javascript" type="text/javascript"></script>
 	<script src="launcher/js/util.js"></script>
@@ -14,14 +14,15 @@
 <script>setBackground();</script>
 <!-- <body> -->
 <!-- <body onload="updateClock(); setInterval('updateClock()', 1000 )"> -->
-	<div class="pure-g" id="body_div">
-		<div class="pure-u-24-24 sep_div"></div>
 
-		<!-- Begin search grid -->
-		<div class="pure-g" id="search_grid">
-			<div class="pure-u-3-24 margin"></div>
+		<!-- <div class="col-24-24 sep_div"></div> -->
+		<!-- ---------------- SEARCH GRID BEGIN ---------------- -->
 
-			<div class="pure-u-6-24 search_cell" id="google_cell">
+		<div class="row" id="search_grid">
+			<div class="col-3-24 margin"></div>
+
+			<!-- Duckduckgo search -->
+			<div class="col-6-24 search_cell" id="google_cell">
 				<p><form class="search_form" onsubmit="searchEnter(1); return false;">
 					<input type="text" class="search_box" id="sbox1" placeholder="Search" autofocus/>
 					<!-- <input type="submit" hidden> -->
@@ -29,385 +30,433 @@
 			</div>
 			<!-- Duckduckgo search -->
 
-			<div class="pure-u-6-24 search_cell" id="scholar_cell">
+			<!-- Google scholar search -->
+			<div class="col-6-24 search_cell" id="scholar_cell">
 				<p><form class="search_form" onsubmit="searchEnter(2); return false;">
 					<input type="text" class="search_box" id="sbox2" placeholder="Scholar"/>
 				</p></form>
 			</div>
 			<!-- Google scholar search -->
 
-			<div class="pure-u-6-24 search_cell" id="wiki_cell">
+			<!-- Wikipedia search -->
+			<div class="col-6-24 search_cell" id="wiki_cell">
 				<p><form class="search_form" onsubmit="searchEnter(3); return false;">
 					<input type="text" class="search_box" id="sbox3" placeholder="Wiki"/>
 				</p></form>
 			</div>
 			<!-- Wikipedia search -->
 
-			<div class="pure-u-3-24 margin"></div>
+			<div class="col-3-24 margin"></div>
 		</div>
-		<!-- end search_grid -->
+		<!-- ----------------- SEARCH GRID END ----------------- -->
 
-		<div class="pure-u-24-24 top_sep_div"></div>
+		<!-- --------------- BOOKMARK GRID BEGIN --------------- -->
+		<!-- ------------------- Row 1 begin ------------------- -->
+		<div class="row">
+			<div class="col-24-24" id="first_line"></div>
+		</div>
 
-		<!-- Begin bookmark grid -->
-		<div class="pure-u-24-24" id="first_line"></div>
-		<div class="pure-u-4-24 bookmark_margin"></div>
+		<div class="row" id="bookmark-row">
+			<div class="col-1-24 bookmark_margin"></div>
+			<!-- Dropdown menu for personal -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="http://gwct.github.io">gwct</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/gwct">github</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://gitlab.com/gwct">gitlab</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://docs.google.com/spreadsheets/d/1dD4JFsuDRDfFxkwbpPfaugKzGy59WBtq5H7vhfh_Gr8/edit#gid=0">Planne</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://crboothb.github.io">crb</a>
+					</div>					
+				</div>
+
+
+			</div>
+			<!-- Dropdown menu for personal -->
+
+			<!-- Dropdown menu for mail -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="https://mail.google.com/mail/u/0/#inbox">Mail</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://outlook.office365.com/mail/inbox/id/AAQkADkwNTczZmI1LTRjY2MtNDJhYy04YzA0LTc3ODIyYjllMmFiNgAQAKo2VXnVUN1ImDC4s8kZ8zI%3D">Montana</a>
+					</div>
+				</div>
+			</div>
+			<!-- Dropdown menu for mail -->
+
+			<!-- Dropdown menu for projects -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="http://gwct.github.io">Projects</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://public.era.nih.gov/commons/commonsInit.do">NIH ERA</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://public.era.nih.gov/assist">NIH ASSIST</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://gwct.github.io/referee/">Referee</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://gwct.github.io/grampa/">GRAMPA</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://gwct.github.io/portals/grampa.html">GRAMPA 2</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://hahnlab.github.io/CAFE/">CAFE</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://gwct.github.io/portals/cafe.html">CAFE 2</a>
+					</div>
+				</div>
+			</div>
+			<!-- Dropdown menu for projects -->
+
+			<!-- Link for papers -->
+			<div class="col-2-24 bookmark">
+				<!-- <a href="https://cgi.soic.indiana.edu/~grthomas/papers/paper_search.html">Papers</a> -->
+				<a href="http://localhost/papers.html">Papers</a>
+			</div>
+			<!-- Link for papers -->
+
+			<!-- Dropdown menu for lab -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="http://www.thegoodlab.org/">Lab</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://goodest-goodlab.github.io/">Resources</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://goodlabgenomics.slack.com/">Slack</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://congen2020.slack.com/">ConGen Slack</a>
+					</div>
+					<!-- <div class="bookmark">
+						<a href="https://goodest-goodlab.github.io/murinae-seq">Rodents</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://goodest-goodlab.github.io/servers.html">Servers</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://github.com/goodest-goodlab">Github</a>
+					</div> -->
+					<div class="bookmark">
+						<a href="https://www.crashplanpro.com/login/">Backup</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://goodlarsonlabs.slack.com/">Slack 2</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://groups.google.com/forum/#!forum/montana-bioinformatics">Group</a>
+					</div>
+				</div>
+			</div>
+			<!-- Dropdown menu for lab -->
+
+			<!-- Dropdown menu for UM -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="http://my.umt.edu/employees">Montana</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="http://umevolgenomicsisb3.slack.com/">Slack</a>
+					</div>
+				</div>
+			</div>
+			<!-- Dropdown menu for UM -->
+
+			<!-- Dropdown menu for dev tools -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="http://gwct.github.io">Dev</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://domains.google.com/m/registrar/?authuser=1&_ga=2.41244386.1776249906.1576171650-1791499027.1576171650#">Domains</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://hpanel.hostinger.com/">Web host</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://translate.google.com/">Translate</a>
+					</div>			
+					<div class="bookmark">
+						<a href="https://www.w3schools.com/colors/colors_picker.asp">Colors</a>
+					</div>
+			
+				</div>
+			</div>
+			<!-- Dropdown menu for dev tools -->
+
+			<!-- Dropdown menu for money sites -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="#">Money</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://plum.twa.rentmanager.com/Shared/Home">Rent</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://myaccount.northwesternenergy.com/NWESSP/index.aspx?ReturnUrl=/NWESSP/Index.aspx">Utilities</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://www.spectrum.net/">ISP</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://www.cricketwireless.com/myaccount.html">Phone</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://www.farmers.com/ePolicyLogin.jsp?tranType=ALL&dest=viewEDoc&lob=F&param=oJcK6IosnuU1mWEto1CyDQ==">Insurance IN</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://selfservice.travelers.com/#/">Insurance MT</a>
+					</div>
+				</div>
+			</div>
+			<!-- Dropdown menu for money sites -->
+
+			<!-- Dropdown menu for finance sites -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="http://www.purduefed.com/">Finance</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://www.tiaa.org/public/index.html">401</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://personal.vanguard.com/us/MyHome">IRA</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://www.creditkarma.com/dashboard">Score</a>
+					</div>					
+					<div class="bookmark">
+						<a href="https://www.coinbase.com/dashboard">Bitcoin</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://www.kraken.com/u/trade">Kraken</a>
+					</div>					
+				</div>
+			</div>
+			<!-- Dropdown menu for finance sites -->
+
+			<!-- Dropdown menu for weather -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="#">Weather</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://montana.maps.arcgis.com/apps/MapSeries/index.html?appid=7c34f3412536439491adcc2103421d4b/">COVID MT</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://bing.com/covid/local/unitedstates/">COVID</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://www.wunderground.com/maps/radar/current/spi">Radar IN</a>
+						<!-- <a href="http://www.intellicast.com/National/Radar/Current.aspx?location=USIL1114&animate=true">Radar</a> -->
+					</div>
+					<div class="bookmark">
+						<a href="https://www.wunderground.com/maps/radar/current/myl">Radar MT</a>
+					</div>
+					<div class="bookmark">
+						<!-- <a href="http://www.wunderground.com/cgi-bin/findweather/hdfForecast?query=47403">IN</a> -->
+						<a href="https://www.wunderground.com/weather/us/in/bloomington">IN</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://www.wunderground.com/weather/us/mt/missoula">MT</a>
+						<!-- <a href="http://www.wunderground.com/cgi-bin/findweather/hdfForecast?query=59801">MT</a> -->
+					</div>
+					<div class="bookmark">
+						<a href="http://www.tornadohq.com/severe-weather-map/">Severe</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://inciweb.nwcg.gov/">Fire</a>
+					</div>
+				</div>
+			</div>
+			<!-- Dropdown menu for weather -->
+
+			<!-- Dropdown menu for IU -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a class="drop_link" href="https://one.iu.edu/">IU</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="http://www.indiana.edu/~hahnlab">Hahn lab</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://kg6ek7cq2b.search.serialssolutions.com/">Library</a>
+					</div>
+					<div class="bookmark">
+						<a href="http://artgen.slack.com">AGS2020 Slack</a>
+					</div>
+				</div>
+			</div>
+			<!-- Dropdown menu for IU -->
+			<div class="col-1-24 bookmark_margin"></div>
+		</div>
+		<!-- -------------------  Row 1 end  ------------------- -->
+		<div class="row">
+			<div class="col-24-24" id="line"></div>
+		</div>
+		<!-- ------------------- Row 2 begin ------------------- -->
+		<div class="row" id="bookmark-row">
+			<div class="col-3-24 bookmark_margin"></div>
+			<div class="col-2-24 bookmark">
+				<a href="https://www.goodreads.com/">Books</a>
+			</div>
+			<div class="col-2-24 bookmark">
+				<a href="https://news.google.com/nwshp?hl=en&tab=wn&authuser=0">News</a>
+			</div>
+			<div class="col-2-24 bookmark">
+				<a href="http://slashdot.org/">Slashdot</a>
+			</div>
+			<div class="col-2-24 bookmark">
+				<a href="http://espn.go.com/">Sports</a>
+			</div>
+			<div class="col-2-24 bookmark">
+				<a href="https://www.youtube.com/feed/subscriptions">Videos</a>
+			</div>
+			<div class="col-2-24 bookmark">
+				<a href="http://xkcd.com/">xkcd</a>
+			</div>
+			<div class="col-2-24 bookmark">
+				<a href="https://whatbox.ca/login">Seed</a>
+			</div>
+			<div class="col-2-24 bookmark">
+				<a href="http://www.amazon.com/">Shop</a>
+			</div>
+			<div class="col-2-24 bookmark">
+				<a href="http://www.newegg.com/">Computers</a>
+			</div>
+			<div class="col-3-24 bookmark_margin"></div>
+		</div>
+		<div class="row">
+			<div class="col-24-24" id="line"></div>
+		</div>
+		<!-- -------------------  Row 2 end  ------------------- -->
+		<!-- ---------------- BOOKMARK GRID END ---------------- -->
+
+		<div class="col-24-24 big_sep_div"></div>
 		
-		<!-- Dropdown menu for personal -->
-		<div class="pure-u-2-24 drop_cont">
-			<div class="bookmark">
-				<a class="drop_link" href="http://gwct.github.io">gwct</a>
-			</div>
-			<div class="drop_list">
-				<div class="bookmark">
-					<a href="https://crboothb.github.io">crb</a>
-				</div>					
-				<div class="bookmark">
-					<a href="https://gwct.github.io/referee/">Referee</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://gwct.github.io/grampa/">GRAMPA</a>
-				</div>
-				<div class="bookmark">
-					<a href="http://gwct.github.io/portals/grampa.html">GRAMPA 2</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://hahnlab.github.io/CAFE/">CAFE</a>
-				</div>
-				<div class="bookmark">
-					<a href="http://gwct.github.io/portals/cafe.html">CAFE 2</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://domains.google.com/m/registrar/?authuser=1&_ga=2.41244386.1776249906.1576171650-1791499027.1576171650#">Domains</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://hpanel.hostinger.com/">Web host</a>
-				</div>
-			</div>
-		</div>
-		<!-- Dropdown menu for personal -->
-
-		<div class="pure-u-2-24 drop_cont">
-			<div class="bookmark">
-				<a href="http://my.umt.edu/employees">Montana</a>
-			</div>
-			<div class="drop_list">
-				<div class="bookmark">
-					<a href="http://umevolgenomicsisb3.slack.com/">Slack</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Dropdown menu for mail -->
-		<div class="pure-u-2-24 drop_cont">
-			<div class="bookmark">
-				<a class="drop_link" href="https://mail.google.com/mail/u/0/#inbox">Mail</a>
-			</div>
-			<div class="drop_list">
-				<div class="bookmark">
-					<a href="https://outlook.office365.com/mail/inbox/id/AAQkADkwNTczZmI1LTRjY2MtNDJhYy04YzA0LTc3ODIyYjllMmFiNgAQAKo2VXnVUN1ImDC4s8kZ8zI%3D">Montana</a>
-				</div>
-			</div>
-		</div>
-		<!-- Dropdown menu for mail -->
-
-		<div class="pure-u-2-24 bookmark">
-			<a href="https://github.com/gwct">github</a>
-		</div>
-		<div class="pure-u-2-24 bookmark">
-			<a href="https://gitlab.com/gwct">gitlab</a>
-		</div>
-
-		<!-- Dropdown menu for lab -->
-		<div class="pure-u-2-24 drop_cont">
-			<div class="bookmark">
-				<a class="drop_link" href="http://www.thegoodlab.org/">Lab</a>
-			</div>
-			<div class="drop_list">
-				<div class="bookmark">
-					<a href="https://goodest-goodlab.github.io/">Resources</a>
-				</div>
-				<div class="bookmark">
-					<a href="http://goodlabgenomics.slack.com/">Slack</a>
-				</div>
-				<div class="bookmark">
-					<a href="http://congen2020.slack.com/">ConGen Slack</a>
-				</div>
-				<!-- <div class="bookmark">
-					<a href="https://goodest-goodlab.github.io/murinae-seq">Rodents</a>
-				</div>	
-				<div class="bookmark">
-					<a href="https://goodest-goodlab.github.io/servers.html">Servers</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://github.com/goodest-goodlab">Github</a>
-				</div> -->
-				<div class="bookmark">
-					<a href="https://www.crashplanpro.com/login/">Backup</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://public.era.nih.gov/commons/commonsInit.do">NIH ERA</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://public.era.nih.gov/assist">NIH ASSIST</a>
-				</div>
-				<div class="bookmark">
-					<a href="http://goodlarsonlabs.slack.com/">Slack 2</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://groups.google.com/forum/#!forum/montana-bioinformatics">Group</a>
-				</div>
-			</div>
-		</div>
-		<!-- Dropdown menu for lab -->
-
-		<div class="pure-u-2-24 bookmark">
-			<!-- <a href="https://cgi.soic.indiana.edu/~grthomas/papers/paper_search.html">Papers</a> -->
-			<a href="http://localhost/papers.html">Papers</a>
-		</div>
-
-		<!-- Dropdown menu for IU -->
-		<div class="pure-u-2-24 drop_cont">
-			<div class="bookmark">
-				<a class="drop_link" href="https://one.iu.edu/">IU</a>
-			</div>
-			<div class="drop_list">
-				<div class="bookmark">
-					<a href="http://www.indiana.edu/~hahnlab">Hahn lab</a>
-				</div>
-				<div class="bookmark">
-					<a href="http://kg6ek7cq2b.search.serialssolutions.com/">Library</a>
-				</div>
-				<div class="bookmark">
-					<a href="http://artgen.slack.com">AGS2020 Slack</a>
-				</div>
-			</div>
-		</div>
-		<!-- Dropdown menu for IU -->
-
-		<div class="pure-u-4-24 bookmark_margin"></div>
-		
-		<div class="pure-u-24-24" id="line"></div>
-		<!-- ------------------- Row 1 end ------------------- -->
-
-		<div class="pure-u-4-24 bookmark_margin"></div>
-
-		<div class="pure-u-2-24 bookmark">
-			<a href="https://www.goodreads.com/">Books</a>
-		</div>
-		<!-- <div class="pure-u-2-24 bookmark">
-			<a href="https://www.volgistics.com/ex/portal.dll/?FROM=13211">Doggies</a>
-		</div> -->
-		<div class="pure-u-2-24 bookmark">
-			<a href="https://news.google.com/nwshp?hl=en&tab=wn&authuser=0">News</a>
-		</div>
-
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://slashdot.org/">Slashdot</a>
-		</div>
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://espn.go.com/">Sports</a>
-		</div>
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://translate.google.com/">Translate</a>
-		</div>			
-		<div class="pure-u-2-24 bookmark">
-			<a href="https://www.youtube.com/feed/subscriptions">Videos</a>
-		</div>
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://xkcd.com/">xkcd</a>
-		</div>
-
-		<!-- Dropdown menu for Weather -->
-		<div class="pure-u-2-24 drop_cont">
-			<div class="bookmark">
-				<a class="drop_link" href="#">Weather</a>
-			</div>
-			<div class="drop_list">
-				<div class="bookmark">
-					<a href="https://montana.maps.arcgis.com/apps/MapSeries/index.html?appid=7c34f3412536439491adcc2103421d4b/">COVID MT</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://bing.com/covid/local/unitedstates/">COVID</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://www.wunderground.com/maps/radar/current/spi">Radar IN</a>
-					<!-- <a href="http://www.intellicast.com/National/Radar/Current.aspx?location=USIL1114&animate=true">Radar</a> -->
-				</div>
-				<div class="bookmark">
-					<a href="https://www.wunderground.com/maps/radar/current/myl">Radar MT</a>
-				</div>
-				<div class="bookmark">
-					<!-- <a href="http://www.wunderground.com/cgi-bin/findweather/hdfForecast?query=47403">IN</a> -->
-					<a href="https://www.wunderground.com/weather/us/in/bloomington">IN</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://www.wunderground.com/weather/us/mt/missoula">MT</a>
-					<!-- <a href="http://www.wunderground.com/cgi-bin/findweather/hdfForecast?query=59801">MT</a> -->
-				</div>
-				<div class="bookmark">
-					<a href="http://www.tornadohq.com/severe-weather-map/">Severe</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://inciweb.nwcg.gov/">Fire</a>
-				</div>
-			</div>
-		</div>
-		<!-- Dropdown menu for Weather -->
-
-		<div class="pure-u-4-24 bookmark_margin"></div>
-
-		<div class="pure-u-24-24" id="line"></div>
-		<!-- ------------------- Row 2 end ------------------- -->
-
-		<div class="pure-u-4-24 bookmark_margin"></div>
-
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://www.purduefed.com/">Banking</a>
-		</div>
-
-		<!-- Dropdown menu for Money -->
-		<div class="pure-u-2-24 drop_cont">
-			<div class="bookmark">
-				<a class="drop_link" href="#">Money</a>
-			</div>
-			<div class="drop_list">
-				<div class="bookmark">
-					<a href="https://plum.twa.rentmanager.com/Shared/Home">Rent</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://myaccount.northwesternenergy.com/NWESSP/index.aspx?ReturnUrl=/NWESSP/Index.aspx">Utilities</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://www.spectrum.net/">ISP</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://www.cricketwireless.com/myaccount.html">Phone</a>
-				</div>
-				<div class="bookmark">
-					<a href="http://www.farmers.com/ePolicyLogin.jsp?tranType=ALL&dest=viewEDoc&lob=F&param=oJcK6IosnuU1mWEto1CyDQ==">Insurance IN</a>
-					<!-- https://agents.farmers.com/mt/missoula/jeremy-belcourt -->
-				</div>
-				<div class="bookmark">
-					<a href="https://selfservice.travelers.com/#/">Insurance MT</a>
-					<!-- https://agents.farmers.com/mt/missoula/jeremy-belcourt -->
-				</div>
-				<div class="bookmark">
-					<a href="https://www.tiaa.org/public/index.html">Retire</a>
-				</div>
-				<div class="bookmark">
-					<a href="https://www.coinbase.com/dashboard">Bitcoin</a>
-				</div>
-			</div>
-		</div>
-		<!-- Dropdown menu for Money -->
-
-		<div class="pure-u-2-24 bookmark">
-			<a href="https://whatbox.ca/login">Seed</a>
-		</div>
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://www.amazon.com/">Shop</a>
-		</div>
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://www.newegg.com/">Computers</a>
-		</div>
-		<div class="pure-u-2-24 bookmark">
-			<a href="https://www.w3schools.com/colors/colors_picker.asp">Colors</a>
-		</div>
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://www.somersault1824.com/tips-for-designing-scientific-figures-for-color-blind-readers/">Palette</a>
-		</div>
-		<!-- <div class="pure-u-2-24 bookmark">
-			<a href="https://www.groupexpro.com/schedule/575/?view=calendar">Fitness</a>
-		</div> -->
-		<div class="pure-u-2-24 bookmark">
-			<a href="http://star-wars-rpg-global.slack.com/">RPG</a>
-		</div>
-
-		<div class="pure-u-4-24 bookmark_margin"></div>	
-		<div class="pure-u-24-24" id="line"></div>
-		<!-- ------------------- Row 3 end ------------------- -->
-		<!-- End bookmark grid -->
-
-		<div class="pure-u-24-24 big_sep_div"></div>
-
-		<!-- Begin environment grid -->
-		<div class="pure-g" id="env_banner">
-			<!-- <div class="pure-u-18-24" id="motd_text">consistency</div> -->
-			<div class="pure-u-1-24 margin"></div>
-			<div class="pure-u-2-24" id="clock_cont">
+		<!-- -------------- ENVIRONMENT GRID BEGIN ------------- -->
+		<div class="row" id="env_banner">
+			<!-- <div class="col-18-24" id="motd_text">consistency</div> -->
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
 				<div id="clock_cell">
 					<span id="clock"></span>
 				</div>
 			</div>
 
-			<div class="pure-u-20-24" id="weather_cont">
+			<div class="col-20-24" id="weather_cont">
 				<script>getWeatherMT();</script>
 			</div>
-			<div class="pure-u-1-24 margin"></div>
+			<div class="col-1-24 margin"></div>
 		</div>
 
-		<div class="pure-u-24-24 sep_div"></div>
+		<div class="col-24-24 sep_div"></div>
 
-		<div class="pure-g" id="env_banner">
-			<div class="pure-u-1-24 margin"></div>
-			<div class="pure-u-2-24" id="clock_cont">
+		<div class="row" id="env_banner">
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
 				<div id="clock_cell">
 					<span id="in">Indiana:</span>
 				</div>
 			</div>
-			<div class="pure-u-20-24" id="weather_cont">
+			<div class="col-20-24" id="weather_cont">
 				<script>getWeatherIN();</script>
 			</div>
-			<div class="pure-u-1-24 margin"></div>
+			<div class="col-1-24 margin"></div>
 		</div>
-		<!-- End environment grid -->
+		<!-- --------------- ENVIRONMENT GRID END -------------- -->
 
-		<div class="pure-u-24-24 big_sep_div"></div>
+		<div class="col-24-24 big_sep_div"></div>
 
-		<!-- Begin media grid -->
-		<div class="pure-u-2-24 margin"></div>
-		<div class="pure-u-12-24 media_cell" id="cal_cell">
+		<!-- ----------------- MEDIA GRID BEGIN ---------------- -->
+		<div class="col-2-24 margin"></div>
+		<div class="col-12-24 media_cell" id="cal_cell">
 			<center>
 				<iframe id="cal_frame" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=300&amp;wkst=1&amp;bgcolor=%23e6e6e6&amp;src=sonotiro%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FDenver" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
 			</center>
 		</div>
-		<div class="pure-u-2-24 margin"></div>
-		<div class="pure-u-6-24 media_cell" id="iotd_cell">
+		<div class="col-2-24 margin"></div>
+		<div class="col-6-24 media_cell" id="iotd_cell">
 			<script>iotd();</script>
 		</div>
-		<div class="pure-u-2-24 margin"></div>
-		<!-- End media grid -->
+		<div class="col-2-24 margin"></div>
+		<!-- ------------------ MEDIA GRID END ----------------- -->
 
-		<div class="pure-u-24-24 sep_div"></div>
-		<div class="pure-u-24-24 sep_div"></div>
+		<div class="col-24-24 sep_div"></div>
+		<div class="col-24-24 sep_div"></div>
 
-	</div>
+
 </body>
 </html>
 
 
+<!-- 
+--------------
+Defunct links
+
+<div class="col-2-24 bookmark">
+	<a href="https://www.volgistics.com/ex/portal.dll/?FROM=13211">Doggies</a>
+</div>
+<div class="col-2-24 bookmark">
+	<a href="http://www.somersault1824.com/tips-for-designing-scientific-figures-for-color-blind-readers/">Palette</a>
+</div>
+<div class="col-2-24 bookmark">
+	<a href="https://www.groupexpro.com/schedule/575/?view=calendar">Fitness</a>
+</div>
+<div class="col-2-24 bookmark">
+	<a href="http://star-wars-rpg-global.slack.com/">RPG</a>
+</div>
+
+--------------
+-->
 
 
+<!-- 
+--------------
+Old spacing
 
+<div class="col-24-24 top_sep_div"></div>
+## Begin bookmark grid
+<div class="col-24-24" id="first_line"></div>
+<div class="col-4-24 bookmark_margin"></div>
+<div class="col-4-24 bookmark_margin"></div>
+<div class="col-24-24" id="line"></div>
+## ------------------- Row 1 end -------------------
+<div class="col-4-24 bookmark_margin"></div>
+<div class="col-4-24 bookmark_margin"></div>
+<div class="col-24-24" id="line"></div>
+## ------------------- Row 2 end -------------------
+<div class="col-4-24 bookmark_margin"></div>
+<div class="col-4-24 bookmark_margin"></div>	
+<div class="col-24-24" id="line"></div>
+## ------------------- Row 3 end -------------------
+## End bookmark grid
 
-
-
-<!-- <div class="pure-u-2-24 bookmark">
-		<a href="http://www.purduefed.com/">Banking</a>
-	</div>
-	<div class="pure-u-2-24 bookmark">
-		<a href="https://plum.twa.rentmanager.com/Shared/Home">Rent</a>
-	</div>
-	<div class="pure-u-2-24 bookmark">
-		<a href="https://www.coinbase.com/dashboard">Bitcoin</a>
-	</div>
-	<div class="pure-u-2-24 bookmark">
-		<a href="http://www.farmers.com/ePolicyLogin.jsp?tranType=ALL&dest=viewEDoc&lob=F&param=oJcK6IosnuU1mWEto1CyDQ==">Insurance IN</a>
-	</div>
-	<div class="pure-u-2-24 bookmark">
-		<a href="https://selfservice.travelers.com/#/">Insurance MT</a>
-	</div>
-	<div class="pure-u-2-24 bookmark">
-		<a href="https://myaccount.northwesternenergy.com/NWESSP/index.aspx?ReturnUrl=/NWESSP/Index.aspx">Utilities</a>
-	</div> -->
+--------------
+-->

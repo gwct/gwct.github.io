@@ -27,6 +27,7 @@ body {
 	font-family: 'metropolislight';
 	content: ' ';
 	scrollbar-width: none;
+	margin:0;
 }
 
 a {
@@ -46,12 +47,15 @@ a {
 	height:10vh;
 }
 .search_box{
-	background-color: rgba(209, 209, 224, 0);
+	color: #ffffff;
+	/* background-color: rgba(209, 209, 224, 0); */
+	background-color:rgba(0,0,0,0.05);
 	border: none;
 	border-bottom: 1px solid #d3d3d3;
-	height: 1.75em;
+	height: 2em;
 	width: 75%;
 	font-size: 1.2em;
+	font-weight: lighter;
 	padding-left:5px;
 	transition: all 0.3s;
 	display:block;
@@ -60,7 +64,9 @@ a {
 .search_box:focus {
 	border-bottom: 1px solid #994d00;
 	box-shadow: 0 1px 0 0 #994d00;
-	background-color: rgba(209, 209, 224, 0.05);
+	/* background-color: rgba(209, 209, 224, 0.05); */
+	background-color:rgba(0,0,0,0.15);
+	outline: none;
 }
 @media (max-width: 1025px) {
 	#search_grid { height: 45vh; }
@@ -70,6 +76,10 @@ a {
 
 /*------------------------------------------------------*/
 /* Bookmark grid styles */
+#bookmark-row {
+	background-color:rgba(0,0,0,0.25);
+}
+
 .bookmark {
 	height:7vh;
 	display: flex;
@@ -88,6 +98,7 @@ a {
 	color: inherit;
 	border-radius:10px;
 	transition:all .4s ease;
+	border-radius:10px;
 }
 .bookmark a:hover{
 	border-radius:20px;
@@ -97,8 +108,9 @@ a {
 }
 
 @media (max-width: 1025px) {
-	.bookmark {width:50%; height:20vh;}
-	.bookmark_margin {display:none;}
+	.row {display:inline-block;}
+	.bookmark {width:49%; height:20vh; display:inline-block;}
+	.bookmark_margin {display:none; width:0;}
 	.bookmark a { width:100%; font-size:xx-large; border-radius:0; border:1px solid grey; background-color:rgba(102,102, 102, 0.5); }
 	.bookmark a:hover { background-color:rgba(102, 102, 102, 0.9); }
 }
@@ -156,7 +168,7 @@ a {
 	height:5vh;
 }
 .big_sep_div {
-	height:25vh;
+	height:45vh;
 }
 #vert_line{
 	width:1px;
@@ -166,7 +178,7 @@ a {
 #line, #first_line {
 	height:0px;
 	border-bottom:1px solid #d3d3d3;
-	margin:2vh 10%;
+	margin:2vh;
 }
 @media (max-width: 1025px) {
 	.margin { display: none; }
@@ -207,7 +219,7 @@ a {
 .drop_cont:hover .drop_link {background-color: rgba(0,0,0,1);}
 
 @media (max-width: 1025px) {
-	.drop_cont {width:50%; height:20vh;}
+	.drop_cont {width:49%; height:20vh; }
 	.drop_cont .bookmark {width:100%;}
 	.drop_list {width:50%; height:20vh;}
 }
