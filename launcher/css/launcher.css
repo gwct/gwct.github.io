@@ -54,7 +54,7 @@ a {
 	border-bottom: 1px solid #d3d3d3;
 	height: 2em;
 	width: 75%;
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: lighter;
 	padding-left:5px;
 	transition: all 0.3s;
@@ -183,7 +183,7 @@ a {
 	.top_sep_div { display: none; }
 	.big_sep_div { display: none; }
 	#line { margin: 4vh 0; }
-	#first_line { height:1vh; margin:1vh 10%;  border:0; }
+	#first_line { height:1vh; margin:5vh; border:0; }
 }
 
 #map_span { padding-left: 5px; padding-top:5px; font-size:x-large; color:#FFD700;}
@@ -193,6 +193,9 @@ a {
 	position:absolute; 
 	top: 0; 
 	height: 62px;
+}
+@media (max-width: 1025px) {
+	#map_span { width:0; display: none; }
 }
 
 /*------------------------------------------------------*/
