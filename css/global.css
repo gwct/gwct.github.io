@@ -65,7 +65,7 @@ img { width: 100%; }
 /*------------------------------------------------------*/
 /* Desktop nav bar styles */
 #logo_nav {
-	height:5vh;
+	max-height:5vh;
 	width:auto;
 	float:left;
 	padding:5px;
@@ -245,6 +245,7 @@ the dropdowns
 }
 #mobile_logo_nav {
 	height:5vh;
+	width:auto;
 	float:left;
 }
 .mobile_drop {
