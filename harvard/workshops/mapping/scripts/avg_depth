@@ -1,0 +1,8 @@
+#!/bin/bash
+# An awk wrapper to print out average read depth from a samtools depth file
+
+DEPTH=$(awk '{ total += $3; count++ } END { print total/count }' $1)
+
+echo "----------------------------"
+echo "Average read depth: $DEPTH"
+echo "----------------------------"
