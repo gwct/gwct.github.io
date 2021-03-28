@@ -193,6 +193,7 @@ img { width: 100%; }
 }
 #mobile_logo_nav {
 	height:5vh;
+	width: auto;
 	float:left;
 }
 .mobile_drop {
