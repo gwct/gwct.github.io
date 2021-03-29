@@ -541,7 +541,7 @@ html_template = """
                                 <p>Compared to the previous 95.015%, the % identity has decreased with an iteration of mapping as expected. This means we are likely capturing more variation in this 
                                     version of the pseudo-reference.</p>
 
-                                <h3>This brings us to <a href="end.html">the end</a> of our workshop. Thanks for attending!</h3>
+                                <h3>This brings us to the end of our workshop. Thanks for attending!</h3>
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
