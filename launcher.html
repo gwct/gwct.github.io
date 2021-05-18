@@ -367,11 +367,18 @@
 						<!-- <a href="http://www.intellicast.com/National/Radar/Current.aspx?location=USIL1114&animate=true">Radar</a> -->
 					</div>
 					<div class="bookmark">
+						<a href="https://www.wunderground.com/maps/radar/current/hfd">Radar MA</a>
+					</div>
+					<div class="bookmark">
 						<a href="https://www.wunderground.com/maps/radar/current/myl">Radar MT</a>
 					</div>
 					<div class="bookmark">
 						<!-- <a href="http://www.wunderground.com/cgi-bin/findweather/hdfForecast?query=47403">IN</a> -->
 						<a href="https://www.wunderground.com/weather/us/in/bloomington">IN</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://www.wunderground.com/weather/us/ma/somerville">MA</a>
+						<!-- <a href="http://www.wunderground.com/cgi-bin/findweather/hdfForecast?query=59801">MT</a> -->
 					</div>
 					<div class="bookmark">
 						<a href="https://www.wunderground.com/weather/us/mt/missoula">MT</a>
@@ -424,6 +431,21 @@
 			</div>
 			<div class="col-20-24" id="weather_cont">
 				<script>getWeatherIN();</script>
+			</div>
+			<div class="col-1-24 margin"></div>
+		</div>
+
+		<div class="col-24-24 sep_div"></div>
+
+		<div class="row" id="env_banner">
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
+				<div id="clock_cell">
+					<span id="in">Boston:</span>
+				</div>
+			</div>
+			<div class="col-20-24" id="weather_cont">
+				<script>getWeatherMA();</script>
 			</div>
 			<div class="col-1-24 margin"></div>
 		</div>
