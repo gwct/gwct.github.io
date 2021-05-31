@@ -106,9 +106,9 @@ a {
 }
 
 @media (max-width: 1025px) {
-	.row {display:inline-block;}
-	.bookmark {width:49%; height:20vh; display:inline-block;}
-	.bookmark_margin {display:none; width:0;}
+	.row {display:inline-block; }
+	.bookmark {width:49%; height:20vh; display:inline-block; }
+	.bookmark_margin {display:none; width:0; }
 	.bookmark a { width:100%; font-size:xx-large; border-radius:0; border:1px solid grey; background-color:rgba(102,102, 102, 0.5); }
 	.bookmark a:hover { background-color:rgba(102, 102, 102, 0.9); }
 }
@@ -186,7 +186,7 @@ a {
 	.top_sep_div { display: none; }
 	.big_sep_div { display: none; }
 	#line { margin: 4vh 0; }
-	#first_line { height:1vh; margin:5vh; border:0; }
+	#first_line { height:1vh; margin:5vh 0; }
 }
 
 #map_span { padding-left: 5px; padding-top:5px; font-size:x-large; color:#FFD700;}
