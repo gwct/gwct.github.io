@@ -114,6 +114,22 @@ html_template = """
 		<div class="col-4-24" id="margin"></div>
 	</div>
 
+	<div class="row" id="link-section">
+		<div class="col-4-24" id="margin"></div>
+		<div class="col-2-24" id="link-img-col">
+			<a href="https://github.com/goodest-goodlab/pseudo-it" id="link-img-link" target="_blank">
+				<img class="pure-img" id="link-img" src="img/logo/pseudo-it-link-logo.png">
+			</a>
+		</div>
+
+		<div class="col-14-24" id="link-text">
+			<b><a href="https://github.com/goodest-goodlab/pseudo-it" target="_blank">Pseudo-it</a></b></br>	
+				Software developed in the Good lab to reduce reference bias in reference-based genome assembly
+				using an iterative mapping process to generate pseudo-genomes.
+		</div>
+		<div class="col-4-24" id="margin"></div>
+	</div>
+
 	<div class="row" id="section-header-row">
 		<div class="col-2-24" id="margin"></div>
 		<div class="col-20-24" id="section_header">Project resources</div>

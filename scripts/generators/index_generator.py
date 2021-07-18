@@ -37,9 +37,11 @@ html_template = """
 		</div>
 		<div class="col-1-24" id="margin"></div>
 		<div class="col-15-24" id="bio_text">
-			<h3>Hi! I am a postdoctoral research associate in the Division of Biological Sciences at the University of Montana under 
-			the advisement of <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good</a>.</h3> I previously studied at Indiana University with 
-				<a href="http://www.indiana.edu/~hahnlab/" target="_blank">Matt Hahn</a>.
+			<h3>Hi! I am a Bioinformatics Scientist in the <a href="https://informatics.fas.harvard.edu/" target="_blank">FAS Informatics Group</a> at
+					Harvard University.</h3>
+					
+			<p>I was recently a postdoctoral researcher at the University of Montana in <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good's lab</a>,
+				and I studied at Indiana University under the advisement of <a href="http://www.indiana.edu/~hahnlab/" target="_blank">Matt Hahn</a>.</p>
 			<p>I'm excited to understand the processes and patterns of molecular evolution by using genomics and phylogenetics, and working 
 				through some of the problems that vast amounts of genomic data has presented. To this end, I have worked on modeling mutation rate variation 
 				in mammals, detecting convergent evolution on genomic data, and analyzing gene families in a number of species. I contributed to latest 
