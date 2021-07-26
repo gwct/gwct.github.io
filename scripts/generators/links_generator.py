@@ -61,7 +61,7 @@ html_template = """
 	<div class="row" id="link-section">
 		<div class="col-4-24" id="margin"></div>
 		<div class="col-2-24" id="link-img-col">
-			<a href="https://gwct.github.io/gwct/" id="link-img-link" target="_blank">
+			<a href="https://github.com/gwct/gwct" id="link-img-link" target="_blank">
 				<img class="pure-img" id="link-img" src="img/logo/gwct-link-logo.png">
 			</a>
 		</div>
@@ -80,7 +80,7 @@ html_template = """
 	<div class="row" id="link-section">
 		<div class="col-4-24" id="margin"></div>
 		<div class="col-2-24" id="link-img-col">
-			<a href="https://gwct.github.io/core/" id="link-img-link" target="_blank">
+			<a href="https://github.com/gwct/core" id="link-img-link" target="_blank">
 				<img class="pure-img" id="link-img" src="img/logo/core-link-logo-2.png">
 			</a>
 		</div>
@@ -101,22 +101,6 @@ html_template = """
 	<div class="row" id="link-section">
 		<div class="col-4-24" id="margin"></div>
 		<div class="col-2-24" id="link-img-col">
-			<a href="https://hahnlab.github.io/CAFE/" id="link-img-link" target="_blank">
-				<img class="pure-img" id="link-img" src="img/logo/cafe-link-logo.png">
-			</a>
-		</div>
-
-		<div class="col-14-24" id="link-text">
-			<b><a href="https://hahnlab.github.io/CAFE/" target="_blank">Computational Analysis of Gene Family Evolution</a></b></br>	
-				Software developed in the Hahn lab to estimate rates of gene family evolution and 
-				reconstruct ancestral gene counts.
-		</div>
-		<div class="col-4-24" id="margin"></div>
-	</div>
-
-	<div class="row" id="link-section">
-		<div class="col-4-24" id="margin"></div>
-		<div class="col-2-24" id="link-img-col">
 			<a href="https://github.com/goodest-goodlab/pseudo-it" id="link-img-link" target="_blank">
 				<img class="pure-img" id="link-img" src="img/logo/pseudo-it-link-logo.png">
 			</a>
@@ -126,6 +110,22 @@ html_template = """
 			<b><a href="https://github.com/goodest-goodlab/pseudo-it" target="_blank">Pseudo-it</a></b></br>	
 				Software developed in the Good lab to reduce reference bias in reference-based genome assembly
 				using an iterative mapping process to generate pseudo-genomes.
+		</div>
+		<div class="col-4-24" id="margin"></div>
+	</div>
+
+	<div class="row" id="link-section">
+		<div class="col-4-24" id="margin"></div>
+		<div class="col-2-24" id="link-img-col">
+			<a href="https://hahnlab.github.io/CAFE/" id="link-img-link" target="_blank">
+				<img class="pure-img" id="link-img" src="img/logo/cafe-link-logo.png">
+			</a>
+		</div>
+
+		<div class="col-14-24" id="link-text">
+			<b><a href="https://hahnlab.github.io/CAFE/" target="_blank">Computational Analysis of Gene Family Evolution</a></b></br>	
+				Software developed in the Hahn lab to estimate rates of gene family evolution and 
+				reconstruct ancestral gene counts.
 		</div>
 		<div class="col-4-24" id="margin"></div>
 	</div>
