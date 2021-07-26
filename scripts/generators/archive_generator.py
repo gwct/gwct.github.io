@@ -22,6 +22,29 @@ html_template = """
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">July 25, 2021</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="arc_entry">
+		<ul>
+			<p>This April I attended <a href="https://physanth.org/" target="_blank">AABA's</a> virtual meeting and gave a talk about primate mutation rates. I summarized
+				all that we have learned about the rate at which mutations accumulate in primates, and how this changes for different types of mutations. Check out
+				the slides <a href="slides/2021.04.15-AABA-mutation-rates.pptx" download>here</a>!</p>
+
+			<p>Importantly, at the beginning of July I started a position as a Bioinformatics Scientist at Harvard University! I'm really excited about this position 
+				because I'll have both the freedom to pursue research and the stability of a staff position. I'll be working in 
+				<a href="https://scholar.harvard.edu/tsackton/home" target="_blank">Tim Sackton's</a> <a href="https://informatics.fas.harvard.edu/" target="_blank">group</a> 
+				on a range of comparative and population genomics questions and software development. For now, I'm working remotely still in Missoula, but will be moving
+				to Cambridge in September, and I'm really looking forward to working with the scientists at Harvard!</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
+
+
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">August 18, 2020</div>
         <div class="col-2-24" id="margin"></div>
 	</div>

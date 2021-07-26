@@ -232,6 +232,9 @@ html_template = """
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
+			<p><span class="pub_title">Pedigree sequencing and mutation rate variation in primates</span>
+			</br>&nbsp;&nbsp;American Association of Biological Anthropologists 2021 - Virtual - Invited Talk - <a href="slides/2021.04.15-AABA-mutation-rates.pptx">Slides</a></p>
+
 			<p><span class="pub_title">Patterns of molecular evolution in Arthropods (with Elias Dohmen)</span>
 			</br>&nbsp;&nbsp;Arthropod Genomics Symposium 2020 - Virtual - Invited Talk - <a href="slides/2020.07.21-AGS-i5k.pptx">Slides</a></p>
 
