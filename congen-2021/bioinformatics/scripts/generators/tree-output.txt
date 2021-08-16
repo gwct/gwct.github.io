@@ -1,0 +1,12 @@
+.
+├── README.md
+├── data
+│   ├── annotation-files
+│   │   └── Macaca_mulatta.Mmul_8.0.1.97.chromes.gtf.gz
+│   └── sv-calls
+│       └── macaque-cnvs-filtered.bed
+├── etc
+├── results
+└── scripts
+
+6 directories, 3 files
