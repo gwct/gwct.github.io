@@ -1,0 +1,545 @@
+############################################################
+# For ConGen2021 site, 08.21
+# This generates the file "commands.html"
+############################################################
+
+import sys, os
+sys.path.append('..')
+import lib.read_chunks as RC
+
+######################
+# HTML template
+######################
+
+html_template = """
+<!doctype html>
+    {head}
+
+<body>
+    {nav}
+
+    <a class="internal-link" name="concepts"></a>
+   	<div class="row" id="header">Command concepts</div>
+
+    <div class="row" id="body-row">
+        <div class="col-3-24" id="side-nav-cont">
+            <div id="side-nav">
+                <span id="side-header">Page contents</span>
+                <ul>
+                    <li><a href="commands.html#concepts">Commands as concepts</a></li>
+                    <li><a href="commands.html#text-proc">Commands as text</a></li>
+                    <li><a href="commands.html#text-editors">Text editors</a></li>
+                    <li><a href="commands.html#philosophy">The Unix philosophy</a></li>
+                    <li><a href="commands.html#pipe-redirect">Piping and redirecting</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-21-24" id="main-cont">
+
+            <div class="row" id="top-row-cont">
+                <div class="col-24-24" id="top-row"></div>
+            </div>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Rhesus macaque dataset</div>
+                </div>
+            </div>
+
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+                            <p>
+                                Today, we're going to use what we've learned about the command line to perform some basic bioinformatics tasks on a sample
+                                of 32 rhesus macaque whole genomes. Rhesus macaques are an Old World monkey, found throughout southern Asia, and are a common model organism for
+                                the study of human disease and primate evolution. We sequenced these genomes to study the evolution structural variation over different 
+                                timescales (<a href="https://doi.org/10.1093/molbev/msaa303" target="_blank">Thomas et al. 2020</a>).
+                            </p>
+
+                            <div class="row" id="img-row">
+                                <div class="col-4-24" id="margin"></div>
+                                <div class="col-16-24" id="img-col">
+                                    <img id="res-img" src="img/macaque.png">
+                                    <center><span class="fig-caption">Figure 4.1: A Rhesus macaque <a href="https://commons.wikimedia.org/wiki/File:Macaque_India_3.jpg/" target="_blank">(left)</a>
+                                        and the species placement in the primate phylogeny
+                                        <a href="https://flexbooks.ck12.org/cbook/ck-12-college-human-biology-flexbook-2.0/section/7.2/primary/lesson/primate-classification-and-evolution-chumbio/" target="_blank">(right)</a>
+                                        .</span></center>
+                                </div>
+                                <div class="col-4-24" id="margin"></div>
+                            </div>
+
+                            <p>
+                                As a very brief overview, we sequenced these genomes and mapped the reads to the <
+                                <a href="https://uswest.ensembl.org/Macaca_mulatta/Info/Index" target="_blank">macaque reference genome</a>. Then, using programs that look at the orientation
+                                of the mapped reads as well as the read depth, we identified regions in each sample with may have been deleted or duplicated. Today, we'll look at these structural
+                                variant calls.
+                            </p>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+                                
+            <a class="internal-link" name="text-proc"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Bed files</div>
+                </div>
+            </div>
+
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            <p>
+                                You'll find in your project repo (folder) a file at the following path: <code class="inline">data/sv-calls/macaque-svs-filtered.bed</code>
+                            </p>
+
+
+                            <p>
+                                Note that this file has the extension <code class="inline">.bed</code>. This tells us something about how the text within the file is formatted.
+                                If you remember our central dogma for Unix commands (<b>formatted text -> command -> processed text</b>), you'll know that being familiar
+                                with how our files are formatted is really important.
+                            </p>
+
+                            <p>
+                                So what is a <code class="inline">.bed</code> file? <code class="inline">Bed</code> files are used to indicate regions within a genome. It
+                                is an extremely flexible format -- these regions can represent anything. 
+                            </p>
+
+                            <p>
+                                In it's most basic form, a <code class="inline">.bed</code> file consists of three columns of text, separated by a tab character. The first
+                                column represents the chromosome or assembly scaffold of the region, while the second indicates the starting coordinate, and the third indicates
+                                the ending coordinate of the region.
+                            </p>
+
+                            <p>Each row represents a separate region</p>
+
+                            <p>
+                                Additional columns can be defined, particularly of interest is a fourth column, which indicates a name or ID for the current region.
+                                See these links for more information about <code class="inline">.bed</code> files:
+
+                                <ul>
+                                    <li><a href="https://bedtools.readthedocs.io/en/latest/content/general-usage.html" target="_blank">bedtools description of BED format</a></li>
+                                    <li><a href="http://genome.ucsc.edu/FAQ/FAQformat#format1" target="_blank">UCSC description of BED format</a></li>
+                                </ul>
+                            </p>
+                                
+                            <p>
+                                Let's take a look at our <code class="inline">.bed</code> file:
+                            </p>
+
+                            <center><pre class="cmd"><code>less -S data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">less</td><td class="tcol-2">A Linux text file viewer (use space to scroll down, b to scroll up, and q to exit)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">-S</td><td class="tcol-2">Turn off line-wrapping within less (use the left and right arrow keys to scroll left and right).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to view</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <p>You should see something like this:</p>
+
+                            <pre class="text"><code>chr1    89943   90471   chr1:89943:&lt;DUP&gt;:528:1907.19
+chr1    130740  131675  chr1:130740:&lt;DEL&gt;:935:285.63
+chr1    218574  219534  chr1:218574:&lt;DUP&gt;:960:5699.01
+chr1    219608  220078  chr1:219608:&lt;DUP&gt;:470:2074.69
+chr1    519434  541582  chr1:519434:&lt;DUP&gt;:22148:1673.64
+chr1    519473  542033  chr1:519473:&lt;DUP&gt;:22560:2560.16
+chr1    520173  541800  chr1:520173:&lt;DEL&gt;:21627:2955.11
+chr1    525401  525806  chr1:525401:&lt;DEL&gt;:405:2986.21
+chr1    541132  590572  chr1:541132:&lt;DEL&gt;:49440:316.41
+chr1    552968  582234  chr1:552968:&lt;DUP&gt;:29266:189.32
+chr1    766381  766933  chr1:766381:&lt;DEL&gt;:552:5099.0</code></pre> 
+
+                            <p>
+                                As defined above, this bed file has text in columns, separated by tabs. The first column being the chromosome of the region, second
+                                being the start coordinate, and third being the end coordinate. This <code class="inline">.bed</code> file also has the optional
+                                fourth column giving us a name or ID for each region. In this case, the name indicates whether the structural variant call is a
+                                deletion (&lt;DEL&gt;) or a duplication (&lt;DUP&gt;).
+                            </p>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="internal-link" name="text-editors"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Summarizing SVs from the command line</div>
+                </div>
+            </div>
+
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+                            <p>
+                                So our collaborator hands us this BED file, and we want to get a general idea about the called variants. What can we do from
+                                the command line?
+                            </p>
+
+                            <h3>TASK 1: How many structural variants are there?</h3>
+
+                                <p>
+                                    The most basic thing we'll want to know is how many structural variants have been called. Recalling that each line in a
+                                    bed file represents one region, which in this case means one structural variant, we can simply count the number of lines
+                                    in the file with the <code class="inline">wc</code> command:
+                                </p>
+
+                                <center><pre class="cmd"><code>wc -l data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+
+                                <div class="table-cont">
+                                    <table class="cmd-table">
+                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                        <tr>
+                                            <td class="tcol-1">wc</td><td class="tcol-2">The Linux word count command. Counts the number of lines, words, and
+                                                characters in an input file.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">-l</td><td class="tcol-2">Tells <code class="inline">wc</code> to only count number of lines</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to count</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <p>
+                                    When I do this, I see
+                                </p>
+
+                                <pre class="text"><code>3646</code></pre>
+
+                                <p>
+                                    Which means there are a total of 3,646 structural variants called in our sample of 32 macaques.
+                                </p>
+
+                            <h3>TASK 2: How many DELETIONS are there?</h3>
+
+                                <p>
+                                    In order to answer this question, we must first separate out the deletions from the duplications. Then we can take the resulting text
+                                    and use <code class="inline">wc -l</code> again.
+                                </p>
+
+                                <p>
+                                    As with many problems in data science and scripting, there are many possible solutions. What we'll use is the Unix pattern matching
+                                    command, <code class="inline">grep</code> along with the piping function we learned about before. Let's first just run the pattern
+                                    matching command:
+                                </p>
+
+                                <center><pre class="cmd"><code>grep "&lt;DEL&gt;" data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+
+                                <div class="table-cont">
+                                    <table class="cmd-table">
+                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                        <tr>
+                                            <td class="tcol-1">grep</td><td class="tcol-2">A Linux string search and pattern matching command that takes
+                                                as input a file or stream from a pipe and searches for a given string.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">"&lt;DEL&gt;"</td><td class="tcol-2">The pattern or specific string we want to search for</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <p>
+                                    This should print out a whole lot of lines from our input file to the screen, as is the default behavior for most Unix commands.
+                                    On my screen, the end of this output looks like this:
+                                </p>
+
+                                <pre class="text"><code>chrX    135682628       135718741       chrX:135682628:&lt;DEL&gt;:36113:4892.62
+chrX    137821409       137821980       chrX:137821409:&lt;DEL&gt;:571:17208.79
+chrX    146387029       146422365       chrX:146387029:&lt;DEL&gt;:35336:4990.42
+chrY    4875713 4904730 chrY:4875713:&lt;DEL&gt;:29017:9217.23
+chrY    4902981 4904657 chrY:4902981:&lt;DEL&gt;:1676:1876.99
+chrY    6907076 6907624 chrY:6907076:&lt;DEL&gt;:548:578.79
+chrY    7143528 7144240 chrY:7143528:&lt;DEL&gt;:712:915.06
+chrY    7424851 7429392 chrY:7424851:&lt;DEL&gt;:4541:1978.63
+chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</code></pre> 
+
+                                <p>
+                                    This is similar to what we saw when we just looked at the raw file with <code class="inline">less</code>, but if you scrolled
+                                    through this you'll notice that all the lines printed are deletions, with the &lt;DEL&gt; string. This is because <code class="inline>grep</code>
+                                    took out search string and only returned lines that had that string in it
+                                </p>
+
+                                <p>
+                                    Now then, how does this help us know how MANY deletions there are. Well, we have two options:
+                                    <ol>
+                                        <li>   
+                                            We could save the output from grep to a file with a redirect (<code class="inline">&gt;</code>) and then use 
+                                            <code class="inline">wc -l</code> on that file.
+                                        </li>
+                                        <li>
+                                            We could directly pipe (<code class="inline">|</code>) the output from <code class="inline">grep</code>
+                                            to <code class="inline">wc -l</code>.
+                                        </li>
+                                </p>
+
+                                <p>
+                                    Let's try option number two, with piping:
+                                </p>
+
+                                <center><pre class="cmd"><code>grep "&lt;DEL&gt;" data/sv-calls/macaque-svs-filtered.bed | wc -l</code></pre></center>
+
+                                <div class="table-cont">
+                                    <table class="cmd-table">
+                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                        <tr>
+                                            <td class="tcol-1">grep</td><td class="tcol-2">A Linux string search and pattern matching command that takes
+                                                as input a file or stream from a pipe and searches for a given string.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">"&lt;DEL&gt;"</td><td class="tcol-2">The pattern or specific string we want to search for</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">|</td><td class="tcol-2">The pipe character means the output from the command specified before it
+                                                will be used as the input tot he command specified after it</td>
+                                        </tr>
+                                    </table>
+                                </div>                            
+
+                                <p>
+                                    When I do this, I see
+                                </p>
+
+                                <pre class="text"><code>3214</code></pre>
+
+                                <p>
+                                    This means that out of our total 3,646 structural variants, 3,214, or 88%, are deletions.
+                                </p>                            
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="internal-link" name="proj-folder"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Introduction to awk</div>
+                </div>
+            </div>
+
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            <h3>TASK 3: What is the length of each variant?</h3>
+
+                                <p>
+                                    To answer this question from the command line, we'll first introduce a new command: <code class="inline">awk</code>
+                                </p>
+
+                                <p>
+                                    <a href="https://www.gnu.org/software/gawk/manual/gawk.html#Getting-Started" target="_blank">awk</a> is slightly different from the other
+                                    commands we've learned about in that it is a fully defined scripting language meant to be used in conjunction with other Unix commands.
+                                    Given that, it has a much more elaborate <em>syntax</em> than the rest of the commands: it doesn't just have input parameters, but also 
+                                    accepts user defined rules and functions.
+                                </p>
+
+                                <p>
+                                    This makes <code class="inline">awk</code> extremely powerful, and is our first step into scripting, since we will use the <code class="inline">awk</code>
+                                    syntax to define our own commands.
+                                </p>
+
+                                <p>
+                                    <code class="inline">awk</code> can be run in two ways:
+
+                                    <ol>
+                                        <li>The traditional scripting/programming way, where you write your rules in a file.</li>
+                                        <li>The Unix way, where you write your rules directly in the command line. These are generally referred to as <b>one-liners</b>.</li>
+                                    </ol>
+
+                                    For one-liners, the general command typed would be:
+                                </p>
+
+                                <center><pre class="cmd-ne"><code>awk '&lt;user-defined rules&gt;' &lt;input file&gt;</code></pre></center>
+
+                                <div class="table-cont">
+                                    <table class="cmd-table">
+                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                        <tr>
+                                            <td class="tcol-1">awk</td><td class="tcol-2">A Linux text processing language</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">'&lt;user-defined rules&gt;'</td><td class="tcol-2">The user-coded program to run</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">&lt;input file&gt;</td><td class="tcol-2">The path to the file on which to run the program</td>
+                                        </tr>
+                                    </table>
+                                </div>     
+
+                                <p>
+                                    Like many other Unix commands, <code class="inline">awk</code> processes the input text in the file line-by-line, and generally for each line (or <b>record</b>)
+                                    it processes one column (or <b>field</b>) at a time. By default, <code class="inline">awk</code> assumes that fields are separated
+                                    by tab characers, but this can be changed with an input option.
+                                </p>
+
+                                <p>
+                                    <b>Fields</b> (columns) in the file are represented by variables specified by a dollar sign (<code class="inline">$</code>) and then the
+                                    number of the column. For instance, the first column in a file is represented by <code class="inline">$1</code>, the fourth column by
+                                    <code class="inline">$4</code>, and so on.
+                                </p>
+
+                                <p>
+                                    As a brief example, let's say we wanted to extract only the column in our input bed file that represents the end of each region. We know
+                                    from our <code class="inline">.bed</code> format specifications that this is the third column. So we would type:
+                                </p>
+
+                                <center><pre class="cmd"><code>awk '{{print $3}}' data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+
+                                <div class="table-cont">
+                                    <table class="cmd-table">
+                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                        <tr>
+                                            <td class="tcol-1">awk</td><td class="tcol-2">A Linux text processing language</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">'{{print $3}}'</td><td class="tcol-2">The user-coded program to run. In this case, we only want to print
+                                                the third column of the file to the screen.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file on which to run 
+                                                the program</td>
+                                        </tr>
+                                    </table>
+                                </div>                                     
+
+
+                                <p>
+                                    The last few lines of this output should be:
+                                </p>
+
+                                <pre class="text"><code>135715923
+135718741
+137821980
+145552312
+146422365
+4904730
+4904657
+6907624
+7144240
+7429392
+10911159</code></pre> 
+
+                                <p>
+                                    We can do this with any other column we want, and we can <b>perform operations</b> on the values in those columns as well, which
+                                    brings us to how we find out the length of each region in the <code class="inline">.bed</code> file.
+                                </p>
+
+                                <p>
+                                    Since <code class="inline">awk</code> is a fully realized scripting language, it supports basic mathematical operations. Since we have
+                                    the start and end coordinates of each region, we can just tell <code class="inline">awk</code> to subtract the end from the start,
+                                    giving us the length of each region:
+                                </p>
+
+                                <center><pre class="cmd"><code>awk '{{print $3 - $2}}' data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+
+                                <div class="table-cont">
+                                    <table class="cmd-table">
+                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                        <tr>
+                                            <td class="tcol-1">awk</td><td class="tcol-2">A Linux text processing language</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">'{{print $3 - $2}}'</td><td class="tcol-2">The user-coded program to run. In this case, we are telling awk
+                                                to take the value in the third column and subtract the value in the second column of each row in the file.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file on which to run 
+                                                the program</td>
+                                        </tr>
+                                    </table>
+                                </div>   
+
+                                <p>
+                                    The last few lines of this output should be:
+                                </p>
+
+                                <pre class="text"><code>36311
+36113
+571
+1156
+35336
+29017
+1676
+548
+712
+4541
+7877</code></pre>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row" id="btm-nav">
+        <div class="col-3-24" id="nav-bnt-margin"></div>
+        <div class="col-6-24" id="nav-btn-cont">
+            <div class="nav-btn">
+                <a href="organization.html">&lt;&nbsp;Previous</a>    
+            </div>
+        </div>
+        <div class="col-6-24" id="nav-margin"></div>
+        <div class="col-6-24" id="nav-btn-cont">
+            <div class="nav-btn">
+                <a href="#">Next&nbsp;&gt;</a>
+            </div>
+        </div>
+        <div class="col-3-24" id="nav-btn-margin"></div>
+    </div>
+
+    {footer}
+</body>
+</html>
+"""
+
+######################
+# Main block
+######################
+pagefile = "macaque-svs.html";
+print("Generating " + pagefile + "...");
+title = "ConGen2021 - Intro to Bioinformatics"
+
+
+head = RC.readHead(title);
+nav = RC.readNav(pagefile);
+footer = RC.readFooter();
+
+outfilename = "../../" + pagefile;
+
+with open(outfilename, "w") as outfile:
+    outfile.write(html_template.format(head=head, nav=nav, footer=footer));
