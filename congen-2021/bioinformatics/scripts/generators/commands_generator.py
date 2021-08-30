@@ -124,6 +124,10 @@ html_template = """
                                 <center><b>formatted text -> command -> processed text</b></center>
 
                             <p>
+                                I refer to this as the central dogma of data science.
+                            </p>
+
+                            <p>
                                 This means 2 things:
 
                                 <ol>
@@ -420,7 +424,7 @@ html_template = """
         <div class="col-6-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
             <div class="nav-btn">
-                <a href="#">Next&nbsp;&gt;</a>
+                <a href="macaque-svs.html">Next&nbsp;&gt;</a>
             </div>
         </div>
         <div class="col-3-24" id="nav-btn-margin"></div>

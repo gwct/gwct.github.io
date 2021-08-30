@@ -113,11 +113,15 @@ html_template = """
                     <center><h1><a href="start.html" id="start-btn">Get Started</a></h1></center>
 
                     <div class="row" id="link-row">
-                        <div class="col-4-24" id="inner-margin"></div>
                         <div class="col-4-24" id="btm-link"><a href="organization.html">Project Organization</a></div>
-                        <div class="col-8-24" id="inner-margin"></div>
+                        <div class="col-1-24" id="inner-margin"></div>
                         <div class="col-4-24" id="btm-link"><a href="commands.html">Command Concepts</a></div>
-                        <div class="col-4-24" id="inner-margin"></div>
+                        <div class="col-1-24" id="inner-margin"></div>
+                        <div class="col-4-24" id="btm-link"><a href="macaque-svs.html">Macaque SVs</a></div>
+                        <div class="col-1-24" id="inner-margin"></div>
+                        <div class="col-4-24" id="btm-link"><a href="#">Wolf SNPs</a></div>
+                        <div class="col-1-24" id="inner-margin"></div>
+                        <div class="col-4-24" id="btm-link"><a href="#">Advanced Topics</a></div>
                     </div>
                 </div>
                 <div class="col-2-24" id="inner-margin"></div>

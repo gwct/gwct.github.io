@@ -270,6 +270,9 @@ img { width: 100%; }
 #header::after {
 	font-size:unset;
 }
+#top-row-cont{
+	background-color: #ececec;
+}
 #top-row{
 	height:2vh;
 	background-color: #ececec;
@@ -752,4 +755,8 @@ table {
 #section_line {
     height:1px;
     border-top:1px solid #999999;
+}
+#task-sep {
+	height: 2px;
+	border-top: 1px solid #999999;
 }

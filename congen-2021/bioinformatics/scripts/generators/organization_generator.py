@@ -34,9 +34,23 @@ html_template = """
 
         <div class="col-21-24" id="main-cont">
 
+
+
+
             <div class="row" id="top-row-cont">
-                <div class="col-24-24" id="top-row"></div>
+                <div class="col-2-24" id="inner-margin"></div>
+                <div class="col-20-24" id="top-text">
+                    <p>
+                        One of the most important and under-taught aspects of data science is project organization. But part of the reason it isn't mentioned that
+                        often is because there are so many good ways to do it. What follows is an explanation of how we setup this project, with justifications
+                        for why we think this is a good setup. Hopefully, you can use this as the basis to figure out a file organization system that works for 
+                        you!
+                    </p>
+                </div>
+                <div class="col-2-24" id="inner-margin"></div>
             </div>
+
+            
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
                     <div id="section-header">File system refresher</div>
@@ -48,12 +62,6 @@ html_template = """
                     <div class="row" id="section-row">
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
-                            <p>
-                                One of the most important and under-taught aspects of data science is project organization. But part of the reason it isn't mentioned that
-                                often is because there are so many good ways to do it. What follows is an explanation of how we setup this project, with justifications
-                                for why we think this is a good setup. Hopefully, you can use this as the basis to figure out a file organization system that works for 
-                                you!
-                            </p>
 
                             <p>
                                 Any project organization will ultimately come back to understanding how file systems work. Whether you're on Linux, Mac, Windows, or
@@ -174,7 +182,7 @@ html_template = """
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1"><code class="inline">Scripts</code></td>
+                                        <td class="tcol-1"><code class="inline">scripts</code></td>
                                         <td class="tcol-2">Any code that I write for a project goes here.</td>
                                     </tr>
                                     <tr>
