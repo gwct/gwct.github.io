@@ -162,7 +162,7 @@ html_template = """
                         <div class="col-20-24" id="section-content">
                             <p>
                                 There are many programs you could use as a text editor, ranging from the most basic text editing capabilities, to full blown
-                                interactive development environments (IDEs) with syntax highlighting for different languages, remote syncing, git integration
+                                integrated development environments (IDEs) with syntax highlighting for different languages, remote syncing, git integration
                                 and so on.
                             </p>
 
@@ -171,7 +171,14 @@ html_template = """
                                 it's own text editor.
                             </p>
 
-                            PICTURE OF RSTUDIO TEXT EDITOR
+                            <div class="row" id="img-row">
+                                <!-- <div class="col-4-24" id="margin"></div> -->
+                                <div class="col-24-24" id="img-col">
+                                    <img id="res-img" src="img/rstudio-editor.png">
+                                    <center><span class="fig-caption">Figure 3.2: The text editor in your Rstudio interface is highlighted in the orange box.</span></center>
+                                </div>
+                                <!-- <div class="col-4-24" id="margin"></div> -->
+                            </div>
 
                             <p>
                                 Text editors are also available within Linux terminals themselves, in the form of programs such as <code class="inline">nano</code>,

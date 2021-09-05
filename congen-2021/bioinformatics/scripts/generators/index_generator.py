@@ -52,7 +52,7 @@ html_template = """
 
                     <div class="row" id="instructor">
                         <div class="col-4-24" id="inst-img-cont">
-                            <img id="inst-img" src="img/NA.jpg">
+                            <img id="inst-img" src="img/rs.jpg">
                         </div>
                         <div class="col-20-24" id="inst-text">
                             <p><a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>: A postdoc at the University of Montana in 
@@ -119,7 +119,7 @@ html_template = """
                         <div class="col-1-24" id="inner-margin"></div>
                         <div class="col-4-24" id="btm-link"><a href="macaque-svs.html">Macaque SVs</a></div>
                         <div class="col-1-24" id="inner-margin"></div>
-                        <div class="col-4-24" id="btm-link"><a href="#">Wolf SNPs</a></div>
+                        <div class="col-4-24" id="btm-link"><a href="wolf-snps.html">Wolf SNPs</a></div>
                         <div class="col-1-24" id="inner-margin"></div>
                         <div class="col-4-24" id="btm-link"><a href="advanced.html">Advanced Topics</a></div>
                     </div>

@@ -464,7 +464,7 @@ html_template = """
                                         <td class="tcol-1">echo</td><td class="tcol-2">The Unix print command. Values given as input will be printed to the screen.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">$wolf_pop</td><td class="tcol-2">The item to print to the screen. In this case, because {co}wolf_pop{cc} is a
+                                        <td class="tcol-1">${{wolf_pop}}</td><td class="tcol-2">The item to print to the screen. In this case, because {co}wolf_pop{cc} is a
                                             defined variable, we must use the {co}${{}}{cc} symbols to let {co}echo{cc} know to print it's assigned value to the screen, rather
                                             than just the text "wolf_pop".</td>                                       
                                 </table>
@@ -508,7 +508,7 @@ html_template = """
                                             in that file will be used by the program for this run.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">pop_{{wolf_pop}}.txt</td><td class="tcol-2">The path to the file with the sample IDs to keep. In 
+                                        <td class="tcol-1">pop_${{wolf_pop}}.txt</td><td class="tcol-2">The path to the file with the sample IDs to keep. In 
                                             this case, we're using our variable, {co}wolf_pop{cc} to indicate which existing file to use.</td>
                                     </tr>     
                                 </table>
@@ -549,7 +549,7 @@ html_template = """
                                         <td class="tcol-1">echo</td><td class="tcol-2">The Unix print command. Values given as input will be printed to the screen.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">$wolf_pop</td><td class="tcol-2">The item to print to the screen. In this case, because {co}wolf_pop{cc} is a
+                                        <td class="tcol-1">${{wolf_pop}}</td><td class="tcol-2">The item to print to the screen. In this case, because {co}wolf_pop{cc} is a
                                             defined variable, we must use the {co}${{}}{cc} symbols to let {co}echo{cc} know to print it's assigned value to the screen, rather
                                             than just the text "wolf_pop".</td>                                       
                                 </table>
@@ -818,6 +818,39 @@ awk '{{sum += $6}} END {{if (NR > 0) print sum / NR }}' Filtered_NAwolf_n35_vari
                                     If we use our handy {co}ls -lht{cc} command, we can see that the three newest files are of the coastal wolf samples, and that
                                     the script we wrote printed the mean population heterozygosity to the screen.
                                 </p>
+
+                                <h3>Documenting our code with comments and print statements</h3>
+
+                                <p>
+                                    It is also good practice to document what each step of our code does in human-readable language. This is called <b>commenting</b>
+                                    our code. The way to comment code differs between programming languages, but a fairly common method (used in Python, R, and the shell
+                                    scripting we're doing) is with the {co}#{cc} symbol. For languages that use this symbol, any line starting with {co}#{cc} will
+                                    be interpreted as a comment rather than a command to be run.
+                                </p>
+
+                                <p>
+                                    We can also provide some helpful context to the output of our script. Rather than just printing out a number that may be confusing
+                                    to someone else using the script (or even ourselves if we re-run this same script months or years later), we can use {co}echo{cc}
+                                    within the script to print some more information, like that the number printed represents mean population heterozygosity.
+                                </p>
+
+                                <p>
+                                    Feel free to open up your script and follow along as I comment my version and add contextutal print statements:
+                                </p>
+
+                                <center><pre class="cmd"><code>vim het_analysis.sh{cc}</pre></center>
+
+                                <div class="table-cont">
+                                    <table class="cmd-table">
+                                        <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                        <tr>
+                                            <td class="tcol-1">vim</td><td class="tcol-2">An in-terminal text editor available on Linux.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tcol-1">het_analysis.sh</td><td class="tcol-2">The name of the text file to create or view (if it exists).
+                                                The .sh extension indicates this is a <b>shell script</b></td>                                      
+                                    </table>
+                                </div>    
 
                             <h3>TASK 4: Which population has the highest mean heterozygosity?</h3>
 
