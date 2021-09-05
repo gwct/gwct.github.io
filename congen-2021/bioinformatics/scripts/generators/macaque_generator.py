@@ -101,7 +101,7 @@ html_template = """
                         <div class="col-20-24" id="section-content">
 
                             <p>
-                                You'll find in your project repo (folder) a file at the following path: <code class="inline">data/sv-calls/macaque-svs-filtered.bed</code>
+                                You'll find in your project repo (folder) a file at the following path: <code class="inline">data/macaque-svs/macaque-svs-filtered.bed</code>
                             </p>
 
 
@@ -138,7 +138,7 @@ html_template = """
                                 Let's take a look at our <code class="inline">.bed</code> file:
                             </p>
 
-                            <center><pre class="cmd"><code>less -S data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+                            <center><pre class="cmd"><code>less -S data/macaque-svs/macaque-svs-filtered.bed</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -150,7 +150,7 @@ html_template = """
                                         <td class="tcol-1">-S</td><td class="tcol-2">Turn off line-wrapping within less (use the left and right arrow keys to scroll left and right).</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to view</td>
+                                        <td class="tcol-1">data/macaque-svs/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to view</td>
                                     </tr>
                                 </table>
                             </div>
@@ -207,7 +207,7 @@ chr1    766381  766933  chr1:766381:&lt;DEL&gt;:552:5099.0</code></pre>
                                     in the file with the <code class="inline">wc</code> command:
                                 </p>
 
-                                <center><pre class="cmd"><code>wc -l data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+                                <center><pre class="cmd"><code>wc -l data/macaque-svs/macaque-svs-filtered.bed</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -220,7 +220,7 @@ chr1    766381  766933  chr1:766381:&lt;DEL&gt;:552:5099.0</code></pre>
                                             <td class="tcol-1">-l</td><td class="tcol-2">Tells <code class="inline">wc</code> to only count number of lines</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to count</td>
+                                            <td class="tcol-1">data/macaque-svs/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to count</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -335,7 +335,7 @@ chr1    766381  766933  chr1:766381:&lt;DEL&gt;:552:5099.0</code></pre>
                                     lines in our input file that represent deletions:
                                 </p>
 
-                                <center><pre class="cmd"><code>grep "&lt;DEL&gt;" data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+                                <center><pre class="cmd"><code>grep "&lt;DEL&gt;" data/macaque-svs/macaque-svs-filtered.bed</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -348,7 +348,7 @@ chr1    766381  766933  chr1:766381:&lt;DEL&gt;:552:5099.0</code></pre>
                                             <td class="tcol-1">"&lt;DEL&gt;"</td><td class="tcol-2">The pattern or specific string we want to search for</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
+                                            <td class="tcol-1">data/macaque-svs/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -391,7 +391,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     Let's try option number two, with piping:
                                 </p>
 
-                                <center><pre class="cmd"><code>grep "&lt;DEL&gt;" data/sv-calls/macaque-svs-filtered.bed | wc -l</code></pre></center>
+                                <center><pre class="cmd"><code>grep "&lt;DEL&gt;" data/macaque-svs/macaque-svs-filtered.bed | wc -l</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -404,7 +404,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                             <td class="tcol-1">"&lt;DEL&gt;"</td><td class="tcol-2">The pattern or specific string we want to search for</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
+                                            <td class="tcol-1">data/macaque-svs/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
                                         </tr>
                                         <tr>
                                             <td class="tcol-1">|</td><td class="tcol-2">The pipe character means the output from the command specified before it
@@ -505,7 +505,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     from our <code class="inline">.bed</code> format specifications that this is the third column. So we would type:
                                 </p>
 
-                                <center><pre class="cmd"><code>awk '{{print $3}}' data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+                                <center><pre class="cmd"><code>awk '{{print $3}}' data/macaque-svs/macaque-svs-filtered.bed</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -518,7 +518,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                                 the third column of the file to the screen.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file on which to run 
+                                            <td class="tcol-1">data/macaque-svs/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file on which to run 
                                                 the program</td>
                                         </tr>
                                     </table>
@@ -552,7 +552,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     giving us the length of each region:
                                 </p>
 
-                                <center><pre class="cmd"><code>awk '{{print $3 - $2}}' data/sv-calls/macaque-svs-filtered.bed</code></pre></center>
+                                <center><pre class="cmd"><code>awk '{{print $3 - $2}}' data/macaque-svs/macaque-svs-filtered.bed</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -565,7 +565,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                                 to take the value in the third column and subtract the value in the second column of each row in the file.</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file on which to run 
+                                            <td class="tcol-1">data/macaque-svs/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file on which to run 
                                                 the program</td>
                                         </tr>
                                     </table>
@@ -717,7 +717,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     perform more complex operations on a subset of input data:
                                 </p>
 
-                                <center><pre class="cmd"><code>grep "&lt;DEL&gt;" data/sv-calls/macaque-svs-filtered.bed | awk '{{sum += $3 - $2}} END {{if (NR > 0) print sum / NR }}'</code></pre></center>
+                                <center><pre class="cmd"><code>grep "&lt;DEL&gt;" data/macaque-svs/macaque-svs-filtered.bed | awk '{{sum += $3 - $2}} END {{if (NR > 0) print sum / NR }}'</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -730,7 +730,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                             <td class="tcol-1">"&lt;DEL&gt;"</td><td class="tcol-2">The pattern or specific string we want to search for</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
+                                            <td class="tcol-1">data/macaque-svs/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
                                         </tr>
                                         <tr>
                                             <td class="tcol-1">|</td><td class="tcol-2">The pipe character means the output from the command specified before it
@@ -761,7 +761,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     This is pretty close to the overall average of 3,615bp, but a little shorter. What about the average length of duplications?
                                 </p>
 
-                                <center><pre class="cmd"><code>grep "&lt;DUP&gt;" data/sv-calls/macaque-svs-filtered.bed | awk '{{sum += $3 - $2}} END {{if (NR > 0) print sum / NR }}'</code></pre></center>
+                                <center><pre class="cmd"><code>grep "&lt;DUP&gt;" data/macaque-svs/macaque-svs-filtered.bed | awk '{{sum += $3 - $2}} END {{if (NR > 0) print sum / NR }}'</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -774,7 +774,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                             <td class="tcol-1">"&lt;DUP&gt;"</td><td class="tcol-2">The pattern or specific string we want to search for</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">data/sv-calls/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
+                                            <td class="tcol-1">data/macaque-svs/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to search</td>
                                         </tr>
                                         <tr>
                                             <td class="tcol-1">|</td><td class="tcol-2">The pipe character means the output from the command specified before it
