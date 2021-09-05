@@ -121,7 +121,7 @@ html_template = """
                         <div class="col-1-24" id="inner-margin"></div>
                         <div class="col-4-24" id="btm-link"><a href="#">Wolf SNPs</a></div>
                         <div class="col-1-24" id="inner-margin"></div>
-                        <div class="col-4-24" id="btm-link"><a href="#">Advanced Topics</a></div>
+                        <div class="col-4-24" id="btm-link"><a href="advanced.html">Advanced Topics</a></div>
                     </div>
                 </div>
                 <div class="col-2-24" id="inner-margin"></div>

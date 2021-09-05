@@ -948,31 +948,7 @@ awk '{{sum += $6}} END {{if (NR > 0) print sum / NR }}' Filtered_NAwolf_n35_vari
                         <div class="col-2-24" id="inner-margin"></div>
                     </div>
                 </div>
-            </div>
-
-            <a class="internal-link" name="fin"></a>
-            <div class="row" id="section-header-cont">
-                <div class="col-24-24" id="section-header-row">
-                    <div id="section-header">Fin</div>
-                </div>
-            </div>
-
-            <div class="row" id="section-cont">
-                <div class="col-24-24" id="section-col">
-                    <div class="row" id="section-row">
-                        <div class="col-2-24" id="inner-margin"></div>
-                        <div class="col-20-24" id="section-content">
-
-                            <h2>
-                                This brings us to <a href="end.html">the end</a> of our Introduction to Bioinformatics workshop. We'll be available to answer
-                                questions throughout the rest of the symposium. Thanks for attending!
-                            </h2>
-                            
-                     </div>
-                        <div class="col-2-24" id="inner-margin"></div>
-                    </div>
-                </div>
-            </div>           
+            </div>     
 
         </div>
     </div>
@@ -987,7 +963,7 @@ awk '{{sum += $6}} END {{if (NR > 0) print sum / NR }}' Filtered_NAwolf_n35_vari
         <div class="col-6-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
             <div class="nav-btn">
-                <a href="#">Next&nbsp;&gt;</a>
+                <a href="advanced.html">Next&nbsp;&gt;</a>
             </div>
         </div>
         <div class="col-3-24" id="nav-btn-margin"></div>
