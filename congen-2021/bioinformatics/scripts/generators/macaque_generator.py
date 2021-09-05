@@ -966,7 +966,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     format. This should be easy since all the information we need is in the first, fourth, and fifth columns:
                                 </p>
 
-                                <center><pre class="cmd"><code>zcat data/macaque-svs/annotation-files/Macaca_mulatta.Mmul_8.0.1.97.chromes.gtf.gz | awk '{{if($3 == "gene"){{print}}}}' | awk 'BEGIN{{OFS="\t"}}{{print "chr"$1, $4, $5}}'</code></pre></center>
+                                <center><pre class="cmd"><code>zcat data/macaque-svs/annotation-files/Macaca_mulatta.Mmul_8.0.1.97.chromes.gtf.gz | awk '{{if($3 == "gene"){{print}}}}' | awk 'BEGIN{{OFS="\\t"}}{{print "chr"$1, $4, $5}}'</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -998,7 +998,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                             <td class="tcol-1">awk</td><td class="tcol-2">A Linux text processing language</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">'BEGIN{{OFS="\t"}}{{print "chr"$1, $4, $5}}'</td><td class="tcol-2">The user-coded program to run. 
+                                            <td class="tcol-1">'BEGIN{{OFS="\\t"}}{{print "chr"$1, $4, $5}}'</td><td class="tcol-2">The user-coded program to run. 
                                                 In this case, we want to print the first, fourth, and fifth columns of the input file.</td>
                                         </tr>    
                                     </table>
@@ -1021,7 +1021,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     Finally, since we want to use this text later, we'll need to save it by <b>redirecting it</b> to a file with <code class="inline">&gt;</code>:
                                 </p>
 
-                                <center><pre class="cmd"><code>zcat data/macaque-svs/annotation-files/Macaca_mulatta.Mmul_8.0.1.97.chromes.gtf.gz | awk '{{if($3 == "gene"){{print}}}}' | awk 'BEGIN{{OFS="\t"}}{{print "chr"$1, $4, $5}}' > data/macaque-svs/annotation-files/macaque-genes.bed</code></pre></center>
+                                <center><pre class="cmd"><code>zcat data/macaque-svs/annotation-files/Macaca_mulatta.Mmul_8.0.1.97.chromes.gtf.gz | awk '{{if($3 == "gene"){{print}}}}' | awk 'BEGIN{{OFS="\\t"}}{{print "chr"$1, $4, $5}}' > data/macaque-svs/annotation-files/macaque-genes.bed</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -1053,7 +1053,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                             <td class="tcol-1">awk</td><td class="tcol-2">A Linux text processing language</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">'BEGIN{{OFS="\t"}}{{print "chr"$1, $4, $5}}'</td><td class="tcol-2">The user-coded program to run. 
+                                            <td class="tcol-1">'BEGIN{{OFS="\\t"}}{{print "chr"$1, $4, $5}}'</td><td class="tcol-2">The user-coded program to run. 
                                                 In this case, we want to print the first, fourth, and fifth columns of the input file.</td>
                                         </tr>
                                         <tr>
