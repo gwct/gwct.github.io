@@ -24,7 +24,7 @@ html_template = """
             <div class="row" id="section-row">
                 <div class="col-2-24" id="inner-margin"></div>
                 <div class="col-20-24" id="section-content">
-                    <h1>Thank you for attending the genome assembly workshop!</h1>
+                    <h1>Thank you for attending the Introduction to Bioinformatics Workshop!</h1>
 
                     <div class="row" id="img-row">
                         <div class="col-7-24" id="margin"></div>
@@ -35,8 +35,8 @@ html_template = """
                         <div class="col-7-24" id="margin"></div>
                     </div>
 
-                    <p>Be sure to check out the <a href="programs.html">Programs</a> and <a href="terms.html">Terms</a> pages, and the slides for the lecture
-                        and the workshop are available on the <a href="links.html">Links</a> page.</p>
+                    <!-- <p>Be sure to check out the <a href="programs.html">Programs</a> and <a href="terms.html">Terms</a> pages, and the slides for the lecture
+                        and the workshop are available on the <a href="links.html">Links</a> page.</p> -->
 
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>

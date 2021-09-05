@@ -1097,7 +1097,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     is a suite of programs that are generally run as follows:
                                 <p>
 
-                                <center><pre class="cmd-ne"><code>bedtools "&lt;sub-program&gt;" &lt;options&gt; &lt;input file&gt;</code></pre></center>
+                                <center><pre class="cmd-ne"><code>bedtools &lt;sub-program&gt; &lt;options&gt; &lt;input file&gt;</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -1106,10 +1106,10 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                             <td class="tcol-1">bedtools</td><td class="tcol-2">A program for working with genomic regions in bed format</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">'&lt;sub-program&gt;'</td><td class="tcol-2">The desired sub-program within bedtools to run</td>
+                                            <td class="tcol-1">&lt;sub-program&gt;</td><td class="tcol-2">The desired sub-program within bedtools to run</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">&lt;input options&gt;</td><td class="tcol-2">Sub-program specific run options</td>
+                                            <td class="tcol-1">&lt;options&gt;</td><td class="tcol-2">Sub-program specific run options</td>
                                         </tr>
                                         <tr>
                                             <td class="tcol-1">&lt;input file&gt;</td><td class="tcol-2">The path to the file you want to run on</td>

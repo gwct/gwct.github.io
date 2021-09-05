@@ -177,6 +177,9 @@
 					<div class="bookmark">
 						<a href="https://key.harvard.edu/">Key</a>
 					</div>
+					<div class="bookmark">
+						<a href="https://www.flexcommute.com/v4/FCN#/dashboard/summary">Commute</a>
+					</div>
 				</div>
 			</div>
 			<!-- Dropdown menu for Harvard -->
@@ -299,7 +302,8 @@
 				</div>
 				<div class="drop_list">
 					<div class="bookmark">
-						<a href="http://www.indiana.edu/~hahnlab">Hahn lab</a>
+						<a href="https://hahnlab.sitehost.iu.edu/">Hahn lab</a>
+						<!-- <a href="http://www.indiana.edu/~hahnlab">Hahn lab</a> -->
 					</div>
 					<div class="bookmark">
 						<a href="http://kg6ek7cq2b.search.serialssolutions.com/">Library</a>
@@ -470,11 +474,26 @@
 		
 		<!-- -------------- ENVIRONMENT GRID BEGIN ------------- -->
 		<div class="row" id="env_banner">
-			<!-- <div class="col-18-24" id="motd_text">consistency</div> -->
 			<div class="col-1-24 margin"></div>
 			<div class="col-2-24" id="clock_cont">
 				<div id="clock_cell">
 					<span id="clock"></span>
+				</div>
+			</div>
+			<div class="col-20-24" id="weather_cont">
+				<script>getWeatherMA();</script>
+			</div>
+			<div class="col-1-24 margin"></div>
+		</div>
+
+		<div class="col-24-24 sep_div"></div>
+
+		<div class="row" id="env_banner">
+			<!-- <div class="col-18-24" id="motd_text">consistency</div> -->
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
+				<div id="clock_cell">
+					<span id="in">Missoula:</span>
 				</div>
 			</div>
 
@@ -495,21 +514,6 @@
 			</div>
 			<div class="col-20-24" id="weather_cont">
 				<script>getWeatherIN();</script>
-			</div>
-			<div class="col-1-24 margin"></div>
-		</div>
-
-		<div class="col-24-24 sep_div"></div>
-
-		<div class="row" id="env_banner">
-			<div class="col-1-24 margin"></div>
-			<div class="col-2-24" id="clock_cont">
-				<div id="clock_cell">
-					<span id="in">Boston:</span>
-				</div>
-			</div>
-			<div class="col-20-24" id="weather_cont">
-				<script>getWeatherMA();</script>
 			</div>
 			<div class="col-1-24 margin"></div>
 		</div>

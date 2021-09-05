@@ -9,7 +9,7 @@ def readHead(title):
 
 def readNav(active_url):
     repl_url = active_url;
-    if active_url in ['start.html', 'reads.html', 'assembly.html', 'mapping.html', 'iterative-mapping.html']:
+    if active_url in ['start.html', 'organization.html', 'commands.html', 'macaque-svs.html', 'wolf-snps.html', 'end.html']:
         active_url = 'start.html';
     navfile = "../html-chunks/nav.html";
     navlines = open(navfile, "r").readlines();
@@ -22,7 +22,7 @@ def readNav(active_url):
                     navlines[x] = navlines[x].replace(repl_url, "#");
             if 'class="nav_link">Workshop</a>' in navlines[x]:
                 navlines[x] = navlines[x].replace('class="nav_link"', 'class="nav_link" id="active"')
-            if '<div class="col-4-24 dropdown" id="nav_link_cell">' in navlines[x]:
+            if '<div class="col-6-24 dropdown" id="nav_link_cell">' in navlines[x]:
                 navlines[x] = navlines[x].replace('id="nav_link_cell"', 'id="nav_link_cell_active"');
         # For the Workshop dropdown menu
 
@@ -34,7 +34,10 @@ def readNav(active_url):
 
         if "mobile_nav" in navlines[x]:
             break;
-            
+
+    # for line in navlines:
+    #     print(line);
+
     return "".join(navlines);
 
 def readReads():
