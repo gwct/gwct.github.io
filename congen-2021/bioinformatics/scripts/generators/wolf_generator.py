@@ -31,7 +31,7 @@ html_template = """
                     <li><a href="wolf-snps.html#het">Calculating heterozygosity</a></li>
                     <li><a href="wolf-snps.html#variables">Introduction to variables</a></li>
                     <li><a href="wolf-snps.html#scripts">Introduction to scripting</a></li>
-                    <li><a href="wolf-snps.html#loops-awk">Introduction to loops</a></li>
+                    <li><a href="wolf-snps.html#loops">Introduction to loops</a></li>
                 </ul>
             </div>
         </div>
@@ -666,7 +666,7 @@ html_template = """
             </div>
 
 
-            <a class="internal-link" name="scripting"></a>
+            <a class="internal-link" name="scripts"></a>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
                     <div id="section-header">Introduction to scripting</div>
@@ -855,7 +855,7 @@ awk '{{sum += $6}} END {{if (NR > 0) print sum / NR }}' Filtered_NAwolf_n35_vari
                             <p>
                                 If only there was a way to automate the analysis even further... Aha! We can use {co}for loops{cc} to call the script
                                 multiple times with different input values, in this case our 3 population strings, for the {co}wolf_pop{cc} variable.
-                                {co}for{cc} loops are generated in a similar way as in other programming:
+                                {co}for{cc} loops in a shell script are generated in a similar way as in other programming languages:
                             </p>
 
                             <center><pre class="cmd-ne"><code>for &lt;variable&gt; in &lt;iterable&gt;; do &lt;code&gt;; done{cc}</pre></center>
@@ -864,7 +864,7 @@ awk '{{sum += $6}} END {{if (NR > 0) print sum / NR }}' Filtered_NAwolf_n35_vari
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
-                                        <td class="tcol-1">for</td><td class="tcol-2">The start of the {co}for{cc} loopt</td>
+                                        <td class="tcol-1">for</td><td class="tcol-2">The start of the {co}for{cc} loop</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">&lt;variable&gt;</td><td class="tcol-2">{co}for{cc} loops iterate over a set of values. Whatever
@@ -909,7 +909,7 @@ awk '{{sum += $6}} END {{if (NR > 0) print sum / NR }}' Filtered_NAwolf_n35_vari
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
-                                        <td class="tcol-1">for</td><td class="tcol-2">The start of the {co}for{cc} loopt</td>
+                                        <td class="tcol-1">for</td><td class="tcol-2">The start of the {co}for{cc} loop</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">pop</td><td class="tcol-2">This tells the {co}for{cc} loop to assign the current value

@@ -61,7 +61,7 @@
                     <li><a href="wolf-snps.html#het">Calculating heterozygosity</a></li>
                     <li><a href="wolf-snps.html#variables">Introduction to variables</a></li>
                     <li><a href="wolf-snps.html#scripts">Introduction to scripting</a></li>
-                    <li><a href="wolf-snps.html#loops-awk">Introduction to loops</a></li>
+                    <li><a href="wolf-snps.html#loops">Introduction to loops</a></li>
                 </ul>
             </div>
         </div>
@@ -696,7 +696,7 @@
             </div>
 
 
-            <a class="internal-link" name="scripting"></a>
+            <a class="internal-link" name="scripts"></a>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
                     <div id="section-header">Introduction to scripting</div>
@@ -885,7 +885,7 @@ awk '{sum += $6} END {if (NR > 0) print sum / NR }' Filtered_NAwolf_n35_variable
                             <p>
                                 If only there was a way to automate the analysis even further... Aha! We can use <code class='inline'>for loops</code> to call the script
                                 multiple times with different input values, in this case our 3 population strings, for the <code class='inline'>wolf_pop</code> variable.
-                                <code class='inline'>for</code> loops are generated in a similar way as in other programming:
+                                <code class='inline'>for</code> loops in a shell script are generated in a similar way as in other programming languages:
                             </p>
 
                             <center><pre class="cmd-ne"><code>for &lt;variable&gt; in &lt;iterable&gt;; do &lt;code&gt;; done</code></pre></center>
@@ -894,7 +894,7 @@ awk '{sum += $6} END {if (NR > 0) print sum / NR }' Filtered_NAwolf_n35_variable
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
-                                        <td class="tcol-1">for</td><td class="tcol-2">The start of the <code class='inline'>for</code> loopt</td>
+                                        <td class="tcol-1">for</td><td class="tcol-2">The start of the <code class='inline'>for</code> loop</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">&lt;variable&gt;</td><td class="tcol-2"><code class='inline'>for</code> loops iterate over a set of values. Whatever
@@ -939,7 +939,7 @@ awk '{sum += $6} END {if (NR > 0) print sum / NR }' Filtered_NAwolf_n35_variable
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
-                                        <td class="tcol-1">for</td><td class="tcol-2">The start of the <code class='inline'>for</code> loopt</td>
+                                        <td class="tcol-1">for</td><td class="tcol-2">The start of the <code class='inline'>for</code> loop</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">pop</td><td class="tcol-2">This tells the <code class='inline'>for</code> loop to assign the current value
@@ -1026,7 +1026,7 @@ awk '{sum += $6} END {if (NR > 0) print sum / NR }' Filtered_NAwolf_n35_variable
     <div class="row" id="footer">
 		<div class="col-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/04/2021 23:00:42 Eastern Daylight Time</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/04/2021 23:33:43 Eastern Daylight Time</center>
 			</div>
 		</div>
 	</div>
