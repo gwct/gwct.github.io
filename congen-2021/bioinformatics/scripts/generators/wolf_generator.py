@@ -62,7 +62,7 @@ html_template = """
                                 Our data consist of genic SNPs genotyped for three wolf ecotypes: (1) the British Columbia coastal, (2) the High Arctic, and (3)
                                 the Boreal Forest. These wolves have pretty striking ecological and behavioral differences that are in part driven by differences
                                 amongst their environments. We used these data to look at population genetic variation and signals of local adaptation amongst these
-                                ecotypes ((<a href="https://doi.org/10.1111/mec.13364" target="_blank">Schweizer et al. 2015, <em>Molecular Ecology</em></a>).).
+                                ecotypes (<a href="https://doi.org/10.1111/mec.13364" target="_blank">Schweizer et al. 2015, <em>Molecular Ecology</em></a>).
                             </p>
 
                             <div class="row" id="img-row">
