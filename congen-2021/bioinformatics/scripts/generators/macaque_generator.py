@@ -850,7 +850,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                     We've pre-downloaded a <code class="inline">GTF</code> file for the rhesus macaque from Ensembl. Let's take a look at it:
                                 </p>
 
-                                <center><pre class="cmd"><code>zless -S data/macaque-svs/annotation-files/macaque-svs-filtered.bed</code></pre></center>
+                                <center><pre class="cmd"><code>zless -S data/macaque-svs/annotation-files/Macaca_mulatta.Mmul_8.0.1.97.chromes.gtf.gz</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -863,7 +863,7 @@ chrY    10903282        10911159        chrY:10903282:&lt;DEL&gt;:7877:2856.38</
                                             <td class="tcol-1">-S</td><td class="tcol-2">Turn off line-wrapping within zless (use the left and right arrow keys to scroll left and right).</td>
                                         </tr>
                                         <tr>
-                                            <td class="tcol-1">data/macaque-svs/annotation-files/macaque-svs-filtered.bed</td><td class="tcol-2">The path to the file you want to view</td>
+                                            <td class="tcol-1">data/macaque-svs/annotation-files/Macaca_mulatta.Mmul_8.0.1.97.chromes.gtf.gz</td><td class="tcol-2">The path to the file you want to view</td>
                                         </tr>
                                     </table>
                                 </div>
