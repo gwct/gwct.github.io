@@ -57,7 +57,7 @@ html_template = """
                         <div class="col-20-24" id="inst-text">
                             <p><a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>: A postdoc at the University of Montana in 
                                 <a href="http://www.chevironlab.org/" target="_blank">Zac Cheviron's lab</a>. Rena is an integrative biologist working at the
-                                intersection of population genomics and evolutionary physiology to understand adaptivee evolution across levels of biological 
+                                intersection of population genomics and evolutionary physiology to understand adaptive evolution across levels of biological 
                                 organization.
                             </p>
                         </div>
@@ -70,8 +70,8 @@ html_template = """
                         <div class="col-20-24" id="inst-text">
                             <p><a href="https://gwct.github.io/" target="_blank">Gregg Thomas</a>: A bioinformatics scientist in the
                                 <a href="https://informatics.fas.harvard.edu/" target="_blank">FAS Informatics group</a> at Harvard University and recent postdoc in
-                                <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good's lab</a> lab at the University of Montana. Gregg studies molecular 
-                                evolution and phylogenetics to determine what forces drive divergence and adaptation between species.
+                                <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good's lab</a> lab at the University of Montana. Gregg uses and develops
+                                computational methods to study molecular evolution and phylogenetics to determine what forces drive divergence and adaptation between species.
                             </p>
                         </div>
                     </div>
