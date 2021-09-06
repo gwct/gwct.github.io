@@ -218,12 +218,12 @@ html_template = """
                         <p>
                             If you have any prior experience with data science in the command line you know that installing new software is often the most
                             painful part of a project. The dreaded <b>command not found</b> and <b>library path not found</b> errors can stop you in your tracks.
-                            Some cluster have {co}module systems{cc} that can make life a lot easier, but they often have only the most popular software, and
+                            Some clusters have {co}module systems{cc} that can make life a lot easier, but they often have only the most popular software, and
                             you would have to wait for an administrator to install what you need.
                         </p>
 
                         <p>
-                            Luckily, a program called <a href="https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)" target="_blank">Anaconda</a></p> along
+                            Luckily, a program called <a href="https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)" target="_blank">Anaconda</a>, along
                             with it's software manager, <a href="https://en.wikipedia.org/wiki/Conda_(package_manager)" target="_blank">conda</a>.
                             {co}Anaconda{cc} is a distribution of the Python programming language that has grown into a useful tool for data science. Importantly,
                             it allows users to install software on their local account with {co}conda{cc}.

@@ -17,9 +17,15 @@ File,"A named location on a computer that contains data, commonly in the form of
 Script,"A type of file whose contents are code or commands to be interpreted by the shell or another interpreter (e.g., Python)."
 Repository/Repo,"From git, a directory of files, possibly including code, documentation, or data."
 File system,"The way in which files and directories are organized in a nesting, tree-like structure."
-Root,"The lowest level in the file system in which all directories and files are stored. Usually located at <code class=""inline"">/</code> and usually only accessible by the computer's administrators."
+Root,"The lowest level in the file system in which all directories and files are stored. Critical system files are stored close to the <b>root</b>. Usually located at <code class=""inline"">/</code> and usually only accessible by the computer's administrators."
 Home,"A user's home directory is where that user has read, write, and execute permissions within the file system."
 Path,"The location of a file or directory within the file system, with directories separated by slash characters (<code class=""inline"">/</code>)."
 Absolute path,The full name of a file or directory that includes all directories and sub-directories starting from the root of the file system to the specified file or directory.
 Relative path,The name of a file or directory that includes all directories and sub-directories starting from the user's current location.
 Operating system,The software that interfaces between the computer's hardware and other user facing software.
+Server,"A computer setup to have users connect and work on it remotely, usually with more resources than personal computers to accommodate more resource intensive commands and multiple users."
+Cluster,An interconnected collection of <b>servers</b> setup such that users can connect to one and specify high resource commands to run which is parsed out based on available resources.
+Node,One computer within a cluster.
+Login node,The <b>node</b> within the <b>cluster</b> which users connect to and interact with.
+Head node,The <b>node</b> within the <b>cluster</b> which handles job scheduling and resource allocation.
+Job,A submitted <b>command</b> or set of commands passed from the user to the job scheduler on a <b>cluster</b>.
