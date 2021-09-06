@@ -80,7 +80,7 @@ html_template = """
                                 ({co}~/congen-2021-bioinformatics/{cc}), so you should just have to type the command:
                             </p>
 
-                            <center><pre class="cmd"><code>cd data/wolf-data/{cc}</pre></center>
+                            <center><pre class="cmd"><code>cd data/wolf-snps/{cc}</pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -89,7 +89,7 @@ html_template = """
                                         <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">data/wolf-data</td><td class="tcol-2">The path to the directory you want to change to. In this case,
+                                        <td class="tcol-1">data/wolf-snps</td><td class="tcol-2">The path to the directory you want to change to. In this case,
                                             this is a <b>relative path</b>. If you are not in the {co}~/congen-2021-bioinformatics/{cc} directory,
                                             you will likely get an error saying this path does not exist.</td>
                                     </tr>
@@ -98,7 +98,7 @@ html_template = """
 
                             <p>
                                 If you are somewhere else other than the root project directory, first navigate back to that folder and then change to the
-                                {co}wolf-data{cc} folder. Or, if you're familiar enough with the file tree, navigate straight to the
+                                {co}wolf-snps{cc} folder. Or, if you're familiar enough with the file tree, navigate straight to the
                                 data folder!
                             </p>
 
@@ -339,7 +339,7 @@ html_template = """
                                     But does this file actually give us the heterozygosity?
                                 </p>
 
-                                <center><pre class="cmd"><code>head Filtered_NAwolf_n35_variableSites_GenicRegions_coastal{cc}</pre></center>
+                                <center><pre class="cmd"><code>head Filtered_NAwolf_n35_variableSites_GenicRegions_coastal.het{cc}</pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">

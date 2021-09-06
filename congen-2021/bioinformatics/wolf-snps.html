@@ -111,7 +111,7 @@
                                 (<code class='inline'>~/congen-2021-bioinformatics/</code>), so you should just have to type the command:
                             </p>
 
-                            <center><pre class="cmd"><code>cd data/wolf-data/</code></pre></center>
+                            <center><pre class="cmd"><code>cd data/wolf-snps/</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -120,7 +120,7 @@
                                         <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">data/wolf-data</td><td class="tcol-2">The path to the directory you want to change to. In this case,
+                                        <td class="tcol-1">data/wolf-snps</td><td class="tcol-2">The path to the directory you want to change to. In this case,
                                             this is a <b>relative path</b>. If you are not in the <code class='inline'>~/congen-2021-bioinformatics/</code> directory,
                                             you will likely get an error saying this path does not exist.</td>
                                     </tr>
@@ -129,7 +129,7 @@
 
                             <p>
                                 If you are somewhere else other than the root project directory, first navigate back to that folder and then change to the
-                                <code class='inline'>wolf-data</code> folder. Or, if you're familiar enough with the file tree, navigate straight to the
+                                <code class='inline'>wolf-snps</code> folder. Or, if you're familiar enough with the file tree, navigate straight to the
                                 data folder!
                             </p>
 
@@ -370,7 +370,7 @@
                                     But does this file actually give us the heterozygosity?
                                 </p>
 
-                                <center><pre class="cmd"><code>head Filtered_NAwolf_n35_variableSites_GenicRegions_coastal</code></pre></center>
+                                <center><pre class="cmd"><code>head Filtered_NAwolf_n35_variableSites_GenicRegions_coastal.het</code></pre></center>
 
                                 <div class="table-cont">
                                     <table class="cmd-table">
@@ -1036,7 +1036,7 @@ awk '{sum += $6} END {if (NR > 0) print sum / NR }' Filtered_NAwolf_n35_variable
     <div class="row" id="footer">
 		<div class="col-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/06/2021 00:05:47 Eastern Daylight Time</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 09/06/2021 15:20:30 Eastern Daylight Time</center>
 			</div>
 		</div>
 	</div>
