@@ -140,7 +140,7 @@ html_template = """
                                 <a href="https://en.wikipedia.org/wiki/Secure_Shell" target="_blank">SSH</a> is the protocol that allows us to connect our local
                                 machine to a remote machine and run commands on it in the terminal. The most common SSH client is openSSH and is widely used. Until recently,
                                 however, it was not available on Windows and a third-party client was required. PuTTY is by far the best SSH client for Windows, and is
-                                still a great option for older versions or versions with openSSH installed.
+                                still a great option for older versions or versions without openSSH installed.
                             </p>
 
                             {ssh_table}
