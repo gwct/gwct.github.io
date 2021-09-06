@@ -1250,7 +1250,7 @@ chrX    146387029       146422365       chrX:146387029:&lt;DEL&gt;:35336:4990.42
         <div class="col-6-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
             <div class="nav-btn">
-                <a href="#">Next&nbsp;&gt;</a>
+                <a href="wolf-snps.html">Next&nbsp;&gt;</a>
             </div>
         </div>
         <div class="col-3-24" id="nav-btn-margin"></div>

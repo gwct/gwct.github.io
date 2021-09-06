@@ -7,3 +7,5 @@ CRAM,Another compressed format to store read mapping information.,https://en.wik
 VCF,Variant Call Format. Used to store information about variants inferred for a given sample(s).,https://en.wikipedia.org/wiki/Variant_Call_Format,https://samtools.github.io/hts-specs/VCFv4.2.pdf
 BCF,Binary variant Call Format. The binary compressed verion of a VCF.,https://en.wikipedia.org/wiki/Variant_Call_Format,https://samtools.github.io/hts-specs/VCFv4.2.pdf
 BED,Stores coordinates of regions of interest,https://en.wikipedia.org/wiki/BED_(file_format),https://bedtools.readthedocs.io/en/latest/content/general-usage.html
+GFF,Stores annotation information from a genome,https://en.wikipedia.org/wiki/General_feature_format,https://genome.ucsc.edu/FAQ/FAQformat.html#format3
+GTF,"Stores annotation information from a genome. GTF is an earlier version of GFF, but still commonly used, notably by the Ensembl database.",https://en.wikipedia.org/wiki/Gene_transfer_format,https://genome.ucsc.edu/FAQ/FAQformat.html#format4

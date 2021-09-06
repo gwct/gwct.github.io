@@ -34,9 +34,6 @@ html_template = """
 
         <div class="col-21-24" id="main-cont">
 
-
-
-
             <div class="row" id="top-row-cont">
                 <div class="col-2-24" id="inner-margin"></div>
                 <div class="col-20-24" id="top-text">

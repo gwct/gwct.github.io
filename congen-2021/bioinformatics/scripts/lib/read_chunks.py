@@ -22,7 +22,7 @@ def readNav(active_url):
                     navlines[x] = navlines[x].replace(repl_url, "#");
             if 'class="nav_link">Workshop</a>' in navlines[x]:
                 navlines[x] = navlines[x].replace('class="nav_link"', 'class="nav_link" id="active"')
-            if '<div class="col-6-24 dropdown" id="nav_link_cell">' in navlines[x]:
+            if '<div class="col-4-24 dropdown" id="nav_link_cell">' in navlines[x]:
                 navlines[x] = navlines[x].replace('id="nav_link_cell"', 'id="nav_link_cell_active"');
         # For the Workshop dropdown menu
 

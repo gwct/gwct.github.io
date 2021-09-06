@@ -990,7 +990,7 @@ awk '{{sum += $6}} END {{if (NR > 0) print sum / NR }}' Filtered_NAwolf_n35_vari
         <div class="col-3-24" id="nav-bnt-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
             <div class="nav-btn">
-                <a href="commands.html">&lt;&nbsp;Previous</a>    
+                <a href="macaque-svs.html">&lt;&nbsp;Previous</a>    
             </div>
         </div>
         <div class="col-6-24" id="nav-margin"></div>
@@ -1003,6 +1003,7 @@ awk '{{sum += $6}} END {{if (NR > 0) print sum / NR }}' Filtered_NAwolf_n35_vari
     </div>
 
     {footer}
+
 </body>
 </html>
 """

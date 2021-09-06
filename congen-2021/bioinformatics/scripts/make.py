@@ -15,7 +15,8 @@ parser.add_argument("--macaque", dest="macaque", help="Without --all: build maca
 parser.add_argument("--wolf", dest="wolf", help="Without --all: build wolf-snps.html. With --all: exlude wolf-snps.html", action="store_true", default=False);
 parser.add_argument("--advanced", dest="advanced", help="Without --all: build advanced.html. With --all: exlude advanced.html", action="store_true", default=False);
 parser.add_argument("--end", dest="end", help="Without --all: build end.html. With --all: exlude end.html", action="store_true", default=False);
-#parser.add_argument("--programs", dest="programs", help="Without --all: build programs.html. With --all: exlude programs.html", action="store_true", default=False);
+parser.add_argument("--terms", dest="terms", help="Without --all: build terms.html. With --all: exlude terms.html", action="store_true", default=False);
+parser.add_argument("--programs", dest="programs", help="Without --all: build programs.html. With --all: exlude programs.html", action="store_true", default=False);
 parser.add_argument("--links", dest="links", help="Without --all: build links.html. With --all: exlude links.html", action="store_true", default=False);
 args = parser.parse_args();
 # Input options.
@@ -32,7 +33,8 @@ pages = {
     'wolf' : args.wolf,
     'advanced' : args.advanced,
     'end' : args.end,
-    #'programs' : args.programs,
+    'terms' : args.terms,
+    'programs' : args.programs,
     'links' : args.links
 }
 
@@ -63,8 +65,11 @@ if pages['advanced']:
 if pages['end']:
     os.system("python end_generator.py");
 
-# if pages['programs']:
-#     os.system("python programs_generator.py");
+if pages['terms']:
+    os.system("python terms_generator.py");
+
+if pages['programs']:
+    os.system("python programs_generator.py");
 
 if pages['links']:
     os.system("python links_generator.py");

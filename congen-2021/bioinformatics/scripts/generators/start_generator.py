@@ -251,7 +251,9 @@ You can catch problems before you use the data in later analyses.</code></pre>
                             <ol>
                                 <li>Talking about project organization, common commands, and text editors and work setups.</li>
                                 <li>Introducing common bioinformatics file formats.</li>
-                                <li>Using the command line to do a basic analysis of structural varation in a sample of 32 Rhesus macaques.</li>
+                                <li>Using the command line to do a basic analysis of structural variation in a sample of 32 Rhesus macaques and
+                                    of SNPs in 35 gray wolves.</li>
+                                <li>Time permitting, briefly touch on some next steps in developing more advanced bioinformatics skills</li>
                             </ol>
 
                             <p>Now, let's move on to <a href="organization.html">Project Organization</a></p>

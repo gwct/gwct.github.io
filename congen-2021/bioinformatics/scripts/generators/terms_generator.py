@@ -47,6 +47,18 @@ html_template = """
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
 
+                            <p>
+                                Sometimes the hardest part of learning a new topic is learning the terminology or jargon that those within
+                                the community commonly use. Here is a table of some terms that are common, but may be unfamiliar to someone new to the 
+                                field of data science. Some of these are my attempt to define abstract terms. If you want any terms defined or added to 
+                                the list, or you feel the definitions are inaccurate, please contact <a href="https://gwct.github.io/" target="_blank">me</a>.
+                            </p>
+
+                            <p>
+                                Importantly, while some terms technically have different meanings, they are often used synonymously. I have tried to indicate
+                                these terms with matching number of asterisks.
+                            </p>
+
                             {terms_table}
                             <div id="sep_div"></div>
 
@@ -59,7 +71,7 @@ html_template = """
             <a class="internal-links" name="formats"></a>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
-                    <div id="section-header">File formats</div>
+                    <div id="section-header">Common bioinformatics file formats</div>
                 </div>
             </div>
             <div class="row" id="section-cont">

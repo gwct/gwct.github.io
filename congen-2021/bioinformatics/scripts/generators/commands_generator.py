@@ -182,8 +182,8 @@ html_template = """
 
                             <p>
                                 Text editors are also available within Linux terminals themselves, in the form of programs such as <code class="inline">nano</code>,
-                                <code class="inline">Emacs</code>, or <code class="inline">vim</code>. See this table for a list of many text editors. You should
-                                find one that suits your style to make you a more productive bioinformatician.
+                                <code class="inline">Emacs</code>, or <code class="inline">vim</code>. See <a href="programs.html">this table</a> for a list of some 
+                                text editors. You should find one that suits your style to make you a more productive bioinformatician.
                             </p>
 
                             <p>
