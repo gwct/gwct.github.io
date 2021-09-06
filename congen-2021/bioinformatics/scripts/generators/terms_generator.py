@@ -150,6 +150,9 @@ for table in tables:
                 if cur_header == "Used":
                     continue;
 
+                # if cur_header == "Term":
+                #     print(line[c]);
+
                 if cur_header == "Link":
                     if cur_col == "NA":
                         cur_rows += "<td>NA</td>"

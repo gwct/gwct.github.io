@@ -1,10 +1,10 @@
 Term,Definition
-Terminal,The window in which you type commands in to be interpreted by the shell
-Console,"Similar to terminal, but full screen with no graphical component."
-Shell,"The program that interprets commands typed into a terminal. In your terminal you can type <code class=""inline"">echo $SHELL</code> to check which shell is loaded."
+Terminal*,The window in which you type commands in to be interpreted by the shell
+Console*,"Similar to terminal, but full screen with no graphical component."
+Shell*,"The program that interprets commands typed into a terminal. In your terminal you can type <code class=""inline"">echo $SHELL</code> to check which shell is loaded."
 Bash,A common <b>shell</b> program.
-Command line,The location where commands are type within the terminal window
-Command prompt,The information displayed on the command line before the cursor
+Command line*,The location where commands are type within the terminal window
+Command prompt*,The information displayed on the command line before the cursor
 Command,A set of instructions (code) that can be interpreted by the <b>shell</b>
 Program,"A set of code designed for a specific task. Similar to <b>command</b>, but more general (i.e., a program is not limited to the <b>shell's</b> scripting syntax)."
 Library,Files containing general code blocks that can be used widely by different programs
@@ -19,5 +19,7 @@ Repository/Repo,"From git, a directory of files, possibly including code, docume
 File system,"The way in which files and directories are organized in a nesting, tree-like structure."
 Root,"The lowest level in the file system in which all directories and files are stored. Usually located at <code class=""inline"">/</code> and usually only accessible by the computer's administrators."
 Home,"A user's home directory is where that user has read, write, and execute permissions within the file system."
-Path,The full name of a file or directory that includes all directories and sub-directories starting from the root of the file system to the specified file or directory.
+Path,"The location of a file or directory within the file system, with directories separated by slash characters (<code class=""inline"">/</code>)."
+Absolute path,The full name of a file or directory that includes all directories and sub-directories starting from the root of the file system to the specified file or directory.
+Relative path,The name of a file or directory that includes all directories and sub-directories starting from the user's current location.
 Operating system,The software that interfaces between the computer's hardware and other user facing software.
