@@ -24,7 +24,7 @@ Absolute path,The full name of a file or directory that includes all directories
 Relative path,The name of a file or directory that includes all directories and sub-directories starting from the user's current location.
 Operating system,The software that interfaces between the computer's hardware and other user facing software.
 Server,"A computer setup to have users connect and work on it remotely, usually with more resources than personal computers to accommodate more resource intensive commands and multiple users."
-Cluster,An interconnected collection of <b>servers</b> setup such that users can connect to one and specify high resource commands to run which is parsed out based on available resources.
+Cluster,An interconnected collection of <b>servers</b> setup such that users can connect to one and specify high resource commands to run which are distributed to the others based on available resources.
 Node,One computer within a cluster.
 Login node,The <b>node</b> within the <b>cluster</b> which users connect to and interact with.
 Head node,The <b>node</b> within the <b>cluster</b> which handles job scheduling and resource allocation.
