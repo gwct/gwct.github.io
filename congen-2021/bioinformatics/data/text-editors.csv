@@ -3,7 +3,7 @@ nano,Command line,Linux/Unix,https://www.nano-editor.org/,N
 vi/vim,Command line,Linux/Mac/Windows,https://www.vim.org/,Y
 Emacs,Command line,Linux/Mac/Windows,https://www.gnu.org/software/emacs/,N
 Visual Studio Code*,GUI,Linux/Mac/Windows,https://code.visualstudio.com/,G
-BBEdit,GUI,Mac,https://www.barebones.com/products/bbedit/,N
+BBEdit*,GUI,Mac,https://www.barebones.com/products/bbedit/,N
 gedit,GUI,Linux/Mac/Windows,,N
 Sublime text,GUI,Linux/Mac/Windows,https://www.sublimetext.com/,N
 Atom,GUI,Linux/Mac/Windows,https://atom.io/,N

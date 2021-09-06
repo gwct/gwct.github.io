@@ -109,7 +109,7 @@ table_template = """
 ######################
 pagefile = "terms.html";
 print("Generating " + pagefile + "...");
-title = "ConGen2020 - Assembly Workshop"
+title = "ConGen2021 - Introduction to Bioinformatics"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
