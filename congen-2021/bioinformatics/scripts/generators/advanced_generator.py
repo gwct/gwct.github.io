@@ -393,7 +393,7 @@ html_template = """
                                 <a href="https://snakemake.github.io/" target="_blank">Snakemake</a> is a Python-based scripting language specifically designed
                                 to help scale up and make bioinformatics workflows reproducible. The basic idea behind {co}snakemake{cc} is that we often run
                                 the same commands over many different but similar files (e.g., VCF files from different samples, alignments from different genes, etc.)
-                                A {co}snakemake{cc} then consists of rules that depend on each other based on the specified output files of previous rules. Rules can be 
+                                A {co}snakemake{cc} file then consists of rules that depend on each other based on the specified output files of previous rules. Rules can be 
                                 run over a range of files (e.g., samples) allowing one to compactly represent and run an entire workflow. {co}Snakemake{cc} also integrates
                                 well with HPC clusters to run these rules in parallel.
                             </p>
