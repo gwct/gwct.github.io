@@ -103,7 +103,7 @@ html_template = """
                 <div class="col-2-24" id="inner-margin"></div>
                 <div class="col-20-24" id="section-content">
                     <p>In the nav bar at the top of the page you'll find links to navigate this workshop and to resources we've compiled. Come back to this page any time by clicking 
-                        the <a href="#">Intro</a> link above. Go to the first page of the workhop by clicking on the <a href="start.hmlt">Workshop</a> link above or the link below.
+                        the <a href="#">Intro</a> link above. Go to the first page of the workhop by clicking on the <a href="start.html">Workshop</a> link above or the link below.
                         If you come across a term or file format you don't recognize, check the <a href="terms">Terminology</a> page to see if it's listed there.
                         A table of useful programs and their use-cases has been compiled as a resource under the <a href="programs.html">Programs</a> link. Finally, some other links have
                         been organized in the <a href="links.html">Links</a> page.
