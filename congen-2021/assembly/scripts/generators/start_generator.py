@@ -410,7 +410,7 @@ You can catch problems before you use the data in later analyses.</code></pre>
 ######################
 pagefile = "start.html";
 print("Generating " + pagefile + "...");
-title = "ConGen2020 - Assembly Workshop"
+title = "ConGen2021 - Assembly Workshop"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);

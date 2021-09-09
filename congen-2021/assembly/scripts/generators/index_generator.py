@@ -24,7 +24,7 @@ html_template = """
             <div class="row" id="section-row">
                 <div class="col-2-24" id="inner-margin"></div>
                 <div class="col-20-24" id="section-content">
-                    <h1>Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2020</a> genome assembly workshop!</h1>
+                    <h1>Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2021</a> genome assembly workshop!</h1>
                         <p>This web page will guide you through the genome assembly and read mapping activities we have planned for you today!</p>
                 </div>
                 <div class="col-2-24" id="inner-margin"></div>
@@ -55,8 +55,10 @@ html_template = """
                             <img id="inst-img" src="img/gt.jpg">
                         </div>
                         <div class="col-20-24" id="inst-text">
-                            <p><a href="https://gwct.github.io/" target="_blank">Gregg Thomas</a>: A postdoctoral researcher in <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good's</a>
-                                lab at the University of Montana. Gregg studies molecular evolution to determine what forces drive divergence and adaptation between species.
+                            <p><a href="https://gwct.github.io/" target="_blank">Gregg Thomas</a>: A bioinformatics scientist in the
+                                <a href="https://informatics.fas.harvard.edu/" target="_blank">FAS Informatics group</a> at Harvard University and recent postdoc in
+                                <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good's lab</a> lab at the University of Montana. Gregg uses and develops
+                                computational methods to study molecular evolution and phylogenetics to determine what forces drive divergence and adaptation between species.
                             </p>
                         </div>
                     </div>
@@ -68,10 +70,11 @@ html_template = """
                             <img id="inst-img" src="img/ea.jpg">
                         </div>
                         <div class="col-20-24" id="inst-text">
-                            <p><a href="http://elliearmstrong.mystrikingly.com/" target="_blank">Ellie Armstrong</a>: A PhD student at Stanford University co-advised by
+                            <p>Ellie Armstrong: A recent PhD at Stanford University co-advised by
                                 <a href="http://petrov.stanford.edu/" target="_blank">Dmitri Petrov</a> and <a href="https://web.stanford.edu/group/hadlylab/" target="_blank">Liz Hadley</a>.
-                                Ellie works on conservation genetics of big cats, and recently published the 
-                                <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-019-0734-5" target="_blank">genome assembly of the lion.</a>
+                                Ellie works on conservation genetics of big cats, and published the 
+                                <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-019-0734-5" target="_blank">genome assembly of the lion</a> and will soon be starting a postdoc at
+                                Washington State University with <a href="https://labs.wsu.edu/genomes/" target="_blank">Joanna Kelley</a>.
                             </p>
                         </div>
                     </div>
@@ -136,7 +139,7 @@ html_template = """
 ######################
 pagefile = "index.html";
 print("Generating " + pagefile + "...");
-title = "ConGen2020 - Assembly Workshop"
+title = "ConGen2021 - Assembly Workshop"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);

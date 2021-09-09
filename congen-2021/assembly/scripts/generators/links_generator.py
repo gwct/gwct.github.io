@@ -48,7 +48,7 @@ html_template = """
                 <div class="col-20-24" id="section-content">
 
                     <ul id="links-list">
-                        <li><a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2020</a></li>
+                        <li><a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2021</a></li>
                     </ul>
                     <div id="sep_div"></div>
 
@@ -104,7 +104,7 @@ html_template = """
                 <div class="col-20-24" id="section-content">
 
                     <ul id="links-list">
-                        <li><a href="http://elliearmstrong.mystrikingly.com" target="_blank">Ellie Armstrong</a> - PhD student at Stanford University</li>
+                        <!-- <li><a href="http://elliearmstrong.mystrikingly.com" target="_blank">Ellie Armstrong</a> - PhD student at Stanford University</li> -->
                         <li><a href="https://gwct.github.io/" target="_blank">Gregg Thomas</a> - Postdoc at the University of Montana</li>
                     </ul>
 

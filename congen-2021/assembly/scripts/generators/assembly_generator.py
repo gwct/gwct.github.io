@@ -592,7 +592,7 @@ NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
 ######################
 pagefile = "assembly.html";
 print("Generating " + pagefile + "...");
-title = "ConGen2020 - Assembly Workshop"
+title = "ConGen2021 - Assembly Workshop"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
