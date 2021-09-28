@@ -1,0 +1,15 @@
+/*------------------------------------------------------*/
+/* Main grid styles */
+#main_div_pub {
+	min-height:92vh;
+}
+/*------------------------------------------------------*/
+/* Publication text styles */
+.pub_title {
+	font-size:1.15em;
+	color:#333333;
+	font-weight:bold;
+}
+@media (max-width: 1025px) {
+	.pub_title { font-size: large }
+}
