@@ -1,0 +1,58 @@
+/*------------------------------------------------------*/
+/* Research grid styles */
+#res-intro-cont {
+	color: #fff;
+	background-color:rgb(102, 114, 75, 0.7);
+	padding:20px;
+}
+#res-intro{
+	text-align:justify;
+}
+#res-section {
+	display:flex;
+	/* height:30vh; */
+	min-height:30vh;
+}
+#res-text {
+	padding:40px;
+	text-align:justify;
+	overflow:ellipsis;
+}
+#res-img-col {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height: 30vh;
+}
+#res-img {
+	max-height:30vh;
+	width:auto;
+	border:1px solid #333;
+	border-radius:5px;
+}
+
+/*------------------------------------------------------*/
+/* Responsive media styles */
+@media (max-width: 1025px) {
+	#res-intro-row { flex-wrap:wrap; text-align:left; }
+	#res-intro { text-align:left; }
+	#res-section { flex-wrap:wrap; }
+	#res-text { width: 100%; text-align:left; }
+	#res-img-col { flex-wrap:wrap; width:100%; }
+	#res-img { margin: auto; }
+	#sep_div { display: none; }
+	#margin { display: none; }
+}
+
+/*------------------------------------------------------*/
+/* Horizontal line seperator styles */
+#horz_line {
+	height:1px;
+	width:100%;
+	margin:20px 50px 20px 50px;
+	background-color:#333333;
+}
+
+
+
+

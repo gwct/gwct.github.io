@@ -1,0 +1,96 @@
+/*------------------------------------------------------*/
+/* Hero image styles */
+#top_grid {
+	height:50vh;
+    background-image: url(../img/me/bg01.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-clip: border-box;
+	background-origin: padding-box;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+#hero {
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+#name_img {
+	max-height:25vh;
+	width:auto;
+}
+
+/*------------------------------------------------------*/
+/* Main grid styles */
+#bio_row {
+    align-items: center;
+	min-height: 35vh;
+}
+#email_row {
+    align-items: center;
+	min-height: 2vh;
+}
+#contact_row {
+    align-items: center;
+	min-height: 10vh;
+}
+
+/*------------------------------------------------------*/
+/* Bio grid styles */
+#bio_pic_container {
+	height:30vh;
+}
+#bio_pic {
+	background-image: url(../img/placeholder.png);
+	height:100%;
+	width:100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#bio_text {
+	text-align: justify;
+}
+#contact {
+    max-width: 100%;
+    height: auto;
+}
+
+/*------------------------------------------------------*/
+/* Hidden image styles */
+.hidden_img { 
+	display:none; 
+	transition: opacity 0.3s linear; 
+}
+span:hover .hidden_img{ 
+	display:block;
+	opacity: 1;
+	height: 400px;
+	width: auto;
+	position:absolute; 
+	top: 50%; 
+	left: 50%;
+}
+
+/*------------------------------------------------------*/
+/* Responsive media styles */
+@media (max-width: 1025px) {
+	#bio_row { flex-wrap: wrap; }
+	#bio_pic_container { display:inline-block; width:100%; }
+    /* #bio_pic { background-position:center; } */
+	#bio_text { display:inline-block; width:100%; padding:0px 20px; font-size:large; text-align:left; }
+	#email-col { width:90%; }
+	#email-margin { width:5%; }
+	span:hover .hidden_img{ display: none; }
+	#margin { width: 0%; display: none; }
+}
+
+
+
+
+
+
