@@ -283,19 +283,19 @@ html_template = """
 	</div>
 	<div class="col-2-24" id="margin"></div>	
 
-	<div class="row" id="header">Other Content</div>
+	<!-- <div class="row" id="header">Other Content</div>
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
-		<!-- <ul id="presents">
+		<ul id="presents">
 			<p>
 			<span class="pub_title">Drosophila 25 species phylogeny.</span>
 			</br>&nbsp;&nbsp;Thomas GWC, Hahn MW. 
 			2017. 
 			<a href="https://figshare.com/articles/Drosophila_25_species_phylogeny/5450602" target="_blank">FigShare fileset</a>.
 			</br>&nbsp;&nbsp;doi: <a href="http://dx.doi.org/10.6084/m9.figshare.5450602" target="_blank">10.6084/m9.figshare.5450602</a></p>
-		</ul> -->
+		</ul>
 	</div>
-	<div class="col-2-24" id="margin"></div>
+	<div class="col-2-24" id="margin"></div> -->
 
     {links}
 

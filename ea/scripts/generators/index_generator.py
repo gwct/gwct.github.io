@@ -21,7 +21,7 @@ html_template = """
 <div class="row" id="top_grid">
 	<div class="col-24-24" id="hero">
 		<div id="name_img_cont">
-			<img id="name_img" src="img/NA">
+			<img id="name_img" src="img/me/main-logo.png">
 		</div>
 	</div>
 	</div>

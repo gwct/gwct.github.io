@@ -20,7 +20,7 @@
 	align-items: center;
 }
 #name_img {
-	max-height:25vh;
+	max-height:10vh;
 	width:auto;
 }
 
@@ -79,6 +79,7 @@ span:hover .hidden_img{
 /*------------------------------------------------------*/
 /* Responsive media styles */
 @media (max-width: 1025px) {
+	#name_img { height: auto; max-width:100%; }
 	#bio_row { flex-wrap: wrap; }
 	#bio_pic_container { display:inline-block; width:100%; }
     /* #bio_pic { background-position:center; } */
