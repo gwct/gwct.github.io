@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel='shortcut icon' href='launcher/img/favicon.ico' type='image/x-icon'/ >
+	<link type="text/css" rel="stylesheet" href="launcher/css/grid.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="launcher/css/launcher.css"  media="screen,projection" />
+	<script language="javascript" type="text/javascript"></script>
+	<script src="launcher/js/util.js"></script>
+	<script>timeStamp();</script>
+</head>
+
+<script>setBackground();</script>
+<!-- <body> -->
+<!-- <body onload="updateClock(); setInterval('updateClock()', 1000 )"> -->
+
+		<!-- <div class="col-24-24 sep_div"></div> -->
+		<!-- ---------------- SEARCH GRID BEGIN ---------------- -->
+
+		<div class="row" id="search_grid">
+			<div class="col-3-24 margin"></div>
+
+			<!-- Duckduckgo search -->
+			<div class="col-6-24 search_cell" id="google_cell">
+				<p><form class="search_form" onsubmit="searchEnter(1); return false;">
+					<input type="text" class="search_box" id="sbox1" placeholder="Search" autofocus/>
+					<!-- <input type="submit" hidden> -->
+				</p></form>
+			</div>
+			<!-- Duckduckgo search -->
+
+			<!-- Google scholar search -->
+			<div class="col-6-24 search_cell" id="scholar_cell">
+				<p><form class="search_form" onsubmit="searchEnter(2); return false;">
+					<input type="text" class="search_box" id="sbox2" placeholder="Scholar"/>
+				</p></form>
+			</div>
+			<!-- Google scholar search -->
+
+			<!-- Wikipedia search -->
+			<div class="col-6-24 search_cell" id="wiki_cell">
+				<p><form class="search_form" onsubmit="searchEnter(3); return false;">
+					<input type="text" class="search_box" id="sbox3" placeholder="Wiki"/>
+				</p></form>
+			</div>
+			<!-- Wikipedia search -->
+
+			<div class="col-3-24 margin"></div>
+		</div>
+		<!-- ----------------- SEARCH GRID END ----------------- -->
+
+		<!-- --------------- BOOKMARK GRID BEGIN --------------- -->
+		<!-- ------------------- Row 1 begin ------------------- -->
+		<div class="row">
+			<div class="col-24-24" id="first_line"></div>
+		</div>
+
+		<div class="row" id="bookmark-row">
+			<div class="col-3-24 bookmark_margin"></div>
+			
+			<!-- Dropdown menu for CAFE -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://hahnlab.github.io/CAFE/">CAFE</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/hahnlab/CAFE">github (v4)</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://github.com/hahnlab/CAFE5">github (v5)</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://gwct.github.io/portals/cafe.html">Results</a>
+					</div>	
+					<div class="bookmark">
+						<a href="http://dx.doi.org/10.1093/molbev/mst100">Paper</a>
+					</div>			
+				</div>
+			</div>
+			<!-- Dropdown menu for CAFE -->
+
+			<!-- Dropdown menu for GRAMPA -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://gwct.github.io/grampa/">GRAMPA</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/gwct/grampa">github</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://gwct.github.io/portals/grampa.html">Results</a>
+					</div>		
+					<div class="bookmark">
+						<a href="https://doi.org/10.1093/sysbio/syx044">Paper</a>
+					</div>		
+				</div>
+			</div>
+			<!-- Dropdown menu for GRAMPA -->
+
+			<!-- Dropdown menu for Referee -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://gwct.github.io/referee/">Referee</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/gwct/referee">github</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://doi.org/10.1093/gbe/evz088">Paper</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for Referee -->
+
+			<!-- Bookmark for rodents -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://goodest-goodlab.github.io/murinae-seq/">Rodents</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/goodest-goodlab/murinae-seq">github</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://github.com/gwct/hyphy-interface">Branch rates</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://github.com/gwct/tree-paring">Tree paring</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Bookmark for rodents -->
+			
+			<!-- Bookmark for pseudo-it -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://github.com/goodest-goodlab/pseudo-it">pseudo-it</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/bricesarver/pseudo-it">Orig github</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://doi.org/10.1093/gbe/evx034">Orig paper</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Bookmark for pseudo-it -->
+
+			<!-- Dropdown menu for mapping sims -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://harvardinformatics.github.io/Mapping-simulations/">Mapping sims</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/harvardinformatics/Mapping-simulations">github</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for mapping sims -->
+
+			<!-- Dropdown menu for PhyloAcc -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://xyz111131.github.io/PhyloAcc/">PhyloAcc</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/xyz111131/PhyloAcc">github (st)</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://github.com/xyz111131/PhyloAcc-GT2">github (gt)</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://github.com/harvardinformatics/PhyloAcc-interface">github (interface)</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://harvardinformatics.github.io/PhyloAcc-interface/">Results</a>
+					</div>
+					<div class="bookmark">
+						<a href="https://doi.org/10.1093/molbev/msz049">Orig paper</a>
+					</div>						
+				</div>
+			</div>
+			<!-- Dropdown menu for PhyloAcc -->
+
+			<!-- Dropdown menu for turtles -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://gwct.github.io/turtle-genomics/">Turtles</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/gwct/turtle-genomics">github</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for turtles -->
+
+			<!-- Dropdown menu for spiders -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://gwct.github.io/spider-wgd/">Spiders</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/gwct/spider-wgd">github</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for spiders -->
+
+			<div class="col-3-24 bookmark_margin"></div>
+		</div>
+		<!-- -------------------  Row 1 end  ------------------- -->
+		<div class="row">
+			<div class="col-24-24" id="line"></div>
+		</div>
+		<!-- ------------------- Row 2 begin ------------------- -->
+		<div class="row" id="bookmark-row">
+			<div class="col-4-24 bookmark_margin"></div>
+
+			<!-- Bookmark for ConGen paper -->
+			<div class="col-2-24 bookmark">
+				<a href="https://docs.google.com/document/d/1ehum5Ilhnq-Tdis26QWXcwYn87CcROsIYlu5JrEufEA/edit">ConGen paper</a>
+			</div>
+			<!-- Bookmark for ConGen paper -->
+
+			<!-- Dropdown menu for phodopus -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://goodest-goodlab.github.io/hamster-genome/">Phodopus</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/goodest-goodlab/hamster-genome">github</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://doi.org/10.1101/2021.11.15.468705">Paper</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for phodopus -->
+
+			<!-- Dropdown menu for phyllotis -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://goodest-goodlab.github.io/phyllotis/index.html">Phyllotis</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/goodest-goodlab/goodest-goodlab.github.io/tree/master/phyllotis">github</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for phyllotis -->
+
+			<!-- Bookmark for degenotate -->
+			<div class="col-2-24 bookmark">
+				<a href="https://github.com/harvardinformatics/degenotate">degenotate</a>
+			</div>
+			<!-- Bookmark for degenotate -->
+			
+			<!-- Dropdown menu for owl monkey -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://gwct.github.io/owl-monkey/">Owl monkey</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/gwct/owl-monkey">github</a>
+					</div>	
+					<div class="bookmark">
+						<a href="https://doi.org/10.1016/j.cub.2018.08.050">Paper</a>
+					</div>
+				</div>
+			</div>
+			<!-- Dropdown menu for owl monkey -->
+
+			<!-- Bookmark for macaque -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://github.com/gwct/macaque-cnv-figs">Macaque</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="hhttps://doi.org/10.1093/molbev/msaa303">Paper</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Bookmark for macaque -->
+
+			<!-- Dropdown menu for drosophila phylogeny -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://figshare.com/articles/dataset/Drosophila_25_species_phylogeny/5450602">Drosophila Phylogeny</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://doi.org/10.1186/s12862-019-1364-9">Paper</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for drosophila phylogeny -->
+
+			<!-- Dropdown menu for code libraries -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://github.com/gwct/core">core</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://github.com/goodest-goodlab/good-utils">good-utils</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for code libraries -->
+
+			<div class="col-4-24 bookmark_margin"></div>
+		</div>	
+		<!-- -------------------  Row 2 end  ------------------- -->
+		<div class="row">
+			<div class="col-24-24" id="line"></div>
+		</div>
+		<!-- ------------------- Row 3 begin ------------------- -->
+		<div class="row" id="bookmark-row">
+			<div class="col-6-24 bookmark_margin"></div>
+
+			<!-- Bookmark for personal github -->
+			<div class="col-4-24 bookmark">
+				<a href="https://github.com/gwct">gwct github</a>
+			</div>
+			<!-- Bookmark for personal github -->
+
+			<!-- Bookmark for FAS info github -->
+			<div class="col-4-24 bookmark">
+				<a href="https://github.com/harvardinformatics/">FAS github</a>
+			</div>
+			<!-- Bookmark for FAS info github -->
+
+			<!-- Bookmark for Good lab github -->
+			<div class="col-4-24 bookmark">
+				<a href="https://github.com/goodest-goodlab">Good github</a>
+			</div>
+			<!-- Bookmark for Good lab github -->
+
+			<div class="col-6-24 bookmark_margin"></div>
+		</div>
+
+		<!-- -------------------  Row 3 end  ------------------- -->
+		<!-- ---------------- BOOKMARK GRID END ---------------- -->
+
+		<div class="col-24-24 xmed_sep_div"></div>
+		
+		<!-- -------------- ENVIRONMENT GRID BEGIN ------------- -->
+		<div class="row" id="env_banner">
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
+				<div id="clock_cell">
+					<span id="clock"></span>
+				</div>
+			</div>
+			<div class="col-20-24" id="weather_cont">
+				<script>getWeatherMA();</script>
+			</div>
+			<div class="col-1-24 margin"></div>
+		</div>
+
+		<div class="col-24-24 sep_div"></div>
+
+		<div class="row" id="env_banner">
+			<!-- <div class="col-18-24" id="motd_text">consistency</div> -->
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
+				<div id="clock_cell">
+					<span id="in">Missoula:</span>
+				</div>
+			</div>
+
+			<div class="col-20-24" id="weather_cont">
+				<script>getWeatherMT();</script>
+			</div>
+			<div class="col-1-24 margin"></div>
+		</div>
+
+		<div class="col-24-24 sep_div"></div>
+
+		<div class="row" id="env_banner">
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
+				<div id="clock_cell">
+					<span id="in">Indiana:</span>
+				</div>
+			</div>
+			<div class="col-20-24" id="weather_cont">
+				<script>getWeatherIN();</script>
+			</div>
+			<div class="col-1-24 margin"></div>
+		</div>
+		<!-- --------------- ENVIRONMENT GRID END -------------- -->
+
+		<div class="col-24-24 med_sep_div"></div>
+
+		<!-- ----------------- MEDIA GRID BEGIN ---------------- -->
+		<div class="col-2-24 margin"></div>
+		<div class="col-12-24 media_cell" id="cal_cell">
+			<center>
+				<iframe id="cal_frame" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=300&amp;wkst=1&amp;bgcolor=%23e6e6e6&amp;src=sonotiro%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FBoston" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+			</center>
+		</div>
+		<div class="col-2-24 margin"></div>
+		<div class="col-6-24 media_cell" id="iotd_cell">
+			<script>iotd();</script>
+		</div>
+		<div class="col-2-24 margin"></div>
+		<!-- ------------------ MEDIA GRID END ----------------- -->
+
+		<!-- <div class="col-24-24 sep_div"></div> -->
+		<!-- <div class="col-24-24 sep_div"></div> -->
+
+
+</body>
+</html>

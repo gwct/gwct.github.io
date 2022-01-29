@@ -4,8 +4,8 @@
 ############################################################
 
 import sys, os
-sys.path.append('..')
-import lib.read_chunks as RC
+sys.path.append(os.path.abspath('../lib/'))
+import read_chunks as RC
 
 ######################
 # HTML template
@@ -19,6 +19,31 @@ html_template = """
     {nav}
 
 	<div class="row" id="header">Updates</div>
+
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">January 29, 2022</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="arc_entry">
+		<ul>
+			<p>
+				After moving to MA and settling in last semester, I'm looking forward to giving a couple seminars this spring. First,
+				I'll be talking at the <a href="https://mcz.harvard.edu/seminars" target="_blank">lunchtime seminar</a> at the Museum of 
+				Comparative Zoology here at Harvard on March 21. Later that week, on March 25, I'll be talking about my work at UMass Lowell's
+				<a href="https://www.uml.edu/Sciences/biology/News/colloquia.aspx" target="_blank">weekly biology seminar</a>. Thanks to 
+				<a href="https://darencard.net/" target="_blank">Daren Card</a> (MCZ) and 
+				<a href="http://www.jessicagarb.science/" target="_blank">Jessica Garb</a> (UMass Lowell) for the invitations!
+			</p>
+
+			<p>
+				I'm also looking forward to presenting my work at some conferences this summer. More on that soon!
+			</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>

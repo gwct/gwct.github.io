@@ -4,8 +4,8 @@
 ############################################################
 
 import sys, os
-sys.path.append('..')
-import lib.read_chunks as RC
+sys.path.append(os.path.abspath('../lib/'))
+import read_chunks as RC
 
 ######################
 # HTML template
@@ -20,7 +20,6 @@ html_template = """
 
     <div class="row" id="header">Publications</div>
 
-	<!--
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">Pre-prints</div>
@@ -30,14 +29,16 @@ html_template = """
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
-			<p><span class="pub_title">Origins and long-term patterns of copy-number variation in rhesus macaques</span>
-			</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Wang RJ, Nguyen J, Harris RA, Raveendran M, Rogers J, Hahn MW. 2019. <em>bioRxiv</em>.
-			</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/749416" target="_blank" id="doi_link">10.1101/749416</a>
-			</br>&nbsp;&nbsp;Resources: <a href="https://github.com/gwct/macaque-cnv-figs" target="_blank">Figures</a></p>
+			<p>
+				<span class="pub_title">The evolution of widespread recombination suppression on the Dwarf Hamster (<em>Phodopus</em>) X chromosome</span>
+				</br>&nbsp;&nbsp;Moore EC, <b>Thomas GWC</b>, Mortimer S, Kopania EEK, Hunnicut KE, Clare-Salzer ZJ, Larson EL, Good JM. 
+				2022.
+				<em>bioRxiv</em>.
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2021.11.15.468705" target="_blank" id="doi_link">10.1101/2021.11.15.468705</a>
+			</p>
 		</ul>
 	</div>
 	<div class="col-2-24" id="margin"></div>
-	-->
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>

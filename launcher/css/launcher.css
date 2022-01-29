@@ -77,6 +77,8 @@ a {
 /*------------------------------------------------------*/
 /* Bookmark grid styles */
 #bookmark-row {}
+.bookmark_margin {}
+
 .bookmark {
 	height:7vh;
 	display: flex;
@@ -167,6 +169,9 @@ a {
 }
 .med_sep_div {
 	height:30vh;
+}
+.xmed_sep_div {
+	height:37vh;
 }
 .big_sep_div {
 	height:45vh;
