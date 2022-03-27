@@ -358,6 +358,22 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Patterns of genomic variation across the tree of life</span>
+				</br>&nbsp;&nbsp;UMass Lowell Departmental Seminar - 
+				2022.03.25 -
+				Invited Talk - 
+				<a href="slides/2022.03.25-UMass-Lowell-comparative.pptx">Slides</a>
+			</p>
+
+			<p>
+				<span class="pub_title">Patterns of genomic variation across the tree of life</span>
+				</br>&nbsp;&nbsp;Harvard Museum of Comparative Zoology Lunchtime Seminar -
+				2022.03.21 - 
+				Invited Talk - 
+				<a href="slides/2022.03.21-MCZ-comparative.pptx">Slides</a>
+			</p>
+
+			<p>
 				<span class="pub_title">Pedigree sequencing and mutation rate variation in primates</span>
 				</br>&nbsp;&nbsp;American Association of Biological Anthropologists 2021 - 
 				Virtual - 
