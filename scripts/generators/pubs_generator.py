@@ -20,6 +20,7 @@ html_template = """
 
     <div class="row" id="header">Publications</div>
 
+	<!--
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">Pre-prints</div>
@@ -35,6 +36,28 @@ html_template = """
 				2022.
 				<em>bioRxiv</em>.
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2021.11.15.468705" target="_blank" id="doi_link">10.1101/2021.11.15.468705</a>
+			</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
+	-->
+
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">2022</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="pub">
+		<ul id="presents">
+			<p>
+				<span class="pub_title">The evolution of widespread recombination suppression on the Dwarf Hamster (<em>Phodopus</em>) X chromosome</span>
+				</br>&nbsp;&nbsp;Moore EC, <b>Thomas GWC</b>, Mortimer S, Kopania EEK, Hunnicut KE, Clare-Salzer ZJ, Larson EL, Good JM. 
+				2022.
+				<em>Genome Biology & Evolution</em>.
+				14(6):evac080.
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/gbe/evac080" target="_blank" id="doi_link">10.1093/gbe/evac080</a>
 			</p>
 		</ul>
 	</div>
@@ -358,9 +381,37 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Prioritizing loci for ILS-aware rate analyses using phylogenetic concordance factors</span>
+				</br>&nbsp;&nbsp;Society of Molecular Biology and Evolution Global Symposium 2 (Sustainability, Equity, and Efficiency in Computational Biology) - 
+				2022.07.12 -
+				Virtual -
+				Contributed Talk - 
+				<a href="slides/2022.07.12-SMBE-phyloacc.pptx">Slides</a>
+			</p>
+
+			<p>
+				<span class="pub_title">Prioritizing loci for ILS-aware rate analyses using phylogenetic concordance factors</span>
+				</br>&nbsp;&nbsp;Evolution Conference - 
+				2022.06.27 -
+				Cleveland, OH -
+				Contributed Talk - 
+				<a href="slides/2022.06.27-Evolution-phyloacc.pptx">Slides</a>
+			</p>
+
+			<p>
+				<span class="pub_title">Speciation and introgression across the most species-rich radiation in mammals</span>
+				</br>&nbsp;&nbsp;Population, Evolutionary, and Quantitative Genetics Conference - 
+				2022.06.09 -
+				Pacific Grove, CA -
+				Platform Talk - 
+				<a href="slides/2022.06.09-PEQG-rodent-introgression.pptx">Slides</a>
+			</p>
+
+			<p>
 				<span class="pub_title">Patterns of genomic variation across the tree of life</span>
 				</br>&nbsp;&nbsp;UMass Lowell Departmental Seminar - 
 				2022.03.25 -
+				Lowell, MA -
 				Invited Talk - 
 				<a href="slides/2022.03.25-UMass-Lowell-comparative.pptx">Slides</a>
 			</p>
@@ -369,13 +420,15 @@ html_template = """
 				<span class="pub_title">Patterns of genomic variation across the tree of life</span>
 				</br>&nbsp;&nbsp;Harvard Museum of Comparative Zoology Lunchtime Seminar -
 				2022.03.21 - 
+				Cambridge, MA -
 				Invited Talk - 
 				<a href="slides/2022.03.21-MCZ-comparative.pptx">Slides</a>
 			</p>
 
 			<p>
 				<span class="pub_title">Pedigree sequencing and mutation rate variation in primates</span>
-				</br>&nbsp;&nbsp;American Association of Biological Anthropologists 2021 - 
+				</br>&nbsp;&nbsp;American Association of Biological Anthropologists - 
+				2021.04.15 -
 				Virtual - 
 				Invited Talk - 
 				<a href="slides/2021.04.15-AABA-mutation-rates.pptx">Slides</a>
@@ -383,7 +436,8 @@ html_template = """
 
 			<p>
 				<span class="pub_title">Patterns of molecular evolution in Arthropods (with Elias Dohmen)</span>
-				</br>&nbsp;&nbsp;Arthropod Genomics Symposium 2020 - 
+				</br>&nbsp;&nbsp;Arthropod Genomics Symposium - 
+				2020.07.21 -
 				Virtual - 
 				Invited Talk - 
 				<a href="slides/2020.07.21-AGS-i5k.pptx">Slides</a>
@@ -391,7 +445,8 @@ html_template = """
 
 			<p>
 				<span class="pub_title">Reproductive longevity predicts mutation rates in primates</span>
-				</br>&nbsp;&nbsp;Population, Evolutionary, and Quantitative Genetics Conference 2018 - 
+				</br>&nbsp;&nbsp;Population, Evolutionary, and Quantitative Genetics Conference - 
+				2018.05.15
 				Madison, WI - 
 				Platform Talk - 
 				<a href="slides/2018.05.15-PEQG-owlmonkey.pptx">Slides</a>
@@ -399,7 +454,8 @@ html_template = """
 
 			<p>
 				<span class="pub_title">The evolution of the genes and genomes of 76 arthropod species</span>
-				</br>&nbsp;&nbsp;Evolution Conference 2017 - 
+				</br>&nbsp;&nbsp;Evolution Conference - 
+				2017.06.26
 				Portland, OR - 
 				Regular Talk - 
 				<a href="slides/2017.06.26-Evolution-i5k.pptx">Slides</a> (14 minute version)
@@ -407,7 +463,8 @@ html_template = """
 
 			<p>
 				<span class="pub_title">The evolution of the genes and genomes of 76 arthropod species</span>
-				</br>&nbsp;&nbsp;Arthropod Genomics Symposium 2017 - 
+				</br>&nbsp;&nbsp;Arthropod Genomics Symposium - 
+				2017.06.09 -
 				South Bend, IN - 
 				Invited Talk - 
 				<a href="slides/2017.06.09-AGS-i5k.pptx">Slides</a> (20 minute version)
@@ -415,7 +472,8 @@ html_template = """
 
 			<p>
 				<span class="pub_title">Gene tree reconciliation with MUL-trees for polyploid analysis</span>
-				</br>&nbsp;&nbsp;Evolution Conference 2016 - 
+				</br>&nbsp;&nbsp;Evolution Conference - 
+				2016.06.19 -
 				Austin, TX - 
 				Regular Talk - 
 				<a href="slides/2016.06.19-Evolution-GRAMPA.pptx">Slides</a>
@@ -423,7 +481,8 @@ html_template = """
 
 			<p>
 				<span class="pub_title">Accounting for sequencing error in phylogenetics</span>
-				</br>&nbsp;&nbsp;Society of Systematic Biologists 2015 - 
+				</br>&nbsp;&nbsp;Society of Systematic Biologists - 
+				2015.05.21 -
 				Ann Arbor, MI - 
 				Lightning Talk - 
 				<a href="slides/2015.05.21-SSB-Error.pptx">Slides</a>
@@ -431,7 +490,8 @@ html_template = """
 
 			<p>
 				<span class="pub_title">Inferring molecular convergence from genomic data</span>
-				</br>&nbsp;&nbsp;Midwest Ecology and Evolution Conference 2015 - 
+				</br>&nbsp;&nbsp;Midwest Ecology and Evolution Conference - 
+				2015.03.28 -
 				Bloomington, IN - 
 				Contributed Talk - 
 				<a href="slides/2015.03.28-MEEC-Convergence.pptx">Slides</a>
@@ -439,10 +499,42 @@ html_template = """
 
 			<p>
 				<span class="pub_title">Convergent evolution of the genomes of marine mammals</span>
-				</br>&nbsp;&nbsp;Society of Molecular Biology and Evolution 2014 - 
+				</br>&nbsp;&nbsp;Society of Molecular Biology and Evolution - 
+				2014.06.12 -
 				San Juan, PR - 
 				Contributed Talk - 
 				<a href="slides/2014.06.12-SMBE-MarineMammals.pptx">Slides</a>
+			</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
+
+	<div class="row" id="header">Posters</div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="pub">
+		<ul id="presents">
+			<p>
+				<span class="pub_title">Molecular and morphological evolution across the most species-rich radiation in mammals</span>
+				</br>&nbsp;&nbsp;Evolution Conference - 
+				2022.06.27 -
+				Cleveland, OH -
+				<a href="posters/2022.06.27-Evolution-murine.png">Poster</a>
+			</p>
+
+			<p>
+				<span class="pub_title">Causes and consequences of structural variation in the <em>Macaca mulatta</em> genome (first author <b>Jelena Nguyen</b>)</span>				
+				</br>&nbsp;&nbsp;Center of Excellence for Women & Technology Research Experience for Undergraduates Symposium - 
+				2019.04.12 -
+				Bloomington, IN -
+				<a href="posters/2019.04.12-CEWiT-macaque.png">Poster</a>
+			</p>
+
+			<p>
+				<span class="pub_title">Convergent evolution of the genomes of marine mammals</span>
+				</br>&nbsp;&nbsp;Genetics, Cellular, and Molecular Sciences Symposium - 
+				2014.06.05 -
+				Bloomington, IN -
+				<a href="posters/2014.06.05-GCMS-Symposium-convergence.jpg">Poster</a>
 			</p>
 		</ul>
 	</div>

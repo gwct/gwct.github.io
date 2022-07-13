@@ -22,6 +22,54 @@ html_template = """
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">July 13, 2022</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="arc_entry">
+		<ul>
+			<p>
+				After my talks in the spring, I launched a summer tour, giving talks and posters at multiple conferences! The tour dates were:
+
+				<ul>
+					<li>
+						June 07 - PEQG (Pacific Grove, CA): Speciation and introgression across the most species-rich radiation in mammals
+					</li>
+
+					<li>
+						June 27 - Evolution (Cleveland, OH): Prioritizing loci for ILS-aware rate analyses using phylogenetic concordance factors (Phylogenetic Methods IV)
+					</li>
+
+					<li>
+						June 27 - Evolution (Cleveland, OH): Molecular and morphological evolution across the most species-rich radiation in mammals (Poster board 105) 
+					</li>
+
+					<li>
+						June 12 - SMBE GS2 (Virtual): Prioritizing loci for ILS-aware rate analyses using phylogenetic concordance factors
+					</li>															
+				</ul>
+			</p>
+
+			<p>
+				SMBE GS2 was really unique, focusing on <a href="http://www.smbe.org/smbe/MEETINGS/SMBEeverywhere/GS2.aspx" target="_blank">Sustainability, Equity, and Efficiency in Computational Biology</a>,
+				which is something I'm really interested in and that our field now has the capability and need to focus on. I learned about some nice tools from Jason Grealey and colleagues
+				(<a href="https://doi.org/10.1093/molbev/msac034" target="_blank">The carbon footprint of bioinformatics</a>) like
+				<a href="http://green-algorithms.org/" target="_blank">Green algorithms</a> and 
+				<a href="https://github.com/Llannelongue/GreenAlgorithms4HPC" target="_blank">GreenAlgorithms4HPC</a> to quantify the energy use and carbon footprint of the programs we run.
+			</p>
+
+			<p>
+				You can check out the slides from my talks on the <a href="pubs.html">Publications & Talks</a> page.
+			</p>
+
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
+
+
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">January 29, 2022</div>
         <div class="col-2-24" id="margin"></div>
 	</div>

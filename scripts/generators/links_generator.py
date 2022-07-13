@@ -26,6 +26,23 @@ html_template = """
 	<div class="row" id="link-section">
 		<div class="col-4-24" id="margin"></div>
 		<div class="col-2-24" id="link-img-col">
+			<a href="https://phyloacc.github.io/" id="link-img-link" target="_blank">
+				<img class="pure-img" id="link-img" src="img/logo/phyloacc-link-logo.png">
+			</a>
+		</div>
+
+		<div class="col-14-24" id="link-text">
+				<b><a href="https://phyloacc.github.io/" target="_blank">Substitution rate shifts in non-coding DNA</a></b></br>
+				A Bayesian framework to estimate substitution rates in non-coding DNA elements, developed in  
+				<a href="https://doi.org/10.1093/molbev/msz049" target="_blank">Hu et al. 2019</a>. Version 2 now accounts
+				for gene tree discordance.
+		</div>
+		<div class="col-4-24" id="margin"></div>
+	</div>
+
+	<div class="row" id="link-section">
+		<div class="col-4-24" id="margin"></div>
+		<div class="col-2-24" id="link-img-col">
 			<a href="https://gwct.github.io/referee/" id="link-img-link" target="_blank">
 				<img class="pure-img" id="link-img" src="img/logo/ref-link-logo.png">
 			</a>
@@ -227,6 +244,21 @@ html_template = """
 	<div class="row" id="link-section">
 		<div class="col-4-24" id="margin"></div>
 		<div class="col-2-24" id="link-img-col">
+			<a href="https://informatics.fas.harvard.edu/" id="link-img-link" target="_blank">
+				<img class="pure-img" id="link-img" src="img/logo/fas-info-link-logo.png">
+			</a>
+		</div>
+
+		<div class="col-14-24" id="link-text">
+			<b><a href="https://informatics.fas.harvard.edu/" target="_blank">Harvard Informatics</a></b></br>
+				My current group, with <a href="https://scholar.harvard.edu/tsackton/home" target="_blank">Tim Sackton</a>.
+		</div>
+		<div class="col-4-24" id="margin"></div>
+	</div>
+
+	<div class="row" id="link-section">
+		<div class="col-4-24" id="margin"></div>
+		<div class="col-2-24" id="link-img-col">
 			<a href="http://www.thegoodlab.org/" id="link-img-link" target="_blank">
 				<img class="pure-img" id="link-img" src="img/logo/good-link-logo.png">
 			</a>
@@ -250,6 +282,21 @@ html_template = """
 		<div class="col-14-24" id="link-text">
 			<b><a href="http://www.indiana.edu/~hahnlab/" target="_blank">Hahn lab</a></b></br>
 				My PhD advisor.
+		</div>
+		<div class="col-4-24" id="margin"></div>
+	</div>	
+
+	<div class="row" id="link-section">
+		<div class="col-4-24" id="margin"></div>
+		<div class="col-2-24" id="link-img-col">
+			<a href="https://kiharalab.org/web/" id="link-img-link" target="_blank">
+				<img class="pure-img" id="link-img" src="img/logo/kihara-link-logo.png">
+			</a>
+		</div>
+
+		<div class="col-14-24" id="link-text">
+			<b><a href="https://kiharalab.org/web/" target="_blank">Kihara lab</a></b></br>
+				My undergrad lab.
 		</div>
 		<div class="col-4-24" id="margin"></div>
 	</div>	

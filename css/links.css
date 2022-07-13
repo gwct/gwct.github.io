@@ -4,6 +4,7 @@
 	display:flex;
 	/* height:30vh; */
 	min-height:12vh;
+	padding: 15px 0;
 }
 #link-img-col {
 	display:flex;
