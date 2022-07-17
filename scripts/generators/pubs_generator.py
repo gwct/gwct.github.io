@@ -18,6 +18,7 @@ html_template = """
 <body>
     {nav}
 
+	<a class="internal-link" name="pubs"></a>
     <div class="row" id="header">Publications</div>
 
 	<!--
@@ -375,7 +376,8 @@ html_template = """
 		</ul>
 	</div>
 	<div class="col-2-24" id="margin"></div>
-		
+	
+	<a class="internal-link" name="talks"></a>
 	<div class="row" id="header">Presentations</div>
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
@@ -509,6 +511,7 @@ html_template = """
 	</div>
 	<div class="col-2-24" id="margin"></div>
 
+	<a class="internal-link" name="posters"></a>
 	<div class="row" id="header">Posters</div>
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
@@ -540,6 +543,7 @@ html_template = """
 	</div>
 	<div class="col-2-24" id="margin"></div>
 
+	<a class="internal-link" name="workshops"></a>
 	<div class="row" id="header">Workshops</div>
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
@@ -570,6 +574,7 @@ html_template = """
 	</div>
 	<div class="col-2-24" id="margin"></div>	
 
+	<a class="internal-link" name="other"></a>
 	<div class="row" id="header">Other Content</div>
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
