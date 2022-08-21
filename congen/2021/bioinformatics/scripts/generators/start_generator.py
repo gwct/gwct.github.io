@@ -4,8 +4,8 @@
 ############################################################
 
 import sys, os
-sys.path.append('..')
-import lib.read_chunks as RC
+sys.path.append(os.path.abspath('../lib/'))
+import read_chunks as RC
 
 ######################
 # HTML template
@@ -172,7 +172,7 @@ You can catch problems before you use the data in later analyses.</code></pre>
 
                             <p>Next, download the project repository using <code class="inline">git</code>:</p>
 
-                            <center><pre class="cmd"><code>git clone https://github.com/gwct/congen-2021-bioinformatics.git</code></pre></center>
+                            <center><pre class="cmd"><code>git clone https://github.com/gwct/congen-bioinformatics.git</code></pre></center>
                             
                             <div class="table-cont">
                                 <table class="cmd-table">
@@ -185,7 +185,7 @@ You can catch problems before you use the data in later analyses.</code></pre>
                                         <td class="tcol-1">clone</td><td class="tcol-2">The git sub-program to make download an exact copy of a repository.</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">https://github.com/gwct/congen-2021-bioinformatics.git</td>
+                                        <td class="tcol-1">https://github.com/gwct/congen-bioinformatics.git</td>
                                         <td class="tcol-2">The URL of the project repository. This can be found on the webpage of the repository.</td>
                                     </tr>
                                 </table>
