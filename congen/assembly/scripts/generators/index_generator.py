@@ -24,7 +24,7 @@ html_template = """
             <div class="row" id="section-row">
                 <div class="col-2-24" id="inner-margin"></div>
                 <div class="col-20-24" id="section-content">
-                    <h1>Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2021</a> genome assembly workshop!</h1>
+                    <h1>Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2022</a> genome assembly workshop!</h1>
                         <p>This web page will guide you through the genome assembly and read mapping activities we have planned for you today!</p>
                 </div>
                 <div class="col-2-24" id="inner-margin"></div>
@@ -48,6 +48,7 @@ html_template = """
                 <div class="col-2-24" id="inner-margin"></div>
                 <div class="col-20-24" id="section-content">
 
+                    <!--
                     <div id="sep_div"></div>
 
                     <div class="row" id="instructor">
@@ -62,6 +63,7 @@ html_template = """
                             </p>
                         </div>
                     </div>
+                    -->
 
                     <div id="sep_div"></div>
 
