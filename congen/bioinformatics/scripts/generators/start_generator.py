@@ -214,7 +214,7 @@ You can catch problems before you use the data in later analyses.</code></pre>
                             </div>
 
                             <p>
-                                After the clone command completes, you should now have a folder in your home directory called <code class="inline">congen-2021-bioinformatics</code>.
+                                After the clone command completes, you should now have a folder in your home directory called <code class="inline">congen-bioinformatics</code>.
                                 Make sure it's there with <code class="inline">ls</code>:
                             </p>
 
@@ -232,7 +232,7 @@ You can catch problems before you use the data in later analyses.</code></pre>
 
                             <p>And next change into that directory:</p>
 
-                            <center><pre class="cmd"><code>cd congen-2021-bioinformatics</code></pre></center>
+                            <center><pre class="cmd"><code>cd congen-bioinformatics</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
