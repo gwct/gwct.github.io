@@ -18,21 +18,24 @@ html_template = """
 <body>
     {nav}
 
-    <a class="internal-link" name="start"></a>
-   	<div class="row" id="header">Introduction to Bioinformatics workshop</div>
+    <a class="internal-link" name="cannon"></a>
+   	<div class="row" id="header">Getting started</div>
 
     <div class="row" id="body-row">
         <div class="col-3-24" id="side-nav-cont">
             <div id="side-nav">
                 <span id="side-header">Page contents</span>
                 <ul>
-                    <li><a href="start.html#start">Getting started</a></li>
-                    <li><a href="start.html#downloading">Downloading the project</a></li>
+                    <li><a href="start.html#cannon">Connecting to Cannon</a></li>
+                    <li><a href="start.html#env">Loading the PhyloAcc environment</a></li>
+                    <li><a href="start.html#project">Creating a project folder</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="col-21-24" id="main-cont">
+
+            <!-- ------- BEGIN SECTION ------- -->
 
             <div class="row" id="top-row-cont">
                 <div class="col-24-24" id="top-row"></div>
@@ -48,23 +51,38 @@ html_template = """
                     <div class="row" id="section-row">
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
-                                <p>Hello! Today we'll be going through some hands-on activities to help you get familiar with how many bioinformatics tasks can be done directly from the command line.</p>
+                                <p>
+                                    Hello! Today we'll be going through some hands-on activities to help you get familiar with how PhyloAcc is run and how it can be used to
+                                    identify genomic elements that have experienced accelerated evolution.
+                                </p>
 
-                                <p>The first thing you should do if you haven't done so is connect to the ConGen server. We'll be working exclusively in the RStudio browser interface that 
-                                    you should be familiar with by now, but if you have questions or problems at any point please feel free to ask! Just in case, here's an annotated 
-                                    picture of roughly what you should be seeing right now. If you are seeing something drastically different or something that you don't understand, let us know.
+                                <p>
+                                    This course will have 2 parts: one where we are on the server and running commands and another where we download some pre-run data to analyze with R.
+                                </p>
+
+                                <p>
+                                    Feel free to just watch this first part, but if you want to follow along by running the commands, the first thing you should do if you haven't done 
+                                    so is to connect to Cannon, our cluster, such that you can run commands from a terminal. There are different ways to do this, but the easiest thing 
+                                    would to just open up Terminal (on Mac) or PowerShell (on Windows) and run the following command:
+                                </p>
+
+                                <center><pre class="cmd"><code>ssh [your user name]@login.rc.fas.harvard.edu</code></pre></center>
+
+                                <p>
+                                    This should prompt you for your password and 2-factor authentication code, at which point you should see something like this:
                                 </p>
 
                                 <div class="row" id="img-row">
-                                    <!-- <div class="col-2-24" id="margin"></div> -->
-                                    <div class="col-24-24" id="img-col">
-                                        <img id="res-img" src="img/congen-interface.png">
-                                        <center><span class="fig-caption">Figure 1.1: The RStudio interface for running commands and browsing files.</span></center>
+                                    <div class="col-5-24" id="margin"></div>
+                                    <div class="col-14-24" id="img-col">
+                                        <img id="res-img" src="img/cannon.png">
+                                        <center><span class="fig-caption">Figure 1.1: Cannon right after logging in.</span></center>
                                     </div>
-                                    <!-- <div class="col-2-24" id="margin"></div> -->
+                                    <div class="col-5-24" id="margin"></div>
                                 </div>
 
-                                <p>Most of our work will be done as bash commands typed in the Terminal provided by RStudio. Throughout this walkthrough, commands will be presented
+                                <p>
+                                    Most of our work in the first part of the course will be done as bash commands typed in the Terminal. Throughout this walkthrough, commands will be presented
                                     as follows:
                                 </p>
 
@@ -119,6 +137,7 @@ html_template = """
                                     </div>
                                 </div>
 
+                                <!--
                                 <p>Commands that you should run will have a <span style="background-color:#c6ecd9;">green background</span>. We will also provide some commands that are beneficial
                                     to see, but do not necessarily need to be run using a <span style="background-color:#ffb3b3;">red background</span>, like so:
 
@@ -128,6 +147,7 @@ html_template = """
                                     There will be several points where we stop to look at the output of a given program or command. When we do, a snippet
                                     of the output will be presented in the walkthrough as follows:
                                 </p>
+                                -->
 
                                 <pre class="text"><code>Here is some made up output.
 Looking at your data is very important!
@@ -138,10 +158,14 @@ You can catch problems before you use the data in later analyses.</code></pre>
                 </div>
             </div>
 
-            <a class="internal-link" name="downloading"></a>
+            <!-- -------- END SECTION -------- -->
+
+            <!-- ------- BEGIN SECTION ------- -->
+
+            <a class="internal-link" name="env"></a>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
-                    <div id="section-header">Downloading the project</div>
+                    <div id="section-header">Loading the PhyloAcc environment</div>
                 </div>
             </div>
             <div class="row" id="section-cont">
@@ -149,11 +173,99 @@ You can catch problems before you use the data in later analyses.</code></pre>
                     <div class="row" id="section-row">
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
-                            <p>Today we'll be doing some basic bioinformatics tasks from the command line. We'll get to the specifics of the data later, but for now
-                                please download the project template we've provided on github.
+
+                            <p>
+                                I've pre-made a <code class="inline">conda</code> environment with PhyloAcc installed in it. To load it, first load Anaconda:
                             </p>
 
-                            <p>First, make sure you're in your home directory. If you're not, or you're not sure if you are, run the command:</p>
+                            <center><pre class="cmd"><code>module load Anaconda3</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">module</td>
+                                        <td class="tcol-2">The cluster's module system that contains pre-installed software.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">load</td>
+                                        <td class="tcol-2">The module sub-command telling it we want to load a package.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">Anaconda3</td>
+                                        <td class="tcol-2">The name of the package we want to load.</td>
+                                    </tr>                                    
+                                </table>
+                            </div>
+
+                            <p>Next, load my pre-made environment</p>
+
+                            <center><pre class="cmd"><code>source activate /n/holylfs05/LABS/informatics/Everyone/phyloacc-data/workshop-20221027/env/phyloacc-workshop</code></pre></center>
+                            
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">source</td>
+                                        <td class="tcol-2">The conda command to run scripts.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">activate</td>
+                                        <td class="tcol-2">The conda script to run which activates environments</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">/n/holylfs05/LABS/informatics/Everyone/phyloacc-data/workshop-20221027/env/phyloacc-workshop</td>
+                                        <td class="tcol-2">The path to the environment we want to load.</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <p>
+                                Then, let's make sure everything loaded correctly by running a check:
+                            </p>
+
+                            <center><pre class="cmd"><code>phyloacc.py --depcheck</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">phyloacc.py</td>
+                                        <td class="tcol-2">The main interface for PhyloAcc.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">--depcheck</td>
+                                        <td class="tcol-2">An option that tells PhyloAcc to check dependency paths.</td>
+                                    </tr>                                    
+                                </table>
+                            </div>       
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------- END SECTION -------- -->
+
+            <!-- ------- BEGIN SECTION ------- -->
+
+            <a class="internal-link" name="project"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Creating a project directory</div>
+                </div>
+            </div>
+             <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">                    
+
+                            <p>
+                                To keep things organized, let's make a new folder specifically for this workshop. First let's make sure you're in your
+                                home directory:
+                            </p>
 
                             <center><pre class="cmd"><code>cd ~</code></pre></center>
 
@@ -161,108 +273,67 @@ You can catch problems before you use the data in later analyses.</code></pre>
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
-                                        <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
+                                        <td class="tcol-1">cd</td>
+                                        <td class="tcol-2">The Linux change directory</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">~</td><td class="tcol-2">The path to the directory you want to change to. ~ is a shortcut for
-                                        "the current user's home directory."</td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <p>Next, download the project repository using <code class="inline">git</code>:</p>
-
-                            <center><pre class="cmd"><code>git clone https://github.com/gwct/congen-bioinformatics.git</code></pre></center>
-                            
-                            <div class="table-cont">
-                                <table class="cmd-table">
-                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
-                                    <tr>
-                                        <td class="tcol-1">git</td><td class="tcol-2">A cross platform program for vesrion control and syncing of software 
-                                        and data projects.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1">clone</td><td class="tcol-2">The git sub-program to make download an exact copy of a repository.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tcol-1">https://github.com/gwct/congen-bioinformatics.git</td>
-                                        <td class="tcol-2">The URL of the project repository. This can be found on the webpage of the repository.</td>
+                                        <td class="tcol-1">phyloacc-workshop</td>
+                                        <td class="tcol-2">The path to the directory you want to change to. In this case, ~ is a shortcut
+                                            meaning "your home directory".</td>
                                     </tr>
                                 </table>
                             </div>
 
                             <p>
-                                Git is very powerful software for sharing your projects and used commonly to share code and data from scientific papers, 
-                                but we won't talk about it much today other than using the <code class="inline">clone</code> command to download the project. 
-                                You don't need a github account to clone a repository, but you do need git installed on your computer to do so.
+                                And this will create a folder in your
+                                home directory, but feel free to do it anywhere you like.
                             </p>
 
-                            <div id="msg_cont">
-                                <div id="msg">
-                                    <div id="msg_banner">Tip - More info about git</div>
-                                    <div id="msg_text">
-                                        <p>
-                                            If you're interested in learning more about git there are a ton of guides and docs out there for you to search for. To get
-                                            started, we've put together a couple of how-tos for understanding git basics here:
-                                        </p>
+                            <center><pre class="cmd"><code>mkdir phyloacc-workshop</code></pre></center>
 
-                                        <center><a href="https://github.com/goodest-goodlab/good-protocols/tree/main/how-tos" target="_blank">git how-tos</a></center>
-
-                                        <p></p>
-                                    </div>
-                                </div>
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">mkdir</td>
+                                        <td class="tcol-2">The Linux create directory command</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">phyloacc-workshop</td>
+                                        <td class="tcol-2">The name of the directory you want to create</td>
+                                    </tr>
+                                </table>
                             </div>
 
                             <p>
-                                After the clone command completes, you should now have a folder in your home directory called <code class="inline">congen-bioinformatics</code>.
-                                Make sure it's there with <code class="inline">ls</code>:
+                                Finally let's enter our new directory so any files we create will be put in it:
                             </p>
 
-                            <center><pre class="cmd"><code>ls</code></pre></center>
+                            <center><pre class="cmd"><code>cd phyloacc-workshop</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
-                                        <td class="tcol-1">ls</td><td class="tcol-2">The Linux list directory contents command. With no other options given,
-                                            this lists the contents of the current directory.</td>
-                                    </tr>
-                                </table>
-                            </div>                            
-
-                            <p>And next change into that directory:</p>
-
-                            <center><pre class="cmd"><code>cd congen-bioinformatics</code></pre></center>
-
-                            <div class="table-cont">
-                                <table class="cmd-table">
-                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
-                                    <tr>
-                                        <td class="tcol-1">cd</td><td class="tcol-2">The Linux change directory command</td>
+                                        <td class="tcol-1">cd</td>
+                                        <td class="tcol-2">The Linux change directory</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">~</td><td class="tcol-2">The path to the directory you want to change to.</td>
+                                        <td class="tcol-1">phyloacc-workshop</td>
+                                        <td class="tcol-2">The path to the directory you want to change to.</td>
                                     </tr>
                                 </table>
                             </div>
 
-                            <p>Using this project template data, we'll be performing the following tasks today:</p>
-
-                            <ol>
-                                <li>Talking about project organization, common commands, and text editors and work setups.</li>
-                                <li>Introducing common bioinformatics file formats.</li>
-                                <li>Using the command line to do a basic analysis of structural variation in a sample of 32 Rhesus macaques and
-                                    of SNPs in 35 gray wolves.</li>
-                                <li>Time permitting, briefly touch on some next steps in developing more advanced bioinformatics skills</li>
-                            </ol>
-
-                            <p>Now, let's move on to <a href="organization.html">Project Organization</a></p>
+                            <p>Now, let's move on to <a href="marine-mammals.html">an intro to our data</a></p>
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
                     </div>
                 </div>
             </div>
+
+            <!-- -------- END SECTION -------- -->
 
         </div>
     </div>
@@ -277,7 +348,7 @@ You can catch problems before you use the data in later analyses.</code></pre>
         <div class="col-6-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
             <div class="nav-btn">
-                <a href="organization.html">Next&nbsp;&gt;</a>
+                <a href="marine-mammals.html">Next&nbsp;&gt;</a>
             </div>
         </div>
         <div class="col-3-24" id="nav-btn-margin"></div>
@@ -294,7 +365,7 @@ You can catch problems before you use the data in later analyses.</code></pre>
 pagefile = "start.html";
 print("Generating " + pagefile + "...");
 year = RC.getYear();
-title = "ConGen" + year + " - Intro to Bioinformatics"
+title = "PhyloAcc OEB275R - " + year
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);

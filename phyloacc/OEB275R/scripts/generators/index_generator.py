@@ -118,16 +118,15 @@ html_template = """
                     <center><h1><a href="start.html" id="start-btn">Get Started</a></h1></center>
 
                     <div class="row" id="link-row">
-                        <div class="col-1-24" id="inner-margin"></div>
-                        <div class="col-4-24" id="btm-link"><a href="organization.html">Marine mammal data</a></div>
-                        <div class="col-2-24" id="inner-margin"></div>
-                        <div class="col-4-24" id="btm-link"><a href="commands.html">Installing PhyloAcc</a></div>
-                        <div class="col-2-24" id="inner-margin"></div>
-                        <div class="col-4-24" id="btm-link"><a href="macaque-svs.html">Running PhyloAcc</a></div>
-                        <div class="col-2-24" id="inner-margin"></div>
-                        <div class="col-4-24" id="btm-link"><a href="wolf-snps.html">Analyzing PhyloAcc results</a></div>
-                        <div class="col-1-24" id="inner-margin"></div>
+                        <div class="col-3-24" id="inner-margin"></div>
+                        <div class="col-4-24" id="btm-link"><a href="marine-mammals.html">Marine mammal data</a></div>
+                        <div class="col-3-24" id="inner-margin"></div>
+                        <div class="col-4-24" id="btm-link"><a href="run-phyloacc.html">Running PhyloAcc</a></div>
+                        <div class="col-3-24" id="inner-margin"></div>
+                        <div class="col-4-24" id="btm-link"><a href="phyloacc-results.html">Analyzing PhyloAcc results</a></div>
+                        <div class="col-3-24" id="inner-margin"></div>
                     </div>
+                    <div id="sep_div"></div>
                 </div>
                 <div class="col-2-24" id="inner-margin"></div>
             </div>
@@ -146,7 +145,7 @@ html_template = """
 pagefile = "index.html";
 print("Generating " + pagefile + "...");
 year = RC.getYear();
-title = "PhyloAcc OEB275R - Fall 2022"
+title = "PhyloAcc OEB275R - " + year
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);

@@ -307,7 +307,7 @@ img { width: 100%; }
     object-fit: scale-down;
 }
 #instructor {
-	max-height:20vh;
+	/* max-height:20vh; */
 	border:1px dotted #666666;
 }
 #inst-img-cont{
@@ -318,7 +318,7 @@ img { width: 100%; }
 	width:auto;
 }
 #inst-text{
-	margin:20px;
+	/* margin:20px; */
 	padding: 20px;
 }
 @media (max-width: 1025px) {
