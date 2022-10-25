@@ -59,7 +59,7 @@ html_template = """
                             <div class="row" id="img-row">
                                 <div class="col-4-24" id="margin"></div>
                                 <div class="col-16-24" id="img-col">
-                                    <img id="res-img" src="img/marine-mammal-convergence.png">
+                                    <img id="res-img" src="img/marine-mammal-convergence-1.png">
                                     <center><span class="fig-caption">Figure 2.1: Convergence among three lineages of mammals that have adapted to aquatic lifestyles.
                                         Adapted from <a href="http://dx.doi.org/doi:10.1038/ng.3198" target="_blank">Foote et al. 2015</a>.</span></center>
                                 </div>
