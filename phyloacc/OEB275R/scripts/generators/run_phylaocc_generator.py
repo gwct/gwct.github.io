@@ -277,7 +277,7 @@ html_template = """
         <div class="col-6-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
             <div class="nav-btn">
-                <a href="advanced.html">Next&nbsp;&gt;</a>
+                <a href="phyloacc-results.html">Next&nbsp;&gt;</a>
             </div>
         </div>
         <div class="col-3-24" id="nav-btn-margin"></div>
