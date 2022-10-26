@@ -26,8 +26,10 @@ html_template = """
             <div id="side-nav">
                 <span id="side-header">Page contents</span>
                 <ul>
-                    <li><a href="terms.html#terms">Term definitions</a></li>
-                    <li><a href="terms.html#formats">Common file formats</a></li>
+                    <li><a href="terms.html#terms">Bioinformatics terms</a></li>
+                    <li><a href="phylo.html#terms">Phylogenetics terms</a></li>
+                    <li><a href="phyloacc.html#terms">PhyloAcc terms</a></li>
+                    <li><a href="formats.html#formats">Common file formats</a></li>
                 </ul>
             </div>
         </div>
@@ -38,7 +40,7 @@ html_template = """
             </div>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
-                    <div id="section-header">Definitions of frequently used terms</div>
+                    <div id="section-header">Definitions of frequently used terms in bioinformatics</div>
                 </div>
             </div>
             <div class="row" id="section-cont">
@@ -60,6 +62,48 @@ html_template = """
                             </p>
 
                             {terms_table}
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="internal-links" name="phylo"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Definitions of frequently used terms in phylogenetics</div>
+                </div>
+            </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            {phylo_table}
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="internal-links" name="phyloacc"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Definitions of frequently used terms in the context of PhyloAcc</div>
+                </div>
+            </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            {phyloacc_table}
                             <div id="sep_div"></div>
 
                         </div>
@@ -110,13 +154,13 @@ table_template = """
 pagefile = "terms.html";
 print("Generating " + pagefile + "...");
 year = RC.getYear();
-title = "ConGen" + year + " - Intro to Bioinformatics"
+title = "PhyloAcc OEB275R - " + year;
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
 footer = RC.readFooter();
 
-tables = {'terms' : "../../data/terms.csv", 'formats' : "../../data/formats.csv" };
+tables = {'terms' : "../../data/terms.csv", 'phylo' : "../../data/phylo-terms.csv", 'phyloacc' : "../../data/phyloacc-terms.csv", 'formats' : "../../data/formats.csv" };
 
 for table in tables:
     #print(table);
@@ -176,9 +220,12 @@ for table in tables:
             terms_table = table_template.format(table_rows=cur_rows);
         elif table == "formats":
             formats_table = table_template.format(table_rows=cur_rows);
-
+        elif table == "phylo":
+            phylo_table = table_template.format(table_rows=cur_rows);            
+        elif table == "phyloacc":
+            phyloacc_table = table_template.format(table_rows=cur_rows);          
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, terms_table=terms_table, formats_table=formats_table, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, terms_table=terms_table, phylo_table=phylo_table, phyloacc_table=phyloacc_table, formats_table=formats_table, footer=footer));

@@ -20,11 +20,9 @@
 			<div class="dropdown_container desktop_drop">
 				<ul class="dropdown_list">
 					<li class="dropdown_list_item"><a href="start.html" id="dropdown_nav_link">Start</a></li>
-					<li class="dropdown_list_item"><a href="organization.html" id="dropdown_nav_link">Project organization</a></li>
-					<li class="dropdown_list_item"><a href="commands.html" id="dropdown_nav_link">Command concepts</a></li>
-					<li class="dropdown_list_item"><a href="macaque-svs.html" id="dropdown_nav_link">Macaque SVs</a></li>
-					<li class="dropdown_list_item"><a href="wolf-snps.html" id="dropdown_nav_link">Wolf SNPs</a></li>
-					<li class="dropdown_list_item"><a href="advanced.html" id="dropdown_nav_link">Overview of advanced topics</a></li>
+					<li class="dropdown_list_item"><a href="marine-mammals.html" id="dropdown_nav_link">Marine mammal data</a></li>
+					<li class="dropdown_list_item"><a href="#" id="dropdown_nav_link">Running PhyloAcc</a></li>
+					<li class="dropdown_list_item"><a href="phyloacc-results.html" id="dropdown_nav_link">Analyzing results</a></li>
 				</ul>
 			</div>
 		</div>
@@ -53,20 +51,18 @@
    	<div class="row" id="header">Running PhyloAcc</div>
 
     <div class="row" id="body-row">
-        <!--
         <div class="col-3-24" id="side-nav-cont">
             <div id="side-nav">
                 <span id="side-header">Page contents</span>
                 <ul>
                     <li><a href="run-phyloacc.html#pipeline">PhyloAcc pipeline</a></li>
-                    <li><a href="run-phyloacc.html#batch">Running a single batch</a></li>
+                    <li><a href="run-phyloacc.html#locus">Running a single locus</a></li>
                     <li><a href="run-phyloacc.html#gather">Gathering outputs</a></li>
                 </ul>
             </div>
         </div>
-        -->
 
-        <div class="col-24-24" id="main-cont">
+        <div class="col-21-24" id="main-cont">
 
             <!-- ------- BEGIN SECTION ------- -->
 
@@ -190,7 +186,7 @@
                             </div> 
 
                             <p>
-                                This should run in a few seconds, and when it's done it should have created several files and folders in the <code class='inline'>phyloacc-batch-st</code>
+                                This should run in about a minute, and when it's done it should have created several files and folders in the <code class='inline'>phyloacc-batch-st</code>
                                 directory, including a <a href="data/st-test-branches/phyloacc-pre-run-summary.html" target="blank">summary HTML file</a>.
                             </p>
 
@@ -205,16 +201,45 @@
                             </p>             
 
                             <p>
-                                If we were performing a real analysis, we would execute the snakemake command printed out when we ran the batching script, which would submit the
-                                batches to the cluster. But since we don't have that much time, I've pre-run these loci through the pipeline with both the species tree and gene tree
-                                model for us to compare and analyze.
+                                Mainly what this script does is partition the input loci into multiple batches and write the config files required by PhyloAcc. Let's take a look at one of those
+                                config files:
                             </p>
 
+                            <center><pre class="cmd"><code>cat phyloacc-batch-st/phyloacc-job-files/cfgs/10-st.cfg</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">cat</td><td class="tcol-2">The command to print the contents of a file to the screen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">/n/holylfs05/LABS/informatics/Everyone/phyloacc-data/workshop-20221027/data/st-test-branches/phyloacc-job-files/cfgs/10-st.cfg</td>
+                                        <td class="tcol-2">The path to the file you want to print.</td>
+                                    </tr>
+                                </table>
+                            </div>
+
                             <p>
-                                Then, after all the PhyloAcc batches have been run by the server, their outputs need to be summarized and gathered back into a single location. For this, 
-                                PhyloAcc containes a post-processing script, <code class='inline'>phyloacc_post.py</code>, that also <a href="data/st-target-branches/phyloacc-results.html" target="_blank">summarizes the results</a> 
-                                and importantly creates the <code class='inline'>elem_lik.txt</code> output table, which we'll analyze in detail after we 
-                                <a href="">download the pre-run data...</a>
+                                This should look something like this on your screen, with the paths being different based on your user name:
+                            </p>
+
+                                <pre class="text"><code>>PHYTREE_FILE /n/holylfs05/LABS/informatics/Everyone/phyloacc-data/mammal-input-accelerated/mammal_acc1.mod
+SEG_FILE /n/home07/gthomas/phyloacc-workshop/phyloacc-batch-st/phyloacc-job-files/bed/10-st.bed
+ID_FILE /n/home07/gthomas/phyloacc-workshop/phyloacc-batch-st/phyloacc-job-files/ids/10-st.id
+ALIGN_FILE /n/home07/gthomas/phyloacc-workshop/phyloacc-batch-st/phyloacc-job-files/alns/10-st.fa
+RESULT_FOLDER /n/home07/gthomas/phyloacc-workshop/phyloacc-batch-st/phyloacc-job-files/phyloacc-output/10-phyloacc-st-out
+PREFIX 10
+BURNIN 1000
+MCMC 10000
+CHAIN 1
+TARGETSPECIES turTru2;orcOrc1;odoRosDiv1;lepWed1;triMan1
+OUTGROUP monDom5;sarHar1;macEug2;ornAna1
+CONSERVE hg38;panTro4;gorGor3;ponAbe2;nomLeu3;rheMac3;macFas5;papAnu2;chlSab2;calJac3;saiBol1;otoGar3;tupChi1;speTri2;jacJac1;micOch1;criGri1;mesAur1;mm10;rn6;hetGla2;cavPor3;chiLan1;octDeg1;oryCun2;ochPri3;susScr3;vicPac2;camFer1;panHod1;bosTau8;oviAri3;capHir1;equCab2;cerSim1;felCat8;canFam3;musFur1;ailMel1;pteAle1;pteVam1;eptFus1;myoDav1;myoLuc2;eriEur2;sorAra2;conCri1;loxAfr3;eleEdw1;chrAsi1;echTel2;oryAfe1;dasNov3
+NUM_THREAD 1</code></pre>                                
+
+                            <p>
+                                So, this file contains paths to sequence files, mod files that have the tree and neutral rates, and a bunch of other options for the MCMC analysis
                             </p>
 
                         </div>
@@ -225,11 +250,12 @@
 
             <!-- -------- END SECTION -------- -->
 
-            <!--      
-            <a class="internal-link" name="batch"></a>
+            <!-- ------- BEGIN SECTION ------- -->
+
+            <a class="internal-link" name="locus"></a>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
-                    <div id="section-header">Running a single locus with the species tre model</div>
+                    <div id="section-header">Running a single locus with the species tree model</div>
                 </div>
             </div>
 
@@ -241,34 +267,64 @@
 
                             <p>
                                 If we were performing a real analysis, we would execute the snakemake command printed out when we ran the batching script, which would submit the
-                                batches to the cluster. But since we don't have that much time, lets just run a single locus through PhyloAcc to get an idea of what its doing:
+                                batches to the cluster. But since we don't have that much time, lets just run a single locus through PhyloAcc to get an idea of what its doing.
                             </p>
 
-                            <center><pre class="cmd-ne"><code>vcftools &lt;options&gt; &lt;input file&gt;</code></pre></center>
+                            <p>
+                                First, we'll need to create the output directory where PhyloAcc will write its files:
+                            </p>
+
+                            <center><pre class="cmd"><code>mkdir single-locus-output</code></pre></center>
 
                             <div class="table-cont">
                                 <table class="cmd-table">
                                     <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
                                     <tr>
-                                        <td class="tcol-1">vcftools</td><td class="tcol-2">A program for working with variant calls in VCF format</td>
+                                        <td class="tcol-1">mkdir</td>
+                                        <td class="tcol-2">The Linux create directory command</td>
                                     </tr>
                                     <tr>
-                                        <td class="tcol-1">&lt;options&gt;</td><td class="tcol-2">Analysis specific run options</td>
+                                        <td class="tcol-1">single-locus-output</td>
+                                        <td class="tcol-2">The name of the directory you want to create</td>
+                                    </tr>
+                                </table>
+                            </div>                            
+
+                            <p>
+                                And then we can run PhyloAcc
+                            </p>
+
+                            <center><pre class="cmd"><code>PhyloAcc-ST /n/holylfs05/LABS/informatics/Everyone/phyloacc-data/workshop-20221027/data/single-locus/1-st.cfg</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">PhyloAcc-ST</td>
+                                        <td class="tcol-2">The path to the PhyloAcc species tree model program.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">/n/holylfs05/LABS/informatics/Everyone/phyloacc-data/workshop-20221027/data/single-locus/1-st.cfg</td>
+                                        <td class="tcol-2">The path to the config file for this run</td>
                                     </tr>
                                     <tr>
                                         <td class="tcol-1">&lt;input file&gt;</td><td class="tcol-2">The path to the file you want to run on</td>
                                     </tr>
                                 </table>
                             </div>
-                                
+
+                            <p>
+                                This should take a couple of minutes, and when its done it should create several files in the specified output directory that have information like
+                                the likelihoods of each model, the Bayes factors, and the conservation states for each branch of the tree for each locus. We'll take a closer look at
+                                all of these things when we analyze some results in a minute.
+                            </p>
+
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
                     </div>
                 </div>
             </div>
-            -->
 
-            <!--   
             <a class="internal-link" name="gather"></a>
             <div class="row" id="section-header-cont">
                 <div class="col-24-24" id="section-header-row">
@@ -282,10 +338,44 @@
                         <div class="col-2-24" id="inner-margin"></div>
                         <div class="col-20-24" id="section-content">
 
+                            <!--
                             <p>
                                 After all the PhyloAcc batches have been run by the server, their outputs need to be summarized and gathered back into a single location. For this, 
                                 PhyloAcc containes a post-processing script, <code class='inline'>phyloacc_post.py</code>, that also <a href="" target="_blank">summarizes the results</a> and importantly
                                 creates the <code class='inline'>elem_lik.txt</code> output table, which we'll analyze in detail after we download some pre-run data...
+                            </p>
+
+                            <p>
+                                We can try running this script on some pre-run data I have:
+                            </p>
+
+                            <center><pre class="cmd"><code>phyloacc_post.py -i /n/holylfs05/LABS/informatics/Everyone/phyloacc-data/workshop-20221027/data/st-test-branches/ -o phyloacc-st-results</code></pre></center>
+
+                            <div class="table-cont">
+                                <table class="cmd-table">
+                                    <thead><th class="tcol-1">Command line parameter</th><th class="tcol-2">Description</th></thead>
+                                    <tr>
+                                        <td class="tcol-1">cat</td><td class="tcol-2">The command to print the contents of a file to the screen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tcol-1">/n/holylfs05/LABS/informatics/Everyone/phyloacc-data/workshop-20221027/data/st-test-branches/phyloacc-job-files/cfgs/10-st.cfg</td>
+                                        <td class="tcol-2">The path to the file you want to print.</td>
+                                    </tr>
+                                </table>
+                            </div>                            
+
+                            <p>
+                                If we were performing a real analysis, we would execute the snakemake command printed out when we ran the batching script, which would submit the
+                                batches to the cluster. But since we don't have that much time, I've pre-run these loci through the pipeline with both the species tree and gene tree
+                                model for us to compare and analyze.
+                            </p>
+                            -->
+
+                            <p>
+                                Then, after all the PhyloAcc batches have been run by the server, their outputs need to be summarized and gathered back into a single location. For this, 
+                                PhyloAcc containes a post-processing script, <code class='inline'>phyloacc_post.py</code>, that also <a href="data/st-test-branches/phyloacc-results.html" target="_blank">summarizes the results</a> 
+                                and importantly creates the <code class='inline'>elem_lik.txt</code> output table, which we'll analyze in detail after we 
+                                <a href="">download the pre-run data...</a>
                             </p>
 
                         </div>
@@ -293,7 +383,7 @@
                     </div>
                 </div>
             </div>    
-            --> 
+
 
         </div>
     </div>
@@ -317,7 +407,7 @@
     <div class="row" id="footer">
 		<div class="col-1">
 			<div id="footer_text">
-				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 10/25/2022 14:13:38 Eastern Daylight Time</center>
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 10/25/2022 23:17:25 Eastern Daylight Time</center>
 			</div>
 		</div>
 	</div>

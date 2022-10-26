@@ -194,7 +194,7 @@ table_template = """
 pagefile = "programs.html";
 print("Generating " + pagefile + "...");
 year = RC.getYear();
-title = "ConGen" + year + " - Intro to Bioinformatics"
+title = "PhyloAcc OEB275R - " + year;
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);

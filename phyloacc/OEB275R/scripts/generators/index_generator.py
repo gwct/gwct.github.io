@@ -109,7 +109,7 @@ html_template = """
                     <p>In the nav bar at the top of the page you'll find links to navigate this workshop and to resources we've compiled. Come back to this page any time by clicking 
                         the <a href="#">Intro</a> link above. Go to the first page of the workhop by clicking on the <a href="start.html">Workshop</a> link above or the link below.
                         If you come across a term or file format you don't recognize, check the <a href="terms.html">Terminology</a> page to see if it's listed there.
-                        A table of useful programs and their use-cases has been compiled as a resource under the <a href="programs.html">Programs</a> link. Finally, some other links have
+                        A table of useful data science programs and their use-cases has been compiled as a resource under the <a href="programs.html">Programs</a> link. Finally, some other links have
                         been organized in the <a href="links.html">Links</a> page.
                     </p>
 
