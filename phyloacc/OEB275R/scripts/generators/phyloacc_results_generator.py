@@ -55,9 +55,9 @@ html_template = """
                                 The rest of the workshop will be spent going through marine mammal data pre-run through PhyloAcc using RStudio and RMarkdown.
                             </p>
 
-                            <h3>
+                            <center><h1>
                                 <a href="https://github.com/gwct/oeb275r-phyloacc-data" target="_blank">Download data from github</a>
-                            </h3>
+                            </h1></center>
 
                             <p>
                                 To download the data, click on the link above and click on the green button labeled "Code" on the github page. Then click Download ZIP
@@ -117,9 +117,9 @@ html_template = """
         </div>
         <div class="col-12-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
-            <!-- <div class="nav-btn">
-                <a href="assembly.html">Next&nbsp;&gt;</a>
-            </div> -->
+            <div class="nav-btn">
+                <a href="end.html">Next?&nbsp;&gt;</a>
+            </div>
         </div>
         <div class="col-3-24" id="nav-btn-margin"></div>
     </div>
