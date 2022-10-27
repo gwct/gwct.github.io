@@ -295,6 +295,23 @@ You can catch problems before you use the data in later analyses.</code></pre>
                                 </table>
                             </div>       
 
+                            <p>
+                                When you do this, you should hopefully see something like this, with both binaries reporting PASSED statuses:
+                            </p>
+
+                            <pre class="text"><code># --depcheck set: CHECKING DEPENDENCY PATHS AND EXITING.
+
+   PROGRAM          PATH                STATUS
+   -------------------------------------------
+   phyloacc         PhyloAcc-ST         PASSED
+   phyloacc-gt      PhyloAcc-GT         PASSED
+
+# All dependencies PASSED.</code></pre>
+
+                        <p>
+                            If you don't see this, or one or both of the checks failed, please let me know.
+                        </p>
+
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
                     </div>
