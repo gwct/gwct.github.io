@@ -707,6 +707,17 @@ table {
 	background-color:#638eb6;
 }
 
+#end-btn {
+	background-color: #fff;
+
+}
+#end-btn a {
+	background-color: #fff;
+	border-radius:10px;
+	border: 1px solid #fafafa;	
+	color: #fafafa;
+}
+
 @media (max-width: 1025px) {
 	.nav-btn-cont { width: 100%; }
 	.nav-btn { width: 100%; }

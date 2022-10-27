@@ -77,6 +77,11 @@ html_template = """
                                 We'll continue the class from the RMarkdown document in RStudio!
                             </p>
 
+                            <center><h2>
+                                A fully rendered page from the RMarkdown analysis is also available 
+                                <a href="https://gwct.github.io/phyloacc/OEB275R/phyloacc_analyses.html" target="_blank">HERE</a> to follow along with in case technical issues arise.
+                            </h2></center>
+
                             <div id="sep_div"></div>
 
                             <div id="msg_cont">
@@ -117,7 +122,7 @@ html_template = """
         </div>
         <div class="col-12-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
-            <div class="nav-btn">
+            <div class="nav-btn" id="end-btn">
                 <a href="end.html">Next?&nbsp;&gt;</a>
             </div>
         </div>
