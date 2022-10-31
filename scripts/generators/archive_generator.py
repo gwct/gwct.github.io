@@ -22,6 +22,25 @@ html_template = """
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header"><img src="img/me/jack.png" style="height:24px;width:24px"/>ctober 31, 2022 &nbsp;</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="arc_entry">
+		<ul>
+			<p>
+				I was happy to give a <a href="https://gwct.github.io/phyloacc/OEB275R/" target="_blank">workshop</a> this week demonstrating 
+				<a href="https://phyloacc.github.io/" target="_blank">PhyloAcc</a> in
+				<a href="https://edwards.oeb.harvard.edu/people/scott-v-edwards" target="_blank">Prof. Scott Edwards'<a> 
+				<a href="https://canvas.harvard.edu/courses/106414" target="_blank">comparative genomics class</a>.
+			</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
+
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">July 13, 2022</div>
         <div class="col-2-24" id="margin"></div>
 	</div>

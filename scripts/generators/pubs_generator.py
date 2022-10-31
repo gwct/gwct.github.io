@@ -549,26 +549,48 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Bayesian estimation of substitution rates with <a href="https://phyloacc.github.io/" target="_blank">PhyloAcc</a></span>
+				</br>&nbsp;&nbsp;OEB275R Fall 2022 - Comparative Genomics: Phylogenetic Approaches to Linking Genomes and Phenotypes - 
+				Harvard University, Cambridge, MA -
+				<a href="https://gwct.github.io/phyloacc/" target="_blank">Workshop website</a>
+			</p>	
+
+			<p>
+				<span class="pub_title">Introduction to Bioinformatics (with <a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>)</span>
+				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
+				Virtual - 
+				<a href="https://gwct.github.io/congen/bioinformatics/" target="_blank">Workshop website</a>
+			</p>			
+
+			<p>
+				<span class="pub_title">Genome Assembly (led by Ellie Armstrong)</span>
+				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
+				Virtual - 
+				<a href="congen/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
+				<a href="https://gwct.github.io/congen/assembly/" target="_blank">Workshop website</a>
+			</p>
+
+			<p>
 				<span class="pub_title">Introduction to Bioinformatics (with <a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>)</span>
 				</br>&nbsp;&nbsp;ConGen 2021: Population Genomic Data Analysis Course/Workshop - 
 				Virtual - 
-				<a href="https://gwct.github.io/congen-2021/bioinformatics/" target="_blank">Workshop website</a>
+				<a href="https://gwct.github.io/congen/2021/bioinformatics/" target="_blank">Workshop website</a>
 			</p>			
 
 			<p>
 				<span class="pub_title">Genome Assembly (with Ellie Armstrong)</span>
 				</br>&nbsp;&nbsp;ConGen 2021: Population Genomic Data Analysis Course/Workshop - 
 				Virtual - 
-				<a href="congen-2021/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
-				<a href="https://gwct.github.io/congen-2021/assembly/" target="_blank">Workshop website</a>
+				<a href="congen/2021/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
+				<a href="https://gwct.github.io/congen/2021/assembly/" target="_blank">Workshop website</a>
 			</p>
 
 			<p>
 				<span class="pub_title">Genome Assembly (with Ellie Armstrong)</span>
 				</br>&nbsp;&nbsp;ConGen 2020: Population Genomic Data Analysis Course/Workshop - 
 				Virtual - 
-				<a href="congen/slides/congen-assembly-lecture.pptx">Slides</a> - 
-				<a href="https://gwct.github.io/congen/" target="_blank">Workshop website</a>
+				<a href="congen/2020/slides/congen-assembly-lecture.pptx">Slides</a> - 
+				<a href="https://gwct.github.io/congen/2020/" target="_blank">Workshop website</a>
 			</p>
 		</ul>
 	</div>
