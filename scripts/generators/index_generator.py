@@ -81,8 +81,10 @@ html_template = """
 		<div class="col-9-24" id="email-margin"></div>
 	</div>
 
-	<a rel="me" href="https://ecoevo.social/@gwct" style="display:none;">Mastodon</a>
-	<a rel="me" href="https://mastodon.social/@gwct" style="display:none;">Mastodon</a>
+	<div style="display:none;"> 
+		<a rel="me" href="https://ecoevo.social/@gwct">Mastodon</a>
+		<a rel="me" href="https://mastodon.social/@gwct">Mastodon</a>
+	</div>
 
 	{links}
 
