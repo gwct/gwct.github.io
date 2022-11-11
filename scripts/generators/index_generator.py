@@ -84,6 +84,7 @@ html_template = """
 	<div style="display:none;"> 
 		<a rel="me" href="https://ecoevo.social/@gwct">Mastodon</a>
 		<a rel="me" href="https://mastodon.social/@gwct">Mastodon</a>
+		<a rel="me" href="https://genomic.social/@gwct">Mastodon</a>
 	</div>
 
 	{links}
