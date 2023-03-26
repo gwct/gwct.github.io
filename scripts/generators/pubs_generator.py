@@ -21,7 +21,6 @@ html_template = """
 	<a class="internal-link" name="pubs"></a>
     <div class="row" id="header">Publications</div>
 
-	<!--
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">Pre-prints</div>
@@ -32,16 +31,14 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
-				<span class="pub_title">The evolution of widespread recombination suppression on the Dwarf Hamster (<em>Phodopus</em>) X chromosome</span>
-				</br>&nbsp;&nbsp;Moore EC, <b>Thomas GWC</b>, Mortimer S, Kopania EEK, Hunnicut KE, Clare-Salzer ZJ, Larson EL, Good JM. 
-				2022.
+				<span class="pub_title">PhyloAcc-GT: A Bayesian method for inferring patterns of substitution rate shifts and associations with binary traits under gene tree discordance</span>
+				</br>&nbsp;&nbsp;Yan H*, Hu Z*, <b>Thomas GWC</b>*, Edwards SV, Sackton TB, Liu JS.
 				<em>bioRxiv</em>.
-				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2021.11.15.468705" target="_blank" id="doi_link">10.1101/2021.11.15.468705</a>
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2022.12.23.521765 " target="_blank" id="doi_link">10.1101/2022.12.23.521765</a>
 			</p>
 		</ul>
 	</div>
 	<div class="col-2-24" id="margin"></div>
-	-->
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
