@@ -22,6 +22,24 @@ html_template = """
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">April 6, 2023 &nbsp;</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="arc_entry">
+		<ul>
+			<p>
+				I helped teach a series of workshops over 4 weeks in March with my colleagues in the <a href="https://informatics.fas.harvard.edu/" target="_blank">Informatics Group</a> here at Harvard.
+				We covered topics ranging from an introduction to the R programming language and the tidyverse, to common bioinformatics files and tools, and working with conda environments and
+				a HPC. I look forward to developing these workshops in the future, possibly into a full semester-long course.
+			</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>
+
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header"><img src="img/me/jack.png" style="height:24px;width:24px"/>ctober 31, 2022 &nbsp;</div>
         <div class="col-2-24" id="margin"></div>
 	</div>
