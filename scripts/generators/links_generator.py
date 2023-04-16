@@ -31,6 +31,24 @@ html_template = """
 		<div class="col-6-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
+					<a href="https://github.com/harvardinformatics/degenotate" id="link-img-link" target="_blank">
+						<img class="pure-img" id="link-img" src="img/logo/degen-link-logo.png">
+					</a>
+				</div>
+
+				<div class="col-17-24" id="link-text">
+						<b><a href="https://github.com/harvardinformatics/degenotate" target="_blank">Annotate the degeneracy of
+						coding sites</a></b> in a genome and extract coding sequences of specified degeneracy. Also counts synonymous
+						and nonysnonymous changes within and between populations to perform a basic 
+						<a href="https://en.wikipedia.org/wiki/McDonald%E2%80%93Kreitman_test" target="_blank">MK test</a> .
+				</div>
+				<div class="col-1-24" id="margin"></div>
+			</div>
+		</div>
+
+		<div class="col-6-24" id="link-section-cont-col">
+			<div class="row" id="link-section">
+				<div class="col-6-24" id="link-img-col">
 					<a href="https://phyloacc.github.io/" id="link-img-link" target="_blank">
 						<img class="pure-img" id="link-img" src="img/logo/phyloacc-link-logo.png">
 					</a>
@@ -65,6 +83,16 @@ html_template = """
 			</div>
 		</div>
 
+		<div class="col-3-24" id="margin"></div>
+	</div>
+
+	<!-- --------- END ROW 1 --------- -->
+	<div id="sep_div"></div>
+	<!-- -------- BEGIN ROW 2 -------- -->
+
+	<div class="row" id="link-section-cont">
+		<div class="col-3-24" id="margin"></div>
+
 		<div class="col-6-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
@@ -82,16 +110,6 @@ html_template = """
 				<div class="col-1-24" id="margin"></div>
 			</div>
 		</div>
-
-		<div class="col-3-24" id="margin"></div>
-	</div>
-
-	<!-- --------- END ROW 1 --------- -->
-	<div id="sep_div"></div>
-	<!-- -------- BEGIN ROW 2 -------- -->
-
-	<div class="row" id="link-section-cont">
-		<div class="col-3-24" id="margin"></div>
 
 		<div class="col-6-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
@@ -129,6 +147,16 @@ html_template = """
 			</div>
 		</div>		
 
+		<div class="col-3-24" id="margin"></div>
+	</div>
+
+	<!-- --------- END ROW 2 --------- -->
+	<div id="sep_div"></div>
+	<!-- -------- BEGIN ROW 3 -------- -->
+
+	<div class="row" id="link-section-cont">
+		<div class="col-6-24" id="margin"></div>
+
 		<div class="col-6-24" id="link-section-cont-col">					
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
@@ -149,16 +177,6 @@ html_template = """
 			</div>
 		</div>
 
-		<div class="col-3-24" id="margin"></div>
-	</div>
-
-	<!-- --------- END ROW 2 --------- -->
-	<div id="sep_div"></div>
-	<!-- -------- BEGIN ROW 3 -------- -->
-
-	<div class="row" id="link-section-cont">
-		<div class="col-9-24" id="margin"></div>
-
 		<div class="col-6-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
@@ -175,7 +193,7 @@ html_template = """
 			</div>
 		</div>
 
-		<div class="col-9-24" id="margin"></div>
+		<div class="col-6-24" id="margin"></div>
 	</div>
 
 	<!-- --------- END ROW 3 --------- -->
