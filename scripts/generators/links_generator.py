@@ -40,7 +40,9 @@ html_template = """
 						<b><a href="https://github.com/harvardinformatics/degenotate" target="_blank">Annotate the degeneracy of
 						coding sites</a></b> in a genome and extract coding sequences of specified degeneracy. Also counts synonymous
 						and nonysnonymous changes within and between populations to perform a basic 
-						<a href="https://en.wikipedia.org/wiki/McDonald%E2%80%93Kreitman_test" target="_blank">MK test</a> .
+						<a href="https://en.wikipedia.org/wiki/McDonald%E2%80%93Kreitman_test" target="_blank">MK test</a>. Included in
+                        the <a href="https://github.com/harvardinformatics/snpArcher" target="_blank">snpArcher</a> 
+                        <a href="https://doi.org/10.1101/2023.06.22.546168 " target="_blank">variant calling workflow</a>.
 				</div>
 				<div class="col-1-24" id="margin"></div>
 			</div>

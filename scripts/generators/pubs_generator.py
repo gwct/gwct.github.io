@@ -31,10 +31,17 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">A fast, reproducible, high-throughput variant calling workflow for evolutionary, ecological, and conservation genomics</span>
+				</br>&nbsp;&nbsp;Mirchandani C, Shultz AJ, <b>Thomas GWC</b>*, Smith SJ, Baylis M, Arnold B, Corbett-Detig R, Enbody E, Sackton TB.
+				<em>bioRxiv</em>.
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.06.22.546168" target="_blank" id="doi_link">10.1101/2023.06.22.546168</a>
+			</p>        
+        
+			<p>
 				<span class="pub_title">PhyloAcc-GT: A Bayesian method for inferring patterns of substitution rate shifts and associations with binary traits under gene tree discordance</span>
 				</br>&nbsp;&nbsp;Yan H*, Hu Z*, <b>Thomas GWC</b>*, Edwards SV, Sackton TB, Liu JS.
 				<em>bioRxiv</em>.
-				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2022.12.23.521765 " target="_blank" id="doi_link">10.1101/2022.12.23.521765</a>
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2022.12.23.521765" target="_blank" id="doi_link">10.1101/2022.12.23.521765</a>
 			</p>
 		</ul>
 	</div>
@@ -380,6 +387,14 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Quantifying and mitigating reference bias in comparative genomics</span>
+				</br>&nbsp;&nbsp;Evolution Converence - 
+				2023.06.25 -
+				Contributed Talk - 
+				<a href="slides/2023.06.25-Evolution-ref-bias.pptx">Slides</a>
+			</p>        
+        
+			<p>
 				<span class="pub_title">Prioritizing loci for ILS-aware rate analyses using phylogenetic concordance factors</span>
 				</br>&nbsp;&nbsp;Society of Molecular Biology and Evolution Global Symposium 2 (Sustainability, Equity, and Efficiency in Computational Biology) - 
 				2022.07.12 -
@@ -545,6 +560,20 @@ html_template = """
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
+			<p>
+				<span class="pub_title">Bioinformatics Tips & Tricks</span>
+				</br>&nbsp;&nbsp;Harvard FAS Informatics Spring 2023 - 
+				Harvard University, Cambridge, MA -
+				<a href="https://harvardinformatics.github.io/workshops/2023-spring/biotips/index.html" target="_blank">Workshop website</a>
+			</p>        
+        
+			<p>
+				<span class="pub_title">Introduction to R</span>
+				</br>&nbsp;&nbsp;Harvard FAS Informatics Spring 2023 - 
+				Harvard University, Cambridge, MA -
+				<a href="https://harvardinformatics.github.io/workshops/2023-spring/r/index.html" target="_blank">Workshop website</a>
+			</p>        
+        
 			<p>
 				<span class="pub_title">Bayesian estimation of substitution rates with <a href="https://phyloacc.github.io/" target="_blank">PhyloAcc</a></span>
 				</br>&nbsp;&nbsp;OEB275R Fall 2022 - Comparative Genomics: Phylogenetic Approaches to Linking Genomes and Phenotypes - 
