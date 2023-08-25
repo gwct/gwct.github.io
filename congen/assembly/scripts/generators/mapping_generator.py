@@ -18,6 +18,8 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     {main}
 
     {footer}
@@ -34,10 +36,12 @@ title = "ConGen" + year + " - Assembly Workshop"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = "";
+#banner = RC.readPrevBanner(year, "assembly");
 main = RC.readMapping();
 footer = RC.readFooter();
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, main=main, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, main=main, banner=banner, footer=footer));

@@ -18,6 +18,8 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     <div class="row" id="section-cont">
         <div class="col-4-24" id="outer-margin"></div>
         <div class="col-16-24" id="section-col">
@@ -36,7 +38,7 @@ html_template = """
     <div class="row" id="section-header-cont">
         <div class="col-4-24" id="outer-margin"></div>
         <div class="col-16-24" id="section-header-row">
-            <div id="section-header">ConGen2021</div>
+            <div id="section-header">Previous workshops</div>
         </div>
         <div class="col-4-24" id="outer-margin"></div>
     </div>
@@ -48,8 +50,14 @@ html_template = """
                 <div class="col-20-24" id="section-content">
 
                     <ul id="links-list">
-                        <li><a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2021</a></li>
+                        <li><a href="https://gwct.github.io/congen/2022/bioinformatics/" target="_blank">ConGen2022 - Introduction to Bioinformatics</a></li>
                     </ul>
+
+                    <ul id="links-list">
+                        <li><a href="https://gwct.github.io/congen/2021/bioinformatics/" target="_blank">ConGen2021 - Introduction to Bioinformatics</a></li>
+                    </ul>
+
+ 
                     <div id="sep_div"></div>
 
                 </div>
@@ -132,9 +140,11 @@ title = "ConGen" + year + " - Intro to Bioinformatics"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = "";
+#banner = RC.readPrevBanner(year, "bioinformatics");
 footer = RC.readFooter();
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, footer=footer));

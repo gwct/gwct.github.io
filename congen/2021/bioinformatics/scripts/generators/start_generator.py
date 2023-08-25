@@ -18,6 +18,8 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     <a class="internal-link" name="start"></a>
    	<div class="row" id="header">Introduction to Bioinformatics workshop</div>
 
@@ -297,9 +299,10 @@ title = "ConGen2021 - Intro to Bioinformatics"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = RC.readPrevBanner("2021", "bioinformatics");
 footer = RC.readFooter();
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, footer=footer));

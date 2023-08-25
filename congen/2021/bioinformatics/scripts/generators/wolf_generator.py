@@ -4,8 +4,8 @@
 ############################################################
 
 import sys, os
-sys.path.append('..')
-import lib.read_chunks as RC
+sys.path.append(os.path.abspath('../lib/'))
+import read_chunks as RC
 
 ######################
 # HTML template
@@ -17,6 +17,8 @@ html_template = """
 
 <body>
     {nav}
+
+    {banner}
 
     <a class="internal-link" name="wolf-data"></a>
    	<div class="row" id="header">Single nucleotide polymorphisms in gray wolves</div>
@@ -1018,9 +1020,10 @@ title = "ConGen2021 - Intro to Bioinformatics"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = RC.readPrevBanner("2021", "bioinformatics");
 footer = RC.readFooter();
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, footer=footer, co="<code class='inline'>", cc="</code>"));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, footer=footer, co="<code class='inline'>", cc="</code>"));

@@ -18,6 +18,8 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     <a class="internal-link" name="top"></a>
     <div class="row" id="header">Data science programs</div>
 
@@ -198,6 +200,8 @@ title = "ConGen" + year + " - Intro to Bioinformatics"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = "";
+#banner = RC.readPrevBanner(year, "bioinformatics");
 footer = RC.readFooter();
 
 tables = {'editor' : "../../data/text-editors.csv", 'ft' : "../../data/ftp.csv", 'ssh' : "../../data/ssh.csv", 'other' : "../../data/other.csv" };
@@ -256,4 +260,4 @@ for table in tables:
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, editor_table=editor_table, ft_table=ft_table, ssh_table=ssh_table, other_table=other_table, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, editor_table=editor_table, ft_table=ft_table, ssh_table=ssh_table, other_table=other_table, footer=footer));

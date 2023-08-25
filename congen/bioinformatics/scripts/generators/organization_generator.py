@@ -18,6 +18,8 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     <a class="internal-link" name="file-systems"></a>
    	<div class="row" id="header">Project organization</div>
 
@@ -245,9 +247,11 @@ treestr = open("tree-output.txt", "r").read();
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = "";
+#banner = RC.readPrevBanner(year, "bioinformatics");
 footer = RC.readFooter();
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, treestr=treestr, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, treestr=treestr, footer=footer));

@@ -18,14 +18,22 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     <div class="row" id="section-cont">
         <div class="col-4-24" id="outer-margin"></div>
         <div class="col-16-24" id="section-col">
             <div class="row" id="section-row">
                 <div class="col-2-24" id="inner-margin"></div>
                 <div class="col-20-24" id="section-content">
-                    <h1>Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2022</a> introduction to bioinformatics workshop!</h1>
-                        <p>This web page will guide you through the activities we have planned for you today!</p>
+                    <center>
+                        <h1>
+                            Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2023</a> Introduction to Bioinformatics workshop!
+                        </h1>
+                        <p>
+                            This web page will guide you through the activities we have planned for you today!
+                        </p>
+                    </center>
                 </div>
                 <div class="col-2-24" id="inner-margin"></div>
             </div>
@@ -104,8 +112,8 @@ html_template = """
                     <p>In the nav bar at the top of the page you'll find links to navigate this workshop and to resources we've compiled. Come back to this page any time by clicking 
                         the <a href="#">Intro</a> link above. Go to the first page of the workhop by clicking on the <a href="start.html">Workshop</a> link above or the link below.
                         If you come across a term or file format you don't recognize, check the <a href="terms.html">Terminology</a> page to see if it's listed there.
-                        A table of useful programs and their use-cases has been compiled as a resource under the <a href="programs.html">Programs</a> link. Finally, some other links have
-                        been organized in the <a href="links.html">Links</a> page.
+                        A table of useful programs and their use-cases has been compiled as a resource under the <a href="programs.html">Programs</a> link. Finally, some other links,
+                        including to workshops from previous years (though they are mostly identical), have been organized in the <a href="links.html">Links</a> page.
                     </p>
 
                     <p>Use the links below to start and navigate to various parts of the workshop.</p>
@@ -145,9 +153,11 @@ title = "ConGen" + year + " - Intro to Bioinformatics"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = "";
+#banner = RC.readPrevBanner(year, "bioinformatics");
 footer = RC.readFooter();
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, footer=footer));

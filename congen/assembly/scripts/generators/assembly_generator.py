@@ -18,6 +18,8 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     <a class="internal-link" name="top"></a>
     <div class="row" id="header">Genome assembly</div>
 
@@ -555,7 +557,12 @@ NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
                                 are in the assembly and classifying their types, and figuring out where the genes in the assembly are. There are many ways to do this, enough to fill
                                 up a separate workshop, so we won't be covering annotation today.</p>
 
-                            <p>Next we will talk about an alternate to de novo genome assembly: reference guided assembly with <a href="mapping.html">read mapping</a>...
+                            <h3>This brings us to <a href="end.html">the end</a> of our workshop. Thanks for attending!</h3>
+
+                            <h3>
+                                In previous years, we covered read mapping as well, but were unable to this year due to time constraints. But feel free to view 
+                                <a href="https://gwct.github.io/congen/2022/assembly/index.html">last year's workshop</a> if you're interested!
+                            </h3>
 
                         </div>
                         <div class="col-2-24" id="inner-margin"></div>
@@ -576,9 +583,9 @@ NODE_19_length_262557_cov_28.861460     262557  6900040 60      61</code></pre>
         </div>
         <div class="col-6-24" id="nav-margin"></div>
         <div class="col-6-24" id="nav-btn-cont">
-            <div class="nav-btn">
+            <!-- div class="nav-btn">
                 <a href="mapping.html">Next&nbsp;&gt;</a>
-            </div>
+            </div> -->
         </div>
         <div class="col-3-24" id="nav-btn-margin"></div>
     </div>
@@ -597,10 +604,12 @@ title = "ConGen" + year + " - Assembly Workshop"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = "";
+#banner = RC.readPrevBanner(year, "assembly");
 #main = RC.readMapping();
 footer = RC.readFooter();
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, footer=footer));

@@ -3,6 +3,9 @@
 # Functions to read static html chunks
 ############################################################
 
+def getYear():
+    return "2020";
+
 def readHead(title):
     headfile = "../html-chunks/head.html";
     return open(headfile, "r").read().replace("TMPTITLE", title);
@@ -36,6 +39,10 @@ def readNav(active_url):
             break;
             
     return "".join(navlines);
+
+def readPrevBanner(year, workshopname):
+    prevfile = "../html-chunks/prev_banner.html";
+    return open(prevfile, "r").read().replace("WORKSHOPYEAR", year).replace("WORKSHOPNAME", workshopname);
 
 def readReads():
     calcsfile = "../html-chunks/reads_main.html";

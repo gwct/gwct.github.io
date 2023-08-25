@@ -18,6 +18,8 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     <a class="internal-link" name="top"></a>
     <div class="row" id="header">Genomics programs</div>
 
@@ -164,6 +166,8 @@ title = "ConGen" + year + " - Assembly Workshop"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = "";
+#banner = RC.readPrevBanner(year, "assembly");
 footer = RC.readFooter();
 
 tables = {'asm' : "../../data/assemblers.csv", 'map' : "../../data/mappers.csv", 'var' : "../../data/varcallers.csv", 'other' : "../../data/other.csv" };
@@ -223,4 +227,4 @@ for table in tables:
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, asm_table=asm_table, map_table=map_table, var_table=var_table, other_table=other_table, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, asm_table=asm_table, map_table=map_table, var_table=var_table, other_table=other_table, footer=footer));

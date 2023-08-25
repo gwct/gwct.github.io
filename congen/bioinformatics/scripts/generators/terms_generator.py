@@ -18,6 +18,8 @@ html_template = """
 <body>
     {nav}
 
+    {banner}
+
     <a class="internal-link" name="terms"></a>
     <div class="row" id="header">Terminology & File Formats</div>
 
@@ -114,6 +116,8 @@ title = "ConGen" + year + " - Intro to Bioinformatics"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = "";
+#banner = RC.readPrevBanner(year, "bioinformatics");
 footer = RC.readFooter();
 
 tables = {'terms' : "../../data/terms.csv", 'formats' : "../../data/formats.csv" };
@@ -181,4 +185,4 @@ for table in tables:
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, terms_table=terms_table, formats_table=formats_table, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, terms_table=terms_table, formats_table=formats_table, footer=footer));

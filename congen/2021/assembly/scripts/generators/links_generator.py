@@ -4,8 +4,8 @@
 ############################################################
 
 import sys, os
-sys.path.append('..')
-import lib.read_chunks as RC
+sys.path.append(os.path.abspath('../lib/'))
+import read_chunks as RC
 
 ######################
 # HTML template
@@ -17,6 +17,8 @@ html_template = """
 
 <body>
     {nav}
+
+    {banner}
 
     <div class="row" id="section-cont">
         <div class="col-4-24" id="outer-margin"></div>
@@ -127,13 +129,14 @@ html_template = """
 ######################
 pagefile = "links.html";
 print("Generating " + pagefile + "...");
-title = "ConGen2020 - Assembly Workshop"
+title = "ConGen2021 - Assembly Workshop"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
+banner = RC.readPrevBanner("2021", "assembly");
 footer = RC.readFooter();
 
 outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, banner=banner, footer=footer));

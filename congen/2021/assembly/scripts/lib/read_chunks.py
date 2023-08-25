@@ -37,6 +37,10 @@ def readNav(active_url):
             
     return "".join(navlines);
 
+def readPrevBanner(year, workshopname):
+    prevfile = "../html-chunks/prev_banner.html";
+    return open(prevfile, "r").read().replace("WORKSHOPYEAR", year).replace("WORKSHOPNAME", workshopname);
+
 def readReads():
     calcsfile = "../html-chunks/reads_main.html";
     return open(calcsfile, "r").read();

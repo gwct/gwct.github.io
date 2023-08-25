@@ -226,7 +226,26 @@ img { width: 100%; }
 
 /*------------------------------------------------------*/
 /* Main grid styles */
-#section-cont{
+
+#prev-banner-row {
+	z-index:5;
+	position: -webkit-sticky;
+	font-family:'opensans';
+	position:sticky;
+	top:5vh;
+	text-align: center;
+	vertical-align: middle;
+	display:table;
+}
+
+#prev-banner {
+	text-align:center;
+	background-color: #f0e442;
+	border-bottom: 1px solid #333333;
+	color: #333333;
+}
+
+#section-cont {
 	/* min-height:100%; */
 	/* border: 1px solid green; */
 }
@@ -571,12 +590,13 @@ table {
 	/* min-height:100vh; */
 	/* border: 1px solid purple; */
 }
-#side-nav-cont{
+#side-nav-cont {
+	z-index:9;
 	display: flex;
 	position: -webkit-sticky;
 	position:sticky;
 	font-family:'opensans';
-	top: 5vh;
+	top: 13.1vh;
 	text-align: left;
 	/* border: 1px solid red; */
 	/* padding: 5px; */
