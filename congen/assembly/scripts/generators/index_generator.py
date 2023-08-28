@@ -80,11 +80,14 @@ html_template = """
                             <img id="inst-img" src="img/ea.jpg">
                         </div>
                         <div class="col-20-24" id="inst-text">
-                            <p>Ellie Armstrong: A recent PhD at Stanford University co-advised by
-                                <a href="http://petrov.stanford.edu/" target="_blank">Dmitri Petrov</a> and <a href="https://web.stanford.edu/group/hadlylab/" target="_blank">Liz Hadley</a>.
-                                Ellie works on conservation genetics of big cats, and published the 
-                                <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-019-0734-5" target="_blank">genome assembly of the lion</a> and will soon be starting a postdoc at
-                                Washington State University with <a href="https://labs.wsu.edu/genomes/" target="_blank">Joanna Kelley</a>.
+                            <p>
+                                Ellie Armstrong: Ellie Armstrong is a Postdoctoral Fellow with the <a href="https://www.wrfseattle.org/grants/wrf-postdoctoral-fellowships/" target="_blank">Washington Research Foundation</a>
+                                in the lab of <a href="https://evogenomes.sites.ucsc.edu/" target="_blank">Joanna Kelley</a> (UCSC). 
+                                She previously received her PhD at Stanford University with <a href="https://petrov.stanford.edu/" target="_blank">Dmitri Petrov</a> and 
+                                <a href="https://hadlylab.stanford.edu/" target="_blank">Liz Hadly</a>, where she worked on the genomics of large carnivores. 
+                                Ellie has assembled genomes from many species across the tree of life including the lion, the african wild dog, Hawaiian spiders, birds, lichens, 
+                                foxes, macaques, flies, and several other big cats. She will soon start her own group as an Assistant Professor of Evolutionary Genomics at the 
+                                University of California, Riverside, where she will continue to study the genomics of carnivores in the Anthropocene. 
                             </p>
                         </div>
                     </div>

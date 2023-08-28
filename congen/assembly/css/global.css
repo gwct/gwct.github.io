@@ -316,11 +316,11 @@ img { width: 100%; }
 /*------------------------------------------------------*/
 /*Instructor grid and image styles */
 #instructor {
-	max-height:20vh;
+	max-height:25vh;
 	border:1px dotted #666666;
 }
 #inst-img-cont{
-	max-height:20vh;
+	max-height:25vh;
 }
 #inst-img {
 	max-height:20vh;
