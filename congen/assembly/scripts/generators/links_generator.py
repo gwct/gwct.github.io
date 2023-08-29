@@ -87,8 +87,8 @@ html_template = """
                 <div class="col-20-24" id="section-content">
 
                     <ul id="links-list">
-                        <li><a href="slides/congen-assembly-lecture.pptx" download>Lecture slides</a></li>
-                        <li><a href="slides/congen-assembly-workshop.pptx" download>Workshop slides</a></li>
+                        <li><a href="slides/congen-assembly-lecture_2023_clean.pptx" download>Lecture slides</a></li>
+                        <!-- <li><a href="slides/congen-assembly-workshop.pptx" download>Workshop slides</a></li> -->
                     </ul>
 
                     <div id="sep_div"></div>
