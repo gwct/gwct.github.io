@@ -28,7 +28,7 @@ html_template = """
 	<div class="row" id="link-section-cont">
 		<div class="col-3-24" id="margin"></div>
 
-		<div class="col-6-24" id="link-section-cont-col">
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://github.com/harvardinformatics/degenotate" id="link-img-link" target="_blank">
@@ -48,7 +48,7 @@ html_template = """
 			</div>
 		</div>
 
-		<div class="col-6-24" id="link-section-cont-col">
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://phyloacc.github.io/" id="link-img-link" target="_blank">
@@ -65,37 +65,37 @@ html_template = """
 				<div class="col-1-24" id="margin"></div>
 			</div>
 		</div>
-
-		<div class="col-6-24" id="link-section-cont-col">
-			<div class="row" id="link-section">
-				<div class="col-6-24" id="link-img-col">
-					<a href="https://github.com/goodest-goodlab/pseudo-it" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/pseudo-it-link-logo.png">
-					</a>
-				</div>
-
-				<div class="col-17-24" id="link-text">
-					<b><a href="https://github.com/goodest-goodlab/pseudo-it" target="_blank">Pseudo genome assembly with iterative read mapping to alleviate reference bias</a></b></br>	
-						Software <a href="https://doi.org/10.1093/gbe/evx034" target="_blank">developed</a>
-						in the <a href=""http://www.thegoodlab.org/" target="_blank">Good lab</a> 
-						to reduce reference bias in reference-based genome assembly
-						using an iterative mapping process to generate pseudo-genomes.
-				</div>
-				<div class="col-1-24" id="margin"></div>
-			</div>
-		</div>
-
+        
 		<div class="col-3-24" id="margin"></div>
-	</div>
+	</div>        
 
-	<!-- --------- END ROW 1 --------- -->
+ 	<!-- --------- END ROW 1 --------- -->
 	<div id="sep_div"></div>
-	<!-- -------- BEGIN ROW 2 -------- -->
+    <!-- -------- BEGIN ROW 2 -------- -->   
 
 	<div class="row" id="link-section-cont">
 		<div class="col-3-24" id="margin"></div>
 
-		<div class="col-6-24" id="link-section-cont-col">
+		<div class="col-9-24" id="link-section-cont-col">
+				<div class="row" id="link-section">
+					<div class="col-6-24" id="link-img-col">
+						<a href="https://github.com/goodest-goodlab/pseudo-it" id="link-img-link" target="_blank">
+							<img class="pure-img" id="link-img" src="img/logo/pseudo-it-link-logo.png">
+						</a>
+					</div>
+
+					<div class="col-17-24" id="link-text">
+						<b><a href="https://github.com/goodest-goodlab/pseudo-it" target="_blank">Pseudo genome assembly with iterative read mapping to alleviate reference bias</a></b></br>	
+							Software <a href="https://doi.org/10.1093/gbe/evx034" target="_blank">developed</a>
+							in the <a href=""http://www.thegoodlab.org/" target="_blank">Good lab</a> 
+							to reduce reference bias in reference-based genome assembly
+							using an iterative mapping process to generate pseudo-genomes.
+					</div>
+					<div class="col-1-24" id="margin"></div>
+				</div>
+			</div>    
+        
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://gwct.github.io/referee/" id="link-img-link" target="_blank">
@@ -112,8 +112,18 @@ html_template = """
 				<div class="col-1-24" id="margin"></div>
 			</div>
 		</div>
+        
+		<div class="col-3-24" id="margin"></div>
+	</div>
 
-		<div class="col-6-24" id="link-section-cont-col">
+	<!-- --------- END ROW 2 --------- -->
+	<div id="sep_div"></div>
+	<!-- -------- BEGIN ROW 3 -------- -->
+
+	<div class="row" id="link-section-cont">
+		<div class="col-3-24" id="margin"></div>    
+    
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://gwct.github.io/grampa/" id="link-img-link" target="_blank">
@@ -132,7 +142,7 @@ html_template = """
 			</div>
 		</div>
 
-		<div class="col-6-24" id="link-section-cont-col">
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://hahnlab.github.io/CAFE/" id="link-img-link" target="_blank">
@@ -143,7 +153,7 @@ html_template = """
 				<div class="col-17-24" id="link-text">
 					<b><a href="https://hahnlab.github.io/CAFE/" target="_blank">Computational Analysis of Gene Family Evolution</a></b></br>	
 						Software developed in the <a href="https://hahnlab.sitehost.iu.edu/" target="_blank">Hahn lab</a> 
-						to estimate rates of gene family evolution and reconstruct ancestral gene counts.
+						to estimate rates of gene family evolution and reconstruct ancestral gene counts. I contributed version 3.
 				</div>
 				<div class="col-2-24" id="margin"></div>
 			</div>
@@ -151,15 +161,15 @@ html_template = """
 
 		<div class="col-3-24" id="margin"></div>
 	</div>
-
-	<!-- --------- END ROW 2 --------- -->
+    
+	<!-- --------- END ROW 3 --------- -->
 	<div id="sep_div"></div>
-	<!-- -------- BEGIN ROW 3 -------- -->
-
+	<!-- -------- BEGIN ROW 4 -------- -->    
+    
 	<div class="row" id="link-section-cont">
-		<div class="col-6-24" id="margin"></div>
+		<div class="col-3-24" id="margin"></div>
 
-		<div class="col-6-24" id="link-section-cont-col">					
+		<div class="col-9-24" id="link-section-cont-col">					
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://github.com/gwct/gwct" id="link-img-link" target="_blank">
@@ -179,7 +189,7 @@ html_template = """
 			</div>
 		</div>
 
-		<div class="col-6-24" id="link-section-cont-col">
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://github.com/gwct/core" id="link-img-link" target="_blank">
@@ -195,7 +205,7 @@ html_template = """
 			</div>
 		</div>
 
-		<div class="col-6-24" id="margin"></div>
+		<div class="col-3-24" id="margin"></div>
 	</div>
 
 	<!-- --------- END ROW 3 --------- -->
@@ -219,8 +229,7 @@ html_template = """
 	<div class="row" id="link-section-cont">
 		<div class="col-3-24" id="margin"></div>
 
-		<div class="col-6-24" id="link-section-cont-col">
-
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://arthrofam.org" id="link-img-link" target="_blank">
@@ -237,7 +246,7 @@ html_template = """
 			</div>
 		</div>
 
-		<div class="col-6-24" id="link-section-cont-col">
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://github.com/gwct/macaque-cnv-figs" id="link-img-link" target="_blank">
@@ -254,7 +263,17 @@ html_template = """
 			</div>
 		</div>		
 
-		<div class="col-6-24" id="link-section-cont-col">					
+		<div class="col-3-24" id="margin"></div>
+	</div>        
+        
+	<!-- --------- END ROW 4 --------- -->
+	<div id="sep_div"></div>
+	<!-- -------- BEGIN ROW 5 -------- -->        
+
+	<div class="row" id="link-section-cont">
+		<div class="col-3-24" id="margin"></div>
+            
+		<div class="col-9-24" id="link-section-cont-col">					
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://gwct.github.io/owl-monkey/" id="link-img-link" target="_blank">
@@ -272,17 +291,7 @@ html_template = """
 			</div>
 		</div>
 
-		<div class="col-3-24" id="margin"></div>
-	</div>
-
-	<!-- --------- END ROW 4 --------- -->
-	<div id="sep_div"></div>
-	<!-- -------- BEGIN ROW 5 -------- -->
-
-	<div class="row" id="link-section-cont">
-		<div class="col-6-24" id="margin"></div>
-
-		<div class="col-6-24" id="link-section-cont-col">
+		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="http://dx.doi.org/10.6084/m9.figshare.5450602" id="link-img-link" target="_blank">
@@ -299,7 +308,17 @@ html_template = """
 				<div class="col-1-24" id="margin"></div>
 			</div>
 		</div>
+        
+		<div class="col-3-24" id="margin"></div>
+	</div>        
+        
+	<!-- --------- END ROW 5 --------- -->
+	<div id="sep_div"></div>
+	<!-- -------- BEGIN ROW 6 -------- -->            
 
+	<div class="row" id="link-section-cont">
+		<div class="col-6-24" id="margin"></div>    
+    
 		<div class="col-6-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
@@ -320,7 +339,7 @@ html_template = """
 		<div class="col-6-24" id="margin"></div>
 	</div>
 
-	<!-- --------- END ROW 5 --------- -->
+	<!-- --------- END ROW 6 --------- -->
 
 	<div class="row" id="section-header-row">
 		<div class="col-2-24" id="margin"></div>
@@ -328,7 +347,7 @@ html_template = """
 		<div class="col-2-24" id="margin"></div>
 	</div>
 
-	<!-- -------- BEGIN ROW 6 -------- -->
+	<!-- -------- BEGIN ROW 7 -------- -->
 
 	<div class="row" id="link-section-cont">
 		<div class="col-6-24" id="margin"></div>
@@ -368,9 +387,9 @@ html_template = """
 		<div class="col-6-24" id="margin"></div>
 	</div>
 
-	<!-- --------- END ROW 6 --------- -->
+	<!-- --------- END ROW 7 --------- -->
 	<div id="sep_div"></div>
-	<!-- -------- BEGIN ROW 7 -------- -->
+	<!-- -------- BEGIN ROW 8 -------- -->
 
 	<div class="row" id="link-section-cont">
 		<div class="col-6-24" id="margin"></div>
@@ -410,8 +429,9 @@ html_template = """
 		<div class="col-6-24" id="margin"></div>
 	</div>
 
-	<!-- --------- END ROW 7 --------- -->
+	<!-- --------- END ROW 8 --------- -->
 
+	<!--
 	<div class="row" id="section-header-row">
 		<div class="col-2-24" id="margin"></div>
 		<div class="col-20-24" id="section_header">Helpful software from others</div>
@@ -453,7 +473,8 @@ html_template = """
 		<div class="col-2-24 other_link"><a href="https://github.com/arq5x/lumpy-sv" target="_blank">Lumpy</a></div>
 		<div class="col-2-24 other_link"><a href="https://github.com/hall-lab/svtyper" target="_blank">SVTyper</a></div>
 		<div class="col-4-24 other_link_margin" id="margin"></div>
-	</div>		
+	</div>
+    -->
 
     {links}
 

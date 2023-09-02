@@ -31,6 +31,20 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Molecular evolution of male reproduction across species with highly divergent sperm morphology in diverse murine rodents</span>
+				</br>&nbsp;&nbsp;Kopania EEK, <b>Thomas GWC</b>*, Hutter CR, Mortimer SME, Callahan CM, Roycroft E, Achmadi AS, Breed WG, Clark NL, Esselstyn JA, Rowe KC, Good JM.
+				<em>bioRxiv</em>.
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.08.30.555585" target="_blank" id="doi_link">10.1101/2023.08.30.555585</a>
+			</p>           
+        
+			<p>
+				<span class="pub_title">The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats</span>
+				</br>&nbsp;&nbsp;<b>Thomas GWC</b>*, Hughes JJ, Kumon T, Berv JS, Nordgren CE, Lampson M, Levine M, Searle JB, Good JM.
+				<em>bioRxiv</em>.
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.08.28.555178" target="_blank" id="doi_link">10.1101/2023.08.28.555178</a>
+			</p>        
+
+			<p>
 				<span class="pub_title">A fast, reproducible, high-throughput variant calling workflow for evolutionary, ecological, and conservation genomics</span>
 				</br>&nbsp;&nbsp;Mirchandani C, Shultz AJ, <b>Thomas GWC</b>*, Smith SJ, Baylis M, Arnold B, Corbett-Detig R, Enbody E, Sackton TB.
 				<em>bioRxiv</em>.
