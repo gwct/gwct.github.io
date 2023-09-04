@@ -32,14 +32,14 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://github.com/harvardinformatics/degenotate" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/degen-link-logo.png">
+						<img id="link-img" src="img/logo/degen-link-logo.png">
 					</a>
 				</div>
 
 				<div class="col-17-24" id="link-text">
-						<b><a href="https://github.com/harvardinformatics/degenotate" target="_blank">Annotate the degeneracy of
-						coding sites</a></b> in a genome and extract coding sequences of specified degeneracy. Also counts synonymous
-						and nonysnonymous changes within and between populations to perform a basic 
+						<b><a href="https://github.com/harvardinformatics/degenotate" target="_blank">degenotate</a></b></br>
+						<b>Annotate the degeneracy of coding sites</b> in a genome and extract coding sequences of specified 
+                        degeneracy. Also counts synonymous and nonysnonymous changes within and between populations to perform a basic 
 						<a href="https://en.wikipedia.org/wiki/McDonald%E2%80%93Kreitman_test" target="_blank">MK test</a>. Included in
                         the <a href="https://github.com/harvardinformatics/snpArcher" target="_blank">snpArcher</a> 
                         <a href="https://doi.org/10.1101/2023.06.22.546168 " target="_blank">variant calling workflow</a>.
@@ -52,15 +52,16 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://phyloacc.github.io/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/phyloacc-link-logo.png">
+						<img id="link-img" src="img/logo/phyloacc-link-logo.png">
 					</a>
 				</div>
 
 				<div class="col-17-24" id="link-text">
-						<b><a href="https://phyloacc.github.io/" target="_blank">Substitution rate shifts in non-coding DNA</a></b></br>
-						A Bayesian framework to estimate substitution rates in non-coding DNA elements, developed in  
-						<a href="https://doi.org/10.1093/molbev/msz049" target="_blank">Hu et al. 2019</a>. Version 2 now accounts
-						for gene tree discordance.
+						<b><a href="https://phyloacc.github.io/" target="_blank">PhyloAcc</a></b></br>
+						<b>Substitution rate shifts in non-coding DNA</b>. 
+                        A Bayesian framework to estimate substitution rates in non-coding DNA elements, 
+                        developed in <a href="https://doi.org/10.1093/molbev/msz049" target="_blank">Hu et al. 2019</a>. 
+                        Version 2 now accounts for phylogenetic discordance.
 				</div>
 				<div class="col-1-24" id="margin"></div>
 			</div>
@@ -77,37 +78,39 @@ html_template = """
 		<div class="col-3-24" id="margin"></div>
 
 		<div class="col-9-24" id="link-section-cont-col">
-				<div class="row" id="link-section">
-					<div class="col-6-24" id="link-img-col">
-						<a href="https://github.com/goodest-goodlab/pseudo-it" id="link-img-link" target="_blank">
-							<img class="pure-img" id="link-img" src="img/logo/pseudo-it-link-logo.png">
-						</a>
-					</div>
-
-					<div class="col-17-24" id="link-text">
-						<b><a href="https://github.com/goodest-goodlab/pseudo-it" target="_blank">Pseudo genome assembly with iterative read mapping to alleviate reference bias</a></b></br>	
-							Software <a href="https://doi.org/10.1093/gbe/evx034" target="_blank">developed</a>
-							in the <a href=""http://www.thegoodlab.org/" target="_blank">Good lab</a> 
-							to reduce reference bias in reference-based genome assembly
-							using an iterative mapping process to generate pseudo-genomes.
-					</div>
-					<div class="col-1-24" id="margin"></div>
+			<div class="row" id="link-section">
+				<div class="col-6-24" id="link-img-col">
+					<a href="https://github.com/goodest-goodlab/pseudo-it" id="link-img-link" target="_blank">
+						<img id="link-img" src="img/logo/pseudo-it-link-logo.png">
+					</a>
 				</div>
-			</div>    
+
+				<div class="col-17-24" id="link-text">
+					<b><a href="https://github.com/goodest-goodlab/pseudo-it" target="_blank">pseudo-it</a></b></br>
+					<b>Reference-based genome assembly with iterative read mapping to alleviate reference bias.</b>	
+					Software <a href="https://doi.org/10.1093/gbe/evx034" target="_blank">developed</a>
+					in the <a href=""http://www.thegoodlab.org/" target="_blank">Good lab</a> 
+					to reduce reference bias in reference-based genome assembly
+					using an iterative mapping process to generate pseudo-genomes.
+				</div>
+				<div class="col-1-24" id="margin"></div>
+			</div>
+		</div>    
         
 		<div class="col-9-24" id="link-section-cont-col">
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://gwct.github.io/referee/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/ref-link-logo.png">
+						<img id="link-img" src="img/logo/ref-link-logo.png">
 					</a>
 				</div>
 
 				<div class="col-17-24" id="link-text">
-						<b><a href="https://gwct.github.io/referee/" target="_blank">Reference assembly quality scores</a></b></br>
-						Using genotype likelihoods from reads mapped back to an assembly, Referee assigns a quality score 
-						to every position of that assembly. Developed in 
-						<a href="https://doi.org/10.1093/gbe/evz088" target="_blank">Thomas and Hahn 2019</a>.
+					<b><a href="https://gwct.github.io/referee/" target="_blank">Referee</a></b></br>
+					<b>Reference assembly quality scores</b>. 
+                    Using genotype likelihoods from reads mapped back to an assembly, Referee assigns a 
+                    quality score to every position of that assembly. Developed in 
+                    <a href="https://doi.org/10.1093/gbe/evz088" target="_blank">Thomas and Hahn 2019</a>.
 				</div>
 				<div class="col-1-24" id="margin"></div>
 			</div>
@@ -127,16 +130,18 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://gwct.github.io/grampa/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/grampa-link-logo.png">
+						<img id="link-img" src="img/logo/grampa-link-logo.png">
 					</a>
 				</div>
 
 				<div class="col-17-24" id="link-text">
-					<b><a href="https://gwct.github.io/grampa/" target="_blank">Gene-tree Reconciliation Algorithm with MUL-trees for Polyploid Analysis</a></b></br>
-						Software to identify polyploidy events given a species tree and a set of gene trees. Can count 
-						duplications and losses in the presence of polyploidy and differentiate between auto- and 
-						allopolyploidy events. Developed in 
-						<a href="https://doi.org/10.1093/sysbio/syx044" target="_blank">Thomas et al. 2017</a>.
+					<b><a href="https://gwct.github.io/grampa/" target="_blank">GRAMPA</a></b></br>
+                    
+					<b>Gene-tree Reconciliation Algorithm with MUL-trees for Polyploid Analysis</b>.
+					Software to identify polyploidy events given a species tree and a set of gene trees. Can count 
+					duplications and losses in the presence of polyploidy and differentiate between auto- and 
+					allopolyploidy events. Developed in 
+					<a href="https://doi.org/10.1093/sysbio/syx044" target="_blank">Thomas et al. 2017</a>.
 				</div>
 				<div class="col-1-24" id="margin"></div>
 			</div>
@@ -146,14 +151,15 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://hahnlab.github.io/CAFE/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/cafe-link-logo.png">
+						<img id="link-img" src="img/logo/cafe-link-logo.png">
 					</a>
 				</div>
 
 				<div class="col-17-24" id="link-text">
-					<b><a href="https://hahnlab.github.io/CAFE/" target="_blank">Computational Analysis of Gene Family Evolution</a></b></br>	
-						Software developed in the <a href="https://hahnlab.sitehost.iu.edu/" target="_blank">Hahn lab</a> 
-						to estimate rates of gene family evolution and reconstruct ancestral gene counts. I contributed version 3.
+					<b><a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE</a></b></br>	
+					<b>Computational Analysis of Gene Family Evolution</b>.
+					Software developed in the <a href="https://hahnlab.sitehost.iu.edu/" target="_blank">Hahn lab</a> 
+					to estimate rates of gene family evolution and reconstruct ancestral gene counts. I contributed version 3.
 				</div>
 				<div class="col-2-24" id="margin"></div>
 			</div>
@@ -173,17 +179,18 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://github.com/gwct/gwct" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/gwct-link-logo.png">
+						<img id="link-img" src="img/logo/gwct-link-logo.png">
 					</a>
 				</div>
 
 				<div class="col-17-24" id="link-text">
-					<b><a href="https://github.com/gwct/gwct" target="_blank">Genome-Wide Convergence Tester</a></b></br>
-						These scripts and earlier versions of them were used in 
-						<a href="http://dx.doi.org/doi:10.1038/ng.3198" target="_blank">Foote et al. 2015</a>, 
-						<a href="http://dx.doi.org/10.1093/molbev/msv013" target="_blank">Thomas and Hahn 2015</a>, 
-						and <a href="http://dx.doi.org/10.1093/gbe/evw306" target="_blank">Thomas et al. 2017</a> 
-						to count convergent and divergent substitutions in a phylogeny.
+					<b><a href="https://github.com/gwct/gwct" target="_blank">GWCT</a></b></br>
+					<b>Genome-Wide Convergence Tester</b>. 
+                    These scripts and earlier versions of them were used in 
+					<a href="http://dx.doi.org/doi:10.1038/ng.3198" target="_blank">Foote et al. 2015</a>, 
+					<a href="http://dx.doi.org/10.1093/molbev/msv013" target="_blank">Thomas and Hahn 2015</a>, 
+					and <a href="http://dx.doi.org/10.1093/gbe/evw306" target="_blank">Thomas et al. 2017</a> 
+					to count convergent and divergent substitutions in a phylogeny. No longer maintained.
 				</div>
 				<div class="col-1-24" id="margin"></div>
 			</div>
@@ -193,13 +200,15 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://github.com/gwct/core" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/core-link-logo-2.png">
+						<img id="link-img" src="img/logo/core-link-logo-2.png">
 					</a>
 				</div>
 
 				<div class="col-17-24" id="link-text">
-					<b><a href="https://github.com/gwct/core" target="_blank">COde for Romps in Evolutionary data</a></b></br>
-						My personal scripts and libraries for manipulating sequence data, phylogenetic trees, and other things.
+					<b><a href="https://github.com/gwct/core" target="_blank">CORE</a></b></br>
+					<b>COde for Romps in Evolutionary data</b>.
+					My personal scripts and libraries for manipulating sequence data, phylogenetic trees, and other things.
+                    Best acronym.
 				</div>
 				<div class="col-1-24" id="margin"></div>
 			</div>
@@ -233,7 +242,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://arthrofam.org" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/i5k-link-logo.png">
+						<img id="link-img" src="img/logo/i5k-link-logo.png">
 					</a>
 				</div>
 
@@ -250,7 +259,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://github.com/gwct/macaque-cnv-figs" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/macaque-link-logo.png">
+						<img id="link-img" src="img/logo/macaque-link-logo.png">
 					</a>
 				</div>
 
@@ -277,7 +286,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://gwct.github.io/owl-monkey/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/om-link-logo.png">
+						<img id="link-img" src="img/logo/om-link-logo.png">
 					</a>
 				</div>
 
@@ -295,7 +304,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="http://dx.doi.org/10.6084/m9.figshare.5450602" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/drosophila-link-logo.png">
+						<img id="link-img" src="img/logo/drosophila-link-logo.png">
 					</a>
 				</div>
 
@@ -323,7 +332,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://cafe-portal.gitlab.io/bop/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/bop-link-logo.png">
+						<img id="link-img" src="img/logo/bop-link-logo.png">
 					</a>
 				</div>
 
@@ -356,7 +365,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://informatics.fas.harvard.edu/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/fas-info-link-logo.png">
+						<img id="link-img" src="img/logo/fas-info-link-logo.png">
 					</a>
 				</div>
 
@@ -372,7 +381,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="http://www.thegoodlab.org/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/good-link-logo.png">
+						<img id="link-img" src="img/logo/good-link-logo.png">
 					</a>
 				</div>
 
@@ -398,7 +407,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://hahnlab.sitehost.iu.edu/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/mwh-link-logo.png">
+						<img id="link-img" src="img/logo/mwh-link-logo.png">
 					</a>
 				</div>
 
@@ -414,7 +423,7 @@ html_template = """
 			<div class="row" id="link-section">
 				<div class="col-6-24" id="link-img-col">
 					<a href="https://kiharalab.org/web/" id="link-img-link" target="_blank">
-						<img class="pure-img" id="link-img" src="img/logo/kihara-link-logo.png">
+						<img id="link-img" src="img/logo/kihara-link-logo.png">
 					</a>
 				</div>
 

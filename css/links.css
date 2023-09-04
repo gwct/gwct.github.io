@@ -34,7 +34,7 @@
 }
 #link-text {
 	padding-left:10px;
-	/* text-align:justify; */
+	text-align:justify;
 	overflow:ellipsis;
 	/* height: 100%; */
 }

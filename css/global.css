@@ -286,9 +286,9 @@ the dropdowns
 #mobile_nav_link:hover {
 	background-color: rgb(206, 200, 208);
 }
-.pure-menu-list{
+/* .pure-menu-list{
 	width:100%;
-}
+} */
 /*------------------------------------------------------*/
 /* Contact logo grid styles */
 #contact_row{
@@ -378,7 +378,7 @@ the dropdowns
 #footer_text {
 }
 @media (max-width: 1025px) {
-	#footer { height:6vh; }
+	#footer { height:7vh; }
 	#footer_text { top: 25%; }
 }
 

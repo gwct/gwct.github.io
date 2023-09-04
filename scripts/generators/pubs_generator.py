@@ -575,6 +575,21 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Introduction to Bioinformatics (with <a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>)</span>
+				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
+				Virtual - 
+				<a href="https://gwct.github.io/congen/bioinformatics/" target="_blank">Workshop website</a>
+			</p>			
+
+			<p>
+				<span class="pub_title">Genome Assembly (led by Ellie Armstrong)</span>
+				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
+				Virtual - 
+				<a href="congen/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
+				<a href="https://gwct.github.io/congen/assembly/" target="_blank">Workshop website</a>
+			</p>        
+        
+			<p>
 				<span class="pub_title">Bioinformatics Tips & Tricks</span>
 				</br>&nbsp;&nbsp;Harvard FAS Informatics Spring 2023 - 
 				Harvard University, Cambridge, MA -
@@ -599,15 +614,15 @@ html_template = """
 				<span class="pub_title">Introduction to Bioinformatics (with <a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>)</span>
 				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
 				Virtual - 
-				<a href="https://gwct.github.io/congen/bioinformatics/" target="_blank">Workshop website</a>
+				<a href="https://gwct.github.io/congen/2022/bioinformatics/" target="_blank">Workshop website</a>
 			</p>			
 
 			<p>
 				<span class="pub_title">Genome Assembly (led by Ellie Armstrong)</span>
 				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
 				Virtual - 
-				<a href="congen/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
-				<a href="https://gwct.github.io/congen/assembly/" target="_blank">Workshop website</a>
+				<a href="congen/2022/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
+				<a href="https://gwct.github.io/congen/2022/assembly/" target="_blank">Workshop website</a>
 			</p>
 
 			<p>
