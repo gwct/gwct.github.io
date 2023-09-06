@@ -32,35 +32,48 @@ html_template = """
 		<ul id="presents">
 			<p>
 				<span class="pub_title">Molecular evolution of male reproduction across species with highly divergent sperm morphology in diverse murine rodents</span>
-				</br>&nbsp;&nbsp;Kopania EEK, <b>Thomas GWC</b>*, Hutter CR, Mortimer SME, Callahan CM, Roycroft E, Achmadi AS, Breed WG, Clark NL, Esselstyn JA, Rowe KC, Good JM.
+				</br>&nbsp;&nbsp;Kopania EEK, <b>Thomas GWC</b>, Hutter CR, Mortimer SME, Callahan CM, Roycroft E, Achmadi AS, Breed WG, Clark NL, Esselstyn JA, Rowe KC, Good JM.
 				<em>bioRxiv</em>.
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.08.30.555585" target="_blank" id="doi_link">10.1101/2023.08.30.555585</a>
 			</p>           
         
 			<p>
 				<span class="pub_title">The genomic landscape, causes, and consequences of extensive phylogenomic discordance in Old World mice and rats</span>
-				</br>&nbsp;&nbsp;<b>Thomas GWC</b>*, Hughes JJ, Kumon T, Berv JS, Nordgren CE, Lampson M, Levine M, Searle JB, Good JM.
+				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Hughes JJ, Kumon T, Berv JS, Nordgren CE, Lampson M, Levine M, Searle JB, Good JM.
 				<em>bioRxiv</em>.
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.08.28.555178" target="_blank" id="doi_link">10.1101/2023.08.28.555178</a>
 			</p>        
 
 			<p>
 				<span class="pub_title">A fast, reproducible, high-throughput variant calling workflow for evolutionary, ecological, and conservation genomics</span>
-				</br>&nbsp;&nbsp;Mirchandani C, Shultz AJ, <b>Thomas GWC</b>*, Smith SJ, Baylis M, Arnold B, Corbett-Detig R, Enbody E, Sackton TB.
+				</br>&nbsp;&nbsp;Mirchandani C, Shultz AJ, <b>Thomas GWC</b>, Smith SJ, Baylis M, Arnold B, Corbett-Detig R, Enbody E, Sackton TB.
 				<em>bioRxiv</em>.
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.06.22.546168" target="_blank" id="doi_link">10.1101/2023.06.22.546168</a>
 			</p>        
-        
-			<p>
-				<span class="pub_title">PhyloAcc-GT: A Bayesian method for inferring patterns of substitution rate shifts and associations with binary traits under gene tree discordance</span>
-				</br>&nbsp;&nbsp;Yan H*, Hu Z*, <b>Thomas GWC</b>*, Edwards SV, Sackton TB, Liu JS.
-				<em>bioRxiv</em>.
-				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2022.12.23.521765" target="_blank" id="doi_link">10.1101/2022.12.23.521765</a>
-			</p>
 		</ul>
 	</div>
 	<div class="col-2-24" id="margin"></div>
 
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">2023</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="pub">
+		<ul id="presents">
+			<p>
+				<span class="pub_title">PhyloAcc-GT: A Bayesian method for inferring patterns of substitution rate shifts on targeted lineages accounting for gene tree discordance</span>
+				</br>&nbsp;&nbsp;Yan H*, Hu Z*, <b>Thomas GWC</b>*, Edwards SV, Sackton TB, Liu JS.
+                2023.
+				<em>Molecular Biology & Evolution</em>.
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/molbev/msad195" target="_blank" id="doi_link">10.1093/molbev/msad195</a>
+			</p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>    
+    
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">2022</div>
