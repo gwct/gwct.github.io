@@ -69,6 +69,7 @@ html_template = """
                 2023.
 				<em>Molecular Biology & Evolution</em>.
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/molbev/msad195" target="_blank" id="doi_link">10.1093/molbev/msad195</a>
+                </br>&nbsp;&nbsp;Website: <a href="https://phyloacc.github.io/" target="_blank">https://phyloacc.github.io/</a>
 			</p>
 		</ul>
 	</div>
@@ -679,7 +680,7 @@ html_template = """
 	<div class="col-2-24" id="margin"></div>
 
     {links}
-
+	
     {footer}
 </body>
 """
