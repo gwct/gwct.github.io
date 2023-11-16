@@ -64,10 +64,18 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Genomics and conservation: Guidance from training to analyses and applications</span>
+				</br>&nbsp;&nbsp;Schiebelhut LM, Guillaume AS, Kuhn A, Schweizer RM, Armstrong EE, Beaumont MA, Byrne M, Cosart T, Hand BK, Howard L, Mussmann SM, Narum SR, Rasteiro R, Rivera-Colón, AG, Saarman N, Sethuraman A, Taylor HR, <b>Thomas GWC</b>, Wellenreuther M, Luikart G.
+                2023.
+				<em>Molecular Ecology Resources</em>.
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1111/1755-0998.13893" target="_blank" id="doi_link">10.1111/1755-0998.13893</a>
+			</p>        
+        
+			<p>
 				<span class="pub_title">PhyloAcc-GT: A Bayesian method for inferring patterns of substitution rate shifts on targeted lineages accounting for gene tree discordance</span>
 				</br>&nbsp;&nbsp;Yan H*, Hu Z*, <b>Thomas GWC</b>*, Edwards SV, Sackton TB, Liu JS.
                 2023.
-				<em>Molecular Biology & Evolution</em>.
+				<em>Molecular Biology & Evolution</em>. 40(9).
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/molbev/msad195" target="_blank" id="doi_link">10.1093/molbev/msad195</a>
                 </br>&nbsp;&nbsp;Website: <a href="https://phyloacc.github.io/" target="_blank">https://phyloacc.github.io/</a>
 			</p>
