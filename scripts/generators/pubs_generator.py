@@ -42,14 +42,7 @@ html_template = """
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Hughes JJ, Kumon T, Berv JS, Nordgren CE, Lampson M, Levine M, Searle JB, Good JM.
 				<em>bioRxiv</em>.
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.08.28.555178" target="_blank" id="doi_link">10.1101/2023.08.28.555178</a>
-			</p>        
-
-			<p>
-				<span class="pub_title">A fast, reproducible, high-throughput variant calling workflow for evolutionary, ecological, and conservation genomics</span>
-				</br>&nbsp;&nbsp;Mirchandani C, Shultz AJ, <b>Thomas GWC</b>, Smith SJ, Baylis M, Arnold B, Corbett-Detig R, Enbody E, Sackton TB.
-				<em>bioRxiv</em>.
-				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.06.22.546168" target="_blank" id="doi_link">10.1101/2023.06.22.546168</a>
-			</p>        
+			</p>           
 		</ul>
 	</div>
 	<div class="col-2-24" id="margin"></div>
@@ -63,6 +56,14 @@ html_template = """
 	<div class="col-2-24" id="margin"></div>
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
+			<p>
+				<span class="pub_title">A fast, reproducible, high-throughput variant calling workflow for population genomics</span>
+				</br>&nbsp;&nbsp;Mirchandani C, Shultz AJ, <b>Thomas GWC</b>, Smith SJ, Baylis M, Arnold B, Corbett-Detig R, Enbody E, Sackton TB.
+				<em>Molecular Biology & Evolution</em>.
+				<!-- </br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.06.22.546168" target="_blank" id="doi_link">10.1101/2023.06.22.546168</a> -->
+                </br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/molbev/msad270" target="_blank" id="doi_link">10.1093/molbev/msad270</a>
+			</p>     
+                    
 			<p>
 				<span class="pub_title">Genomics and conservation: Guidance from training to analyses and applications</span>
 				</br>&nbsp;&nbsp;Schiebelhut LM, Guillaume AS, Kuhn A, Schweizer RM, Armstrong EE, Beaumont MA, Byrne M, Cosart T, Hand BK, Howard L, Mussmann SM, Narum SR, Rasteiro R, Rivera-Colón, AG, Saarman N, Sethuraman A, Taylor HR, <b>Thomas GWC</b>, Wellenreuther M, Luikart G.
