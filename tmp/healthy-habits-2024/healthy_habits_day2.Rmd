@@ -8,7 +8,7 @@ output:
     includes:
       in_header: 'html-chunks/rmd_header.html'
     df_print: paged
-    code_folding: show
+    code_folding: none
     number_sections: true
     toc_depth: 3
 ---
@@ -38,7 +38,7 @@ However, all ths scripts and some of the intermediate files will be provided for
 > 2. Navigate to `/holyscratch01/<USERNAME>/`
 
 > 3. Create a project directory and enter it:
-    
+
 ```bash
 mkdir healthy-habits
 cd healthy-habits

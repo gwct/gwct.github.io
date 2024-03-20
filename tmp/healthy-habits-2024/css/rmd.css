@@ -122,3 +122,8 @@ nav#toc ul.nav li.active ul li ul li a span{
 	#footer_text { top: 25%; }
 }
 /*------------------------------------------------------*/
+
+
+.book .book-body .page-inner section.normal pre.sourceCode {
+    margin: 0;
+}
