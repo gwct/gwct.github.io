@@ -4,6 +4,12 @@
     min-width:75%;
 } */
 
+blockquote {
+    color: #174159;
+    font-size: 1em;
+    font-weight: bold;
+}
+
 /*------------------------------------------------------*/
 /* bookthedown styles */
 #content{
@@ -11,15 +17,15 @@
 }
 .page-inner{
     min-width:100%;
-    background-color:#f2f2f2;
+    background-color:#fff;
 }
 /* Widens page content so there isn't a bunch of wasted space on the sides */
 
 #content{
-    background-color:#f2f2f2;
+    background-color:#fff;
 }
 .row{
-    background-color:#f2f2f2;
+    background-color:#fff;
 }
 /* Changes background color so there is contrast between figures and page */
 

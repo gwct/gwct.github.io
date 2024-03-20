@@ -8,16 +8,18 @@ output:
     includes:
       in_header: 'html-chunks/rmd_header.html'
     df_print: paged
-    code_folding: hide
+    code_folding: show
     number_sections: true
     toc_depth: 3
 ---
 
-```{r setup, warning=FALSE, message=FALSE}
+```{r setup, warning=FALSE, message=FALSE, echo=FALSE}
 
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, eval = FALSE)
 
 ```
+
+
 
 # Review of paper and get everyone caught up
 
@@ -38,7 +40,6 @@ However, all ths scripts and some of the intermediate files will be provided for
 > 3. Create a project directory and enter it:
     
 ```bash
-
 mkdir healthy-habits
 cd healthy-habits
 
@@ -47,7 +48,6 @@ cd healthy-habits
 > 4. Copy the project data to your directory:
 
 ```bash
-
 cp /n/holylfs05/LABS/informatics/Everyone/workshop-data/healthy-habits-2024/day1/* .
 
 ```
@@ -55,7 +55,6 @@ cp /n/holylfs05/LABS/informatics/Everyone/workshop-data/healthy-habits-2024/day1
 > 5. Navigate to the project directory for this workshop that we created on Day 1:
 
 ```bash
-
 cd healthy-habits/
 
 ```
@@ -89,10 +88,9 @@ Software often bundles a lot of programs and libraries together. For example, th
 
 These dependencies also need to be in a location that is findable by the main program. Typically, there are a few *environement variables* that tell the computer where to look for programs and their dependencies. One of these, on Unix systems, is `$PATH`.
 
-> Type the following intouy your terminal:
+> Type the following into your terminal:
 
 ```bash
-
 echo $PATH
 
 ```
@@ -125,8 +123,7 @@ However, most software is not developed on a cluster, so there are several assum
 
 > Type the following in your terminal:
 
-```bash 
-
+```bash
 ls -l /
 
 ```
@@ -134,7 +131,6 @@ ls -l /
 This will show you the contents of the root directory and the permissions of each file and directory. The permissions are the first column of the output. They look like this:
 
 ```bash
-
 drwxr-xr-x
 
 ```
@@ -161,7 +157,6 @@ We've provided a Singularity image for the `sra-tools` program that we used to d
 > Type the following into your terminal (`fastq-dump` is one of the programs included with `sra-tools`). What happens?
 
 ```bash
-
 fastq-dump -h
 
 ```
@@ -174,8 +169,7 @@ There are two ways we can execute commands from a container.
 
 > Type the following into your terminal:
 
-```bash 
-
+```bash
 singularity exec software/sra-tools-3.0.1.sif fastq-dump -h
 
 ```
@@ -186,8 +180,7 @@ Now we should see the full help menu for this program, and, if we wanted to, we 
 
 > Type the following into your terminal:
 
-```bash 
-
+```bash
 singularity shell software/sra-tools-3.0.1.sif
 
 ```
@@ -200,8 +193,7 @@ This is the prompt for the new shell that is running from the container. We can 
 
 > Type the following into your terminal:
 
-```bash 
-
+```bash
 fastq-dump -h
 
 ```
@@ -215,7 +207,6 @@ Let's exit our container shell.
 > Type the following into your terminal:
 
 ```bash
-
 exit
 
 ```
@@ -255,8 +246,7 @@ Today we'll be installing `mamba` using [their recommended method of miniforge](
 
 > 1. Type the following into your terminal:
 
-```bash 
-
+```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 
 ```
@@ -266,7 +256,6 @@ This will download the miniforge installer to your current directory.
 > 2. Type the following into your terminal:
 
 ```bash
-
 bash Miniforge3-Linux-x86_64.sh
 
 ```
@@ -276,7 +265,6 @@ This will run the installer. You will be prompted to accept the license agreemen
 > 3. Type the following into your terminal:
 
 ```bash
-
 source ~/.bashrc
 
 ```
@@ -286,7 +274,6 @@ This will update your PATH variable so that you can run `mamba` from the termina
 > 4. Type the following into your terminal:
 
 ```bash
-
 mamba -h
 
 ```
@@ -314,7 +301,6 @@ This website contains a lot of information about bioconda, including a list of a
 > Set up your conda channels.
 
 ```bash
-
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
@@ -333,7 +319,6 @@ We've already downloaded the raw data and organized it into our project folder.
 > If you've navigated away, navigate back to your project directory.
 
 ```bash
-
 cd /holyscratch01/<USERNAME>/healthy-habits/
 
 ```
@@ -343,7 +328,6 @@ The first step in our analysis is to **remove the adapters** from the raw reads.
 > Type the following into your terminal:
 
 ```bash
-
 cutadapt -h
 
 ```
@@ -357,7 +341,6 @@ The typical syntax for creating an environment with `mamba` is `mamba create -n 
 > Type the following into your terminal:
 
 ```bash
-
 mamba create -n cutadpt-env
 
 ```
@@ -367,7 +350,6 @@ If that finishes without error, we can confirm that the environment is created:
 > Type the following into your terminal:
 
 ```bash
-
 mamba env list
 
 ```
@@ -390,7 +372,6 @@ To activate the environment, we use the `mamba activate` command.
 > Type the following into your terminal:
 
 ```bash
-
 mamba activate cutadpt-env
 
 ```
@@ -408,7 +389,6 @@ Ok, now we're in the `cutadpt-env` environment!
 > Type the following into your terminal:
 
 ```bash
-
 cutadapt -h
 
 ```
@@ -421,7 +401,6 @@ To do that, let's go to the [bioconda website](https://bioconda.github.io/) and 
 > 2. Follow the instructions to install `cutadapt` into your `cutadpt-env` environment.
 
 ```bash
-
 mamba install cutadapt
 
 ```
@@ -433,7 +412,6 @@ This may take a minute or so (which is less time than if we used `conda`). Once 
 > Type the following into your terminal:
 
 ```bash
-
 cutadapt -h
 
 ``` 
@@ -449,7 +427,6 @@ Let's deactivate the cutadapt environment now.
 > Type the following into your terminal:
 
 ```bash
-
 mamba deactivate
 
 ```
@@ -471,7 +448,6 @@ Let's start a screen session.
 > Type the following into your terminal:
 
 ```bash
-
 screen -S cutadapt-screen
 
 ```
@@ -483,7 +459,6 @@ Now, let's start an interactive session on the cluster.
 > Type the following into your terminal:
 
 ```bash
-
 salloc -p test --mem 8G -t 02:00:00 -c 16 --job-name cutadapt-job
 
 ```
@@ -495,7 +470,6 @@ We'll next need to activate our `cutadpt-env` environment on this node:
 > Type the following into your terminal:
 
 ```bash
-
 mamba activate cutadpt-env
 
 ```
@@ -505,7 +479,6 @@ Just to be sure, you can check if `cutadapt` is installed in this environment:
 > Type the following into your terminal:
 
 ```bash
-
 cutadapt -h
 
 ```
@@ -515,7 +488,6 @@ Next, navigate to the project directory:
 > Type the following into your terminal:
 
 ```bash
-
 cd /holyscratch01/<USERNAME>/healthy-habits/
 
 ```
@@ -527,7 +499,6 @@ First, make a new directory for the output files:
 > Type the following into your terminal:
 
 ```bash
-
 mkdir -p data/2-adapter_removed
 
 ```
@@ -535,7 +506,6 @@ mkdir -p data/2-adapter_removed
 Now, to run `cutadapt`.
 
 ```bash
-
 > Type the following into your terminal:
 
 ```bash
@@ -570,7 +540,6 @@ While this is running, since we're in a screen session, we can detach the screen
 > To detach the screen, use the following key combination:
 
 ```bash
-
 Ctrl-a d
 
 ```
@@ -582,7 +551,6 @@ Let's make sure the screen is still running.
 > Type the following into your terminal:
 
 ```bash
-
 screen -ls
 
 ```
@@ -594,7 +562,6 @@ When we want to check on our job, we can reattach the screen.
 > Type the following into your terminal:
 
 ```bash
-
 screen -r cutadapt-screen
 
 ```
@@ -614,7 +581,6 @@ First, if you're still in a screen session, detach from it.
 > Type the following into your terminal:
 
 ```bash
-
 Ctrl-a d
 
 ```
@@ -624,7 +590,6 @@ Next, if you're not already in the `cutadpt-env` environment, activate it.
 > Type the following into your terminal:
 
 ```bash
-
 mamba activate cutadpt-env
 
 ```
@@ -634,7 +599,6 @@ Now, we can export the environment to a file.
 > Type the following into your terminal:
 
 ```bash
-
 mamba env export > software/cutadpt-env.yml
 
 ```
@@ -646,7 +610,6 @@ Let's look at the file.
 > Type the following into your terminal:
 
 ```bash
-
 cat software/cutadpt-env.yml
 
 ```
@@ -662,7 +625,6 @@ First, make sure you're in your project directory, and if you don't have this fi
 > Type the following into your terminal:
 
 ```bash
-
 cp /n/holylfs05/LABS/informatics/Everyone/workshop-data/healthy-habits-2024/day2/env.yml software/env.yml
 
 ```
@@ -672,7 +634,6 @@ Now, let's look at the file.
 > Type the following into your terminal:
 
 ```bash
-
 cat software/env.yml
 
 ```
@@ -686,7 +647,6 @@ First, make sure you're not still attached to a screen.
 > Type the following into your terminal:
 
 ```bash
-
 screen -ls
 
 ```
@@ -696,7 +656,6 @@ If any of the listed screens have the status **(Attached)**, you'll need to deta
 > Type the following into your terminal:
 
 ```bash
-
 screen -S favate-screen
 
 ```
@@ -708,7 +667,6 @@ Let's check the status of the screen.
 > Type the following into your terminal:
 
 ```bash
-
 screen -ls
 
 ```
@@ -720,7 +678,6 @@ Let's create the environment from this file.
 > Type the following into your terminal:
 
 ```bash
-
 mamba env create -f software/env.yml
 
 ```
@@ -730,7 +687,6 @@ This will create an environment called `favate`. Make sure to say yes when it pr
 > To detach the screen, use the following key combination:
 
 ```bash
-
 Ctrl-a d
 
 ```
