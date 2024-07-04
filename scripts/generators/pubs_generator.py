@@ -42,11 +42,37 @@ html_template = """
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Hughes JJ, Kumon T, Berv JS, Nordgren CE, Lampson M, Levine M, Searle JB, Good JM.
 				<em>bioRxiv</em>.
 				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2023.08.28.555178" target="_blank" id="doi_link">10.1101/2023.08.28.555178</a>
-			</p>           
+			</p>        
+
+			<p>
+				<span class="pub_title">A comprehensive examination of Chelicerate genomes reveals no evidence for a whole genome duplication among spiders and scorpions</span>
+				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, McKibben MTW, Hahn MW, Barker MS.
+				<em>bioRxiv</em>.
+				</br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1101/2024.02.05.578966 " target="_blank" id="doi_link">10.1101/2024.02.05.578966 </a>
+			</p>    
 		</ul>
 	</div>
 	<div class="col-2-24" id="margin"></div>
 
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">2024</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="pub">
+		<ul id="presents">
+			<p>
+				<span class="pub_title">Practical guidance and workflows for identifying fast evolving non-coding genomic elements using PhyloAcc</span>
+				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Gemmell P, Shakya SB, Hu Z, Liu JS, Sackton TB, Edwards SV.
+				<em>Integrative & Comparative Biology</em>.
+                </br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/icb/icae056" target="_blank" id="doi_link">10.1093/icb/icae056</a>
+			</p>     
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>     
+    
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">2023</div>
@@ -566,6 +592,14 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Inferring substitution rate shifts in a phylogeny with <a href="https://phyloacc.github.io/" target="_blank">PhyloAcc</a></span>
+				</br>&nbsp;&nbsp;The Allied Genetics Conference (Population, Evolutionary, and Quantitative Genetics section) - 
+				2024.03.09 -
+				Washington D.C. -
+				<a href="posters/2024.03.09-TAGC-phyloacc.png">Poster</a>
+			</p>        
+        
+			<p>
 				<span class="pub_title">Molecular and morphological evolution across the most species-rich radiation in mammals</span>
 				</br>&nbsp;&nbsp;Evolution Conference - 
 				2022.06.27 -
@@ -598,33 +632,46 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
-				<span class="pub_title">Introduction to Bioinformatics (with <a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>)</span>
-				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
-				Virtual - 
-				<a href="https://gwct.github.io/congen/bioinformatics/" target="_blank">Workshop website</a>
-			</p>			
+				<span class="pub_title">
+                	<a href="https://harvardinformatics.github.io/workshops/current/hh.html" target="_blank">
+                    	Healthy Habits for Data Science
+                    </a>
+                </span>
+				</br>&nbsp;&nbsp;
+                <a href="https://informatics.fas.harvard.edu/" target="_blank">Harvard FAS Informatics Group</a> - 
+				Harvard University, Cambridge, MA -
+                </br>&nbsp;&nbsp;
+				<a href="https://harvardinformatics.github.io/workshops/2024-spring/healthy_habits/" target="_blank">Spring 2024</a>
+			</p>             
 
 			<p>
-				<span class="pub_title">Genome Assembly (led by Ellie Armstrong)</span>
-				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
-				Virtual - 
-				<a href="congen/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
-				<a href="https://gwct.github.io/congen/assembly/" target="_blank">Workshop website</a>
-			</p>        
-        
-			<p>
-				<span class="pub_title">Bioinformatics Tips & Tricks</span>
-				</br>&nbsp;&nbsp;Harvard FAS Informatics Spring 2023 - 
+				<span class="pub_title">
+                	<a href="https://harvardinformatics.github.io/workshops/current/biotips.html" target="_blank">
+                    	Bioinformatics Tips & Tricks
+                    </a>
+                </span>
+				</br>&nbsp;&nbsp;
+                <a href="https://informatics.fas.harvard.edu/" target="_blank">Harvard FAS Informatics Group</a> - 
 				Harvard University, Cambridge, MA -
-				<a href="https://harvardinformatics.github.io/workshops/2023-spring/biotips/index.html" target="_blank">Workshop website</a>
+                </br>&nbsp;&nbsp;
+				<a href="https://harvardinformatics.github.io/workshops/2023-spring/biotips/index.html" target="_blank">2023 Spring</a> -
+                <a href="https://harvardinformatics.github.io/workshops/2023-fall/biotips/index.html" target="_blank">2023 Fall</a> -
+                <a href="https://harvardinformatics.github.io/workshops/2024-spring/biotips/index.html" target="_blank">2024 Spring</a>
 			</p>        
-        
+
 			<p>
-				<span class="pub_title">Introduction to R</span>
-				</br>&nbsp;&nbsp;Harvard FAS Informatics Spring 2023 - 
+				<span class="pub_title">
+                	<a href="https://harvardinformatics.github.io/workshops/current/r.html" target="_blank">
+                    	Introduction to R
+                    </a>
+                </span>
+				</br>&nbsp;&nbsp;
+                <a href="https://informatics.fas.harvard.edu/" target="_blank">Harvard FAS Informatics Group</a> -  
 				Harvard University, Cambridge, MA -
-				<a href="https://harvardinformatics.github.io/workshops/2023-spring/r/index.html" target="_blank">Workshop website</a>
-			</p>        
+                </br>&nbsp;&nbsp;
+				<a href="https://harvardinformatics.github.io/workshops/2023-spring/r/index.html" target="_blank">2023 Spring</a> - 
+                <a href="https://harvardinformatics.github.io/workshops/2023-fall/r/index.html" target="_blank">2023 Fall</a>
+			</p>       
         
 			<p>
 				<span class="pub_title">Bayesian estimation of substitution rates with <a href="https://phyloacc.github.io/" target="_blank">PhyloAcc</a></span>
@@ -634,41 +681,30 @@ html_template = """
 			</p>	
 
 			<p>
-				<span class="pub_title">Introduction to Bioinformatics (with <a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>)</span>
-				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
+				<span class="pub_title">
+                	<a href="https://gwct.github.io/congen/bioinformatics/" target="_blank">
+                    	Introduction to Bioinformatics</a> (with <a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>)
+                </span>
+				</br>&nbsp;&nbsp;ConGen 2021: Population Genomic Data Analysis Course/Workshop - 
 				Virtual - 
-				<a href="https://gwct.github.io/congen/2022/bioinformatics/" target="_blank">Workshop website</a>
+                </br>&nbsp;&nbsp;
+				<a href="https://gwct.github.io/congen/2021/bioinformatics/" target="_blank">2021</a> -
+                <a href="https://gwct.github.io/congen/2022/bioinformatics/" target="_blank">2022</a> -
+                <a href="https://gwct.github.io/congen/bioinformatics/" target="_blank">2023</a>
 			</p>			
 
 			<p>
-				<span class="pub_title">Genome Assembly (led by Ellie Armstrong)</span>
-				</br>&nbsp;&nbsp;ConGen 2022: Population Genomic Data Analysis Course/Workshop - 
+				<span class="pub_title">
+                	<a href="https://gwct.github.io/congen/assembly/" target="_blank">
+                    	Genome Assembly</a> (with <a href="https://www.armstrong-lab.com/" target="_blank">Ellie Armstrong</a>)
+                </span>
+				</br>&nbsp;&nbsp;ConGen: Population Genomic Data Analysis Course/Workshop - 
 				Virtual - 
-				<a href="congen/2022/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
-				<a href="https://gwct.github.io/congen/2022/assembly/" target="_blank">Workshop website</a>
-			</p>
-
-			<p>
-				<span class="pub_title">Introduction to Bioinformatics (with <a href="https://renaschweizer.org/" target="_blank">Rena Schweizer</a>)</span>
-				</br>&nbsp;&nbsp;ConGen 2021: Population Genomic Data Analysis Course/Workshop - 
-				Virtual - 
-				<a href="https://gwct.github.io/congen/2021/bioinformatics/" target="_blank">Workshop website</a>
-			</p>			
-
-			<p>
-				<span class="pub_title">Genome Assembly (with Ellie Armstrong)</span>
-				</br>&nbsp;&nbsp;ConGen 2021: Population Genomic Data Analysis Course/Workshop - 
-				Virtual - 
-				<a href="congen/2021/assembly/slides/congen-assembly-lecture.pptx">Slides</a> - 
-				<a href="https://gwct.github.io/congen/2021/assembly/" target="_blank">Workshop website</a>
-			</p>
-
-			<p>
-				<span class="pub_title">Genome Assembly (with Ellie Armstrong)</span>
-				</br>&nbsp;&nbsp;ConGen 2020: Population Genomic Data Analysis Course/Workshop - 
-				Virtual - 
-				<a href="congen/2020/slides/congen-assembly-lecture.pptx">Slides</a> - 
-				<a href="https://gwct.github.io/congen/2020/" target="_blank">Workshop website</a>
+                </br>&nbsp;&nbsp;
+                <a href="https://gwct.github.io/congen/2020/" target="_blank">2020</a> -
+                <a href="https://gwct.github.io/congen/2021/" target="_blank">2021</a> -
+                <a href="https://gwct.github.io/congen/2022/" target="_blank">2022</a> -
+                <a href="https://gwct.github.io/congen/assembly/" target="_blank">2023</a>
 			</p>
 		</ul>
 	</div>
@@ -698,6 +734,7 @@ html_template = """
 # Main block
 ######################
 pagefile = "pubs.html";
+
 print("Generating " + pagefile + "...");
 title = "Gregg Thomas - Publications"
 

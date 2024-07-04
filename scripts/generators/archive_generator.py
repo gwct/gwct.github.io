@@ -22,6 +22,28 @@ html_template = """
 
     <div class="row" id="section-header-row">
         <div class="col-2-24" id="margin"></div>
+        <div class="col-20-24" id="section_header">July 2, 2024 &nbsp;</div>
+        <div class="col-2-24" id="margin"></div>
+	</div>
+	<div class="row" id="pub-row"></div>
+	<div class="col-2-24" id="margin"></div>
+	<div class="col-20-24" id="arc_entry">
+		<ul>
+			<p>
+				The past year has been busy! From teaching and developing more workshops here in the <a href="https://informatics.fas.harvard.edu/" target="_blank">Informatics Group</a>
+                (and helping to update the website!), to seeing friends and showing a poster about <a href="https://phyloacc.github.io/" target="_blank">PhyloAcc</a> at this year's 
+                <a href="https://genetics-gsa.org/tagc/" target="_blank">TAGC in Washington D.C</a>, and to <a href="pubs.html" target="_blank">finishing up several projects</a>.
+			</p>
+            
+            <p>
+				On top of that, I just welcomed my son, Wesley, into the world on June 20! With that being said, I'll be on leave for the next few months to get to know him.
+            </p>
+		</ul>
+	</div>
+	<div class="col-2-24" id="margin"></div>    
+    
+    <div class="row" id="section-header-row">
+        <div class="col-2-24" id="margin"></div>
         <div class="col-20-24" id="section_header">July 2, 2023 &nbsp;</div>
         <div class="col-2-24" id="margin"></div>
 	</div>
