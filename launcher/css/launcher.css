@@ -34,6 +34,12 @@ a {
 	color:#ff8f33;
 }
 
+.row-title {
+	font-family: 'Roboto Mono', monospace;
+	/* font-style: italic; */
+	font-size: 1.5em;
+}
+
 /*------------------------------------------------------*/
 /* Main grid styles */
 #body_div {
@@ -166,6 +172,9 @@ a {
 }
 .top_sep_div {
 	height:5vh;
+}
+.smed_sep_div {
+	height:20vh;
 }
 .med_sep_div {
 	height:30vh;

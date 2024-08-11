@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel='shortcut icon' href='launcher/img/favicon.ico' type='image/x-icon'/ >
+	<link type="text/css" rel="stylesheet" href="launcher/css/grid.css"  media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="launcher/css/launcher.css"  media="screen,projection" />
+	<script language="javascript" type="text/javascript"></script>
+	<script src="launcher/js/util.js"></script>
+	<script>timeStamp();</script>
+</head>
+
+<script>setBackground();</script>
+<!-- <body> -->
+<!-- <body onload="updateClock(); setInterval('updateClock()', 1000 )"> -->
+
+		<!-- <div class="col-24-24 sep_div"></div> -->
+		<!-- ---------------- SEARCH GRID BEGIN ---------------- -->
+
+		<div class="row" id="search_grid">
+			<div class="col-3-24 margin"></div>
+
+			<!-- Duckduckgo search -->
+			<div class="col-6-24 search_cell" id="google_cell">
+				<p><form class="search_form" onsubmit="searchEnter(1); return false;">
+					<input type="text" class="search_box" id="sbox1" placeholder="Search" autofocus/>
+					<!-- <input type="submit" hidden> -->
+				</p></form>
+			</div>
+			<!-- Duckduckgo search -->
+
+			<!-- Google scholar search -->
+			<div class="col-6-24 search_cell" id="scholar_cell">
+				<p><form class="search_form" onsubmit="searchEnter(2); return false;">
+					<input type="text" class="search_box" id="sbox2" placeholder="Scholar"/>
+				</p></form>
+			</div>
+			<!-- Google scholar search -->
+
+			<!-- Wikipedia search -->
+			<div class="col-6-24 search_cell" id="wiki_cell">
+				<p><form class="search_form" onsubmit="searchEnter(3); return false;">
+					<input type="text" class="search_box" id="sbox3" placeholder="Wiki"/>
+				</p></form>
+			</div>
+			<!-- Wikipedia search -->
+
+			<div class="col-3-24 margin"></div>
+		</div>
+		<!-- ----------------- SEARCH GRID END ----------------- -->
+
+		<!-- --------------- BOOKMARK GRID BEGIN --------------- -->
+		<!-- ------------------- Row 1 begin ------------------- -->
+		<div class="row">
+			<div class="col-24-24" id="first_line"></div>
+		</div>
+
+		<div class="row" id="bookmark-row">
+			<div class="col-4-24 bookmark_margin"></div>
+			
+			<div class="col-2-24 bookmark">
+				<a class="drop_link" href="http://www.purduefed.com/">Purdue</a>
+			</div>
+
+			<!-- Dropdown menu for huecu -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://my.huecu.org/Authentication">Harvard</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://borrower-portal.harvardfcu.org/#/login">House</a>
+					</div>		
+				</div>
+			</div>
+			<!-- Dropdown menu for huecu -->
+
+			<div class="col-2-24 bookmark">
+				<a href="https://personal.vanguard.com/us/MyHome">IRA</a>
+			</div>
+
+			<div class="col-2-24 bookmark">
+				<a href="https://www.tiaa.org/public/index.html">40X</a>
+			</div>
+			
+			<div class="col-2-24 bookmark">
+				<a href="https://digital.fidelity.com/ftgw/digital/portfolio/summary">529</a>
+			</div>
+		
+			<div class="col-2-24 bookmark">
+				<a href="https://my.voya.com/">FSA</a>
+			</div>
+			
+			<div class="col-2-24 bookmark">
+				<a href="https://www.creditkarma.com/dashboard">Score</a>
+			</div>
+
+			<!-- Dropdown menu for crypto -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://www.coinbase.com/dashboard">Bitcoin</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://www.kraken.com/u/trade">Kraken</a>
+					</div>		
+				</div>
+			</div>
+			<!-- Dropdown menu for crypto -->
+
+			<div class="col-4-24 bookmark_margin"></div>
+		</div>
+		<!-- -------------------  Row 1 end  ------------------- -->
+		<div class="row">
+			<div class="col-24-24" id="line"></div>
+		</div>
+		<!-- ------------------- Row 2 begin ------------------- -->
+		<div class="row" id="bookmark-row">
+			<div class="col-5-24 bookmark_margin"></div>
+
+			<div class="col-2-24 bookmark">
+				<a href="https://www.eversource.com/cg/customer/accountoverview">Utils I</a>
+			</div>
+
+			<div class="col-2-24 bookmark">
+				<a href="https://myaccount.nationalgrid.com/s/">Utils II</a>
+			</div>
+			
+			<div class="col-2-24 bookmark">
+				<a href="https://www.verizon.com/consumer/myverizon/dashboard">ISP</a>
+			</div>
+			
+			<div class="col-2-24 bookmark">
+				<a href="https://www.cricketwireless.com/myaccount.html">Phone</a>
+			</div>			
+
+			<!-- Dropdown menu for insurance -->
+			<div class="col-2-24 drop_cont">
+				<div class="bookmark">
+					<a href="https://myinsurance.ndgroup.com/AccountHome.action">Insurance</a>
+				</div>
+				<div class="drop_list">
+					<div class="bookmark">
+						<a href="https://my.gloveboxapp.com/auth">Agent</a>
+					</div>	
+				</div>
+			</div>
+			<!-- Dropdown menu for insurance -->
+
+			<div class="col-2-24 bookmark">
+				<a href="http://www.amazon.com/">Shop</a>
+			</div>		
+			
+			<div class="col-2-24 bookmark">
+				<a href="http://www.newegg.com/">Computers</a>
+			</div>					
+
+			<div class="col-5-24 bookmark_margin"></div>
+		</div>
+		<!-- -------------------  Row 2 end  ------------------- -->
+		<!-- ---------------- BOOKMARK GRID END ---------------- -->
+		<div class="row">
+			<div class="col-24-24" id="line"></div>
+		</div>
+		<div class="col-24-24 big_sep_div"></div>
+		
+		<!-- -------------- ENVIRONMENT GRID BEGIN ------------- -->
+		<div class="row" id="env_banner">
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
+				<div id="clock_cell">
+					<span id="clock"></span>
+				</div>
+			</div>
+			<div class="col-20-24" id="weather_cont">
+				<script>getWeatherMA();</script>
+			</div>
+			<div class="col-1-24 margin"></div>
+		</div>
+
+		<div class="col-24-24 sep_div"></div>
+
+		<div class="row" id="env_banner">
+			<!-- <div class="col-18-24" id="motd_text">consistency</div> -->
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
+				<div id="clock_cell">
+					<span id="in">Missoula:</span>
+				</div>
+			</div>
+
+			<div class="col-20-24" id="weather_cont">
+				<script>getWeatherMT();</script>
+			</div>
+			<div class="col-1-24 margin"></div>
+		</div>
+
+		<div class="col-24-24 sep_div"></div>
+
+		<div class="row" id="env_banner">
+			<div class="col-1-24 margin"></div>
+			<div class="col-2-24" id="clock_cont">
+				<div id="clock_cell">
+					<span id="in">Indiana:</span>
+				</div>
+			</div>
+			<div class="col-20-24" id="weather_cont">
+				<script>getWeatherIN();</script>
+			</div>
+			<div class="col-1-24 margin"></div>
+		</div>
+		<!-- --------------- ENVIRONMENT GRID END -------------- -->
+
+		<div class="col-24-24 med_sep_div"></div>
+
+		<!-- ----------------- MEDIA GRID BEGIN ---------------- -->
+		<div class="col-2-24 margin"></div>
+		<div class="col-12-24 media_cell" id="cal_cell">
+			<center>
+				<iframe id="cal_frame" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=300&amp;wkst=1&amp;bgcolor=%23e6e6e6&amp;src=sonotiro%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FBoston" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+			</center>
+		</div>
+		<div class="col-2-24 margin"></div>
+		<div class="col-6-24 media_cell" id="iotd_cell">
+			<script>iotd();</script>
+		</div>
+		<div class="col-2-24 margin"></div>
+		<!-- ------------------ MEDIA GRID END ----------------- -->
+
+		<!-- <div class="col-24-24 sep_div"></div> -->
+		<!-- <div class="col-24-24 sep_div"></div> -->
+
+
+</body>
+</html>
