@@ -28,7 +28,7 @@ html_template = """
                 <div class="col-20-24" id="section-content">
                     <center>
                         <h1>
-                            Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2023</a> Introduction to Bioinformatics workshop!
+                            Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2024</a> Introduction to Bioinformatics workshop!
                         </h1>
                         <p>
                             This web page will guide you through the activities we have planned for you today!
@@ -72,6 +72,7 @@ html_template = """
                         </div>
                     </div>
 
+                    <!--
                     <div class="row" id="instructor">
                         <div class="col-4-24" id="inst-img-cont">
                             <img id="inst-img" src="img/gt.jpg">
@@ -85,6 +86,7 @@ html_template = """
                             </p>
                         </div>
                     </div>
+                    -->
 
                     <div id="sep_div"></div>
 

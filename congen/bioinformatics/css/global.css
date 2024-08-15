@@ -331,6 +331,7 @@ img { width: 100%; }
 }
 #inst-text{
 	margin:20px;
+	padding-left: 5px;
 }
 @media (max-width: 1025px) {
 	#instructor {  max-height: 100vh;  flex-wrap: wrap; }

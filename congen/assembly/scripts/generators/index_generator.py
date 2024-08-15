@@ -28,7 +28,7 @@ html_template = """
                 <div class="col-20-24" id="section-content">
                     <center>
                         <h1>
-                            Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2023</a> Genome Assembly workshop!
+                            Welcome to the virtual <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">ConGen2024</a> Genome Assembly workshop!
                         </h1>
                         <p>
                             This web page will guide you through the genome assembly and read mapping activities we have planned for you today!

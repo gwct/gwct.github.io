@@ -1,0 +1,134 @@
+
+<!doctype html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/ >
+    <link type="text/css" rel="stylesheet" href="css/grid.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
+    <title>ConGen2023 - Assembly Workshop</title>
+</head>
+
+<body>
+    <div class="row" id="desktop_nav">
+		<div class="col-2-24" id="margin"></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="index.html">Intro</a></div>
+		<!-- <div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="start.html">Workshop</a></div> -->
+		<div class="col-4-24 dropdown" id="nav_link_cell">
+			<a href="start.html" class="nav_link">Workshop</a>
+			<div class="dropdown_container desktop_drop">
+				<ul class="dropdown_list">
+					<li class="dropdown_list_item"><a href="start.html" id="dropdown_nav_link">Start</a></li>
+					<li class="dropdown_list_item"><a href="reads.html" id="dropdown_nav_link">Reads</a></li>
+					<li class="dropdown_list_item"><a href="assembly.html" id="dropdown_nav_link">Assembly</a></li>
+					<!-- <li class="dropdown_list_item"><a href="mapping.html" id="dropdown_nav_link">Mapping</a></li>
+					<li class="dropdown_list_item"><a href="iterative-mapping.html" id="dropdown_nav_link">Iterative mapping</a></li> -->
+				</ul>
+			</div>
+		</div>
+		<div class="col-4-24" id="nav_link_cell_active"><a class="nav_link" id="active" href="#">Terminology</a></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="programs.html">Programs</a></div>
+		<div class="col-4-24" id="nav_link_cell"><a class="nav_link" href="links.html">Links</a></div>
+		<div class="col-u-2-24" id="margin"></div>
+	</div>
+
+	<div class="row" id="mobile_nav">
+		<div class="col-24-24 dropdown" id="nav_link_cell">
+			<a href="#" class="nav_link"><img id="mobile_logo_nav" src="img/nav.png"></a>
+			<div class="dropdown_container mobile_drop">
+				<ul class="dropdown_list">
+					<li class="dropdown_list_item"><a href="intro.html" id="mobile_nav_link">Intro</a></li>
+					<li class="dropdown_list_item"><a href="start.html" id="mobile_nav_link">Workshop</a></li>
+					<li class="dropdown_list_item"><a href="terms.html" id="mobile_nav_link">Terminology</a></li>
+					<li class="dropdown_list_item"><a href="programs.html" id="mobile_nav_link">Programs</a></li>
+					<li class="dropdown_list_item"><a href="links.html" id="mobile_nav_link">Links</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+    
+
+    <a class="internal-link" name="terms"></a>
+    <div class="row" id="header">Terminology & File Formats</div>
+
+    <div class="row" id="body-row">
+        <div class="col-3-24" id="side-nav-cont">
+            <div id="side-nav">
+                <span id="side-header">Page contents</span>
+                <ul>
+                    <li><a href="terms.html#terms">Term definitions</a></li>
+                    <li><a href="terms.html#formats">Common file formats</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-21-24" id="main-cont">
+            <div class="row" id="top-row-cont">
+                <div class="col-24-24" id="top-row"></div>
+            </div>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">Definitions of frequently used terms</div>
+                </div>
+            </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            
+<div class="table-cont">
+    <table class="prog-table">
+        <thead><th>Term</th><th>Definition</th></thead><tr><td><b>Sequence libraries</b></td><td>A sample of DNA that has been processed to be sequenced.</td></tr><tr><td><b>Reads</b></td><td>Fragmented and overlapping pieces of a DNA strand that are sequenced.</td></tr><tr><td><b>Phred quality scores</b></td><td>A scaled probability that a given inference (usually a called base) is incorrect. The probabilty of error, P(e), scaled by -10 log P(e).</td></tr><tr><td><b>Short reads</b></td><td>Reads from first and second generation sequencing such as Sanger, Illumina, IonTorrent, etc. Short reads can range from 30-1000bp long.</td></tr><tr><td><b>Read pair</b></td><td>Many short read sequencing technologies sequence from both ends of a DNA fragment, resulting in a pair of sequenced reads that come from said fragment.</td></tr><tr><td><b>Adapter</b></td><td>A short piece of DNA that is ligated to the short fragment to be sequenced. The adapter allows the fragment to be affixed to a physical medium (such as a flow cell) to facilitate amplification and sequencing.</td></tr><tr><td><b>Insert size</b></td><td>The size of the DNA fragment between the adapter sequences.</td></tr><tr><td><b>Mate pairs</b></td><td>Long-insert paired end reads prepared by circularizing longer DNA fragments.</td></tr><tr><td><b>Jumping libraries</b></td><td>Junction-fragment libraries. Mate pair libraries.</td></tr><tr><td><b>Long reads</b></td><td>Reads from single-molecule sequencing technology such as PacBio SMRT and Oxford Nanopore. Long reads can range from 1000-100000+bp long.</td></tr><tr><td><b>Genome assembly, Assembly, de novo Assembly</b></td><td>1. The process by which small overlapping parts of the genome are reconstructed into longer contiguous sequences, 2. A sequence that has undergone the assembly process.</td></tr><tr><td><b>Contigs</b></td><td>Assembled reads. Contig assembly is usually done with a graph-based representation (i.e. de Bruijn graphs) of overlapping sequence reads.</td></tr><tr><td><b>Scaffolds</b></td><td>Contigs that have been joined together to form longer sequences. Scaffolding is usually done using read pair information or long reads.</td></tr><tr><td><b>Reference genome</b></td><td>An already assembled genome to which you can compare newly sequenced reads or genomes.</td></tr><tr><td><b>Read mapping</b></td><td>The process of aligning reads from a newly sequenced genome to a reference genome</td></tr><tr><td><b>Mapping quality</b></td><td>A usually Phred scaled probability that a given read has mapped incorrectly.</td></tr><tr><td><b>Reference-guided assembly</b></td><td>1. The process of using read mapping to reconstruct the genome from a set of reads, 2. A sequence that has undergone the reference-guided assembly process.</td></tr><tr><td><b>Reference bias</b></td><td>The phenomenon of a set of mapped reads appearing to resembe (through lower divergence) the reference genome more closely than they actually do because reads containing the most variation were not mapped.</td></tr><tr><td><b>Iterative mapping</b></td><td>The process of mapping reads to a reference genome, generating a reference-guided assembly, and then repeating the process this time mapping to the new reference guided assembly. Done to reduce reference bias.</td></tr>
+    </table>
+</div>
+
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="internal-links" name="formats"></a>
+            <div class="row" id="section-header-cont">
+                <div class="col-24-24" id="section-header-row">
+                    <div id="section-header">File formats</div>
+                </div>
+            </div>
+            <div class="row" id="section-cont">
+                <div class="col-24-24" id="section-col">
+                    <div class="row" id="section-row">
+                        <div class="col-2-24" id="inner-margin"></div>
+                        <div class="col-20-24" id="section-content">
+
+                            
+<div class="table-cont">
+    <table class="prog-table">
+        <thead><th>Format</th><th>Use</th><th>Link</th><th>Specs</th></thead><tr><td><b>FASTA</b></td><td>Stores sequence data.</td><td><a href='https://en.wikipedia.org/wiki/FASTA_format' target='_blank'>Wikipedia</a></td><td>NA</td></tr><tr><td><b>FASTQ</b></td><td>Stores sequence data and quality scores.</td><td><a href='https://en.wikipedia.org/wiki/FASTQ_format' target='_blank'>Wikipedia</a></td><td><a href='https://doi.org/10.1093/nar/gkp1137' target='_blank'>Link</a></td></tr><tr><td><b>SAM</b></td><td>Sequence Alignment Map format. Stores information about reads mapped to a reference genome.</td><td><a href='https://en.wikipedia.org/wiki/SAM_(file_format)' target='_blank'>Wikipedia</a></td><td><a href='https://samtools.github.io/hts-specs/SAMv1.pdf' target='_blank'>Link</a></td></tr><tr><td><b>BAM</b></td><td>Binary Alignment Map format. The compressed binary version of SAM format.</td><td><a href='https://en.wikipedia.org/wiki/SAM_(file_format)' target='_blank'>Wikipedia</a></td><td><a href='https://samtools.github.io/hts-specs/SAMv1.pdf' target='_blank'>Link</a></td></tr><tr><td><b>CRAM</b></td><td>Another compressed format to store read mapping information.</td><td><a href='https://en.wikipedia.org/wiki/CRAM_(file_format)' target='_blank'>Wikipedia</a></td><td><a href='https://samtools.github.io/hts-specs/CRAMv3.pdf' target='_blank'>Link</a></td></tr><tr><td><b>VCF</b></td><td>Variant Call Format. Used to store information about variants inferred for a given sample(s).</td><td><a href='https://en.wikipedia.org/wiki/Variant_Call_Format' target='_blank'>Wikipedia</a></td><td><a href='https://samtools.github.io/hts-specs/VCFv4.2.pdf' target='_blank'>Link</a></td></tr><tr><td><b>BCF</b></td><td>Binary variant Call Format. The binary compressed verion of a VCF.</td><td><a href='https://en.wikipedia.org/wiki/Variant_Call_Format' target='_blank'>Wikipedia</a></td><td><a href='https://samtools.github.io/hts-specs/VCFv4.2.pdf' target='_blank'>Link</a></td></tr><tr><td><b>BED</b></td><td>Stores coordinates of regions of interest</td><td><a href='https://en.wikipedia.org/wiki/BED_(file_format)' target='_blank'>Wikipedia</a></td><td><a href='https://bedtools.readthedocs.io/en/latest/content/general-usage.html' target='_blank'>Link</a></td></tr>
+    </table>
+</div>
+
+                            <div id="sep_div"></div>
+
+                        </div>
+                        <div class="col-2-24" id="inner-margin"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" id="footer">
+		<div class="col-1">
+			<div id="footer_text">
+				<center>Site designed and maintained by <a href="https://gwct.github.io" target="_blank">Gregg Thomas</a> | Page built: 08/25/2023 11:58:18 Eastern Daylight Time</center>
+			</div>
+		</div>
+	</div>
+</body>

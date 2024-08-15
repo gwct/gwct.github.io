@@ -4,8 +4,8 @@
 ############################################################
 
 import sys, os
-#sys.path.append('..')
-import lib.read_chunks as RC
+sys.path.append(os.path.abspath('lib/'))
+import read_chunks as RC
 
 ######################
 # HTML template
@@ -23,7 +23,7 @@ html_template = """
 
                 <div class="row" id="congen-row">
                     <div class="col-24-24" id="congen-col">
-                        <center><a href="https://www.umt.edu/ces/conferences/congen/">ConGen 2022</a></center>
+                        <center><a href="https://www.umt.edu/ces/conferences/congen/">ConGen 2024</a></center>
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@ html_template = """
 ######################
 pagefile = "index.html";
 print("Generating " + pagefile + "...");
-title = "ConGen2022"
+title = "ConGen2024"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);

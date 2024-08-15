@@ -4,7 +4,7 @@
 ############################################################
 
 def getYear():
-    return "2023";
+    return "2024";
 
 def readHead(title):
     headfile = "../html-chunks/head.html";
