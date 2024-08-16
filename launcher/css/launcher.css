@@ -39,6 +39,10 @@ a {
 	/* font-style: italic; */
 	font-size: 1.5em;
 }
+@media (max-width: 1025px) {
+	.row-title { width: 100%; text-align: center; min-height: 6vh; }
+}
+
 
 /*------------------------------------------------------*/
 /* Main grid styles */
