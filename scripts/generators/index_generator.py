@@ -43,19 +43,31 @@ html_template = """
 			</h3>
 					
 			<p>
-				I was recently a postdoctoral researcher at the University of Montana in <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good's lab</a>,
-				and I studied at Indiana University under the advisement of <a href="http://www.indiana.edu/~hahnlab/" target="_blank">Matt Hahn</a>.
+				Previously I was a postdoctoral researcher at the University of Montana in <a href="http://www.thegoodlab.org/" target="_blank">Jeff Good's lab</a>,
+				and I studied at Indiana University with <a href="http://www.indiana.edu/~hahnlab/" target="_blank">Matt Hahn</a>.
 			</p>
 
 			<p>
 				I'm excited to understand the processes and patterns of molecular evolution by using genomics and phylogenetics, and working 
 				through some of the problems that vast amounts of genomic data has presented. To this end, I have worked on modeling mutation rate variation 
-				in mammals, detecting convergent evolution on genomic data, and analyzing gene families in a number of species. I contributed to
-				<a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE</a> to account for error in gene family analysis, and I developed 
-				the program <a href="https://gwct.github.io/grampa" target="_blank" id="doi_link">GRAMPA</a> to study polyploidy in the context of gene tree 
-				topologies. <!-- I also have an interest in the biology of extremophiles.</p> --> I also wrote the program 
-				<a href="https://gwct.github.io/referee" target="_blank" id="doi_link">Referee</a> to annotate genome assemblies with quality scores.
+				in mammals, detecting convergent evolution on genomic data, and analyzing gene family evolution in a number of species. 
+            </p>
+            
+            <p>
+                I contribute to and develop software to facilitate research in comparative genomics. I contributed to <a href="https://hahnlab.github.io/CAFE/" target="_blank">CAFE</a> 
+                to account for error in gene family analysis, and I developed the program <a href="https://gwct.github.io/grampa" target="_blank" id="doi_link">GRAMPA</a> 
+                to study polyploidy in the context of gene tree topologies. <!-- I also have an interest in the biology of extremophiles.</p>  I also wrote the program 
+				<a href="https://gwct.github.io/referee" target="_blank" id="doi_link">Referee</a> to annotate genome assemblies with quality scores. --> I now develop and
+                maintain <a href="https://phyloacc.github.io/" target="_blank" id="doi_link">PhyloAcc</a> to identify substitution rate shifts in phylogenetic trees. See
+                my <a href="links.html" target="_blank">Software & Links</a> page for a complete list of software I have been involved in.
 			</p>
+            
+            <p>
+				I also teach workshops to foster best practices and reproducibility in computational biology. My teachings include subjects that span basic computational, 
+                programming, and data science skills to more advanced topics like genome assembly and phylogenetics. In the past, I have taught at the 
+                <a href="https://www.umt.edu/ces/conferences/congen/" target="_blank">Conservation Genetics workshop (ConGen)</a> and I help teach a 
+                <a href="https://informatics.fas.harvard.edu/resources/" target="_blank">variety of subjects in our group</a>. 
+            </p>
 
 			<p>
 				Outside of the lab, I have a passion for 
@@ -70,7 +82,7 @@ html_template = """
 	</div>
 
 	<div class="row">
-		<div class="col-24-24" id="sep_div"></div>
+		<div class="col-24-24" id="sep_div_index"></div>
 	</div>
 
 	<div class="row" id="email_row">

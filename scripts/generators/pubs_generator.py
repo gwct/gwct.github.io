@@ -64,9 +64,16 @@ html_template = """
 	<div class="col-20-24" id="pub">
 		<ul id="presents">
 			<p>
+				<span class="pub_title">Rapid evolution of mitochondrion-related genes in haplodiploid arthropods</span>
+				</br>&nbsp;&nbsp;Li Y, <b>Thomas GWC</b>, Richards S, Waterhouse RM, Zhou X, Pfrender ME.
+				<em>BMC Biology</em>. 22:229.
+                </br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1186/s12915-024-02027-4" target="_blank" id="doi_link">10.1186/s12915-024-02027-4</a>
+			</p>            
+        
+			<p>
 				<span class="pub_title">Practical guidance and workflows for identifying fast evolving non-coding genomic elements using PhyloAcc</span>
 				</br>&nbsp;&nbsp;<b>Thomas GWC</b>, Gemmell P, Shakya SB, Hu Z, Liu JS, Sackton TB, Edwards SV.
-				<em>Integrative & Comparative Biology</em>.
+				<em>Integrative & Comparative Biology</em>. icae056.
                 </br>&nbsp;&nbsp;doi: <a href="https://doi.org/10.1093/icb/icae056" target="_blank" id="doi_link">10.1093/icb/icae056</a>
 			</p>     
 		</ul>
